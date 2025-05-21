@@ -1,0 +1,749 @@
+
+\section*{Exercises for \ref{sec:1_2}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:1_2}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+	\label{ex:1_2_1}
+Which of the following matrices are in reduced row-echelon form? Which are in row-echelon form?
+
+\begin{exenumerate}
+\exitem 
+$\leftB \begin{array}{rrr}
+	1 & -1 & 2 \\
+	0 &  0 & 0 \\
+	0 &  0 & 1		
+\end{array} \rightB$
+\exitem 
+$\leftB \begin{array}{rrrr}
+	2 & 1 & -1 & 3 \\
+	0 & 0 &  0 & 0
+\end{array} \rightB$
+\exitem 
+$\leftB \begin{array}{rrrr}
+1 & -2 & 3 & 5 \\
+0 & 0 &  0 & 1
+\end{array} \rightB$
+\exitem 
+$\leftB \begin{array}{rrrrr}
+	1 & 0 & 0 & 3 & 1\\
+	0 & 0 & 0 & 1 & 1 \\
+	0 & 0 & 0 & 0 & 1
+\end{array} \rightB$
+\exitem
+$\leftB \begin{array}{rr}
+	1 & 1 \\
+	0 & 1		
+\end{array} \rightB$
+\exitem 
+$\leftB \begin{array}{rrr}
+	0 &  0 & 1 \\
+	0 &  0 & 1 \\
+	0 &  0 & 1		
+\end{array} \rightB$
+\end{exenumerate}
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  No, no
+\setcounter{enumi}{3}
+\item  No, yes
+\setcounter{enumi}{5}
+\item  No, no
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Carry each of the following matrices to reduced row-echelon form.
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$\leftB \begin{array}{rrrrrrr}
+	0 & -1 & 2 & 1 & 2 & 1 & -1 \\
+	0 & 1 & -2 & 2 & 7 & 2 & 4 \\
+	0 & -2 & 4 & 3 & 7 & 1 & 0 \\
+	0 & 3  &-6 & 1 & 6 & 4 & 1
+\end{array} \rightB$
+
+\item 
+$\leftB \begin{array}{rrrrrrr}
+	0 & -1 & 3 & 1 & 3 & 2 & 1 \\
+	0 & -2 & 6 & 1 & -5 & 0 & -1 \\
+	0 & 3 & -9 & 2 & 4 & 1 & -1 \\
+	0 & 1 & -3 & -1 & 3 & 0 & 1
+\end{array} \rightB$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item 
+$\leftB \begin{array}{rrrrrrr}
+	0 & 1 & -3 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 1 & 0 & 0 & -1 \\
+	0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 & 1 & 1 \\
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+The augmented matrix of a system of linear equations has been carried to the following by row operations. In each case solve the system.
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$\leftB \begin{array}{rrrrrr|r}
+	1 & 2 & 0 & 3 & 1 & 0 & -1 \\
+	0 & 0 & 1 &-1 & 1 & 0 &  2 \\
+	0 & 0 & 0 & 0 & 0 & 1 &  3 \\
+	0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array} \rightB$
+
+\item 
+$\leftB \begin{array}{rrrrrr|r}
+	1 & -2 & 0 & 2 & 0 & 1 &  1 \\
+	0 &  0 & 1 & 5 & 0 &-3 & -1 \\
+	0 & 0 &  0 & 0 & 1 & 6 &  1 \\
+	0 & 0 &  0 & 0 & 0 & 0 & 0
+\end{array} \rightB$
+
+\item 
+$\leftB \begin{array}{rrrrr|r}
+	1 & 2 & 1 & 3 & 1 & 1 \\
+	0 & 1 &-1 & 0 & 1 & 1 \\
+	0 & 0 & 0 & 1 & -1& 0 \\
+	0 & 0 & 0 & 0 & 0 & 0
+\end{array} \rightB$
+
+\item 
+$\leftB \begin{array}{rrrrr|r}
+	1 & -1 & 2 & 4 & 6 &  2 \\
+	0 &  1 & 2 & 1 & -1 & -1 \\
+	0 &  0 & 0 & 1 & 0 & 1 \\
+	0 &  0 & 0 & 0 & 0 & 0
+\end{array} \rightB$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $x_1 = 2r - 2s - t + 1$, $x_2 = r$, $x_3 = -5s + 3t - 1$, $x_4 = s$, $x_5 = - 6t + 1$, $x_6 = t$
+
+\setcounter{enumi}{3}
+\item  $x_1 = - 4s - 5t - 4$, $x_2 = -2s + t - 2$, $x_3 = s$, $x_4 = 1$, $x_5 = t$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find all solutions (if any) to each of the following systems of linear equations.
+
+\begin{exenumerate}
+\exitem
+$\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	 x & - & 2y & = & 1 \\
+	4y & - &  x & = & -2
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	3x & - & y  & = & 0 \\
+	2x & - & 3y & = & 1
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	2x & + & y  & = & 5 \\
+	3x & + & 2y & = & 6
+\end{array}$
+\exitem
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	3x & - &  y & = & 2\\
+	2y & - & 6x & = & -4
+\end{array}$
+\exitem
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	3x & - &  y & = & 4 \\
+	2y & - & 6x & = & 1
+\end{array}$
+\exitem
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	2x & - & 3y & = & 5 \\
+	3y & - & 2x & = & 2
+\end{array}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $x = -\frac{1}{7}$, $y = - \frac{3}{7}$ 
+\setcounter{enumi}{3}
+\item  $x = \frac{1}{3}(t + 2)$, $y = t$
+\setcounter{enumi}{5}
+\item  No solution
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find all solutions (if any) to each of the following systems of linear equations.
+
+\begin{exenumerate}
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	 x & + &  y & + & 2z & = & 8 \\
+	3x & - &  y & + &  z & = & 0 \\
+	-x & + & 3y & + & 4z & = & -4 \\
+\end{array}$
+\exitem %b
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	-2x & + & 3y & + & 3z & = & -9 \\
+	 3x & - & 4y & + &  z & = & 5 \\
+	-5x & + & 7y & + & 2z & = & -14
+\end{array}$
+\exitem %c
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	 x & + &  y & - &  z & = & 10\\
+	-x & + & 4y & + & 5z & = & -5 \\
+	 x & + & 6y & + & 3z & = & 15
+\end{array}$
+\exitem %d
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	 x & + & 2y & - &  z & = & 2 \\
+	2x & + & 5y & - & 3z & = & 1 \\
+	 x & + & 4y & - & 3z & = & 3
+\end{array}$
+\exitem %e
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	5x & + & y &   &   & = & 2 \\
+	3x & - & y & + & 2z& = & 1 \\
+	 x & + & y & - & z & = & 5 
+\end{array}$
+\exitem %f
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	3x & - & 2y & + & z & = & -2 \\
+ 	 x & - & y & + & 3z & = & 5 \\
+	-x & + & y & + & z & = & -1
+\end{array}$
+\exitem %g
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	 x & + & y & + & z & = & 2 \\
+	 x &  &    & + & z & = & 1 \\
+	2x & + & 5y & + & 2z & = & 7
+\end{array}$
+\exitem %h
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	 x & + & 2y& - & 4z & = & 10 \\
+	2x & - & y & + & 2z & = & 5 \\
+	 x & + & y & - & 2z & = & 7	
+\end{array}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $x = -15t - 21$, $y = -11t - 17$, $z = t$
+
+\setcounter{enumi}{3}
+\item  No solution
+
+\setcounter{enumi}{5}
+\item  $x = -7$, $y = -9$, $z = 1$
+
+\setcounter{enumi}{7}
+\item  $x = 4$, $y = 3 + 2t$, $z = t$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Express the last equation of each system as a sum of multiples of the first two equations. [\textit{Hint}: Label the equations, use the gaussian algorithm.]
+
+\begin{exenumerate}
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+ 	 x_1 & + & x_2 & + &  x_3 & = & 1 \\
+	2x_1 & - & x_2 & + & 3x_3 & = & 3 \\
+	 x_1 & - & 2x_2& + & 2x_3 & = & 2
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	 x_1 & + & 2x_2 & - & 3x_3 & = & -3 \\
+	 x_1 & + & 3x_2 & - & 5x_3 & = & 5 \\
+	 x_1 & - & 2x_2 & + & 5x_3 & = & -35
+\end{array}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Denote the equations as $E_1$, $E_2$, and $E_3$. Apply gaussian elimination to column 1 of the augmented matrix, and observe that $E_3 - E_1 = -4(E_2 - E_1)$. Hence $E_3 = 5 E_1 - 4 E_2$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex} %2.7
+Find all solutions to the following systems.
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrlrcr}
+	3x_1 & + & 8x_2 & - & 3x_3 & - & 14x_4 & = & 2 \\
+	2x_1 & + & 3x_2 & - &  x_3 & - &  2x_4 & = & 1 \\
+	 x_1 & - & 2x_2 & + &  x_3 & + & 10x_4 & = & 0 \\
+	 x_1 & + & 5x_2 & - & 2x_3 & - & 12x_4 & = & 1 \\
+\end{array}$
+
+\item
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrlrcr}
+	 x_1 & - & x_2 & + & x_3 & - & x_4 & = & 0 \\
+	-x_1 & + & x_2 & + & x_3 & + & x_4 & = & 0 \\
+	 x_1 & + & x_2 & - & x_3 & + & x_4 & = & 0 \\
+	 x_1 & + & x_2 & + & x_3 & + & x_4 & = & 0 \\
+\end{array}$
+
+\item 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrlrcr}
+	 x_1 & - &  x_2 & + &  x_3 & - & 2x_4 & = & 1 \\
+	-x_1 & + &  x_2 & + &  x_3 & + &  x_4 & = & -1\\
+	-x_1 & + & 2x_2 & + & 3x_3 & - &  x_4 & = & 2 \\
+	 x_1 & - &  x_2 & + & 2x_3 & + &  x_4 & = & 1 \\
+\end{array}$
+
+\item 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrlrcr}
+	x_1 & + &  x_2 & + & 2x_3 & - &  x_4 & = & 4 \\
+	    &   & 3x_2 & - &  x_3 & + & 4x_4 & = & 2 \\
+	x_1 & + & 2x_2 & - & 3x_3 & + & 5x_4 & = & 0 \\
+	x_1 & + &  x_2 & - & 5x_3 & + & 6x_4 & = & -3 \\
+\end{array}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $x_1 = 0$, $x_2 = -t$, $x_3 = 0$, $x_4 = t$
+
+\setcounter{enumi}{3}
+\item  $x_1 = 1$, $x_2 = 1 -t$, $x_3 = 1 + t$, $x_4 = t$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each of the following, find (if possible) conditions on $a$ and $b$ such that the system has no solution, one solution, and infinitely many solutions.
+
+\begin{exenumerate}
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	x & - & 2y & = & 1 \\
+	ax & + & by & = & 5
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	 x & + & by& = & -1 \\
+	ax & + & 2y & = & 5
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	x & - & by & = & -1 \\
+	x & + & ay & = & 3 
+\end{array}$
+\exitem
+$\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	ax & + & y & = & 1 \\
+	2x & + & y & = & b
+\end{array}$
+\end{exenumerate}
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $ab \neq 2$, unique solution $ x = \frac{-2 - 5b}{2 - ab} $, $y = \frac{a + 5}{2 - ab}$.
+ If $ab = 2$: no solution if $a \neq -5$; if $a = -5$, the solutions are $x = -1 + \frac{2}{5} t$, $y = t$.
+
+\setcounter{enumi}{3}
+\item  If $a \neq 2$, unique solution $x = \frac{1 - b}{a - 2}$, $y = \frac{ab - 2}{a - 2}$. If $a = 2$, no solution if $b \neq 1$; if $b = 1$, the solutions are $x = \frac{1}{2}(1 - t)$, $y = t$.
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each of the following, find (if possible) conditions on $a$, $b$, and $c$ such that the system has no solution, one solution, or infinitely many solutions.
+
+\begin{exenumerate}
+\exitem %a
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	3x & + & y & - &  z & = & a \\
+	 x & - & y & + & 2z & = & b \\
+	5x & + & 3y & - & 4z & = & c
+\end{array}$
+\exitem %b
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	2x & + & y & - & z & = & a \\
+	   &   &2y & + & 3z & = & b \\
+	 x &   &   & - &  z & = & c
+\end{array}$
+\exitem %c
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	-x & + & 3y & + & 2z & = & -8 \\
+	 x &   &    & + &  z & = & 2 \\
+	3x & + & 3y & + & az & = & b
+\end{array}$
+\exitem %d
+$\arraycolsep=1pt
+\begin{array}[t]{rcr}
+	x + ay & = & 0 \\
+	y + bz & = & 0 \\
+	z + cx & = & 0
+\end{array}$
+\exitem* %e
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	3x & - & y & + & 2z & = & 3 \\
+	 x & + & y & - &  z & = & 2 \\
+	2x & - &2y & + & 3z & = & b
+\end{array}$
+\exitem* %f
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	 x & + & ay & - & z & = & 1 \\
+	-x & + &(a - 2)y & + & z & = & -1 \\
+	2x & + & 2y & + & (a - 2)z & = & 1
+\end{array}$
+\end{exenumerate}
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Unique solution $x = -2a + b + 5c$, \newline $y = 3a - b - 6c$, $z = -2a + b + c $, for any $a$, $b$, $c$.
+
+\setcounter{enumi}{3}
+\item  If $abc \neq -1$, unique solution $ x = y = z = 0 $; if $abc = -1$ the solutions are $x = abt$, $y = -bt$, $z = t$.
+
+\setcounter{enumi}{5}
+\item  If $a = 1$, solutions $x = -t$, $y = t$, $z = -1$. If $a = 0$, there is no solution. If $a \neq 1$ and $a \neq 0$, unique solution $x = \frac{a - 1}{a} $, $ y = 0$, $z = \frac{-1}{a}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the rank of each of the matrices in Exercise \ref{ex:1_2_1}.
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $1$
+\setcounter{enumi}{3}
+\item  $3$
+\setcounter{enumi}{5}
+\item  $1$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the rank of each of the following matrices.
+
+\begin{exenumerate}
+\exitem %a
+$\leftB \begin{array}{rrr}
+	1 & 1 & 2 \\
+	3 & -1 & 1 \\
+	-1 & 3 & 4
+\end{array} \rightB$
+\exitem %b
+$\leftB \begin{array}{rrr}
+	-2 & 3 & 3 \\
+	3 & -4 & 1 \\
+	-5 & 7 & 2
+\end{array} \rightB$
+\exitem %c
+$\leftB \begin{array}{rrrr}
+	1 & 1 & -1 & 3 \\
+	-1 & 4 & 5 & -2 \\
+	1 & 6 & 3 & 4
+\end{array} \rightB$
+\exitem %d
+$\leftB \begin{array}{rrrr}
+	3 & -2 & 1 & -2 \\
+	1 & -1 & 3 & 5 \\
+	-1 & 1 & 1 & -1
+\end{array} \rightB$
+\exitem* %e
+$\leftB \begin{array}{cccc}
+	1 & 2 & -1 & 0 \\
+	0 & a & 1 - a & a^2 + 1 \\
+	1 & 2 - a & -1 & -2a^2
+\end{array} \rightB$
+\exitem* %f
+$\leftB \begin{array}{cccc}
+	1 & 1 & 2 & a^2 \\
+	1 & 1 - a & 2 & 0 \\
+	2 & 2 - a & 6 - a & 4
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $2$
+\setcounter{enumi}{3}
+\item  $3$
+\setcounter{enumi}{5}
+\item $2$ if $a = 0$ or $a = 2$; $3$, otherwise.
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Consider a system of linear equations with augmented matrix $A$ and coefficient matrix $C$. In each case either prove the statement or give an example showing that it is false.
+
+\begin{enumerate}[label={\alph*.}]
+\item If there is more than one solution, $A$ has a row of zeros.
+
+\item If $A$ has a row of zeros, there is more than one solution.
+
+\item If there is no solution, the reduced row-echelon form of $C$ has a row of zeros.
+
+\item If the row-echelon form of $C$ has a row of zeros, there is no solution.
+
+\item There is no system that is inconsistent for every choice of constants.
+
+\item If the system is consistent for some choice of constants, it is consistent for every choice of constants.
+
+\end{enumerate}
+
+\noindent Now assume that the augmented matrix $A$ has 3 rows and 5 columns.
+
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{6}
+\item If the system is consistent, there is more than one solution.
+
+\item The rank of $A$ is at most $3$.
+
+\item If $\func{rank} A = 3$, the system is consistent.
+
+\item If $\func{rank} C = 3$, the system is consistent.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  False. 
+$A = \leftB \begin{array}{rr|r}
+	1 & 0 & 1 \\
+	0 & 1 & 1 \\
+	0 & 0 & 0	
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item  False. 
+$A = \leftB \begin{array}{rr|r}
+	1 & 0 & 1 \\
+	0 & 1 & 0 \\
+	0 & 0 & 0	
+\end{array} \rightB$
+
+\setcounter{enumi}{5}
+\item  False.
+$\arraycolsep=1pt
+\begin{array}{rcl}
+ 	 2x - y & = & 0 \\
+	-4x + 2y & = & 0 \\
+\end{array}$ is consistent but $\arraycolsep=1pt
+\begin{array}{rcl}
+	 2x - y & = & 1 \\
+	-4x + 2y & = & 1 \\
+\end{array}$ is not.
+
+\setcounter{enumi}{7}
+\item  True, $A$ has 3 rows, so there are at most 3 leading $1$s.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find a sequence of row operations carrying
+\begin{equation*}
+\leftB \begin{array}{ccc}
+	b_1 + c_1 & b_2 + c_2 & b_3 + c_3 \\
+	c_1 + a_1 & c_2 + a_2 & c_3 + a_3 \\
+	a_1 + b_1 & a_2 + b_2 & a_3 + b_3 
+\end{array} \rightB
+\mbox{to}
+\leftB \begin{array}{rrr}
+	a_1 & a_2 & a_3 \\
+	b_1 & b_2 & b_3 \\
+	c_1 & c_2 & c_3 
+\end{array} \rightB
+\end{equation*}
+\end{ex}
+
+\begin{ex}
+In each case, show that the reduced row-echelon form is as given.
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$\leftB \begin{array}{rrr}
+	p & 0 & a \\
+	b & 0 & 0 \\
+	q & c & r
+\end{array} \rightB$ with $abc \neq 0$; $
+\leftB \begin{array}{rrr}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\end{array} \rightB$
+
+\item
+$\leftB \begin{array}{rrr}
+1 & a & b + c \\
+1 & b & c + a \\
+1 & c & a + b
+\end{array} \rightB$ where $c \neq a$ or $b \neq a$; 
+$\leftB \begin{array}{rrr}
+1 & 0 & * \\
+0 & 1 & * \\
+0 & 0 & 0 
+\end{array} \rightB$
+\end{enumerate}
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item Since one of $b-a$ and $c-a$ is nonzero, then
+$\leftB \begin{array}{ccc}
+	1 & a & b + c \\
+	1 & b & c + a \\
+	1 & b & c + a
+\end{array} \rightB
+\rightarrow
+\leftB \begin{array}{ccc}
+	1 & a & b + c \\
+	0 & b - a & a - b \\
+	0 & c - a & a - c 
+\end{array} \rightB \rightarrow
+\leftB \begin{array}{ccc}
+	1 & a & b + c \\
+	0 & 1 & -1 \\
+	0 & 0 & 0 
+\end{array} \rightB
+\rightarrow
+\leftB \begin{array}{ccc}
+	1 & 0 & b + c + a\\
+	0 & 1 & -1 \\
+	0 & 0 & 0 
+\end{array} \rightB$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that 
+$\left \{
+\arraycolsep=1pt
+\begin{array}{rlrlrcr}
+	  az & + &   by & + &   cz & = & 0 \\
+	a_1x & + & b_1y & + & c_1z & = & 0
+\end{array}
+\right.$ always has a solution other than $x = 0$, $y = 0$, $z = 0$.
+\end{ex}
+
+
+\begin{ex}
+Find the circle $x^2 + y^2 + ax + by + c = 0$ passing through the following points.
+
+\begin{enumerate}[label={\alph*.}]
+\item $(-2, 1)$, $(5, 0)$, and $(4, 1)$
+
+\item $(1, 1)$, $(5, -3)$, and $(-3, -3)$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $ x^2 + y^2 - 2x + 6y - 6 = 0 $
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Three Nissans, two Fords, and four Chevrolets can be rented for \$106 per day. At the same rates two Nissans, four Fords, and three Chevrolets cost \$107 per day, whereas four Nissans, three Fords, and two Chevrolets cost \$102 per day. Find the rental rates for all three kinds of cars.
+\end{ex}
+
+\begin{ex}
+A school has three clubs and each student is required to belong to exactly one club. One year the students switched club membership as follows:
+
+\noindent Club A. $ \frac{4}{10} $  remain in A, $ \frac{1}{10} $ switch to B, $ \frac{5}{10} $ switch to C.
+
+\noindent Club B. $ \frac{7}{10} $ remain in B, $ \frac{2}{10}$ switch to A, $ \frac{1}{10} $ switch to C.
+
+\noindent Club C. $ \frac{6}{10} $ remain in C, $ \frac{2}{10} $ switch to A, $ \frac{2}{10} $ switch to B.
+
+If the fraction of the student population in each club is unchanged, find each of these fractions.
+
+\begin{sol}
+$ \frac{5}{20} $ in $A$, $\frac{7}{20}$ in $B$, $\frac{8}{20}$ in $C$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Given points $(p_1, q_1)$, $(p_2, q_2)$, and $(p_3, q_3)$ in the plane with $p_1$, $p_2$, and $p_3$ distinct, show that they lie on some curve with equation $y = a + bx + cx^2$. [\textit{Hint}: Solve for $a$, $b$, and $c$.]
+\end{ex}
+
+\begin{ex}
+The scores of three players in a tournament have been lost. The only information available is the total of the scores for players 1 and 2, the total for players 2 and 3, and the total for players 3 and 1.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that the individual scores can be rediscovered.
+
+\item Is this possible with four players (knowing the totals for players 1 and 2, 2 and 3, 3 and 4, and 4 and 1)?
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+A boy finds \$1.05 in dimes, nickels, and pennies. If there are 17 coins in all, how many coins of each type can he have?
+\end{ex}
+
+\begin{ex}
+If a consistent system has more variables than equations, show that it has infinitely many solutions. [\textit{Hint}: Use Theorem \ref{thm:001133}.]
+\end{ex}
+\end{multicols}
+

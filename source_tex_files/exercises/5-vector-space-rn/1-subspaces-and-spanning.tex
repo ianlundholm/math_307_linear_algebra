@@ -1,0 +1,283 @@
+\section*{Exercises for \ref{sec:5_1}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:5_1}}
+\end{Filesave}
+
+\begin{multicols}{2}
+{\small \noindent We often write vectors in $\RR^n$ as rows.}
+
+\begin{ex}
+In each case determine whether $U$ is a subspace of $\RR^3$. Support your answer.
+
+\begin{enumerate}[label={\alph*.}]
+\item $U = \{(1, s, t) \mid s \mbox{ and }t \mbox{ in }\RR\}$.
+
+\item $U = \{(0, s, t) \mid s \mbox{ and } t \mbox{ in } \RR\}$.
+
+\item $U = \{(r, s, t) \mid r, s,\mbox{ and } t \mbox{ in } \RR, \\
+ -r + 3s + 2t = 0\}$.
+
+\item $U = \{(r, 3s, r - 2) \mid r \mbox{ and } s \mbox{ in } \RR\}$.
+
+\item $U = \{(r, 0, s) \mid r^{2} + s^{2} = 0, r \mbox{ and } s \mbox{ in } \RR\}$.
+
+\item $U = \{(2r, -s^{2}, t) \mid r,  s, \mbox{ and } t \mbox{ in } \RR\}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Yes
+
+\setcounter{enumi}{3}
+\item  No
+
+\setcounter{enumi}{5}
+\item  No.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case determine if $\vect{x}$ lies in $U = \func{span}\{\vect{y}, \vect{z}\}$. If $\vect{x}$ is in $U$, write it as a linear combination of $\vect{y}$ and $\vect{z}$; if $\vect{x}$ is not in $U$, show why not.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\vect{x} = (2, -1, 0, 1)$, $\vect{y} = (1, 0, 0, 1)$, and \\$\vect{z} = (0, 1, 0, 1)$.
+
+\item $\vect{x} = (1, 2, 15, 11)$, $\vect{y} = (2, -1, 0, 2)$, and \\$\vect{z} = (1, -1, -3, 1)$.
+
+\item $\vect{x} = (8, 3, -13, 20)$, $\vect{y} = (2, 1, -3, 5)$, and $\vect{z} = (-1, 0, 2, -3)$.
+
+\item $\vect{x} = (2, 5, 8, 3)$, $\vect{y} = (2, -1, 0, 5)$, and \\$\vect{z} = (-1, 2, 2, -3)$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  No
+
+\setcounter{enumi}{3}
+\item  Yes, $\vect{x} = 3\vect{y} + 4\vect{z}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case determine if the given vectors span $\RR^4$. Support your answer.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\{(1, 1, 1, 1), (0, 1, 1, 1), (0, 0, 1, 1), (0, 0, 0, 1)\}$.
+
+\item $\{(1, 3, -5, 0), (-2, 1, 0, 0), (0, 2, 1, -1),\\ (1, -4, 5, 0)\}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  No
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Is it possible that $\{(1, 2, 0), (2, 0, 3)\}$ can span the subspace $U = \{(r, s, 0) \mid r \mbox{ and } s \mbox{ in } \RR\}$? Defend your answer.
+\end{ex}
+
+\begin{ex}
+Give a spanning set for the zero subspace $\{\vect{0}\}$ of $\RR^n$.
+\end{ex}
+
+\begin{ex}
+Is $\RR^2$ a subspace of $\RR^3$? Defend your answer.
+\end{ex}
+
+\begin{ex}
+If $U = \func{span}\{\vect{x}, \vect{y}, \vect{z}\}$ in $\RR^n$, show that $U = \func{span}\{\vect{x} + t\vect{z}, \vect{y}, \vect{z}\}$ for every $t$ in $\RR$.
+\end{ex}
+
+\begin{ex}
+If $U = \func{span}\{\vect{x}, \vect{y}, \vect{z}\}$ in $\RR^n$, show that $U = \func{span}\{\vect{x} + \vect{y}, \vect{y} + \vect{z}, \vect{z} + \vect{x}\}$.
+\end{ex}
+
+\begin{ex}
+If $a \neq 0$ is a scalar, show that $\func{span}\{a\vect{x}\} = \func{span}\{\vect{x}\}$ for every vector $\vect{x}$ in $\RR^n$.
+\end{ex}
+
+\begin{ex}
+If $a_{1}, a_{2}, \dots, a_{k}$ are nonzero scalars, show that $\func{span}\{a_{1}\vect{x}_{1}, a_{2}\vect{x}_{2}, \dots, a_{k}\vect{x}_{k}\} = \func{span}\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$ for any vectors $\vect{x}_{i}$ in $\RR^n$.
+
+\begin{sol}
+$\func{span}\{a_{1}\vect{x}_{1}, a_{2}\vect{x}_{2}, \dots, a_{k}\vect{x}_{k}\} \subseteq \func{span}\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$ by Theorem~\ref{thm:013606} because, for each $i$, $a_{i}\vect{x}_{i}$ is in $\func{span}\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$. Similarly, the fact that $\vect{x}_{i} = a_{i}^{-1}(a_{i}\vect{x}_{i})$ is in $\func{span}\{a_{1}\vect{x}_{1}, a_{2}\vect{x}_{2}, \dots, a_{k}\vect{x}_{k}\}$ for each $i$ shows that $\func{span}\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\} \subseteq \func{span}\{a_{1}\vect{x}_{1}, a_{2}\vect{x}_{2}, \dots, a_{k}\vect{x}_{k}\}$, again by Theorem~\ref{thm:013606}.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $\vect{x} \neq \vect{0}$ in $\RR^n$, determine all subspaces of $\func{span}\{\vect{x}\}$.
+\end{ex}
+
+\begin{ex}
+Suppose that $U = \func{span}\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$ where each $\vect{x}_{i}$ is in $\RR ^n$. If $A$ is an $m \times n$ matrix and $A\vect{x}_{i} = \vect{0}$ for each $i$, show that $A\vect{y} = \vect{0}$ for every vector $\vect{y}$ in $U$.
+
+\begin{sol}
+If $\vect{y} = r_{1}\vect{x}_{1} + \dots + r_{k}\vect{x}_{k}$ then $A\vect{y} = r_{1}(A\vect{x}_{1}) + \dots + r_{k}(A\vect{x}_{k}) = 0$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is an $m \times n$ matrix, show that, for each invertible $m \times m$ matrix $U$, $\func{null}(A) = \func{null}(UA)$.
+\end{ex}
+
+\begin{ex}
+If $A$ is an $m \times n$ matrix, show that, for each invertible $n \times n$ matrix $V$, $\func{im}(A) = \func{im}(AV)$.
+\end{ex}
+
+\begin{ex}
+Let $U$ be a subspace of $\RR^n$, and let $\vect{x}$ be a vector in $\RR^n$.
+
+\begin{enumerate}[label={\alph*.}]
+\item If $a\vect{x}$ is in $U$ where $a \neq 0$ is a number, show that $\vect{x}$ is in $U$.
+
+\item If $\vect{y}$ and $\vect{x} + \vect{y}$ are in $U$ where $\vect{y}$ is a vector in $\RR^n$, show that $\vect{x}$ is in $U$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\vect{x} = (\vect{x} + \vect{y}) - \vect{y} = (\vect{x} + \vect{y}) + (-\vect{y})$ is in $U$ because $U$ is a subspace and both $\vect{x} + \vect{y}$ and $-\vect{y} = (-1)\vect{y}$ are in $U$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case either show that the statement is true or give an example showing that it is false.
+
+\begin{enumerate}[label={\alph*.}]
+\item If $U \neq \RR^n$ is a subspace of $\RR^n$ and $\vect{x} + \vect{y}$ is in $U$, then $\vect{x}$ and $\vect{y}$ are both in $U$.
+
+\item If $U$ is a subspace of $\RR^n$ and $r\vect{x}$ is in $U$ for all $r$ in $\RR$, then $\vect{x}$ is in $U$.
+
+\item If $U$ is a subspace of $\RR^n$ and $\vect{x}$ is in $U$, then $-\vect{x}$ is also in $U$.
+
+\item If $\vect{x}$ is in $U$ and $U = \func{span}\{\vect{y}, \vect{z}\}$, then $U = \func{span}\{\vect{x}, \vect{y}, \vect{z}\}$.
+
+\item The empty set of vectors in $\RR^n$ is a subspace of $\RR^n$.
+
+\item 
+$\leftB \begin{array}{r}
+0 \\
+1
+\end{array} \rightB$ is in $\func{span}
+\left\{
+\leftB \begin{array}{r}
+1 \\
+0
+\end{array} \rightB,\
+\leftB \begin{array}{r}
+2 \\
+0
+\end{array} \rightB
+\right\}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  True. $\vect{x} = 1\vect{x}$ is in $U$.
+
+\setcounter{enumi}{3}
+\item  True. Always $\func{span}\{\vect{y}, \vect{z}\} \subseteq \func{span}\{\vect{x}, \vect{y}, \vect{z}\}$ by Theorem~\ref{thm:013606}. Since $\vect{x}$ is in $\func{span}\{\vect{x}, \vect{y}\}$ we have $\func{span}\{\vect{x}, \vect{y}, \vect{z}\}  \subseteq \func{span}\{\vect{y}, \vect{z}\}$, again by Theorem~\ref{thm:013606}.
+
+\setcounter{enumi}{5}
+\item  False. $a 
+\leftB \begin{array}{r}
+1 \\
+0
+\end{array} \rightB
++ b
+\leftB \begin{array}{r}
+2 \\
+0
+\end{array} \rightB
+= 
+\leftB \begin{array}{c}
+a + 2b \\
+0
+\end{array} \rightB
+$ cannot equal $
+\leftB \begin{array}{r}
+0 \\
+1
+\end{array} \rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If $A$ and $B$ are $m \times n$ matrices, show that \\$U = \{\vect{x}$ in $\RR^n$ | $A\vect{x} = B\vect{x}\}$ is a subspace of $\RR^n$.
+
+\item What if $A$ is $m \times n$, $B$ is $k \times n$, and $m \neq k$?
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Suppose that $\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}$ are vectors in $\RR^n$. If $\vect{y} = a_{1}\vect{x}_{1} + a_{2}\vect{x}_{2} + \dots + a_{k}\vect{x}_{k}$ where $a_{1} \neq 0$, show that $\func{span}\{\vect{x}_{1}\, \vect{x}_{2}, \dots, \vect{x}_{k}\} = \func{span}\{\vect{y}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$.
+\end{ex}
+
+\begin{ex}
+If $U \neq \{\vect{0}\}$ is a subspace of $\RR$, show that $U = \RR$.
+\end{ex}
+
+\begin{ex}\label{ex:5_1_20}
+Let $U$ be a nonempty subset of $\RR^n$. Show that $U$ is a subspace if and only if S2 and S3 hold.
+
+\begin{sol}
+If $U$ is a subspace, then S2 and S3 certainly hold. Conversely, assume that S2 and S3 hold for $U$. Since $U$ is nonempty, choose $\vect{x}$ in $U$. Then $\vect{0} = 0\vect{x}$ is in $U$ by S3, so S1 also holds. This means that $U$ is a subspace.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $S$ and $T$ are nonempty sets of vectors in $\RR^n$, and if $S \subseteq T$, show that $\func{span}\{S\} \subseteq \func{span}\{T\}$.
+\end{ex}
+
+\begin{ex}\label{ex:5_1_22}
+Let $U$ and $W$ be subspaces of $\RR^n$. Define their \textbf{intersection}\index{intersection}\index{subspaces!intersection} $U \cap W$ and their \textbf{sum}\index{sum!subspaces}\index{subspaces!sum} $U + W$ as follows:
+
+$U \cap W = \{\vect{x} \in \RR^n \mid \vect{x}\mbox{ belongs to both } U \mbox{ and } W\}$. 
+
+$U + W = \{\vect{x} \in \RR^n \mid \vect{x}\mbox{ is a sum of a vector in } U \\ \mbox{ and a vector in } W\}$.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $U \cap W$ is a subspace of $\RR^n$.
+
+\item Show that $U + W$ is a subspace of $\RR^n$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  The zero vector $\vect{0}$ is in $U + W$ because $\vect{0} = \vect{0} + \vect{0}$. Let $\vect{p}$ and $\vect{q}$ be vectors in $U + W$, say $\vect{p} = \vect{x}_{1} + \vect{y}_{1}$ and $\vect{q} = \vect{x}_{2} + \vect{y}_{2}$ where $\vect{x}_{1}$ and $\vect{x}_{2}$ are in $U$, and $\vect{y}_{1}$ and $\vect{y}_{2}$ are in $W$. Then $\vect{p} + \vect{q} = (\vect{x}_{1} + \vect{x}_{2}) + (\vect{y}_{1} + \vect{y}_{2})$ is in $U + W$ because $\vect{x}_{1} + \vect{x}_{2}$ is in $U$ and $\vect{y}_{1} + \vect{y}_{2}$ is in $W$. Similarly, $a(\vect{p} + \vect{q}) = a\vect{p} + a\vect{q}$ is in $U + W$ for any scalar $a$ because $a\vect{p}$ is in $U$ and $a\vect{q}$ is in $W$. Hence $U + W$ is indeed a subspace of $\RR^n$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $P$ denote an invertible $n \times n$ matrix. If $\lambda$ is a number, show that 
+\begin{equation*}
+E_{\lambda}(PAP^{-1}) = \{P\vect{x} \mid \vect{x} \mbox{ is in } E_{\lambda}(A)\}
+\end{equation*}
+for each $n \times n$ matrix $A$.
+\end{ex}
+
+\begin{ex}\label{ex:5_1_24}
+Show that every proper subspace $U$ of $\RR^2$ is a line through the origin. [\textit{Hint}: If $\vect{d}$ is a nonzero vector in $U$, let $L = \RR \vect{d} = \{r\vect{d} \mid r \mbox{ in }\RR\}$ denote the line with direction vector $\vect{d}$. If $\vect{u}$ is in $U$ but not in $L$, argue geometrically that every vector $\vect{v}$ in $\RR^2$ is a linear combination of $\vect{u}$ and $\vect{d}$.]
+\end{ex}
+\end{multicols}

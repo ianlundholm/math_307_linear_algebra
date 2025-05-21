@@ -1,0 +1,272 @@
+
+\section*{Exercises for \ref{sec:5_6}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:5_6}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+Find the best approximation to a solution of each of the following systems of equations.
+
+\begin{exenumerate}
+\exitem $\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+ x & + &  y & - &  z & = & 5 \\
+2x & - &  y & + & 6z & = & 1 \\
+3x & + & 2y & - &  z & = & 6 \\
+-x & + & 4y & + &  z & = & 0 \\
+\end{array}$
+\exitem $\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+3x & + &  y & + &  z & = & 6 \\
+2x & + & 3y & - &  z & = & 1 \\
+2x & - &  y & + &  z & = & 0 \\
+3x & - & 3y & + & 3z & = & 8 \\
+\end{array}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\frac{1}{12}
+\leftB \begin{array}{r}
+-20 \\
+46 \\
+95
+\end{array} \rightB, (A^TA)^{-1}$ \\
+$ = \frac{1}{12}
+\leftB \begin{array}{rrr}
+  8 & -10 & -18 \\
+-10 &  14 &  24 \\
+-18 &  24 &  43 
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the least squares approximating line $y = z_{0} + z_{1}x$ for each of the following sets of data points.
+
+\begin{enumerate}[label={\alph*.}]
+\item $(1, 1), (3, 2), (4, 3), (6, 4)$
+
+\item $(2, 4), (4, 3), (7, 2), (8, 1)$
+
+\item $(-1, -1), (0, 1), (1, 2), (2, 4), (3, 6)$
+
+\item $(-2, 3), (-1, 1), (0, 0), (1, -2), (2, -4)$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $ \frac{64}{13} - \frac{6}{13}x $
+
+\setcounter{enumi}{3}
+\item  $ -\frac{4}{10} - \frac{17}{10}x $
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the least squares approximating quadratic $y = z_{0} + z_{1}x + z_{2}x^{2}$ for each of the following sets of data points.
+
+\begin{enumerate}[label={\alph*.}]
+\item $(0, 1), (2, 2), (3, 3), (4, 5)$
+
+\item $(-2, 1), (0, 0), (3, 2), (4, 3)$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $y = 0.127 - 0.024x + 0.194x^{2}, (M^TM)^{-1} = \frac{1}{4248}
+\leftB \begin{array}{rrr}
+3348 &  642 & -426 \\
+ 642 &  571 & -187 \\
+-426 & -187 &   91
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find a least squares approximating function of the form $r_{0}x + r_{1}x^{2} + r_{2}2^{x}$ for each of the following sets of data pairs.
+
+\begin{enumerate}[label={\alph*.}]
+\item $(-1, 1), (0, 3), (1, 1), (2, 0)$
+
+\item $(0, 1), (1, 1), (2, 5), (3, 10)$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\frac{1}{92}(-46x + 66x^2 + 60 \dotprod 2^x), (M^TM)^{-1} = \frac{1}{46}
+\leftB \begin{array}{rrr}
+115 &   0 & -46 \\
+  0 &  17 & -18 \\
+-46 & -18 &  38
+\end{array} \rightB$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+	\label{ex:5_6_5}
+Find the least squares approximating function of the form $r_0 + r_1x^2 + r_2\sin \frac{\pi x}{2}$ for each of the following sets of data pairs.
+
+\begin{enumerate}[label={\alph*.}]
+\item $(0, 3), (1, 0), (1, -1), (-1, 2)$
+
+\item $(-1, \frac{1}{2}), (0, 1), (2, 5), (3, 9)$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\frac{1}{20}[18 + 21x^2 + 28\sin (\frac{\pi x}{2})], (M^TM)^{-1} = \frac{1}{40}
+\leftB \begin{array}{rrr}
+24 & -2 & 14 \\
+-2 &  1 &  3 \\
+14 &  3 & 49
+\end{array} \rightB$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $M$ is a square invertible matrix, show that $\vect{z} = M^{-1}\vect{y}$ (in the notation of Theorem~\ref{thm:016951}).
+\end{ex}
+
+\begin{ex}
+Newton's laws of motion imply that an object dropped from rest at a height of 100 metres will be at a height $s = 100 - \frac{1}{2}gt^{2}$ metres $t$ seconds later, where $g$ is a constant called the acceleration due to gravity. The values of $s$ and $t$ given in the table are observed. Write $x = t^{2}$, find the least squares approximating line $s = a + bx$ for these data, and use $b$ to estimate $g$.
+
+Then find the least squares approximating quadratic $s = a_{0} + a_{1}t + a_{2}t^{2}$ and use the value of $a_{2}$ to estimate $g$.
+\begin{equation*}
+\begin{array}{|c|c|c|c|}
+\hline
+t &  1 &  2 &  3 \\ \hline
+s & 95 & 80 & 56 \\ \hline
+\end{array}
+\end{equation*}
+
+\begin{sol}
+$s = 99.71 - 4.87x$; the estimate of $g$ is $9.74$. [The true value of $g$ is $9.81$]. If a quadratic in $s$ is fit, the result is $s = 101 - \frac{3}{2}t - \frac{9}{2}t^2$ giving $g = 9$;
+
+$(M^TM)^{-1} = \frac{1}{2}
+\leftB \begin{array}{rrr}
+ 38 & -42 &  10 \\
+-42 &  49 & -12 \\
+ 10 & -12 &   3
+\end{array} \rightB$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+A naturalist measured the heights $y_{i}$ (in metres) of several spruce trees with trunk diameters $x_{i}$ (in centimetres). The data are as given in the table. Find the least squares approximating line for these data and use it to estimate the height of a spruce tree with a trunk of diameter 10 cm.
+\begin{equation*}
+\begin{array}{|c|c|c|c|c|c|c|}
+\hline
+x_i &  5 &  7 &  8 & 12 & 13 & 16 \\ \hline
+y_i &  2 & 3.3 &  4 & 7.3 & 7.9 & 10.1 \\ \hline
+\end{array}
+\end{equation*}
+\end{ex}
+
+\begin{ex}
+The yield $y$ of wheat in bushels per acre appears to be a linear function of the number of days $x_{1}$ of sunshine, the number of inches $x_{2}$ of rain, and the number of pounds $x_{3}$ of fertilizer applied per acre. Find the best fit to the data in the table by an equation of the form $y = r_{0} + r_{1}x_{1} + r_{2}x_{2} + r_{3}x_{3}$. [\textit{Hint}: If a calculator for inverting $A^{T}A$ is not available, the inverse is given in the answer.]
+
+\begin{equation*}
+\begin{array}{|c|c|c|c|}
+\hline
+ y & x_1 & x_2 & x_3 \\ \hline
+28 & 50  & 18  & 10 \\ 
+30 & 40  & 20  & 16 \\ 
+21 & 35  & 14  & 10 \\ 
+23 & 40  & 12  & 12 \\ 
+23 & 30  & 16  & 14 \\ \hline
+\end{array}
+\end{equation*}
+
+\begin{sol}
+$y = -5.19 + 0.34x_{1} + 0.51x_{2} + 0.71x_{3}, (A^TA)^{-1}$ \\
+$ = \frac{1}{25080}
+\leftB \begin{array}{rrrr}
+517860 & -8016 &  5040 & -22650 \\
+ -8016 &   208 &  -316 &    400 \\
+  5040 &  -316 &  1300 &  -1090 \\
+-22650 &   400 & -1090 &   1975
+\end{array} \rightB$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Use $m = 0$ in Theorem~\ref{thm:016951} to show that the best-fitting horizontal line $y = a_{0}$ through the data points $(x_{1}, y_{1}), \dots, (x_{n}, y_{n})$ is 
+\begin{equation*}
+y = \frac{1}{n}(y_1 + y_2 + \dots + y_n)
+\end{equation*}
+the average of the $y$ coordinates.
+
+\item Deduce the conclusion in (a) without using Theorem~\ref{thm:016951}.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $f(x) = a_{0}$ here, so the sum of squares is 
+$S = \sum(y_i - a_0)^2 = na_0^2 - 2a_0\sum y_i + \sum y_i^2$. Completing the square gives  $S = n[a_0 - \frac{1}{n}\sum y_i]^2 + [\sum y_i^2 - \frac{1}{n}(\sum y_i)^2]$ This is minimal when $a_0 = \frac{1}{n}\sum y_i$.
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Assume $n = m + 1$ in Theorem~\ref{thm:016951} (so $M$ is square). If the $x_{i}$ are distinct, use Theorem~\ref{thm:008520} to show that $M$ is invertible. Deduce that $\vect{z} = M^{-1}\vect{y}$ and that the least squares polynomial is the interpolating polynomial (Theorem~\ref{thm:008520}) and actually passes through all the data points.
+\end{ex}
+
+\begin{ex}
+Let $A$ be any $m \times n$ matrix and write $K = \{\vect{x} \mid A^{T}A\vect{x} = \vect{0}\}$. Let $\vect{b}$ be an $m$-column. Show that, if $\vect{z}$ is an $n$-column such that $\vectlength\vect{b} - A\vect{z}\vectlength$ is minimal, then \textit{all} such vectors have the form $\vect{z} + \vect{x}$ for some $\vect{x} \in K$. [\textit{Hint}: $\vectlength\vect{b} - A\vect{y}\vectlength$ is minimal if and only if $A^{T}A\vect{y} = A^{T}\vect{b}$.]
+\end{ex}
+
+\begin{ex}
+Given the situation in Theorem~\ref{thm:017041}, write
+\begin{equation*}
+f(x) = r_0p_0(x) + r_1p_1(x) + \dots + r_mp_m(x)
+\end{equation*}
+Suppose that $f(x)$ has at most $k$ roots for any choice of the coefficients $r_{0}, r_{1}, \dots, r_{m}$, not all zero.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $M^{T}M$ is invertible if at least $k + 1$ of the $x_{i}$ are distinct.
+
+\item If at least two of the $x_{i}$ are distinct, show that there is always a best approximation of the form $r_{0} + r_{1}e^{x}$.
+
+\item If at least three of the $x_{i}$ are distinct, show that there is always a best approximation of the form $r_{0} + r_{1}x + r_{2}e^{x}$. [Calculus is needed.]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Here $f(x) = r_{0} + r_{1}e^{x}$. If $f(x_{1}) = 0 = f(x_{2})$ where $x_{1} \neq x_{2}$, then $r_0 + r_1 \dotprod e^{x_1} = 0 = r_0 + r_1 \dotprod e^{x_2}$ so $r_1(e^{x_1} - e^{x_2}) = 0$. Hence $r_{1} = 0 = r_{0}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+	\label{ex:5_6_14}
+If $A$ is an $m \times n$ matrix, it can be proved that there exists a unique $n \times m$ matrix $A^{\#}$ satisfying the following four conditions: $AA^{\#}A = A$; $A^{\#}AA^{\#} = A^{\#}$; $AA^{\#}$ and $A^{\#}A$ are symmetric. The matrix $A^{\#}$ is called the \textbf{generalized inverse}\index{generalized inverse}\index{inverses!generalized inverse} of $A$, or the \textbf{Moore-Penrose}\index{inverses!Moore-Penrose inverse}\index{Moore-Penrose inverse} inverse.
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A$ is square and invertible, show that $A^{\#} = A^{-1}$.
+
+\item If $\func{rank} A = m$, show that $A^{\#} = A^{T}(AA^{T})^{-1}$.
+
+\item If $\func{rank} A = n$, show that $A^{\#} = (A^{T}A)^{-1}A^{T}$.
+
+\end{enumerate}
+\end{ex}
+\end{multicols}

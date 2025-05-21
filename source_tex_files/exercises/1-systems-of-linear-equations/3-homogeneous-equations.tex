@@ -1,0 +1,405 @@
+\section*{Exercises for \ref{sec:1_3}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:1_3}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+Consider the following statements about a system of linear equations with augmented matrix $A$. In each case either prove the statement or give an example for which it is false.
+
+\begin{enumerate}[label={\alph*.}]
+\item If the system is homogeneous, every solution is trivial.
+
+\item If the system has a nontrivial solution, it cannot be homogeneous.
+
+\item If there exists a trivial solution, the system is homogeneous.
+
+\item If the system is consistent, it must be homogeneous.
+\end{enumerate}
+
+\noindent\textit{Now assume that the system is homogeneous.}
+
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{4}
+\item If there exists a nontrivial solution, there is no trivial solution.
+
+\item If there exists a solution, there are infinitely many solutions.
+
+\item If there exist nontrivial solutions, the row-echelon form of $A$ has a row of zeros.
+
+\item If the row-echelon form of $A$ has a row of zeros, there exist nontrivial solutions.
+
+\item If a row operation is applied to the system, the new system is also homogeneous.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  False. 
+$A = 
+\leftB \begin{array}{rrr|r}
+	1 & 0 & 1 & 0 \\
+	0 & 1 & 1 & 0	
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item  False. 
+$A =
+\leftB \begin{array}{rrr|r}
+	1 & 0 & 1 & 1 \\
+	0 & 1 & 1 & 0	
+\end{array} \rightB$
+
+\setcounter{enumi}{5}
+\item  False. 
+$A =
+\leftB \begin{array}{rr|r}
+	1 & 0 & 0 \\
+	0 & 1 & 0	
+\end{array} \rightB$
+
+\setcounter{enumi}{7}
+\item  False. 
+$A =
+\leftB \begin{array}{rr|r}
+	1 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 0
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each of the following, find all values of $a$ for which the system has nontrivial solutions, and determine all solutions in each case.
+
+\begin{exenumerate}
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	 x & - & 2y & + &  z & = & 0 \\
+	 x & + & ay & - & 3z & = & 0 \\
+	-x & + & 6y & - & 5z & = & 0 \\
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	x & + & 2y & + &  z & = & 0 \\
+	x & + & 3y & + & 6z & = & 0 \\
+	2x & + & 3y & + & az & = & 0 \\
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	x & + &  y & - &  z & = & 0 \\
+	  &   & ay & - &  z & = & 0 \\
+	 x & + &  y & + & az & = & 0 \\
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	ax & + &  y & + &  z & = & 0 \\
+	x & + &  y & - &  z & = & 0 \\
+	 x & + &  y & + & az & = & 0 \\
+\end{array}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $a = -3$, $x = 9t$, $y = -5t$, $z = t$
+
+\setcounter{enumi}{3}
+\item  $a = 1$, $x = -t$, $y = t$, $z = 0$; or $a = -1$, $x = t$, $y = 0$, $z = t$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $\vect{x} = 
+\leftB \begin{array}{r}
+	2 \\
+	1 \\
+	-1
+\end{array} \rightB$, $\vect{y} = 
+\leftB \begin{array}{r}
+	1 \\
+	0 \\
+	1
+\end{array} \rightB$, and \\ $\vect{z} = 
+\leftB \begin{array}{r}
+	1 \\
+	1 \\
+	-2
+\end{array} \rightB$. In each case, either write $\vect{v}$ as a linear combination of $\vect{x}$, $\vect{y}$, and $\vect{z}$, or show that it is not such a linear combination.
+
+\begin{exenumerate}
+\exitem 
+$\vect{v} = 
+\leftB \begin{array}{r}
+	0 \\
+	1 \\
+	-3	
+\end{array} \rightB$
+\exitem 
+$\vect{v} = 
+\leftB \begin{array}{r}
+	4 \\
+	3 \\
+	-4
+\end{array} \rightB$
+\exitem 
+$\vect{v} = 
+\leftB \begin{array}{r}
+	3 \\
+	1 \\
+	0
+\end{array} \rightB$
+\exitem 
+$\vect{v} = 
+\leftB \begin{array}{r}
+	3 \\
+	0 \\
+	3
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Not a linear combination.
+
+\setcounter{enumi}{3}
+\item  $\vect{v} = \vect{x} + 2\vect{y} - \vect{z}$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, either express $\vect{y}$ as a linear combination of $\vect{a}_1$, $\vect{a}_2$, and $\vect{a}_3$, or show that it is not such a linear combination. Here:
+\begin{equation*}
+\vect{a}_1 =
+\leftB \begin{array}{r}
+	-1 \\
+	3 \\
+	0 \\
+	1
+\end{array} \rightB, \
+\vect{a}_2 =
+\leftB \begin{array}{r}
+	3 \\
+	1 \\
+	2 \\
+	0
+\end{array} \rightB,
+\mbox{ and } \vect{a}_3 =
+\leftB \begin{array}{r}
+	1 \\
+	1 \\
+	1 \\
+	1
+\end{array} \rightB
+\end{equation*}
+
+\begin{exenumerate}
+\exitem 
+$\vect{y} =
+\leftB \begin{array}{r}
+	1 \\
+	2 \\
+	4 \\
+	0
+\end{array} \rightB$
+\exitem 
+$\vect{y} =
+\leftB \begin{array}{r}
+	-1 \\
+	9 \\
+	2 \\
+	6
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\vect{y} = 2\vect{a}_1 - \vect{a}_2 + 4\vect{a}_3$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+For each of the following homogeneous systems, find a set of basic solutions and express the general solution as a linear combination of these basic solutions.
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrlrlrcr}
+	 x_1 & + & 2x_2 & - &  x_3 & + & 2x_4 & + &  x_5 & = & 0 \\
+	 x_1 & + & 2x_2 & + & 2x_3 &   &      & + &  x_5 & = & 0 \\
+	2x_1 & + & 4x_2 & - & 2x_3 & + & 3x_4 & + &  x_5 & = & 0
+\end{array}$
+
+\item 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrlrlrcr}
+	 x_1 & + & 2x_2 & - &  x_3 & + &  x_4 & + &  x_5 & = & 0 \\
+	-x_1 & - & 2x_2 & + & 2x_3 &   &      & + &  x_5 & = & 0 \\
+	-x_1 & - & 2x_2 & + & 3x_3 & + &  x_4 & + & 3x_5 & = & 0
+\end{array}$
+
+\item 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrlrlrcr}
+	 x_1 & + &  x_2 & - &  x_3 & + & 2x_4 & + &  x_5 & = & 0 \\
+	 x_1 & + & 2x_2 & - &  x_3 & + &  x_4 & + &  x_5 & = & 0 \\
+	2x_1 & + & 3x_2 & - &  x_3 & + & 2x_4 & + &  x_5 & = & 0 \\
+	4x_1 & + & 5x_2 & - & 2x_3 & + & 5x_4 & + & 2x_5 & = & 0
+\end{array}$
+
+\item 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrlrlrcr}
+	 x_1 & + &  x_2 & - & 2x_3 & - & 2x_4 & + & 2x_5 & = & 0 \\
+	2x_1 & + & 2x_2 & - & 4x_3 & - & 4x_4 & + &  x_5 & = & 0 \\
+	 x_1 & - &  x_2 & + & 2x_3 & + & 4x_4 & + &  x_5 & = & 0 \\
+	-2x_1 & - & 4x_2 & + & 8x_3 & + &10x_4 & + &  x_5 & = & 0
+\end{array}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$r \leftB \begin{array}{r}
+	-2 \\
+	1 \\
+	0 \\
+	0 \\
+	0
+\end{array} \rightB
++ s
+\leftB \begin{array}{r}
+	-2 \\
+	0 \\
+	-1 \\
+	1 \\
+	0
+\end{array} \rightB
++ t
+\leftB \begin{array}{r}
+	-3 \\
+	0 \\
+	-2 \\
+	0 \\
+	1
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item 
+$s \leftB \begin{array}{r}
+	0 \\
+	2 \\
+	1 \\
+	0 \\
+	0
+\end{array} \rightB
++ t
+\leftB \begin{array}{r}
+	-1 \\
+	3 \\
+	0 \\
+	1 \\
+	0
+\end{array} \rightB$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex} %1.3.6
+\begin{enumerate}[label={\alph*.}]
+\item Does Theorem~\ref{thm:001473} imply that the system 
+$\left \{
+\arraycolsep=1pt
+\begin{array}{rcl}
+	-z + 3y & = & 0 \\
+	2x - 6y & = & 0
+\end{array}
+\right.$ has nontrivial solutions? Explain.
+
+\item Show that the converse to Theorem~\ref{thm:001473} is not true. That is, show that the existence of nontrivial solutions does \textit{not} imply that there are more variables than equations.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  The system in (a) has nontrivial solutions.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex} %1.3.7
+In each case determine how many solutions (and how many parameters) are possible for a homogeneous system of four linear equations in six variables with augmented matrix $A$. Assume that $A$ has nonzero entries. Give all possibilities.
+
+\begin{exenumerate}
+\exitem Rank $A = 2$.
+\exitem Rank $A = 1$.
+\exitem* $A$ has a row of zeros.
+\exitem* The row-echelon form of $A$ has a row of zeros.
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  By Theorem~\ref{thm:001133}, there are $n - r = 6 - 1 = 5$ parameters and thus infinitely many solutions.
+
+\setcounter{enumi}{3}
+\item  If $R$ is the row-echelon form of $A$, then $R$ has a row of zeros and 4 rows in all. Hence $R$ has $r = \func{rank } A = 1$, $2$, or $3$. Thus there are $n - r = 6 - r = 5$, $4$, or $3$ parameters and thus infinitely many solutions.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+The graph of an equation $ax + by + cz = 0$ is a plane through the origin (provided that not all of $a$, $b$, and $c$ are zero). Use Theorem~\ref{thm:001473} to show that two planes through the origin have a point in common other than the origin $(0, 0, 0)$.
+\end{ex}
+
+\begin{ex} %1.3.9
+\begin{enumerate}[label={\alph*.}]
+\item Show that there is a line through any pair of points in the plane. [\textit{Hint}: Every line has equation $ax + by + c = 0$, where $a$, $b$, and $c$ are not all zero.]
+
+\item Generalize and show that there is a plane $ax + by + cz + d = 0$ through any three points in space.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  That the graph of $ax + by + cz = d$ contains three points leads to 3 linear equations homogeneous in variables $a$, $b$, $c$, and $d$. Apply Theorem~\ref{thm:001473}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex} %1.3.10
+The graph of 
+\begin{equation*}
+a(x^2 + y^2) + bx + cy + d = 0
+\end{equation*}
+ is a circle if $a \neq 0$. Show that there is a circle through any three points in the plane that are not all on a line.
+\end{ex}
+
+\begin{ex} %1.3.11
+Consider a homogeneous system of linear equations in $n$ variables, and suppose that the augmented matrix has rank $r$. Show that the system has nontrivial solutions if and only if $n > r$.
+
+\begin{sol}
+There are $n - r$ parameters (Theorem~\ref{thm:001133}), so there are nontrivial solutions if and only if $n - r > 0$.
+\end{sol}
+\end{ex}
+
+\begin{ex} %1.3.12
+If a consistent (possibly nonhomogeneous) system of linear equations has more variables than equations, prove that it has more than one solution.
+\end{ex}
+\end{multicols}

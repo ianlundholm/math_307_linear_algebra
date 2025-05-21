@@ -1,0 +1,73 @@
+\section{An Application to Network Flow}
+\label{sec:1_4}
+
+\index{network flow}\index{system of linear equations!network flow application}
+There are many types of problems that concern a network of conductors along which some sort of flow is observed. Examples of these include an irrigation network and a network of streets or freeways. There are often points in the system at which a net flow either enters or leaves the system. The basic principle behind the analysis of such systems is that the total flow into the system must equal the total flow out. In fact, we apply this principle at every junction in the system.
+
+\begin{theorem*}[label=thm:001735]{Junction Rule}
+At each of the junctions in the network, the total flow into that junction must equal the total flow out.\index{junction rule}
+\end{theorem*}
+
+\noindent This requirement gives a linear equation relating the flows in conductors emanating from the junction.
+
+\begin{example}{}{001739}
+A network of one-way streets is shown in the accompanying diagram. The rate of flow of cars into intersection $A$ is 500 cars per hour, and 400 and 100 cars per hour emerge from $B$ and $C$, respectively. Find the possible flows along each street.
+
+\setlength{\rightskip}{0pt plus 200pt}
+\begin{solution}
+Suppose the flows along the streets are $ f_1$, $f_2$, $f_3$, $f_4$, $f_5$, and $f_6$ cars per hour in the directions shown. 
+
+\newpage
+
+Then, equating the flow in with the flow out at each intersection, we get
+\begin{equation*}
+\arraycolsep=1pt
+\begin{array}{lrl}
+	\mbox{Intersection } A & 500 					& = f_1 + f_2 + f_3 \\
+	\mbox{Intersection } B & \quad f_1 + f_4 + f_6 	& = 400 \\
+	\mbox{Intersection } C & f_3 + f_5 				& = f_6 + 100 \\
+	\mbox{Intersection } D & f_2					& = f_4 + f_5 \\
+\end{array}
+\end{equation*}
+
+
+
+These give four equations in the six variables $ f_1, f_2, \dots , f_6 $.
+\begin{equation*}
+\arraycolsep=1pt
+\begin{array}{rlrlrlrlrlrcr}
+	f_1 & + & f_2 & + & f_3 &   &     &   &     &   &     & = & 500 \\
+	f_1 &   &     &   &     & + & f_4 &   &     & + & f_6 & = & 400 \\
+	    &   &     &   & f_3 &   &     & + & f_5 & - & f_6 & = & 100 \\
+	    &   & f_2 &   &     & - & f_4 & - & f_5 &   &     & = & 0 \\
+\end{array}
+\end{equation*}
+The reduction of the augmented matrix is
+\begin{equation*}
+\leftB \begin{array}{rrrrrr|r}
+	1 & 1 & 1 & 0 & 0 & 0 & 500 \\
+	1 & 0 & 0 & 1 & 0 & 1 & 400 \\
+	0 & 0 & 1 & 0 & 1 &-1 & 100 \\
+	0 & 1 & 0 &-1 &-1 & 0 & 0
+\end{array} \rightB
+\rightarrow
+\leftB \begin{array}{rrrrrr|r}
+	1 & 0 & 0 & 1 & 0 & 1 & 400 \\
+	0 & 1 & 0 &-1 &-1 & 0 & 0 \\
+	0 & 0 & 1 & 0 & 1 &-1 & 100 \\
+	0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array} \rightB
+\end{equation*}
+Hence, when we use $f_4$, $f_5$, and $f_6$ as parameters, the general solution is
+\begin{equation*}
+f_1 = 400 - f_4 - f_6 \quad\quad f_2 = f_4 + f_5 \quad\quad f_3 = 100 - f_5 + f_6
+\end{equation*}
+This gives all solutions to the system of equations and hence all the possible flows.
+
+Of course, not all these solutions may be acceptable in the real situation. For example, the flows $ f_1, f_2, \dots , f_6 $ are all \textit{positive} in the present context (if one came out negative, it would mean traffic flowed in the opposite direction). This imposes constraints on the flows: $f_1 \geq 0$ and $f_3 \geq 0$ become
+\begin{equation*}
+f_4 + f_6 \leq 400 \quad\quad f_5 - f_6 \leq 100
+\end{equation*}
+Further constraints might be imposed by insisting on maximum values on the flow in each street.
+\end{solution}
+\end{example}

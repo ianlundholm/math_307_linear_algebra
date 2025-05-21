@@ -1,0 +1,435 @@
+\section{Eigenvalues and Eigenvectors}
+\label{sec:3_3}
+
+The  world is filled with examples of systems that evolve in time---the 
+weather in a region, the economy of a nation, the diversity of an 
+ecosystem, etc. Describing such systems is difficult in general and 
+various methods have been developed in special cases. In this section we
+ describe one such method, called \textit{diagonalization,} which is one 
+of the most important techniques in linear algebra. A very fertile 
+example of this procedure is in modelling the growth of the population 
+of an animal species. This has attracted more attention in recent years 
+with the ever increasing awareness that many species are endangered. To 
+motivate the technique, we begin by setting up a simple model of a bird 
+population in which we make assumptions about survival and reproduction 
+rates.
+
+\index{diagonalization!example}
+\begin{example}{}{008923}
+Consider
+ the evolution of the population of a species of birds. Because the 
+number of males and females are nearly equal, we count only females. We 
+assume that each female remains a juvenile for one year and then becomes
+ an adult, and that only adults have offspring. We make three 
+assumptions about reproduction and survival rates:
+
+
+\begin{enumerate}
+\item The number of juvenile females hatched in any year is twice the number of adult females alive the year before (we say the \textbf{reproduction rate} is 2).\index{reproduction rate}
+
+\item Half of the adult females in any year survive to the next year (the \textbf{adult survival rate} is $\frac{1}{2}$).\index{adult survival rate}
+
+\item One quarter of the juvenile females in any year survive into adulthood (the \textbf{juvenile survival rate} is $\frac{1}{4}$).\index{juvenile survival rate}
+
+\end{enumerate}
+
+If there were 100 adult females and 40 juvenile females alive initially, compute the population of females $k$ years later.
+
+
+\begin{solution}
+  Let $a_{k}$ and $j_{k}$ denote, respectively, the number of adult and juvenile females after $k$ years, so that the total female population is the sum $a_{k} + j_{k}$. Assumption 1 shows that $j_{k+1} = 2a_{k}$, while assumptions 2 and 3 show that $a_{k+1} = \frac{1}{2}a_{k} + \frac{1}{4}j_{k}$. Hence the numbers $a_{k}$ and $j_{k}$ in successive years are related by the following equations:
+\begin{align*}
+a_{k+1} & = \frac{1}{2} a_k + \frac{1}{4} j_k \\
+j_{k+1} & = 2 a_k 
+\end{align*}
+
+If we write $\vect{v}_k = \leftB \begin{array}{c}
+a_k \\
+j_k 
+\end{array}\rightB$
+ and $A = \leftB \begin{array}{rr}
+\frac{1}{2} & \frac{1}{4} \\
+2 & 0 \end{array}\rightB$
+ these equations take the matrix form
+\begin{equation*}
+\vect{v}_{k+1} = A\vect{v}_k, \mbox{ for each } k = 0,1,2,\dots
+\end{equation*}
+Taking $k = 0$ gives $\vect{v}_{1} = A\vect{v}_{0}$, then taking $k = 1$ gives $\vect{v}_{2} = A\vect{v}_{1} = A^{2}\vect{v}_{0}$, and taking $k = 2$ gives $\vect{v}_{3} = A\vect{v}_{2} = A^{3}\vect{v}_{0}$. Continuing in this way, we get
+\begin{equation*}
+\vect{v}_k = A^k \vect{v}_0, \mbox{ for each } k=0,1,2, \dots
+\end{equation*}
+Since $\vect{v}_0 = \leftB \begin{array}{c}
+a_0 \\
+j_0 
+\end{array}\rightB = \leftB \begin{array}{c}
+100 \\
+40 
+\end{array}\rightB $
+ is known, finding the population profile $\vect{v}_{k}$ amounts to computing $A^{k}$ for all $k \geq 0$. We will complete this calculation in Example~\ref{exa:009389} after some new techniques have been developed.
+\end{solution}
+\end{example}
+
+Let $A$ be a fixed $n \times n$ matrix. A sequence $\vect{v}_{0}, \vect{v}_{1}, \vect{v}_{2}, \dots$  of column vectors\index{vectors!column vectors}\index{column vectors}\index{sequences!of column vectors} in $\RR^n$ is called a \textbf{linear dynamical system}\index{linear dynamical system}\footnote{More precisely, this is \textit{a linear discrete} dynamical system\index{linear discrete dynamical system}. Many models regard $\vect{v}_{t}$ as a continuous function of the time $t$, and replace our condition between $\vect{b}_{k+1}$ and $A\vect{v}_k$ with a differential relationship viewed as functions of time.\index{time, functions of}}
+ if $\vect{v}_{0}$ is known and the other $\vect{v}_{k}$ are determined (as in Example~\ref{exa:008923}) by the conditions
+\begin{equation*}
+\vect{v}_{k+1} = A\vect{v}_k \mbox{ for each } k = 0, 1, 2, \dots
+\end{equation*}
+These conditions are called a \textbf{matrix recurrence}\index{matrix recurrence}\index{vectors!matrix recurrence} for the vectors $\vect{v}_{k}$. As in Example~\ref{exa:008923}, they imply that
+\begin{equation*}
+\vect{v}_k = A^k \vect{v}_0 \mbox{ for all }k \ge 0
+\end{equation*}
+so finding the columns $\vect{v}_{k}$ amounts to calculating $A^{k}$ for $k \geq 0$.
+
+
+Direct computation of the powers $A^{k}$ of a square matrix $A$ can be time-consuming, so we adopt an indirect method that is commonly used. The idea is to first \textbf{diagonalize} the matrix $A$, that is, to find an invertible matrix $P$ such that
+\begin{equation}\label{eq:diagonalizeP}
+P^{-1}AP=D \mbox{ is a diagonal matrix}
+\end{equation}\index{matrix!diagonal matrices}\index{diagonal matrices}\index{square matrix ($n \times n$ matrix)!diagonal matrices}
+This works because the powers $D^{k}$ of the diagonal matrix $D$ are easy to compute, and Equation \ref{eq:diagonalizeP} enables us to compute powers $A^{k}$ of the matrix $A$ in terms of powers $D^{k}$ of $D$. Indeed, we can solve Equation \ref{eq:diagonalizeP} for $A$ to get $A = PDP^{-1}$. Squaring this gives
+\begin{equation*}
+A^2 = (PDP^{-1})(PDP^{-1}) = PD^2P^{-1}
+\end{equation*}
+Using this we can compute $A^{3}$ as follows:
+\begin{equation*}
+A^3 = AA^2 = (PDP^{-1})(PD^2P^{-1}) = PD^3P^{-1}
+\end{equation*}
+Continuing in this way we obtain Theorem~\ref{thm:008997} (even if $D$ is not diagonal).
+
+
+\begin{theorem}{}{008997}
+If $A = PDP^{-1}$ then $A^{k} = PD^{k}P^{-1}$ for each $k = 1, 2, \dots$.
+\end{theorem}
+
+Hence computing $A^{k}$ comes down to finding an invertible matrix $P$ as in equation Equation \ref{eq:diagonalizeP}. To do this it is necessary to first compute certain numbers (called eigenvalues) associated with the matrix $A$.
+
+
+\subsection*{Eigenvalues and Eigenvectors}
+\index{eigenvalues}\index{eigenvectors}
+\index{eigenvectors!eigenvalues}
+
+
+\begin{definition}{Eigenvalues and Eigenvectors of a Matrix}{009008}
+If $A$ is an $n \times n$ matrix, a number $\lambda$ is called an \textbf{eigenvalue}\index{eigenvalues!defined} of $A$ if
+\begin{equation*}
+A\vect{x} = \lambda \vect{x} \mbox{ for some column } \vect{x} \neq \vect{0}. 
+\end{equation*}
+In this case, $\vect{x}$ is called an \textbf{eigenvector}\index{eigenvector!defined} of $A$ corresponding to the eigenvalue $\lambda$, or a $\lambda$-\textbf{eigenvector} for short.
+\end{definition}
+
+\begin{example}{}{009013}
+If $A = \leftB \begin{array}{rr}
+3 & 5 \\
+1 & -1 
+\end{array}\rightB$
+ and $\vect{x} = \leftB \begin{array}{r}
+5 \\
+1
+\end{array}\rightB$
+ then $A\vect{x} = 4 \vect{x}$ so $\lambda = 4$
+ is an eigenvalue of $A$ with corresponding eigenvector $\vect{x}$.
+\end{example}
+
+The matrix $A$ in Example~\ref{exa:009013} has another eigenvalue in addition to $\lambda = 4$. To find it, we develop a general procedure for \textit{any} $n \times n$ matrix $A$.\index{diagonalization!matrix}
+
+
+By definition a number $\lambda$ is an eigenvalue of the $n \times n$ matrix $A$ if and only if $A\vect{x} = \lambda\vect{x}$ for some column $\vect{x} \neq \vect{0}$. This is equivalent to asking that the homogeneous system
+\begin{equation*}
+(\lambda I - A)\vect{x} = \vect{0}
+\end{equation*}
+of linear equations has a nontrivial solution $\vect{x} \neq \vect{0}$\index{homogeneous equations!nontrivial solution}\index{nontrivial solution}\index{solution!nontrivial solution}. By Theorem \ref{thm:004553} this happens if and only if the matrix $\lambda I - A$ is not invertible and this, in turn, holds if and only if the determinant of the coefficient matrix is zero:
+\begin{equation*}
+\func{det}(\lambda I -A)=0
+\end{equation*}
+This last condition prompts the following definition:
+
+
+\begin{definition}{Characteristic Polynomial of a Matrix}{009024}
+If $A$ is an $n \times n$ matrix, the \textbf{characteristic polynomial}\index{characteristic polynomial!square matrix}\index{square matrix ($n \times n$ matrix)!characteristic polynomial} $c_{A}(x)$ of $A$ is defined by
+\begin{equation*}
+c_A(x) = \func{det}(xI - A)
+\end{equation*}
+\end{definition}
+
+\noindent Note that $c_{A}(x)$ is indeed a polynomial in the variable $x$, and it has degree $n$ when $A$ is an $n \times n$ matrix (this is illustrated in the examples below). The above discussion shows that a number $\lambda$ is an eigenvalue of $A$ if and only if $c_{A}(\lambda) = 0$, that is if and only if $\lambda$ is a \textbf{root} of the characteristic polynomial $c_{A}(x)$. We record these observations in 
+\index{characteristic polynomial!root of}\index{characteristic polynomial!eigenvalues}\index{eigenvalues!root of the characteristic polynomial}\index{polynomials!root}\index{polynomials!root of characteristic polynomial}\index{root!of characteristic polynomial}
+
+\begin{theorem}{}{009033}
+Let $A$ be an $n \times n$ matrix.
+
+\begin{enumerate}
+\item The eigenvalues $\lambda$ of $A$ are the roots of the characteristic polynomial $c_{A}(x)$ of $A$.\index{eigenvalues!solving for}
+
+\item The $\lambda$-eigenvectors $\vect{x}$ are the nonzero solutions to the homogeneous system
+\begin{equation*}
+(\lambda I - A)\vect{x} = \vect{0}
+\end{equation*}
+of linear equations with $\lambda I - A$ as coefficient matrix.
+
+\end{enumerate}
+\end{theorem}
+
+\noindent In practice, solving the equations in part 2 of Theorem~\ref{thm:009033} is a routine application of gaussian elimination, but finding the eigenvalues can be difficult, often requiring computers (see Section~\ref{sec:8_5}).
+ For now, the examples and exercises will be constructed so that the 
+roots of the characteristic polynomials are relatively easy to find 
+(usually integers). However, the reader should not be misled by this 
+into thinking that eigenvalues are so easily obtained for the matrices 
+that occur in practical applications!
+
+
+\begin{example}{}{009044}
+Find the characteristic polynomial of the matrix $A = \leftB \begin{array}{rr}
+3 & 5 \\
+1 & -1 
+\end{array}\rightB$
+ discussed in Example~\ref{exa:009013}, and then find all the eigenvalues and their eigenvectors.
+
+
+\begin{solution}
+  Since $xI-A = \leftB \begin{array}{rr}
+x & 0 \\
+0 & x 
+\end{array}\rightB - \leftB \begin{array}{rr}
+3 & 5 \\
+1 & -1 
+\end{array}\rightB = 
+\leftB \begin{array}{cc}
+x - 3 & -5 \\
+-1 & x+1 
+\end{array}\rightB$
+ we get
+\begin{equation*}
+c_A(x) = \func{det} \leftB \begin{array}{cc}
+x - 3 & -5 \\
+-1 & x+1 
+\end{array}\rightB = x^2 - 2x - 8 = (x-4)(x+2)
+\end{equation*}
+Hence, the roots of $c_{A}(x)$ are $\lambda_{1} = 4$ and $\lambda_{2} = -2$, so these are the eigenvalues of $A$. Note that $\lambda_{1} = 4$ was the eigenvalue mentioned in Example~\ref{exa:009013}, but we have found a new one: $\lambda_{2} = -2$.
+
+
+To find the eigenvectors corresponding to $\lambda_{2} = -2$, observe that in this case
+\begin{equation*}
+(\lambda_2 I - A)\vect{x} = \leftB \begin{array}{cc}
+\lambda_2 - 3 & -5 \\
+-1 & \lambda_2+1
+\end{array}\rightB = \leftB \begin{array}{rr}
+-5 & -5 \\
+-1 & -1
+\end{array}\rightB
+\end{equation*}
+so the general solution to $(\lambda_{2} I - A)\vect{x} = \vect{0}$ is $\vect{x} = t \leftB \begin{array}{r}
+-1 \\
+1
+\end{array}\rightB$
+ where $t$ is an arbitrary real number. Hence, the eigenvectors $\vect{x}$ corresponding to $\lambda$\textsubscript{2} are $\vect{x} = t \leftB \begin{array}{r}
+-1 \\
+1
+\end{array}\rightB$
+ where $t \neq 0$ is arbitrary. Similarly, $\lambda_{1} = 4$ gives rise to the eigenvectors $\vect{x} = t \leftB \begin{array}{r}
+5 \\
+1
+\end{array}\rightB, t \neq 0$
+ which includes the observation in Example~\ref{exa:009013}.
+\end{solution}
+\end{example}
+
+Note that a square matrix $A$ has \textit{many} eigenvectors associated with any given eigenvalue $\lambda$. In fact \textit{every} nonzero solution $\vect{x}$ of $(\lambda I - A)\vect{x} = \vect{0}$ is an eigenvector. Recall that these solutions are all linear 
+combinations of certain basic solutions determined by the gaussian 
+algorithm (see Theorem \ref{thm:001586}). Observe that any nonzero multiple of an eigenvector\index{eigenvector!nonzero multiple} is again an eigenvector,\footnote{In fact, any nonzero linear combination of $\lambda$-eigenvectors is again a $\lambda$-eigenvector.\index{eigenvector!nonzero linear combination}}
+ and such multiples are often more convenient.\footnote{Allowing nonzero multiples helps eliminate round-off error when the eigenvectors involve fractions.\index{eigenvector!nonzero multiple}\index{eigenvector!fractions}\index{fractions!eigenvectors}\index{round-off error}}
+ Any set of nonzero multiples of the basic solutions of $(\lambda I - A)\vect{x} = \vect{0}$ will be called a set of \textbf{basic eigenvectors}\index{basic eigenvectors}\index{eigenvector!basic eigenvectors} corresponding to $\lambda$.
+
+
+\begin{example}{}{009069}
+Find the characteristic polynomial, eigenvalues, and basic eigenvectors for
+\begin{equation*}
+A = \leftB \begin{array}{rrr}
+2 & 0 & 0 \\
+1 & 2 & -1 \\
+1 & 3 & -2
+\end{array}\rightB
+\end{equation*}
+\begin{solution}
+  Here the characteristic polynomial is given by
+\begin{equation*}
+c_A(x) = \func{det} \leftB \begin{array}{ccc}
+x-2 & 0 & 0 \\
+-1 & x-2 & 1 \\
+-1 & -3 & x+2
+\end{array}\rightB = (x-2)(x-1)(x+1)
+\end{equation*}
+so the eigenvalues are $\lambda_{1} = 2$, $\lambda_{2} = 1$, and $\lambda_{3} = -1$. To find all eigenvectors for $\lambda_{1} = 2$, compute
+\begin{equation*}
+\lambda_1 I-A = \leftB \begin{array}{ccc}
+\lambda_1-2 & 0 & 0 \\
+-1 & \lambda_1-2 & 1 \\
+-1 & -3 & \lambda_1+2
+\end{array}\rightB = \leftB \begin{array}{rrr}
+0 & 0 & 0 \\
+-1 & 0 & 1 \\
+-1 & -3 & 4 
+\end{array}\rightB
+\end{equation*}
+We want the (nonzero) solutions to $(\lambda_{1}I - A)\vect{x} = \vect{0}$. The augmented matrix becomes
+\begin{equation*}
+\leftB \begin{array}{rrr|r}
+0 & 0 & 0 & 0 \\
+-1 & 0 & 1 & 0 \\
+-1 & -3 & 4 & 0 
+\end{array}\rightB \rightarrow
+\leftB \begin{array}{rrr|r}
+1 & 0 & -1 & 0 \\
+0 & 1 & -1 & 0 \\
+0 & 0 & 0 & 0 
+\end{array}\rightB
+\end{equation*}
+using row operations. Hence, the general solution $\vect{x}$ to $(\lambda_{1}I - A)\vect{x} = \vect{0}$ is $\vect{x} = t \leftB \begin{array}{r}
+1 \\
+1 \\
+1
+\end{array}\rightB$
+ where $t$ is arbitrary, so we can use $\vect{x}_1 = \leftB \begin{array}{r}
+1 \\
+1 \\
+1
+\end{array}\rightB$
+ as the basic eigenvector corresponding to $\lambda_{1} = 2$. As the reader can verify, the gaussian algorithm gives basic eigenvectors $\vect{x}_2 = \leftB \begin{array}{r}
+0 \\
+1 \\
+1
+\end{array}\rightB$
+ and $\vect{x}_3 = \leftB \begin{array}{r}
+0 \\
+\frac{1}{3} \\
+1
+\end{array}\rightB$
+ corresponding to $\lambda_{2} = 1$ and $\lambda_{3} = -1$, respectively. Note that to eliminate fractions, we could instead use $3\vect{x}_3 = \leftB \begin{array}{r}
+0 \\
+1 \\
+3
+\end{array}\rightB$
+ as the basic $\lambda_{3}$-eigenvector.
+\end{solution}
+\end{example}
+
+\begin{example}{}{009095}
+If $A$ is a square matrix, show that $A$ and $A^{T}$ have the same characteristic polynomial, and hence the same eigenvalues.
+
+
+\begin{solution}
+  We use the fact that $xI - A^{T} = (xI - A)^{T}$. Then
+\begin{equation*}
+c_{A^T}(x) = \func{det} \left( xI-A^T \right) = \func{det} \left[ (xI-A)^T \right] = \func{det} (xI-A) = c_A(x)
+\end{equation*}
+by Theorem \ref{thm:008268}. Hence $c_{A^{T}}(x)$ and $c_{A}(x)$ have the same roots, and so $A^{T}$ and $A$ have the same eigenvalues (by Theorem~\ref{thm:009033}).
+\end{solution}
+\end{example}
+
+The eigenvalues of a matrix need not be distinct. For example, if $A = \leftB \begin{array}{rr}
+1 & 1  \\
+0 & 1 
+\end{array}\rightB$
+ the characteristic polynomial is $(x - 1)^2$ so the eigenvalue 1 occurs twice. Furthermore, eigenvalues are usually 
+not computed as the roots of the characteristic polynomial. There are 
+iterative, numerical methods (for example the QR-algorithm in Section~\ref{sec:8_5}) that are much more efficient for large matrices.
+
+
+\subsection*{$A$-Invariance}
+
+
+If $A$ is a $2 \times 2$ matrix, we can describe the eigenvectors of $A$ geometrically using the following concept. A line $L$ through the origin in $\RR^2$ is called $A$-\textbf{invariant}\index{$A$-invariance}\index{invariants}\index{square matrix ($n \times n$ matrix)!invariants} if $A\vect{x}$ is in $L$ whenever $\vect{x}$ is in $L$. If we think of $A$ as a linear transformation $\RR^2 \to \RR^2$, this asks that $A$ carries $L$ into itself, that is the image $A\vect{x}$ of each vector $\vect{x}$ in $L$ is again in $L$.
+
+
+\begin{example}{}{009117}
+The $x$ axis $L = \left\{ \leftB \begin{array}{r}
+x \\
+0
+\end{array} \rightB \mid x \mbox{ in } \RR \right\}$  is $A$-invariant for any matrix of the form
+\begin{equation*}
+A = \leftB \begin{array}{rr}
+a & b \\
+0 & c 
+\end{array} \rightB \mbox{ because }  \leftB \begin{array}{rr}
+a & b \\
+0 & c 
+\end{array} \rightB \leftB \begin{array}{r}
+x \\
+0
+\end{array}\rightB = \leftB \begin{array}{r}
+ax \\
+0
+\end{array}\rightB \mbox{ is } L \mbox{ for all } \vect{x} = \leftB \begin{array}{r}
+x \\
+0
+\end{array}\rightB \mbox{ in } L
+\end{equation*}
+\end{example}
+
+\begin{wrapfigure}[12]{l}{5cm} 
+	\centering
+	\input{content/3-determinants-and-diagonalization/figures/3-diagonalization-and-eigenvalues/example3.3.6}
+	%\caption{\label{fig:009127}}
+\end{wrapfigure}
+
+To see the connection with eigenvectors, let $\vect{x} \neq \vect{0}$ be any nonzero vector in $\RR^2$  and let $L_{\vect{x}}$ denote the unique line through the origin containing $\vect{x}$ (see the diagram). By the definition of scalar multiplication in Section~\ref{sec:2_6}, we see that $L_{\vect{x}}$ consists of all scalar multiples of $\vect{x}$, that is
+\begin{equation*}
+L_{\vect{x}} = \RR \vect{x} = \left\{ t\vect{x} \mid t \mbox{ in } \RR \right\}
+\end{equation*}
+\noindent Now suppose that $\vect{x}$ is an eigenvector of $A$, say $A\vect{x} = \lambda\vect{x}$ for some $\lambda$ in $\RR$. Then if $t\vect{x}$ is in $L_{\vect{x}}$ then
+\begin{equation*}
+A(t\vect{x}) = t\left(A\vect{x}\right) = t(\lambda \vect{x}) = (t\lambda)\vect{x} \mbox{ is again in } L_{\vect{x}}
+\end{equation*}
+That is, $L_{\vect{x}}$ is $A$-invariant. On the other hand, if $L_{\vect{x}}$ is $A$-invariant then $A\vect{x}$ is in $L_{\vect{x}}$ (since $\vect{x}$ is in $L_{\vect{x}}$). Hence $A\vect{x} = t\vect{x}$ for some $t$ in $\RR$, so $\vect{x}$ is an eigenvector for $A$ (with eigenvalue $t$). This proves:
+
+
+\begin{theorem}{}{009136}
+Let $A$ be a $2 \times 2$ matrix, let $\vect{x} \neq \vect{0}$ be a vector in $\RR^2$, and let $L_{\vect{x}}$ be the line through the origin in $\RR^2$ containing $\vect{x}$. Then
+\begin{equation*}
+\vect{x} \mbox{ is an eigenvector of } A \quad \mbox{ if and only if } \quad L_{\vect{x}} \mbox{ is } A\mbox{-invariant}
+\end{equation*}
+\end{theorem}
+
+\begin{example}{}{009143}
+\begin{enumerate}
+\item If $\theta$ is not a multiple of $\pi$, show that $A = \leftB \begin{array}{cc}
+\cos \theta & - \sin \theta \\
+\sin \theta & \cos \theta
+\end{array}\rightB$
+ has no real eigenvalue.
+
+\item If $m$ is real show that $B = \frac{1}{1+m^2} \leftB \begin{array}{cc}
+1-m^2 & 2m \\
+2m & m^2 -1
+\end{array}\rightB$
+ has a 1 as an eigenvalue.
+
+\end{enumerate}
+
+\begin{solution}
+\begin{enumerate}
+\item $A$ induces rotation about the origin through the angle $\theta$ (Theorem \ref{thm:006021}). Since $\theta$ is not a multiple of $\pi$, this shows that no line through the origin is $A$-invariant. Hence $A$ has no eigenvector by Theorem~\ref{thm:009136}, and so has no eigenvalue.
+
+\item $B$ induces reflection $Q_{m}$ in the line through the origin with slope $m$ by Theorem \ref{thm:006096}. If $\vect{x}$ is any nonzero point on this line then it is clear that $Q_{m}\vect{x} = \vect{x}$, that is $Q_{m}\vect{x} = 1\vect{x}$. Hence 1 is an eigenvalue (with eigenvector $\vect{x}$).
+
+\end{enumerate}
+\end{solution}
+\end{example}
+
+If $\theta = \frac{\pi}{2}$ in Example~\ref{exa:009143}, then $A = \leftB \begin{array}{rr}
+0 & -1 \\
+1 & 0 
+\end{array}\rightB$
+ so $c_{A}(x) = x^{2} + 1$. This polynomial has no root in $\RR$, so $A$ has no (real) eigenvalue, and hence no eigenvector. In fact its eigenvalues are the complex numbers $i$ and $-i$, with corresponding eigenvectors $\leftB \begin{array}{r}
+1 \\
+-i 
+\end{array}\rightB$
+ and $\leftB \begin{array}{r}
+1 \\
+i 
+\end{array}\rightB$
+ In other words, $A$ \textit{has} eigenvalues and eigenvectors, just not real ones.
+
+
+Note that \textit{every} polynomial has complex roots\index{polynomials!complex roots},\footnote{This is called the \textit{Fundamental Theorem of Algebra}\index{fundamental theorem of algebra} and was first proved by Gauss\index{Gauss, Carl Friedrich} in his doctoral dissertation.} so every matrix has complex eigenvalues\index{eigenvalues!complex eigenvalues}. While these eigenvalues may very well be real, this suggests that we really should be doing linear algebra over the complex numbers. Indeed, everything we have done (gaussian elimination, matrix algebra, determinants, etc.) works if all the scalars are complex.
+
+
+

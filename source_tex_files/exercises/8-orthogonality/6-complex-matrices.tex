@@ -1,0 +1,468 @@
+
+\section*{Exercises for \ref{sec:8_6}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:8_6}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+In each case, compute the norm of the complex vector.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $(1, 1 - i, -2, i)$
+
+\item $(1 - i, 1 + i, 1, -1)$
+
+\item $(2 + i, 1 - i, 2, 0, -i)$
+
+\item $(-2, -i, 1 + i, 1 - i, 2i)$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\sqrt{6}$
+
+\setcounter{enumi}{3}
+\item  $\sqrt{13}$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, determine whether the two vectors are orthogonal.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $(4, -3i, 2 + i)$, $(i, 2, 2 - 4i)$
+
+\item $(i, -i, 2 + i)$, $(i, i, 2 - i)$
+
+\item $(1, 1, i, i)$, $(1, i, -i, 1)$
+
+\item $(4 + 4i, 2 + i, 2i)$, $(-1 + i, 2, 3 - 2i)$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Not orthogonal
+
+\setcounter{enumi}{3}
+\item  Orthogonal
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+A subset $U$ of $\mathbb{C}^n$ is called a \textbf{complex subspace}\index{subspaces!complex subspace}\index{complex subspace} of $\mathbb{C}^n$ if it contains $0$ and if, given $\vect{v}$ and $\vect{w}$ in $U$, both $\vect{v} + \vect{w}$ and $z\vect{v}$ lie in $U$ ($z$ any complex number). In each case, determine whether $U$ is a complex subspace of $\mathbb{C}^3$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $U = \{(w, \overline{w}, 0) \mid w \mbox{ in } \mathbb{C}\}$
+
+\item $U = \{(w, 2w, a) \mid w \mbox{ in } \mathbb{C}, a \mbox{ in } \RR\}$
+
+\item $U = \RR^3$
+
+\item $U = \{(v + w, v - 2w, v) \mid v, w \mbox{ in } \mathbb{C}\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Not a subspace. For example, $i(0, 0, 1) = (0, 0, i)$ is not in $U$.
+
+\setcounter{enumi}{3}
+\item  This is a subspace.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, find a basis over $\mathbb{C}$, and determine the dimension of the complex subspace $U$ of $\mathbb{C}^3$ (see the previous exercise).
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $U = \{(w, v + w, v - iw) \mid v, w \mbox{ in } \mathbb{C}\}$
+
+\item $U = \{(iv + w, 0, 2v - w) \mid v, w \mbox{ in } \mathbb{C}\}$
+
+\item $U = \{(u, v, w) \mid  iu - 3v + (1 - i)w = 0;\  \\ u, v, w \mbox{ in } \mathbb{C}\}$
+
+\item $U = \{(u, v, w) \mid 2u + (1 + i)v - iw = 0;\ \\ u, v, w \mbox{ in } \mathbb{C}\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Basis $\{(i, 0, 2), (1, 0, -1)\}$; dimension $2$
+
+\setcounter{enumi}{3}
+\item  Basis $\{(1, 0, -2i), (0, 1, 1 - i)\}$; dimension $2$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, determine whether the given matrix is hermitian, unitary, or normal.
+
+\begin{exenumerate}[column-sep=-15pt]
+\exitem $\leftB \begin{array}{rr}
+1 & -i \\
+i & i
+\end{array}\rightB$
+\exitem $\leftB \begin{array}{rr}
+2 & 3 \\
+-3 & 2
+\end{array}\rightB$
+\exitem $\leftB \begin{array}{rr}
+1 & i \\
+-i & 2
+\end{array}\rightB$
+\exitem $\leftB \begin{array}{rr}
+1 & -i \\
+i & -1
+\end{array}\rightB$
+\exitem $\frac{1}{\sqrt{2}} \leftB \begin{array}{rr}
+1 & -1 \\
+1 & 1
+\end{array}\rightB$
+\exitem $\leftB \begin{array}{cc}
+1 & 1 + i \\
+1 + i & i
+\end{array}\rightB$
+\exitem $\leftB \begin{array}{cc}
+1 + i & 1 \\
+-i & -1 + i
+\end{array}\rightB$
+\exitem $\frac{1}{\sqrt{2}|z|}\leftB \begin{array}{rr}
+z & z \\
+\overline{z} & -\overline{z}
+\end{array}\rightB$, $z \neq 0$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Normal only
+
+\setcounter{enumi}{3}
+\item  Hermitian (and normal), not unitary
+
+\setcounter{enumi}{5}
+\item  None
+
+\setcounter{enumi}{7}
+\item  Unitary (and normal); hermitian if and only if $z$ is real
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that a matrix $N$ is normal if and only if $\overline{N}N^T = N^T\overline{N}$.
+\end{ex}
+
+\begin{ex}
+Let $A = \leftB \begin{array}{cc}
+z & \overline{v} \\
+v & w
+\end{array}\rightB$
+ where $v$, $w$, and $z$ are complex numbers. Characterize in terms of $v$, $w$, and $z$ when $A$ is
+
+\begin{exenumerate}
+\exitem hermitian
+\exitem unitary
+\exitem normal.
+\end{exenumerate}
+\end{ex}
+
+\begin{ex}
+In each case, find a unitary matrix $U$ such that $U^{H}AU$ is diagonal.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $A = \leftB \begin{array}{rr}
+1 & i\\
+-i & 1
+\end{array}\rightB$
+
+\item $A = \leftB \begin{array}{cc}
+4 & 3 - i \\
+3 + i & 1
+\end{array}\rightB$
+
+\item $A = \leftB \begin{array}{rr}
+a & b\\
+-b & a
+\end{array}\rightB$;  $a$, $b$, real 
+
+\item $A = \leftB \begin{array}{cc}
+2 & 1 + i\\
+1 - i & 3
+\end{array}\rightB$
+
+\item $A = \leftB \begin{array}{ccc}
+1 & 0 &  1 + i\\
+0 & 2 & 0 \\
+1 - i & 0 & 0
+\end{array}\rightB$
+
+\item $A = \leftB \begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 1 + i\\
+0 & 1 - i & 2
+\end{array}\rightB$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $U = \frac{1}{\sqrt{14}}\leftB \begin{array}{cc}
+-2 & 3 - i \\
+3 + i & 2
+\end{array}\rightB$, $U^HAU = \leftB \begin{array}{rr}
+-1 & 0 \\
+0 & 6
+\end{array}\rightB$
+
+\setcounter{enumi}{3}
+\item  $U = \frac{1}{\sqrt{3}}\leftB \begin{array}{cc}
+1 + i & 1 \\
+-1 & 1 - i
+\end{array}\rightB$, $U^HAU = \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 4
+\end{array}\rightB$
+
+\setcounter{enumi}{5}
+\item  $U = \frac{1}{\sqrt{3}}\leftB \begin{array}{ccc}
+\sqrt{3} & 0 & 0 \\
+0 & 1 + i & 1 \\
+0 & -1 & 1 - i
+\end{array}\rightB$, $U^HAU = \leftB \begin{array}{rrr}
+1 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 3
+\end{array}\rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that $\langle A \vect{x}, \vect{y} \rangle = \langle \vect{x}, A^{H}\vect{y}\rangle$ holds for all $n \times n$ matrices $A$ and for all $n$-tuples $\vect{x}$ and $\vect{y}$ in $\mathbb{C}^n$.
+\end{ex}
+
+\begin{ex}\label{ex:8_6_10}
+\begin{enumerate}[label={\alph*.}]
+\item Prove (1) and (2) of Theorem~\ref{thm:025575}.
+
+\item Prove Theorem~\ref{thm:025616}.
+
+\item Prove Theorem~\ref{thm:025659}.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\vectlength \lambda Z \vectlength^2 = \langle \lambda Z, \lambda Z \rangle = \lambda\overline{\lambda} \langle Z, Z \rangle = |\lambda|^2 \vectlength Z \vectlength^2$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Show that $A$ is hermitian if and only if $\overline{A} = A^T$.
+
+\item Show that the diagonal entries of any hermitian matrix are real.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If the $(k, k)$-entry of $A$ is $a_{kk}$, then the $(k, k)$-entry of $\overline{A}$ is $\overline{a}_{kk}$ so the $(k, k)$-entry of $(\overline{A})^T = A^{H}$ is $\overline{a}_{kk}$. This equals $a$, so $a_{kk}$ is real.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Show that every complex matrix $Z$ can be written uniquely in the form $Z = A + iB$, where $A$ and $B$ are real matrices.
+
+\item If $Z = A + iB$ as in (a), show that $Z$ is hermitian if and only if $A$ is symmetric, and $B$ is skew-symmetric (that is, $B^{T} = -B$).
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+If $Z$ is any complex $n \times n$ matrix, show that $ZZ^{H}$ and $Z + Z^{H}$ are hermitian.
+\end{ex}
+
+\begin{ex}
+A complex matrix $B$ is called \textbf{skew-hermitian}\index{skew-hermitian}\index{complex matrix!skew-hermitian} if $B^{H} = -B$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $Z - Z^{H}$ is skew-hermitian for any square complex matrix $Z$.
+
+\item If $B$ is skew-hermitian, show that $B^{2}$ and $iB$ are hermitian.
+
+\item If $B$ is skew-hermitian, show that the eigenvalues of $B$ are pure imaginary ($i \lambda$ for real $\lambda$).
+
+\item Show that every $n \times n$ complex matrix $Z$ can be written uniquely as $Z = A + B$, where $A$ is hermitian and $B$ is skew-hermitian.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Show that $(B^2)^H = B^HB^H = (-B)(-B) = B^2$; $(iB)^H = \overline{i}B^H = (-i)(-B) = iB$.
+
+
+\setcounter{enumi}{3}
+\item  If $Z = A + B$, as given, first show that $Z^{H} = A - B$, and hence that $A = \frac{1}{2}(Z + Z^{H})$ and $B = \frac{1}{2}(Z - Z^{H})$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $U$ be a unitary matrix. Show that:
+
+\begin{enumerate}[label={\alph*.}]
+\item $\vectlength U\vect{x} \vectlength = \vectlength \vect{x} \vectlength$ for all columns $\vect{x}$ in $\mathbb{C}^n$.
+
+\item $|\lambda| = 1$ for every eigenvalue $\lambda$ of $U$.
+
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If $Z$ is an invertible complex matrix, show that $Z^{H}$ is invertible and that $(Z^{H})^{-1} = (Z^{-1})^{H}$.
+
+\item Show that the inverse of a unitary matrix is again unitary.
+
+\item If $U$ is unitary, show that $U^{H}$ is unitary.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $U$ is unitary, $(U^{-1})^{-1} = (U^{H})^{-1} = (U^{-1})^{H}$, so $U^{-1}$ is unitary.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $Z$ be an $m \times n$ matrix such that $Z^{H}Z = I_{n}$ (for example, $Z$ is a unit column in $\mathbb{C}^n$).
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $V = ZZ^{H}$ is hermitian and satisfies \\ $V^{2} = V$.
+
+\item Show that $U = I - 2ZZ^{H}$ is both unitary and hermitian (so $U^{-1} = U^{H} = U$).
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If $N$ is normal, show that $zN$ is also normal for all complex numbers $z$.
+
+\item Show that (a) fails if \textit{normal} is replaced by \textit{hermitian}.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $H = \leftB \begin{array}{rr}
+1 & i \\
+-i & 0
+\end{array}\rightB$ is hermitian but $iH = \leftB \begin{array}{rr}
+i & -1 \\
+1 & 0
+\end{array}\rightB$ is not.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that a real $2 \times 2$ normal matrix is either symmetric or has the form $\leftB \begin{array}{rr}
+a & b \\
+-b & a
+\end{array}\rightB$.
+\end{ex}
+
+\begin{ex}
+If $A$ is hermitian, show that all the coefficients of $c_{A}(x)$ are real numbers.
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If $A = \leftB \begin{array}{rr}
+1 & 1 \\
+0 & 1
+\end{array}\rightB$, show that $U^{-1}AU$ is not diagonal for any invertible complex matrix $U$.
+
+\item If $A = \leftB \begin{array}{rr}
+0 & 1 \\
+-1 & 0
+\end{array}\rightB$, show that $U^{-1}AU$ is not upper triangular for any \textit{real} invertible matrix $U$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Let $U = \leftB \begin{array}{rr}
+a & b \\
+c & d
+\end{array}\rightB$ be real and invertible, and assume that $U^{-1}AU = \leftB \begin{array}{rr}
+\lambda & \mu \\
+0 & v
+\end{array}\rightB$.
+ Then $AU = U\leftB \begin{array}{rr}
+ \lambda & \mu \\
+ 0 & v
+ \end{array}\rightB$, and first column entries are $c = a\lambda$ and $-a = c\lambda$. Hence $\lambda$ is real ($c$ and $a$ are both real and are not both $0$), and $(1 + \lambda^{2})a = 0$. Thus $a = 0$, $c = a\lambda = 0$, a contradiction.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is any $n \times n$ matrix, show that $U^{H}AU$ is lower triangular for some unitary matrix $U$.
+\end{ex}
+
+\begin{ex}
+If $A$ is a $3 \times 3$ matrix, show that $A^{2} = 0$ if and only if there exists a unitary matrix $U$ such that $U^{H}AU$ has the form $\leftB \begin{array}{rrr}
+0 & 0 & u \\
+0 & 0 & v \\
+0 & 0 & 0
+\end{array}\rightB$
+or the form $\leftB \begin{array}{rrr}
+0 & u & v \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{array}\rightB$.
+\end{ex}
+
+\begin{ex}
+If $A^{2} = A$, show that rank $A = \func{tr}A$. [\textit{Hint}: Use Schur's theorem.]
+\end{ex}
+
+\begin{ex}
+Let $A$ be any $n \times n$ complex matrix with eigenvalues $\lambda_1, \dots, \lambda_n$. Show that $A = P+N$ where $N^{n}=0$ and $P=UDU^{T}$ where $U$ is unitary and $D=\func{diag}(\lambda_1,\dots,\lambda_{n})$. [Hint: Schur's theorem]
+\end{ex}
+\end{multicols}

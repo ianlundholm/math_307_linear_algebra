@@ -1,0 +1,222 @@
+\section*{Exercises for \ref{sec:2_8}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:2_8}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\vspace*{-2em}
+\begin{ex}
+Find the possible equilibrium price structures when the input-output matrices are:
+\begin{exenumerate}
+\exitem $\leftB \begin{array}{rrr}
+0.1 & 0.2 & 0.3 \\
+0.6 & 0.2 & 0.3 \\
+0.3 & 0.6 & 0.4
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+0.5 & 0 & 0.5 \\
+0.1 & 0.9 & 0.2 \\
+0.4 & 0.1 & 0.3
+\end{array} \rightB$
+\exitem* $\leftB \begin{array}{rrrr}
+0.3 & 0.1 & 0.1 & 0.2 \\
+0.2 & 0.3 & 0.1 & 0 \\
+0.3 & 0.3 & 0.2 & 0.3 \\
+0.2 & 0.3 & 0.6 & 0.5
+\end{array} \rightB$
+\exitem* $\leftB \begin{array}{rrrr}
+0.5 & 0 & 0.1 & 0.1 \\
+0.2 & 0.7 & 0 & 0.1 \\
+0.1 & 0.2 & 0.8 & 0.2 \\
+0.2 & 0.1 & 0.1 & 0.6
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\leftB \begin{array}{r}
+t \\
+3t \\
+t
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item $\leftB \begin{array}{r}
+14t \\
+17t \\
+47t \\
+23t
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Three industries $A$, $B$, and $C$ are such that all the output of $A$ is used by $B$, all the output of $B$ is used by $C$, and all the output of $C$ is used by $A$. Find the possible equilibrium price structures.
+
+\begin{sol}
+$\leftB \begin{array}{r}
+t \\
+t \\
+t
+\end{array} \rightB$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the possible equilibrium price structures for three industries where the input-output matrix is $\leftB \begin{array}{rrr}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \rightB$. Discuss why there are two parameters here.
+\end{ex}
+
+\begin{ex}
+Prove Theorem~\ref{thm:007013} for a $2 \times 2$ stochastic matrix $E$ by first writing it in the form $E = \leftB \begin{array}{cc}
+a & b \\
+1 - a & 1 - b
+\end{array} \rightB$, where $0 \leq a \leq 1$ and $0 \leq b \leq 1$.
+
+\begin{sol}
+$P = \leftB \begin{array}{c}
+bt \\
+(1 - a)t
+\end{array} \rightB$
+ is nonzero (for some $t$) unless $b = 0$ and $a = 1$. In that case, $\leftB \begin{array}{r}
+ 1 \\
+ 1
+ \end{array} \rightB$
+ is a solution. If the entries of $E$ are positive, then $P = \leftB \begin{array}{c}
+ b \\
+ 1 - a
+ \end{array} \rightB$
+ has positive entries.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $E$ is an $n \times n$ stochastic matrix and $\vect{c}$ is an $n \times 1$ matrix, show that the sum of the entries of $\vect{c}$ equals the sum of the entries of the $n \times 1$ matrix $E\vect{c}$.
+\end{ex}
+
+\begin{ex}
+Let $W = \leftB \begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1
+\end{array} \rightB$. Let $E$ and $F$ denote $n \times n$ matrices with nonnegative entries.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $E$ is a stochastic matrix if and only if $WE = W$.
+
+\item Use part (a.) to deduce that, if $E$ and $F$ are both stochastic matrices, then $EF$ is also stochastic.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Find a $2 \times 2$ matrix $E$ with entries between $0$ and $1$ such that:
+
+\begin{enumerate}[label={\alph*.}]
+\item $I - E$ has no inverse.
+
+\item $I - E$ has an inverse but not all entries of $(I - E)^{-1}$ are nonnegative.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\leftB \begin{array}{rr}
+0.4 & 0.8 \\
+0.7 & 0.2
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $E$ is a $2 \times 2$ matrix with entries between $0$ and $1$, show that $I - E$ is invertible and $(I - E)^{-1} \geq 0$ if and only if $\func{tr }E < 1 + \func{det }E$. Here, if $E = \leftB \begin{array}{rr}
+a & b \\
+c & d
+\end{array} \rightB$,
+ then $\func{tr }E = a + d$ and $\func{det }E = ad - bc$.
+
+\begin{sol}
+If $E = \leftB \begin{array}{rr}
+	a & b \\
+	c & d
+\end{array} \rightB$,
+ then $I - E = \leftB \begin{array}{cc}
+ 1 - a & -b \\
+ -c & 1 - d
+ \end{array} \rightB$,
+ so $\func{det}(I - E) = (1 - a)(1 - d) - bc = 1 - \func{tr }E + \func{det }E$. If $\func{det}(I - E) \neq 0$, then $(I - E)^{-1} = \frac{1}{\func{det}(I - E)} \leftB \begin{array}{cc}
+ 1 - d & b \\
+ c & 1 - a
+ \end{array} \rightB$, so $(I - E)^{-1} \geq 0$ if $\func{det}(I - E) > 0$, that is, $\func{tr }E < 1 + \func{det } E$.
+ The converse is now clear.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case show that $I - E$ is invertible and $(I - E)^{-1} \geq 0$.
+\begin{exenumerate}
+\exitem $\leftB \begin{array}{rrr}
+0.6 & 0.5 & 0.1 \\
+0.1 & 0.3 & 0.3 \\
+0.2 & 0.1 & 0.4
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+0.7 & 0.1 & 0.3 \\
+0.2 & 0.5 & 0.2 \\
+0.1 & 0.1 & 0.4
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+0.6 & 0.2 & 0.1 \\
+0.3 & 0.4 & 0.2 \\
+0.2 & 0.5 & 0.1
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+0.8 & 0.1 & 0.1 \\
+0.3 & 0.1 & 0.2 \\
+0.3 & 0.3 & 0.2
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Use $\vect{p} = \leftB \begin{array}{r}
+3 \\
+2 \\
+1
+\end{array} \rightB$
+ in Theorem~\ref{thm:007060}.
+
+\setcounter{enumi}{3}
+\item  $\vect{p} = \leftB \begin{array}{r}
+3 \\
+2 \\
+2
+\end{array} \rightB$
+ in Theorem~\ref{thm:007060}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}\label{ex:ex2_8_10}
+Prove that (1) implies (2) in the Corollary to Theorem~\ref{thm:007060}.
+\end{ex}
+
+\begin{ex}\label{ex:ex2_8_11}
+If $(I - E)^{-1} \geq 0$, find $\vect{p} > 0$ such that $\vect{p} > E\vect{p}$.
+\end{ex}
+
+\begin{ex}\label{ex:ex2_8_12}
+If $E\vect{p} < \vect{p}$ where $E \geq 0$ and $\vect{p} > 0$, find a number $\mu$ such that $E\vect{p} < \mu\vect{p}$ and $0 < \mu < 1$.
+
+
+[\textit{Hint}: If $E\vect{p} = (q_{1}, \dots, q_{n})^{T}$ and $\vect{p} = (p_{1}, \dots, p_{n})^{T}$, take any number $\mu$ where $\func{max}\left\lbrace \frac{q_{1}}{p_{1}}, \dots, \frac{q_{n}}{p_{n}} \right\rbrace < \mu < 1$.]
+\end{ex}
+
+\end{multicols}

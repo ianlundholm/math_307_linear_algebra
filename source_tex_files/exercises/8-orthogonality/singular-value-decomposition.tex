@@ -1,0 +1,274 @@
+
+\section*{Exercises for \ref{sec:SVD}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:SVD}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+If $ACA=A$ show that $B=CAC$ is a middle inverse for $A$.
+\end{ex} 
+
+\begin{ex} 
+For any matrix $A$ show that
+\begin{equation*}
+\Sigma_{A^{T}}=(\Sigma_{A})^{T}
+\end{equation*}
+\end{ex}
+
+\begin{ex}
+If $A$ is $m\times n$ with all singular values positive, what is $\func{rank}A$?
+\end{ex}
+
+\begin{ex}
+If $A$ has singular values $\sigma_{1},\dots ,\sigma_{r}$, what are the singular values of:
+
+\begin{exenumerate}
+\exitem $A^{T}$ 
+\exitem $tA$ where $t>0$ is real
+\exitem* $A^{-1}$ assuming $A$ is invertible.
+\end{exenumerate}
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $t\sigma _{1},\dots ,t\sigma _{r}.$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is square show that $| \func{det}A |$ is the product of the singular values of $A$.
+\end{ex}
+
+\begin{ex}
+If $A$ is square and real, show that $A=0$ if and only if every eigenvalue of $A^T A$ (or $AA^T$) is $0$.
+\end{ex} 
+
+\begin{ex}
+Given a SVD for an invertible matrix $A$, find one for $A^{-1}$. How are $\Sigma_{A}$ and $\Sigma_{A^{-1}}$ related?
+\begin{sol}
+If $A=U\Sigma V^{T}$ then $\Sigma$ is invertible, so $A^{-1}=V\Sigma^{-1}U^{T}$ is a SVD.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A^{-1}=A=A^{T}$ where $A$ is $n\times n$. Given any orthogonal $n\times n$ matrix $U$, find an orthogonal matrix $V$ such that $A=U\Sigma_{A}V^{T}$ is an SVD for $A$.
+
+\noindent If $A=
+\leftB 
+\begin{array}{cc}
+0 & 1 \\ 
+1 & 0
+\end{array}
+\rightB $ do this for:
+\begin{exenumerate}
+\exitem $U=\frac{1}{5}
+\leftB 
+\begin{array}{rr}
+3 & -4 \\ 
+4 & 3
+\end{array}
+\rightB$
+\exitem $U=\frac{1}{\sqrt{2}}
+\leftB 
+\begin{array}{rr}
+1 & -1 \\ 
+1 & 1
+\end{array}
+\rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item First $A^{T}A=I_{n}$ so $\Sigma _{A}=I_{n}$.  
+\begin{eqnarray*}
+A &=& \frac{1}{\sqrt{2}}\leftB
+\begin{array}{rr}
+1 & 1 \\ 
+1 & -1
+\end{array}
+\rightB
+\leftB
+\begin{array}{rr}
+1 & 0 \\ 
+0 & 1
+\end{array}
+\rightB \frac{1}{\sqrt{2}}
+\leftB 
+\begin{array}{rr}
+1 & 1 \\ 
+-1 & 1
+\end{array}
+\rightB \\
+& =&\frac{1}{\sqrt{2}}\leftB 
+\begin{array}{rr}
+1 & -1 \\ 
+1 & 1
+\end{array}
+\rightB \frac{1}{\sqrt{2}}
+\leftB 
+\begin{array}{rr}
+-1 & 1 \\ 
+1 & 1
+\end{array}
+\rightB \\
+& =& \leftB
+\begin{array}{rr}
+-1 & 0 \\ 
+0 & 1
+\end{array}
+\rightB 
+\end{eqnarray*}
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find a SVD for the following
+matrices:
+
+\begin{exenumerate}
+\exitem  $A=
+\leftB 
+\begin{array}{rr}
+1 & -1 \\ 
+0 & 1 \\ 
+1 & 0
+\end{array}
+\rightB$
+\exitem  
+$\leftB 
+\begin{array}{rrr}
+1 & 1 & 1 \\ 
+-1 & 0 & -2 \\ 
+1 & 2 & 0
+\end{array}
+\rightB $
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item 
+\begin{equation*}
+\hspace*{-15em} A = F
+\end{equation*}
+\begin{equation*}
+\hspace*{-5em} = \scriptsize \frac{1}{5}\leftB
+\begin{array}{rr}
+3 & 4 \\ 
+4 & -3
+\end{array}
+\rightB 
+\leftB 
+\begin{array}{rrrr}
+20 & 0 & 0 & 0 \\ 
+0 & 10 & 0 & 0
+\end{array}
+\rightB \frac{1}{2}
+\leftB 
+\begin{array}{rrrr}
+1 & 1 & 1 & 1 \\ 
+1 & -1 & 1 & -1 \\ 
+1 & 1 & -1 & -1 \\ 
+1 & -1 & 1 & -1
+\end{array}
+\rightB 
+\end{equation*}
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find an SVD for $A=
+\leftB 
+\begin{array}{rr}
+0 & 1 \\ 
+-1 & 0
+\end{array}
+\rightB$.
+\end{ex}
+
+
+\begin{ex}
+If $A=U\Sigma V^{T}$ is an SVD for $A$, find an SVD for $A^{T}$.
+\end{ex} 
+
+\begin{ex}
+Let $A$ be a real, $m\times n$ matrix with positive singular values $\sigma_{1},\sigma_{2},\dots ,\sigma_{r}$, and write 
+\begin{equation*}
+s(x)=(x-\sigma_{1})(x-\sigma_{2})\cdots (x-\sigma_{r})
+\end{equation*}
+\begin{enumerate}[label={\alph*.}]
+\item Show that $c_{A^{T}A}(x)=s(x)x^{n-r}$ and \newline $c_{AA^{T}}(x)=s(x)x^{m-r}$.
+\item If $m\leq n$ conclude that $c_{A^{T}A}(x)=s(x)x^{n-m}$.
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+If $G$ is positive show that: 
+\begin{enumerate}[label={\alph*.}]
+\item $rG$ is positive if $r\geq 0$
+\item $G+H$ is positive for any positive $H$.
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item If $\vect{x}\in \RR^{n}$ then $\vect{x}^{T}(G+H)\vect{x}=\vect{x}^{T}G\vect{x}+\vect{x}^{T}H\vect{x}\geq 0+0=0$.
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $G$ is positive and $\lambda$ is an eigenvalue, show that $\lambda \geq 0$.
+\end{ex}
+
+\begin{ex}
+If $G$ is positive show that $G=H^{2}$ for some positive matrix $H$. [Hint: Preceding exercise and Lemma \ref{lem:svdlemma5}] 
+\end{ex}
+
+\begin{ex}
+If $A$ is $n\times n$ show that $AA^{T}$ and $A^{T}A$ are similar. [Hint: Start with an SVD for $A$.]
+\end{ex} 
+
+\begin{ex}
+Find $A^{+}$ if: 
+\begin{enumerate}[label={\alph*.}]
+\item
+ $A=
+\leftB 
+\begin{array}{rr}
+1 & 2 \\ 
+-1 & -2
+\end{array}
+\rightB$
+
+\item $A=
+\leftB 
+\begin{array}{rr}
+1 & -1 \\ 
+0 & 0 \\ 
+1 & -1
+\end{array}
+\rightB $
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $
+\leftB 
+\begin{array}{rrr}
+\frac{1}{4} & 0 & \frac{1}{4} \\ 
+-\frac{1}{4} & 0 & -\frac{1}{4}
+\end{array}
+\rightB $
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Show that $(A^{+})^{T}=(A^{T})^{+}$.
+\end{ex}
+\end{multicols}

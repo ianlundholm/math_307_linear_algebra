@@ -1,0 +1,392 @@
+
+\section*{Exercises for \ref{sec:5_5}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:5_5}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+By computing the trace, determinant, and rank, show that $A$ and $B$ are \textit{not} similar in each case.
+
+\begin{enumerate}[label={\alph*.}]
+\item $A = \leftB \begin{array}{rr}
+	1 & 2 \\
+	2 & 1
+\end{array} \rightB$, $B =
+\leftB \begin{array}{rr}
+	1 & 1\\
+	-1 & 1
+\end{array} \rightB$
+
+\item $A = 
+\leftB \begin{array}{rr}
+3 & 1 \\
+2 & -1
+\end{array} \rightB$, $B =
+\leftB \begin{array}{rr}
+1 & 1 \\
+2 & 1
+\end{array} \rightB$
+
+\item $A =
+\leftB \begin{array}{rr}
+2 & 1 \\
+1 & -1 
+\end{array} \rightB$, $B =
+\leftB \begin{array}{rr}
+3 & 0 \\
+1 & -1
+\end{array} \rightB$
+
+\item $A = 
+\leftB \begin{array}{rr}
+3 & 1 \\
+-1 & 2 
+\end{array} \rightB$, $B =
+\leftB \begin{array}{rr}
+2 & -1 \\
+3 & 2
+\end{array} \rightB$
+
+\item $A = 
+\leftB \begin{array}{rrr}
+2 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0
+\end{array} \rightB$, $B = 
+\leftB \begin{array}{rrr}
+ 1 & -2 & 1 \\
+-2 & 4 & -2 \\
+-3 & 6 & -3 
+\end{array} \rightB$
+
+\item $A = 
+\leftB \begin{array}{rrr}
+1 & 2 & -3 \\
+1 & -1 & 2 \\
+0 & 3 & -5
+\end{array} \rightB$, $B =
+\leftB \begin{array}{rrr}
+-2 & 1 & 3 \\
+ 6 & -3 & -9 \\
+ 0 & 0 & 0
+\end{array} \rightB$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  traces $= 2$, ranks $= 2$, but $\func{det} A = -5$, $\func{det} B = -1$
+
+\setcounter{enumi}{3}
+\item  ranks $= 2$, determinants $= 7$, but $\func{tr} A = 5$, $\func{tr} B = 4$
+
+\setcounter{enumi}{5}
+\item  traces $= -5$, determinants $= 0$, but $\func{rank} A = 2$, $\func{rank} B = 1$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that $\leftB \begin{array}{rrrr}
+1 & 2 & -1 &  0 \\
+2 & 0 &  1 &  1 \\
+1 & 1 &  0 & -1 \\
+4 & 3 & 0 & 0
+\end{array} \rightB$ and $
+\leftB \begin{array}{rrrr}
+  1 & -1 &  3 &  0 \\
+ -1 &  0 &  1 &  1 \\
+  0 & -1 &  4 &  1 \\
+  5 & -1 & -1 & -4
+\end{array} \rightB$ are \textit{not} similar.
+\end{ex}
+
+\begin{ex}
+If $A \sim B$, show that:
+
+\begin{exenumerate}
+\exitem $A^{T} \sim B^{T}$
+\exitem $A^{-1} \sim B^{-1}$
+\exitem $rA \sim rB$ for $r$ in $\RR$
+\exitem $A^{n} \sim B^{n}$ for $n \geq 1$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $B = P^{-1}AP$, then $B^{-1} = P^{-1}A^{-1}(P^{-1})^{-1} = P^{-1}A^{-1}P$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, decide whether the matrix $A$ is diagonalizable. If so, find $P$ such that $P^{-1}AP$ is diagonal.
+
+\begin{exenumerate}
+\exitem $\leftB \begin{array}{rrr}
+1 & 0 & 0 \\
+1 & 2 & 1 \\
+0 & 0 & 1
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+3 &  0 & 6 \\
+0 & -3 & 0 \\
+5 &  0 & 2
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+ 3 &  1 &  6 \\
+ 2 &  1 &  0 \\
+-1 &  0 & -3 
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+4 & 0 & 0 \\
+0 & 2 & 2 \\
+2 & 3 & 1
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Yes, $ P =
+\leftB \begin{array}{rrr}
+-1 & 0 & 6 \\
+ 0 & 1 & 0 \\
+ 1 & 0 & 5
+\end{array} \rightB$, $P^{-1}AP = 
+\leftB \begin{array}{rrr}
+-3 &  0 & 0 \\
+ 0 & -3 & 0 \\
+ 0 &  0 & 8
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item  No, $c_{A}(x) = (x + 1)(x - 4)^{2}$ so $\lambda = 4$ has multiplicity 2. But $\func{dim}(E_{4}) = 1$ so Theorem~\ref{thm:016250} applies.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is invertible, show that $AB$ is similar to $BA$ for all $B$.
+\end{ex}
+
+\begin{ex}
+Show that the only matrix similar to a scalar matrix $A = rI$, $r$ in $\RR$, is $A$ itself.
+\end{ex}
+
+\begin{ex}
+Let $\lambda$ be an eigenvalue of $A$ with corresponding eigenvector $\vect{x}$. If $B = P^{-1}AP$ is similar to $A$, show that $P^{-1}\vect{x}$ is an eigenvector of $B$ corresponding to $\lambda$.
+\end{ex}
+
+\begin{ex}
+If $A \sim B$ and $A$ has any of the following properties, show that $B$ has the same property.
+
+\begin{enumerate}[label={\alph*.}]
+\item Idempotent, that is $A^{2} = A$.
+
+\item Nilpotent, that is $A^{k} = 0$ for some $k \geq 1$.
+
+\item Invertible.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $B = P^{-1}AP$ and $A^{k} = 0$, then $B^{k} = (P^{-1}AP)^{k} = P^{-1}A^{k}P = P^{-1}0P = 0$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ denote an $n \times n$ upper triangular matrix.
+
+\begin{enumerate}[label={\alph*.}]
+\item If all the main diagonal entries of $A$ are distinct, show that $A$ is diagonalizable.
+
+\item If all the main diagonal entries of $A$ are equal, show that $A$ is diagonalizable only if it is \textit{already} diagonal.
+
+\item Show that $\leftB \begin{array}{rrr}
+1 & 0 & 1 \\
+0 & 1 & 0 \\
+0 & 0 & 2
+\end{array} \rightB$ is diagonalizable but that $
+ \leftB \begin{array}{rrr}
+ 1 & 1 & 0 \\
+ 0 & 1 & 0 \\
+ 0 & 0 & 2
+ \end{array} \rightB$ is not diagonalizable.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  The eigenvalues of $A$ are all equal (they are the diagonal elements), so if $P^{-1}AP = D$ is diagonal, then $D = \lambda I$. Hence $A = P^{-1}(\lambda I)P = \lambda I$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+
+\begin{ex}
+Let $A$ be a diagonalizable $n \times n$ matrix with eigenvalues $\lambda_{1}, \lambda_{2}, \dots, \lambda_{n}$ (including multiplicities). Show that:
+
+\begin{enumerate}[label={\alph*.}]
+\item $\func{det} A = \lambda_{1}\lambda_{2}\cdots \lambda_{n}$
+
+\item $\func{tr} A = \lambda_{1} + \lambda_{2} + \cdots + \lambda_{n}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $A$ is similar to $D = \func{diag}(\lambda_{1}, \lambda_{2}, \dots, \lambda_{n})$ so (Theorem~\ref{thm:016008}) $\func{tr} A = \func{tr} D = \lambda_{1} + \lambda_{2} + \dots + \lambda_{n}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Given a polynomial $p(x) = r_{0} + r_{1}x + \dots + r_{n}x^{n}$ and a square matrix $A$, the matrix $p(A) = r_{0}I + r_{1}A + \dots  + r_{n}A^{n}$ is called the \textbf{evaluation}\index{evaluation} of $p(x)$ at $A$. Let $B = P^{-1}AP$. Show that $p(B) = P^{-1}p(A)P$ for all polynomials $p(x)$.
+\end{ex}
+
+\begin{ex}
+	\label{ex:5_5_12}
+Let $P$ be an invertible $n \times n$ matrix. If $A$ is any $n \times n$ matrix, write $T_{P}(A) = P^{-1}AP$. Verify that:
+
+%\begin{enumerate}[label={\alph*.}]
+\begin{exenumerate}
+\exitem $T_{P}(I) = I$
+\exitem $T_{P}(AB) = T_{P}(A)T_{P}(B)$
+\exitem $T_{P}(A + B) = T_{P}(A) + T_{P}(B)$
+\exitem $T_{P}(rA) = rT_{P}(A)$
+\exitem* $T_{P}(A^{k}) = [T_{P}(A)]^{k}$ for $k \geq 1$
+\exitem* If $A$ is invertible, $T_{P}(A^{-1}) = [T_{P}(A)]^{-1}$.
+\exitem* If $Q$ is invertible, $T_{Q}[T_{P}(A)] = T_{PQ}(A)$.
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $T_{P}(A)T_{P}(B) = (P^{-1}AP)(P^{-1}BP) = P^{-1}(AB)P = T_{P}(AB)$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Show that two diagonalizable matrices are similar if and only if they have the same eigenvalues with the same multiplicities.
+
+\item If $A$ is diagonalizable, show that $A \sim A^{T}$.
+
+\item Show that $A \sim A^{T}$ if 
+ $A = \leftB \begin{array}{rr}
+ 1 & 1 \\
+ 0 & 1
+ \end{array} \rightB $
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $A$ is diagonalizable, so is $A^{T}$, and they have the same eigenvalues. Use \textbf{(a)}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is $2 \times 2$ and diagonalizable, show that $C(A) = \{X \mid XA = AX\}$ has dimension $2$ or $4$. [\textit{Hint}: If $P^{-1}AP = D$, show that $X$ is in $C(A)$ if and only if $P^{-1}XP$ is in $C(D)$.]
+\end{ex}
+
+\begin{ex}
+If $A$ is diagonalizable and $p(x)$ is a polynomial such that $p(\lambda) = 0$ for all eigenvalues $\lambda$ of $A$, show that $p(A) = 0$ (see Example~\ref{exa:009262}). In particular, show $c_{A}(A) = 0$. [\textit{Remark}: $c_{A}(A) = 0$ for \textit{all} square matrices $A$---this is the Cayley-Hamilton theorem, see Theorem~\ref{thm:033262}.]
+\end{ex}
+
+\begin{ex}
+Let $A$ be $n \times n$ with $n$ distinct real eigenvalues. If $AC = CA$, show that $C$ is diagonalizable.
+\end{ex}
+
+\begin{ex}
+Let $A = \leftB \begin{array}{rrr}
+0 & a & b \\
+a & 0 & c \\
+b & c & 0	
+\end{array} \rightB$ and \newline $B = 
+\leftB \begin{array}{rrr}
+c & a & b \\
+a & b & c \\
+b & c & a
+\end{array} \rightB$.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $x^{3} - (a^{2} + b^{2} + c^{2})x - 2abc$ has real roots by considering $A$.
+
+\item Show that $a^{2} + b^{2} + c^{2} \geq ab + ac + bc$ by considering $B$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $c_{B}(x) = [x - (a + b + c)][x^{2} - k]$ where $k = a^{2} + b^{2} + c^{2} - [ab + ac + bc]$. Use Theorem~\ref{thm:016397}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Assume the $2 \times 2$ matrix $A$ is similar to an upper triangular matrix. If $\func{tr} A = 0 = \func{tr} A^{2}$, show that $A^{2} = 0$.
+\end{ex}
+
+\begin{ex}
+Show that $A$ is similar to $A^{T}$ for all $2 \times 2$ matrices $A$. [\textit{Hint}: Let $A = \leftB \begin{array}{rr}
+a & b \\
+c & d
+\end{array} \rightB$. If $c = 0$ treat the cases $b = 0$ and $b \neq 0$ separately. If $c \neq 0$, reduce to the case $c = 1$ using Exercise~\ref{ex:5_5_12}(d).]
+\end{ex}
+
+\begin{ex}
+Refer to Section~\ref{sec:3_4} on linear recurrences. Assume that the sequence $x_{0}, x_{1}, x_{2}, \dots$ satisfies
+\vspace*{-1em}
+\begin{equation*}
+x_{n+k} = r_0x_n + r_1x_{n+1} + \dotsb + r_{k-1}x_{n+k-1}
+\end{equation*}
+for all $n \geq 0$. Define
+\begin{equation*}
+A = 
+\scriptsize \leftB \begin{array}{ccccc}
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & & \vdots \\
+0 & 0 & 0 & \cdots & 1 \\
+r_0 & r_1 & r_2 & \cdots & r_{k-1}
+\end{array} \rightB, V_n =
+\leftB \begin{array}{cccc}
+x_n \\
+x_{n+1} \\
+\vdots \\
+x_{n+k-1}
+\end{array} \rightB.
+\end{equation*}
+Then show that:
+\vspace*{-1em}
+\begin{enumerate}[label={\alph*.}]
+\item $V_{n} = A^{n}V_{0}$ for all $n$.
+
+\item $c_{A}(x) = x^{k} - r_{k-1}x^{k-1} - \dots - r_{1}x - r_{0}$
+
+\item If $\lambda$ is an eigenvalue of $A$, the eigenspace $E_{\lambda}$ has dimension 1, and $\vect{x} = (1, \lambda, \lambda^{2}, \dots, \lambda^{k-1})^{T}$ is an eigenvector. [\textit{Hint}: Use $c_{A}(\lambda) = 0$ to show that $E_{\lambda} = \RR\vect{x}$.]
+
+\item $A$ is diagonalizable if and only if the eigenvalues of $A$ are distinct. [\textit{Hint}: See part (c) and Theorem~\ref{thm:016090}.]
+
+\item If $\lambda_{1}, \lambda_{2}, \dots, \lambda_{k}$ are distinct real eigenvalues, there exist constants $t_{1}, t_{2}, \dots, t_{k}$ such that $x_n = t_1\lambda_1^n + \dots + t_k\lambda_k^n$ holds for all $n$. [\textit{Hint}: If $D$ is diagonal with $\lambda_{1}, \lambda_{2}, \dots, \lambda_{k}$ as the main diagonal entries, show that $A^{n}$ = $PD^{n}P^{-1}$ has entries that are linear combinations of $\lambda_1^n, \lambda_2^n, \dots, \lambda_k^n$.]
+\end{enumerate}
+\end{ex}
+
+\begin{ex} Suppose $A$ is $2 \times 2$ and $A^2=0$. If $\func{tr} A \neq 0$ show that $A=0$.
+\end{ex}
+\end{multicols}

@@ -1,0 +1,293 @@
+\section{Diagonalization}\label{sec:3_4}
+
+An $n \times n$ matrix $D$ is called a \textbf{diagonal matrix}\index{matrix!diagonal matrices}\index{diagonal matrices} if all its entries off the main diagonal are zero, that is if $D$ has the form
+\begin{equation*}
+D = \leftB \begin{array}{cccc}
+\lambda_1 & 0 & \cdots & 0 \\
+0 & \lambda_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \lambda_n \end{array}\rightB = \diag(\lambda_1, \lambda_2, \cdots, \lambda_n)
+\end{equation*}
+where $\lambda_{1}, \lambda_{2}, \dots , \lambda_{n}$ are numbers. Calculations with diagonal matrices are very easy. Indeed, if \newline$D = \func{diag}(\lambda_{1}, \lambda_{2}, \dots , \lambda_{n})$ and $E = \func{diag}(\mu_{1}, \mu_{2}, \dots , \mu_{n})$ are two diagonal matrices, their product $DE$ and sum $D + E$ are again diagonal, and are obtained by doing the same operations to corresponding diagonal elements:
+\begin{align*}
+DE &= \diag(\lambda_1 \mu_1, \lambda_2 \mu_2, \dots, \lambda_n \mu_n) \\
+D + E &= \diag(\lambda_1 + \mu_1, \lambda_2 + \mu_2, \dots, \lambda_n + \mu_n)
+\end{align*}
+Because of the simplicity of these formulas, and with an eye on Theorem~\ref{thm:008997} and the discussion preceding it, we make another definition:
+
+
+\begin{definition}{Diagonalizable Matrices}{009185}
+An $n \times n$ matrix $A$ is called \textbf{diagonalizable}\index{matrix!diagonalizable matrix}\index{diagonalizable matrix}\index{square matrix ($n \times n$ matrix)!diagonalizable matrix} if
+\begin{equation*}
+P^{-1}AP \mbox{ is diagonal for some invertible } n \times n \mbox{ matrix } P
+\end{equation*}
+Here the invertible matrix $P$ is called a \textbf{diagonalizing matrix}\index{matrix!diagonalizing matrix}\index{diagonalizing matrix}\index{square matrix ($n \times n$ matrix)!diagonalizing matrix} for $A$.
+\end{definition}
+
+\index{diagonalization!described}
+To discover when such a matrix $P$ exists, we let $\vect{x}_{1}, \vect{x}_{2}, \dots , \vect{x}_{n}$ denote the columns of $P$ and look for ways to determine when such $\vect{x}_{i}$ exist and how to compute them. To this end, write $P$ in terms of its columns as follows:
+\begin{equation*}
+P = \leftB \vect{x}_1, \vect{x}_2, \cdots, \vect{x}_n \rightB
+\end{equation*}
+Observe that $P^{-1}AP = D$ for some diagonal matrix $D$ holds if and only if
+\begin{equation*}
+AP = PD
+\end{equation*}
+If we write $D = \func{diag}(\lambda_{1}, \lambda_{2}, \dots , \lambda_{n})$, where the $\lambda_{i}$ are numbers to be determined, the equation $AP = PD$ becomes
+\begin{equation*}
+A\leftB \vect{x}_1, \vect{x}_2, \cdots, \vect{x}_n \rightB = \leftB \vect{x}_1, \vect{x}_2, \cdots, \vect{x}_n \rightB \leftB \begin{array}{cccc}
+\lambda_1 & 0 & \cdots & 0 \\
+0 & \lambda_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \lambda_n \end{array}\rightB
+\end{equation*}
+By the definition of matrix multiplication, each side simplifies as follows
+\begin{equation*}
+\leftB \begin{array}{cccc}
+A\vect{x}_1 & A\vect{x}_2 & \cdots & A\vect{x}_n 
+\end{array}\rightB = \leftB \begin{array}{cccc}
+\lambda_1 \vect{x}_1 & \lambda_2 \vect{x}_2 & \cdots & \lambda_n \vect{x}_n 
+\end{array}\rightB\end{equation*}
+Comparing columns shows that $A\vect{x}_{i} = \lambda_{i}\vect{x}_{i}$ for each $i$, so
+\begin{equation*}
+P^{-1}AP = D \quad \mbox{ if and only if } A\vect{x}_i = \lambda_i \vect{x}_i \mbox{ for each } i
+\end{equation*}
+In other words, $P^{-1}AP = D$ holds if and only if the diagonal entries of $D$ are eigenvalues of $A$ and the columns of $P$ are corresponding eigenvectors. This proves the following fundamental result.
+
+
+\begin{theorem}{}{009214}
+Let $A$ be an $n \times n$ matrix.
+
+
+\begin{enumerate}
+\item $A$ is diagonalizable if and only if it has eigenvectors $\vect{x}_{1}, \vect{x}_{2}, \dots , \vect{x}_{n}$ such that the matrix $P = \leftB \begin{array}{cccc} \vect{x}_{1}&  \vect{x}_{2} & \dots & \vect{x}_{n} \end{array}\rightB$ is invertible.\index{eigenvalues!and diagonalizable matrices}
+
+\item When this is the case, $P^{-1}AP = \func{diag}(\lambda_{1}, \lambda_{2}, \dots , \lambda_{n})$ where, for each $i$, $\lambda_{i}$ is the eigenvalue of $A$ corresponding to $\vect{x}_{i}$.
+
+\end{enumerate}
+\end{theorem}
+
+\begin{example}{}{009234}
+Diagonalize the matrix $A = \leftB \begin{array}{rrr}
+2 & 0 & 0 \\
+1 & 2 & -1 \\
+1 & 3 & -2 
+\end{array}\rightB$
+ in Example~\ref{exa:009069}.
+
+
+\begin{solution}
+  By Example~\ref{exa:009069}, the eigenvalues of $A$ are $\lambda_{1} = 2$, $\lambda_{2} = 1$, and $\lambda_{3} = -1$, with corresponding basic eigenvectors $\vect{x}_1 = \leftB \begin{array}{r}
+1 \\
+1 \\
+1
+\end{array}\rightB, \vect{x}_2 = \leftB \begin{array}{r}
+0 \\
+1 \\
+1
+\end{array}\rightB$, 
+ and $\vect{x}_3 = \leftB \begin{array}{r}
+0 \\
+1 \\
+3
+\end{array}\rightB$ 
+ respectively. Since the matrix $P= \leftB \begin{array}{cccc}
+\vect{x}_1 & \vect{x}_2 & \vect{x}_3 \end{array}\rightB = \leftB \begin{array}{rrr}
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+1 & 1 & 3
+\end{array}\rightB$
+ is invertible, Theorem~\ref{thm:009214} guarantees that 
+\begin{equation*}
+P^{-1} AP = \leftB \begin{array}{ccc}
+\lambda_1 & 0 & 0 \\
+0 & \lambda_2 & 0 \\
+0 & 0 & \lambda_3 
+\end{array}\rightB = \leftB \begin{array}{ccc}
+2 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & -1 
+\end{array}\rightB
+=D
+\end{equation*}
+The reader can verify this directly---easier to check $AP = PD$.
+\end{solution}
+\end{example}
+
+In Example~\ref{exa:009234}, suppose we let $Q = \leftB \begin{array}{ccc} \vect{x}_{2} & \vect{x}_{1} & \vect{x}_{3} \end{array} \rightB$ be the matrix formed from the eigenvectors $\vect{x}_{1}$, $\vect{x}_{2}$, and $\vect{x}_{3}$ of $A$, but in a \textit{different order} than that used to form $P$. Then $Q^{-1}AQ = \func{diag}(\lambda_{2}, \lambda_{1}, \lambda_{3})$ is diagonal by Theorem~\ref{thm:009214}, but the eigenvalues are in the \textit{new} order. Hence we can choose the diagonalizing matrix $P$ so that the eigenvalues $\lambda_{i}$ appear in any order we want along the main diagonal of $D$.
+
+
+In
+ every example above each eigenvalue has had only one basic eigenvector.
+ Here is a diagonalizable matrix where this is not the case.
+
+
+\begin{example}{}{009262}
+Diagonalize the matrix $ A = \leftB \begin{array}{rrr}
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0 
+\end{array}\rightB$
+
+
+
+\begin{solution}
+  To compute the characteristic polynomial of $A$ first add rows 2 and 3 of $xI - A$ to row 1:
+
+
+\begin{align*}
+c_A(x) &= \func{det} \leftB \begin{array}{ccc}
+x & -1 & -1 \\
+-1 & x & -1\\
+-1 & -1 & x
+\end{array}\rightB =  \func{det} \leftB \begin{array}{ccc}
+x-2 & x-2 & x-2 \\
+-1 & x & -1\\
+-1 & -1 & x
+\end{array}\rightB \\
+& =  \func{det} \leftB \begin{array}{ccc}
+x-2 & 0 & 0 \\
+-1 & x+1 & 0\\
+-1 & 0 & x+1
+\end{array}\rightB = (x-2)(x+1)^2
+\end{align*}
+
+Hence the eigenvalues are $\lambda_{1} = 2$ and $\lambda_{2} = -1$, with $\lambda_{2}$ repeated twice (we say that $\lambda_{2}$ has \textit{multiplicity} two). However, $A$ \textit{is} diagonalizable. For $\lambda_{1} = 2$, the system of equations $(\lambda_{1}I - A)\vect{x} = \vect{0}$ has general solution $\vect{x} = t \leftB \begin{array}{r}
+1\\
+1\\
+1
+\end{array}\rightB$
+ as the reader can verify, so a basic $\lambda_{1}$-eigenvector is $\vect{x}_1 = \leftB \begin{array}{r}
+1\\
+1\\
+1
+\end{array}\rightB$.
+
+
+Turning to the repeated eigenvalue $\lambda_{2} = -1$, we must solve $(\lambda_{2}I - A)\vect{x} = \vect{0}$. By gaussian elimination, the general solution is $\vect{x} = s \leftB \begin{array}{r}
+-1 \\
+1 \\
+0
+\end{array}\rightB + t \leftB \begin{array}{r}
+-1\\
+0\\
+1
+\end{array}\rightB$
+ where $s$ and $t$ are arbitrary. Hence the gaussian algorithm produces \textit{two} basic $\lambda_{2}$-eigenvectors $\vect{x}_2 = \leftB \begin{array}{r}
+-1\\
+1\\
+0
+\end{array}\rightB$ and $\vect{y}_2 =  \leftB \begin{array}{r}
+-1\\
+0\\
+1
+\end{array}\rightB$
+ If we take $P = \leftB \begin{array}{ccc}
+\vect{x}_1 & \vect{x}_2 & \vect{y}_2
+\end{array}\rightB = \leftB \begin{array}{rrr}
+1 & -1 & -1 \\
+1 & 1 & 0 \\
+1 & 0 & 1
+\end{array}\rightB$
+ we find that $P$ is invertible. Hence $P^{-1}AP = \func{diag}(2, -1, -1)$ by Theorem~\ref{thm:009214}.
+\end{solution}
+\end{example}
+
+Example~\ref{exa:009262} typifies every diagonalizable matrix. To describe the general case, we need some terminology.
+
+
+\begin{definition}{Multiplicity of an Eigenvalue}{009289}
+An eigenvalue $\lambda$ of a square matrix $A$ is said to have \textbf{multiplicity} $m$ if it occurs $m$ times as a root of the characteristic polynomial $c_{A}(x)$.\index{eigenvalues!multiplicity}\index{multiplicity}
+\end{definition}
+
+\noindent For example, the eigenvalue $\lambda_{2} = -1$ in Example~\ref{exa:009262} has multiplicity $2$. In that example the gaussian algorithm yields two basic $\lambda_{2}$-eigenvectors, the same number as the multiplicity. This works in general.
+
+
+\begin{theorem}{}{009296}
+A  square matrix $A$ is diagonalizable if and only if every eigenvalue $\lambda$ of 
+multiplicity $m$ yields exactly $m$ basic eigenvectors; that is, if and only
+ if the general solution of the system $(\lambda I - A)\vect{x} = \vect{0}$ has exactly $m$ parameters.
+\end{theorem}
+
+\noindent One case of Theorem~\ref{thm:009296} deserves mention.
+
+
+\begin{theorem}{}{009300}
+An $n \times n$ matrix with $n$ distinct eigenvalues is diagonalizable.
+\end{theorem}
+
+\noindent The proofs of Theorem~\ref{thm:009296} and Theorem~\ref{thm:009300} require more advanced techniques and are given in Chapter~\ref{chap:5}. The following procedure summarizes the method.
+
+\index{diagonalization algorithm}
+\begin{theorem*}[label=thm:009304]{Diagonalization Algorithm}
+To diagonalize an $n \times n$ matrix $A$:
+
+
+\begin{itemize}[leftmargin=1em]
+\item[] Step 1. Find the distinct eigenvalues $\lambda$ of $A$.
+
+\item[] Step 2. Compute a set of basic eigenvectors corresponding to each of these 
+eigenvalues $\lambda$ as basic solutions of the homogeneous system $(\lambda I - A)\vect{x} = \vect{0}$.
+
+\item[] Step 3. The matrix A is diagonalizable if and only if there are n basic eigenvectors in all.
+
+\item[] Step 4. If $A$ is diagonalizable, the $n \times n$ matrix $P$ with these basic 
+eigenvectors as its columns is a diagonalizing matrix for $A$, that is, $P$ 
+is invertible and $P^{-1}AP$ is diagonal.
+\end{itemize}
+\end{theorem*}
+
+\noindent The diagonalization algorithm is valid even if the eigenvalues are nonreal 
+complex numbers. In this case the eigenvectors will also have complex 
+entries, but we will not pursue this here.
+
+
+\begin{example}{}{009318}
+Show that $A = \leftB \begin{array}{rr}
+1 & 1 \\
+0 & 1 
+\end{array}\rightB$
+ is not diagonalizable.
+
+
+\begin{solution}[1] 
+  The characteristic polynomial is $c_{A}(x) = (x - 1)^{2}$, so $A$ has only one eigenvalue $\lambda_{1} = 1$ of multiplicity $2$. But the system of equations $(\lambda_{1}I - A)\vect{x} = \vect{0}$ has general solution $ t \leftB \begin{array}{r}
+1 \\ 
+0
+\end{array}\rightB$,
+ so there is only one parameter, and so only one basic eigenvector $ \leftB \begin{array}{r}
+1 \\ 
+2
+\end{array}\rightB$.
+ Hence $A$ is not diagonalizable.
+\end{solution}
+
+\begin{solution}[2]
+  We have $c_{A}(x) = (x - 1)^{2}$ so the only eigenvalue of $A$ is $\lambda = 1$. Hence, if $A$ were diagonalizable, Theorem~\ref{thm:009214} would give $ P^{-1}AP = \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 1 \end{array}\rightB = I$
+ for some invertible matrix $P$. But then $A = PIP^{-1} = I$, which is not the case. So $A$ cannot be diagonalizable.
+\end{solution}
+\end{example}
+
+Diagonalizable matrices share many properties of their eigenvalues. The following example illustrates why.
+
+
+\begin{example}{}{009339}
+If $\lambda^{3} = 5\lambda$ for every eigenvalue of the diagonalizable matrix $A$, show that $A^{3} = 5A$.
+
+
+\begin{solution}
+  Let $P^{-1}AP = D = \func{diag}(\lambda_{1}, \dots , \lambda_{n})$. Because $\lambda_i^3$ = $5\lambda_{i}$ for each $i$, we obtain
+\begin{equation*}
+D^3 = \diag(\lambda_1^3 ,\dots, \lambda_n^3) = \diag(5\lambda_1, \dots, 5 \lambda_n) = 5D
+\end{equation*}
+Hence $A^{3} = (PDP^{-1})^{3} = PD^{3}P^{-1} = P(5D)P^{-1} = 5(PDP^{-1}) = 5A$ using Theorem~\ref{thm:008997}. This is what we wanted.
+\end{solution}
+\end{example}
+
+If $p(x)$ is any polynomial and $p(\lambda) = 0$ for every eigenvalue of the diagonalizable matrix $A$, an argument similar to that in Example~\ref{exa:009339} shows that $p(A) = 0$. Thus Example~\ref{exa:009339} deals with the case $p(x) = x^{3} - 5x$. In general, $p(A)$ is called the \textit{evaluation}\index{evaluation}\index{polynomials!evaluation} of the polynomial $p(x)$ at the matrix $A$. For example, if $p(x) = 2x^{3} - 3x + 5$, then $p(A) = 2A^{3} - 3A + 5I$---note the use of the identity matrix.
+
+
+In particular, if $c_{A}(x)$ denotes the characteristic polynomial of $A$, we certainly have $c_{A}(\lambda) = 0$ for each eigenvalue $\lambda$ of $A$ (Theorem~\ref{thm:009033}). Hence $c_{A}(A) = 0$ for every diagonalizable matrix $A$. This is, in fact, true for \textit{any} square matrix, diagonalizable or not, and the general result is called the Cayley-Hamilton theorem. It is proved in Section~\ref{sec:8_6} and again in Section~\ref{sec:11_1}. 
+

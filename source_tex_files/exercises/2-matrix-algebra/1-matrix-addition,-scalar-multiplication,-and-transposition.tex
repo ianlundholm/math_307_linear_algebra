@@ -1,0 +1,704 @@
+\section*{Exercises for \ref{sec:2_1}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:2_1}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+Find $a$, $b$, $c$, and $d$ if
+
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$
+\leftB \begin{array}{cc}
+a & b \\
+c & d
+\end{array} \rightB = 
+\leftB \begin{array}{cc}
+c - 3d & -d \\
+2a + d & a + b
+\end{array} \rightB
+$
+
+\item 
+$
+\leftB \begin{array}{cc}
+a - b & b - c \\
+c - d & d - a
+\end{array} \rightB = 2
+\leftB \begin{array}{rr}
+1 & 1 \\
+-3 & 1
+\end{array} \rightB
+$
+
+\item 
+$
+3 \leftB \begin{array}{c}
+a \\
+b
+\end{array} \rightB + 2
+\leftB \begin{array}{rr}
+b \\
+a
+\end{array} \rightB =
+\leftB \begin{array}{rr}
+1 \\
+2
+\end{array} \rightB
+$
+
+\item 
+$
+\leftB \begin{array}{cc}
+a & b \\
+c & d
+\end{array} \rightB = 
+\leftB \begin{array}{cc}
+b & c \\
+d & a
+\end{array} \rightB
+$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $(a\ b\ c\ d) = (-2, -4, -6, 0) + t(1, 1, 1, 1)$, \\ $t$ arbitrary
+
+\setcounter{enumi}{3}
+\item  $a = b = c = d = t$, $t$ arbitrary
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Compute the following:
+\begin{exenumerate}
+\exitem*
+$
+\leftB \begin{array}{rrr}
+3 & 2 & 1 \\
+5 & 1 & 0
+\end{array} \rightB - 5 
+\leftB \begin{array}{rrr}
+3 & 0 & -2 \\
+1 & -1 & 2
+\end{array} \rightB
+$
+\exitem*
+$
+3 \leftB \begin{array}{r}
+3 \\
+-1
+\end{array} \rightB - 5 
+\leftB \begin{array}{r}
+6 \\
+2
+\end{array} \rightB + 7
+\leftB \begin{array}{r}
+1 \\
+-1
+\end{array} \rightB
+$
+\exitem*
+$
+\leftB \begin{array}{rr}
+-2 & 1 \\
+3 & 2
+\end{array} \rightB - 4 
+\leftB \begin{array}{rr}
+1 & -2 \\
+0 & -1
+\end{array} \rightB + 3
+\leftB \begin{array}{rr}
+2 & -3 \\
+-1 & -2
+\end{array} \rightB
+$
+\exitem*
+$
+\leftB \begin{array}{rrr}
+3 & -1 & 2
+\end{array} \rightB - 2 
+\leftB \begin{array}{rrr}
+9 & 3 & 4
+\end{array} \rightB +
+\leftB \begin{array}{rrr}
+3 & 11 & -6
+\end{array} \rightB
+$
+\exitem
+$
+\leftB \begin{array}{rrrr}
+1 & -5 & 4 & 0 \\
+2 & 1 & 0 & 6
+\end{array} \rightB^{T}
+$
+\exitem
+$
+\leftB \begin{array}{rrr}
+0 & -1 & 2 \\
+1 & 0 & -4 \\
+-2 & 4 & 0
+\end{array} \rightB^{T}
+$ 
+\exitem*
+$
+\leftB \begin{array}{rr}
+3 & -1 \\
+2 & 1
+\end{array} \rightB - 2
+\leftB \begin{array}{rr}
+1 & -2 \\
+1 & 1
+\end{array} \rightB^{T}
+$
+\exitem*
+$
+3 \leftB \begin{array}{rr}
+2 & 1 \\
+-1 & 0
+\end{array} \rightB^{T} - 2
+\leftB \begin{array}{rr}
+1 & -1 \\
+2 & 3
+\end{array} \rightB
+$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$\leftB \begin{array}{r}
+-14 \\
+-20
+\end{array} \rightB$
+
+
+\setcounter{enumi}{3}
+\item  $(-12, 4, -12)$
+
+\setcounter{enumi}{5}
+\item  
+$\leftB \begin{array}{rrr}
+0 & 1 & -2 \\
+-1 & 0 & 4 \\
+2 & -4 & 0
+\end{array} \rightB$
+
+\setcounter{enumi}{7}
+\item  
+$\leftB \begin{array}{rr}
+4 & -1 \\
+-1 & -6
+\end{array} \rightB$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let 
+$A = \leftB \begin{array}{rr}
+2 & 1 \\
+0 & -1
+\end{array} \rightB$, \\ $
+B = \leftB \begin{array}{rrr}
+3 & -1 & 2 \\
+0 & 1 & 4
+\end{array} \rightB$,  $
+C = \leftB \begin{array}{rr}
+3 & -1 \\
+2 & 0
+\end{array} \rightB$, \\ $
+D = \leftB \begin{array}{rr}
+1 & 3 \\
+-1 & 0 \\
+1 & 4
+\end{array} \rightB$, and  $ 
+E = \leftB \begin{array}{rrr}
+1 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \rightB$.
+
+\noindent Compute the following (where possible).
+\begin{exenumerate}
+\exitem $3A - 2B$
+\exitem $5C$
+\exitem $3E^{T}$
+\exitem $B + D$
+\exitem $4A^{T} - 3C$
+\exitem $(A + C)^{T}$
+\exitem $2B - 3E$
+\exitem $A - D$
+\exitem $(B - 2E)^{T}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$\leftB \begin{array}{rr}
+15 & -5 \\
+10 & 0
+\end{array} \rightB$
+\setcounter{enumi}{3}
+\item  Impossible
+
+\setcounter{enumi}{5}
+\item  
+$\leftB \begin{array}{rr}
+5 & 2 \\
+0 & -1
+\end{array} \rightB$
+
+\setcounter{enumi}{7}
+\item  Impossible
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find $A$ if:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$
+5A - \leftB \begin{array}{rr}
+1 & 0 \\
+2 & 3
+\end{array} \rightB =
+3A - \leftB \begin{array}{rr}
+5 & 2 \\
+6 & 1
+\end{array} \rightB
+$
+
+\item $
+3A - \leftB \begin{array}{r}
+2 \\
+1
+\end{array} \rightB =
+5A - 2 \leftB \begin{array}{rr}
+3 \\
+0
+\end{array} \rightB
+$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$\leftB \begin{array}{r}
+2 \\
+-\frac{1}{2}
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find $A$ in terms of $B$ if:
+
+
+\begin{exenumerate}
+\exitem $A + B = 3A + 2B$
+\exitem $2A - B = 5(A + 2B)$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$A = -\frac{11}{3}B$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $X$, $Y$, $A$, and $B$ are matrices of the same size, solve the following systems of equations to obtain $X$ and $Y$ in terms of $A$ and $B$.
+\begin{exenumerate}
+\exitem 
+$5X + 3Y = A \\
+2X + Y = B$
+\exitem 
+$4X + 3Y = A \\
+5X + 4Y = B$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $X = 4A - 3B$, $Y = 4B - 5A$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find all matrices $X$ and $Y$ such that:
+
+\begin{exenumerate}
+\exitem $3X - 2Y = \leftB \begin{array}{rr}
+3 & - 1 
+\end{array} \rightB$
+\exitem $2X - 5Y = \leftB \begin{array}{rr}
+1 & 2
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $Y = (s, t)$, $X = \frac{1}{2}(1 + 5s, 2 + 5t)$; $s$ and $t$ arbitrary
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Simplify the following expressions where $A$, $B$, and $C$ are matrices.
+
+\begin{enumerate}[label={\alph*.}]
+\item $2 \leftB 9(A - B) + 7(2B - A) \rightB$ \\ $- 2 \leftB 3(2B + A) - 2(A + 3B) - 5(A + B) \rightB$
+
+\item $5 \leftB 3(A - B + 2C) - 2(3C - B) - A \rightB$  \\ $+ 2 \leftB 3(3A - B + C) + 2(B - 2A) - 2C \rightB$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $20A - 7B + 2C$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+If $A$ is any $2 \times 2$ matrix, show that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$A = a \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 0
+\end{array} \rightB + 
+b \leftB \begin{array}{rr}
+0 & 1 \\
+0 & 0
+\end{array} \rightB + 
+c \leftB \begin{array}{rr}
+0 & 0 \\
+1 & 0
+\end{array} \rightB + 
+d \leftB \begin{array}{rr}
+0 & 0 \\
+0 & 1
+\end{array} \rightB
+$
+ for some numbers $a$, $b$, $c$, and $d$.
+
+\item 
+$A = p \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 1
+\end{array} \rightB + 
+q \leftB \begin{array}{rr}
+1 & 1 \\
+0 & 0
+\end{array} \rightB + 
+r \leftB \begin{array}{rr}
+1 & 0 \\
+1 & 0
+\end{array} \rightB + 
+s \leftB \begin{array}{rr}
+0 & 1 \\
+1 & 0
+\end{array} \rightB
+$
+ for some numbers $p$, $q$, $r$, and $s$. 
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If 
+$A = \leftB \begin{array}{cc}
+a & b \\
+c & d
+\end{array} \rightB$, then $(p, q, r, s) = \frac{1}{2}(2d, a + b - c - d, a - b + c - d, -a + b + c + d)$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A = \leftB \begin{array}{rrr}
+1 & 1 & -1
+\end{array} \rightB$, \\ $B = \leftB \begin{array}{rrr}
+0 & 1 & 2
+\end{array} \rightB$, and 
+$C = \leftB \begin{array}{rrr}
+3 & 0 & 1
+\end{array} \rightB$. If \\ $rA + sB + tC = 0$ for some scalars $r$, $s$, and $t$, show that necessarily $r = s = t = 0$.
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If $Q + A = A$ holds for every $m \times n$ matrix $A$, show that $Q = 0_{mn}$.
+
+\item If $A$ is an $m \times n$ matrix and $A + A^\prime = 0_{mn}$, show that $A^\prime = -A$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $A + A^\prime = 0$ then $-A = -A + 0 = -A + (A + A^\prime) = (-A + A) + A^\prime = 0 + A^\prime = A^\prime$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ denotes an $m \times n$ matrix, show that $A = -A$ if and only if $A = 0$.
+\end{ex}
+
+\begin{ex}
+A square matrix is called a \textbf{diagonal} matrix\index{diagonal matrices}\index{matrix!diagonal matrices} if all the entries off the main diagonal are zero. If $A$ and $B$ are diagonal matrices, show that the following matrices are also diagonal.
+\begin{exenumerate}
+\exitem $A + B$
+\exitem $A - B$
+\exitem $kA$ for any number $k$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Write $A = \diag(a_{1}, \dots, a_{n})$, where $a_{1}, \dots, a_{n}$ are the main diagonal entries. If $B = \diag(b_{1}, \dots, b_{n})$ then $kA = \diag(ka_{1}, \dots, ka_{n})$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case determine all $s$ and $t$ such that the given matrix is symmetric:
+\begin{exenumerate}
+\exitem 
+$\leftB \begin{array}{rr}
+1 & s \\
+-2 & t
+\end{array} \rightB$
+\exitem 
+$\leftB \begin{array}{cc}
+s & t \\
+st & 1
+\end{array} \rightB$
+\exitem 
+$\leftB \begin{array}{crc}
+s & 2s & st \\
+t & -1 & s \\
+t & s^{2} & s
+\end{array} \rightB$
+\exitem 
+$\leftB \begin{array}{ccc}
+2 & s & t \\
+2s & 0 & s + t \\
+3 & 3 & t
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $s = 1$ or $t = 0$
+
+\setcounter{enumi}{3}
+\item  $s = 0$, and $t = 3$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case find the matrix $A$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$\left(A + 3 \leftB \begin{array}{rrr}
+1 & -1 & 0 \\
+1 & 2 & 4
+\end{array} \rightB \right)^{T} = \leftB \begin{array}{rr}
+2 & 1 \\
+0 & 5 \\
+3 & 8
+\end{array} \rightB$
+
+\item 
+$\left(3A^{T} + 2 \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 2
+\end{array} \rightB \right)^{T} = \leftB \begin{array}{rr}
+8 & 0 \\
+3 & 1
+\end{array} \rightB$
+
+\item 
+$\left(2A - 3 \leftB \begin{array}{rrr}
+1 & 2 & 0
+\end{array} \rightB \right)^{T} = 3A^{T} + \leftB \begin{array}{rrr}
+2 & 1 & -1
+\end{array} \rightB^{T}$ 
+
+\item 
+$\left(2A^{T} - 5 \leftB \begin{array}{rr}
+1 & 0 \\
+-1 & 2
+\end{array} \rightB \right)^{T} = 4A - 9 \leftB \begin{array}{rr}
+1 & 1 \\
+-1 & 0
+\end{array} \rightB$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$\leftB \begin{array}{rr}
+2 & 0 \\
+1 & -1
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item  
+$\leftB \begin{array}{rr}
+2 & 7 \\
+-\frac{9}{2} & -5
+\end{array} \rightB$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ be symmetric (of the same size). Show that each of the following is symmetric.
+\begin{exenumerate}
+\exitem $(A - B)$
+\exitem $kA$ for any scalar $k$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $A = A^{T}$, so using Theorem~\ref{thm:002240}, $(kA)^{T} = kA^{T} = kA$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that $A + A^{T}$ is symmetric for \textit{any} square matrix $A$.
+\end{ex}
+
+\begin{ex}
+If $A$ is a square matrix and $A = kA^{T}$ where $k \neq \pm 1$, show that $A = 0$.
+\end{ex}
+
+\begin{ex}
+In each case either show that the statement is true or give an example showing it is false.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A + B = A + C$, then $B$ and $C$ have the same size.
+
+\item If $A + B = 0$, then $B = 0$.
+
+\item If the $(3, 1)$-entry of $A$ is $5$, then the $(1, 3)$-entry of $A^{T}$ is $-5$.
+
+\item $A$ and $A^{T}$ have the same main diagonal for every matrix $A$.
+
+\item If $B$ is symmetric and $A^{T} = 3B$, then $A = 3B$.
+
+\item If $A$ and $B$ are symmetric, then $kA + mB$ is symmetric for any scalars $k$ and $m$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  False. Take $B = -A$ for any $A \neq 0$.
+
+\setcounter{enumi}{3}
+\item True. Transposing fixes the main diagonal. 
+
+\setcounter{enumi}{5}
+\item True. $(kA + mB)^{T} = (kA)^{T} + (mB)^{T} = kA^{T} + mB^{T} = kA + mB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}\label{ex:skewsymmetric}
+A square matrix $W$ is called \textbf{skew-symmetric}\index{skew-symmetric}\index{square matrix ($n \times n$ matrix)!skew-symmetric} if $W^{T} = -W$. Let $A$ be any square matrix.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $A - A^{T}$ is skew-symmetric.
+
+\item Find a symmetric matrix $S$ and a skew-symmetric matrix $W$ such that $A = S + W$.
+
+\item Show that $S$ and $W$ in part (b) are uniquely determined by $A$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{2}
+\item  Suppose $A = S + W$, where $S = S^{T}$ and $W = -W^{T}$. Then $A^{T} = S^{T} + W^{T} = S - W$, so $A + A^{T} = 2S$ and $A - A^{T} = 2W$. Hence $S = \frac{1}{2}(A + A^{T})$ and $W = \frac{1}{2}(A - A^{T})$ are uniquely determined by $A$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $W$ is skew-symmetric (Exercise~\ref{ex:skewsymmetric}), show that the entries on the main diagonal are zero. 
+\end{ex}
+
+\begin{ex}
+Prove the following parts of Theorem~\ref{thm:002170}.
+\begin{exenumerate}
+\exitem $(k + p)A = kA + pA$
+\exitem $(kp)A = k(pA)$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $A = \leftB a_{ij} \rightB$ then $(kp)A = \leftB (kp)a_{ij} \rightB = \leftB k(pa_{ij}) \rightB = k \leftB pa_{ij} \rightB = k(pA)$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A, A_{1}, A_{2}, \dots, A_{n}$ denote matrices of the same size. Use induction on $n$ to verify the following extensions of properties 5 and 6 of Theorem~\ref{thm:002170}.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $k(A_{1} + A_{2} + \dots + A_{n}) = kA_{1} + kA_{2} + \dots + kA_{n}$ for any number $k$
+
+\item $(k_{1} + k_{2} + \dots + k_{n})A = k_{1}A + k_{2}A + \dots + k_{n}A$ for any numbers $k_{1}, k_{2}, \dots, k_{n}$
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Let $A$ be a square matrix. If $A = pB^{T}$ and $B = qA^{T}$ for some matrix $B$ and numbers $p$ and $q$, show that either $A = 0 = B$ or $pq = 1$. \newline [\textit{Hint}: Example~\ref{exa:002159}.]
+\end{ex}
+
+\end{multicols}

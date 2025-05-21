@@ -1,0 +1,646 @@
+\section*{Exercises for \ref{sec:3_2}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:3_2}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+Find the adjugate of each of the following matrices.
+
+\begin{exenumerate}
+\exitem $\leftB \begin{array}{rrr}
+5 & 1 & 3 \\
+-1 & 2 & 3 \\
+1 & 4 & 8
+\end{array}\rightB$
+\exitem  $\leftB \begin{array}{rrr}
+1 & -1 & 2 \\
+3 & 1 & 0 \\
+0 & -1 & 1
+\end{array}\rightB$
+\exitem $\leftB \begin{array}{rrr}
+1 & 0 & -1 \\
+-1 & 1 & 0 \\
+0 & -1 & 1
+\end{array}\rightB$
+\exitem  $\frac{1}{3}\leftB \begin{array}{rrr}
+-1 & 2 & 2 \\
+2 & -1 & 2 \\
+2 & 2 & -1
+\end{array}\rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item   $\leftB \begin{array}{rrr}
+1 & -1 & -2 \\
+-3 & 1 & 6 \\
+-3 & 1 & 4
+\end{array}\rightB$
+
+\setcounter{enumi}{3}
+\item   $\frac{1}{3}\leftB \begin{array}{rrr}
+-1 & 2 & 2 \\
+2 & -1 & 2 \\
+2 & 2 & -1
+\end{array}\rightB = A$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Use determinants to find which real values of $c$ make each of the following matrices invertible.
+
+\begin{exenumerate}
+\exitem  $\leftB \begin{array}{rrr}
+1 & 0 & 3 \\
+3 & -4 & c \\
+2 & 5 & 8
+\end{array}\rightB$
+\exitem  $\leftB \begin{array}{rrr}
+0 & c & -c \\
+-1 & 2 & 1 \\
+c & -c & c
+\end{array}\rightB$
+\exitem  $\leftB \begin{array}{rrr}
+c & 1 & 0 \\
+0 & 2 & c \\
+-1 & c & 5
+\end{array}\rightB$
+\exitem  $\leftB \begin{array}{rrr}
+4 & c & 3 \\
+c & 2 & c \\
+5 & c & 4
+\end{array}\rightB$
+\exitem  $\leftB \begin{array}{rrr}
+1 & 2 & -1 \\
+0 & -1 & c \\
+2 & c & 1
+\end{array}\rightB$
+\exitem  $\leftB \begin{array}{rrr}
+1 & c & -1 \\
+c & 1 & 1 \\
+0 & 1 & c
+\end{array}\rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $c \neq 0$
+
+\setcounter{enumi}{3}
+\item  any $c$
+
+\setcounter{enumi}{5}
+\item  $c \neq -1$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$, $B$, and $C$ denote $n \times n$ matrices and assume that $\func{det } A = -1$, $\func{det } B = 2$, and $\func{det } C = 3$. Evaluate:
+
+\begin{exenumerate}
+\exitem $\func{det}(A^{3}BC^{T}B^{-1})$
+\exitem $\func{det}(B^{2}C^{-1}AB^{-1}C^{T})$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $-2$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ be invertible $n \times n$ matrices. Evaluate:
+
+\begin{exenumerate}
+\exitem $\func{det}(B^{-1}AB)$
+\exitem $\func{det}(A^{-1}B^{-1}AB)$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $1$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is $3 \times 3$ and $\func{det}(2A^{-1}) = -4$ and $\func{det}(A^{3}(B^{-1})^{T})=-4$, find $\func{det }A$ and $\func{det }B$.
+\end{ex}
+
+\begin{ex}
+Let $A = \leftB \begin{array}{rrr}
+a & b & c \\
+p & q & r \\
+u & v & w 
+\end{array}\rightB$ 
+ and assume that $\func{det } A = 3$. Compute:
+
+\begin{enumerate}[label={\alph*.}]
+\item $\func{det} (2B^{-1}) \mbox{ where } B = \leftB \begin{array}{rrr}
+4u & 2a & -p \\
+4v & 2b & -q \\
+4w & 2c & -r 
+\end{array}\rightB $
+
+\item $\func{det} (2C^{-1}) \mbox{ where } C = \leftB \begin{array}{ccc}
+2p & -a+u & 3u \\
+2q & -b+v & 3v \\
+2r & -c+w & 3w
+\end{array}\rightB $
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\frac{4}{9}$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $\func{det} \leftB \begin{array}{rr}
+a & b \\
+c& d 
+\end{array}\rightB = -2$
+ calculate:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $ \func{det} \leftB \begin{array}{ccc}
+2 & -2 & 0 \\
+c+1 & -1 & 2a \\
+d-2 & 2 & 2b 
+\end{array}\rightB$
+
+
+\item  $ \func{det} \leftB \begin{array}{ccc}
+2b & 0 & 4d \\
+1 & 2 & -2 \\
+a+1 & 2 & 2(c-1) 
+\end{array}\rightB$
+
+
+\item $\func{det}(3A^{-1}) \mbox{ where } A = \leftB \begin{array}{rr}
+3c & a+c \\
+3d & b+d 
+\end{array}\rightB$
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $16$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Solve each of the following by Cramer's rule:
+
+\begin{exenumerate}
+\exitem $\arraycolsep=1pt
+\begin{array}{rrrrr}
+2x & + & y  & = & 1\\
+3x & + & 7y & = & -2 \end{array}
+$
+\exitem $\arraycolsep=1pt
+\begin{array}{rrrrr}
+3x & + & 4y  & = & 9 \\
+2x & - & y & = & -1
+\end{array} $
+\exitem  $\arraycolsep=1pt
+\begin{array}{rrrrrrr}
+5x & + & y & - & z & = & -7 \\
+2x & - & y & - & 2z & = & 6 \\
+3x &  &  & + & 2z & = & -7 
+\end{array} $
+\exitem $\arraycolsep=1pt
+\begin{array}{rrrrrrr}
+4x & - & y & + & 3z & = & 1 \\
+6x & + & 2y & - & z & = & 0 \\
+3x & + & 3y & + & 2z & = & -1 
+\end{array} $
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\frac{1}{11}\leftB \begin{array}{r}
+5 \\
+21
+\end{array}\rightB$
+
+
+\setcounter{enumi}{3}
+\item   $\frac{1}{79}\leftB \begin{array}{r}
+12  \\
+-37 \\
+-2
+\end{array}\rightB$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Use Theorem~\ref{thm:008370} to find the $(2, 3)$-entry of $A^{-1}$ if:
+
+\begin{exenumerate}
+\exitem $ A = \leftB \begin{array}{rrr}
+3 & 2 & 1 \\
+1 & 1 & 2 \\
+-1 & 2 & 1 
+\end{array}\rightB $ 
+\exitem $ A = \leftB \begin{array}{rrr}
+1 & 2 & -1 \\
+3 & 1 & 1 \\
+0 & 4 & 7 
+\end{array}\rightB $ 
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\frac{4}{51}$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Explain what can be said about $\func{det }A$ if:
+
+\begin{exenumerate}
+\exitem $A^{2} = A$
+\exitem $A^{2} = I$
+\exitem $A^{3} = A$
+\exitem $PA = P$ and $P$ is invertible
+\exitem $A^{2} = uA$ and $A$ is $n \times n$
+\exitem $A = -A^{T}$ and $A$ is $n \times n$
+\exitem $A^{2} + I = 0$ and $A$ is $n \times n$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\func{det } A = 1, -1$
+
+\setcounter{enumi}{3}
+\item $\func{det }A = 1$
+
+\setcounter{enumi}{5}
+\item  $\func{det }A = 0$ if $n$ is odd; nothing can be said if $n$ is even
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ be $n \times n$. Show that $uA = (uI)A$, and use this with Theorem~\ref{thm:008196} to deduce the result in Theorem \ref{thm:007870}: $\func{det}(uA) = u^{n} \func{det }A$.
+\end{ex}
+
+\begin{ex}
+If $A$ and $B$ are $n \times n$ matrices, if $AB = -BA$, and if $n$ is odd, show that either $A$ or $B$ has no inverse.
+\end{ex}
+
+\begin{ex}
+Show that $\func{det }AB = \func{det }BA$ holds for any two $n \times n$ matrices $A$ and $B$.
+\end{ex}
+
+\begin{ex}
+If $A^{k} = 0$ for some $k \geq 1$, show that $A$ is not invertible.
+\end{ex}
+
+\begin{ex}
+If $A^{-1} = A^{T}$, describe the cofactor matrix of $A$ in terms of $A$.
+
+\begin{sol}
+$dA$ where $d = \func{det }A$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that no $3 \times 3$ matrix $A$ exists such that $A^{2} + I = 0$. Find a $2 \times 2$ matrix $A$ with this property.
+\end{ex}
+
+\begin{ex}
+Show that $\func{det}(A + B^{T}) = \func{det}(A^{T} + B)$ for any $n \times n$ matrices $A$ and $B$.
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ be invertible $n \times n$ matrices. Show that $\func{det }A = \func{det }B$ if and only if $A = UB$ where $U$ is a matrix with $\func{det }U = 1$.
+\end{ex}
+
+\begin{ex}
+For each of the matrices in Exercise 2, find the inverse for those values of $c$ for which it exists.
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\frac{1}{c} \leftB \begin{array}{rrr}
+1 & 0 & 1 \\
+0 & c & 1 \\
+-1 & c & 1 
+\end{array} \rightB, c \neq 0$
+
+\setcounter{enumi}{3}
+\item $\frac{1}{2}\leftB \begin{array}{rrr}
+8-c^2 & -c & c^2-6 \\
+c & 1 & -c \\
+c^2-10 & c & 8-c^2 
+\end{array} \rightB$
+
+
+\setcounter{enumi}{5}
+\item  $\frac{1}{c^3+1} \leftB \begin{array}{rrr}
+1-c & c^2+1 & -c-1 \\
+c^2 & -c & c+1 \\
+-c & 1 & c^2-1 
+\end{array} \rightB, c \neq -1$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case either prove the statement or give an example showing that it is false:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $\func{adj }A$ exists, then $A$ is invertible.
+
+\item If $A$ is invertible and $\func{adj }A = A^{-1}$, then $\func{det }A = 1$.
+
+\item $\func{det}(AB) = \func{det}(B^{T}A)$.
+
+\item If $\func{det }A \neq 0$ and $AB = AC$, then $B = C$.
+
+\item If $A^{T} = -A$, then $\func{det } A = -1$.
+
+\item If $\func{adj }A = 0$, then $A = 0$.
+
+\item If $A$ is invertible, then $\func{adj } A$ is invertible.
+
+\item If $A$ has a row of zeros, so also does $\func{adj } A$.
+
+\item $\func{det}(A^{T}A) > 0$ for all square matrices $A$.
+
+\item $\func{det}(I + A) = 1 + \func{det }A$.
+
+\item If $AB$ is invertible, then $A$ and $B$ are invertible.
+
+\item If $\func{det } A = 1$, then $\func{adj }A = A$.
+
+\item If $A$ is invertible and $\func{det} A = d$, then $\func{adj} A = d A^{-1}$. 
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  T. $\func{det }AB = \func{det }A \func{det }B = \func{det }B \func{det }A = \func{det }BA$.
+
+\setcounter{enumi}{3}
+\item  T. $\func{det }A \neq 0$ means $A^{-1}$ exists, so $AB = AC$ implies that $B=C$.
+
+\setcounter{enumi}{5}
+\item  F. If $A = \leftB \begin{array}{rrr}
+1 & 1 & 1 \\
+1 & 1 & 1 \\
+1 & 1 & 1
+\end{array}\rightB$
+ then $\func{adj }A = 0$.
+
+\setcounter{enumi}{7}
+\item  F. If  $A = \leftB \begin{array}{rr}
+1 & 1 \\
+0 & 0 
+\end{array}\rightB$
+ then $\func{adj } A = \leftB \begin{array}{rr}
+0 & -1 \\
+0 & 1 
+\end{array}\rightB$
+
+\setcounter{enumi}{9}
+\item F. If $A = \leftB \begin{array}{rr}
+-1 & 1 \\
+1 & -1 
+\end{array}\rightB$
+ then $\func{det}(I + A) = -1$ but $1 + \func{det }A = 1$.
+
+\setcounter{enumi}{11}
+\item F. If $A = \leftB \begin{array}{rr}
+1 & 1 \\
+0 & 1 
+\end{array}\rightB$ 
+ then $\func{det }A = 1$ but $\func{adj } A = \leftB \begin{array}{rr}
+1 & -1 \\
+0 & 1 
+\end{array}\rightB \neq A$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is $2 \times 2$ and $\func{det }A = 0$, show that one column of $A$ is a scalar multiple of the other. [\textit{Hint}: Definition \ref{def:002668} and Part (2) of Theorem \ref{thm:004553}.]
+\end{ex}
+
+\begin{ex}
+Find a polynomial $p(x)$ of degree $2$ such that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $p(0) = 2$, $p(1) = 3$, $p(3) = 8$
+
+\item $p(0) = 5$, $p(1) = 3$, $p(2) = 5$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $5 - 4x + 2x^{2}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find a polynomial $p(x)$ of degree $3$ such that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $p(0) = p(1) = 1$, $p(-1) = 4$, $p(2) = -5$
+
+\item $p(0) = p(1) = 1$, $p(-1) = 2$, $p(-2) = -3$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $ 1- \frac{5}{3}x  + \frac{1}{2} x ^2 + \frac{7}{6}x^3$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Given the following data pairs, find the interpolating polynomial of degree at most $3$ and estimate the value of $y$ corresponding to $x = 1.5$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $(0, 1)$, $(1, 2)$, $(2, 5)$, $(3, 10)$
+
+\item $(0, 1)$, $(1, 1.49)$, $(2, -0.42)$, $(3, -11.33)$
+
+\item $(0, 2)$, $(1, 2.03)$, $(2, -0.40)$, $(-1, 0.89)$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $1 - 0.51 x + 2.1 x^2 - 1.1 x^3; 1.25$, so  $y = 1.25$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A = \leftB \begin{array}{rrr}
+1 & a & b \\
+-a & 1 & c \\
+-b & -c & 1 
+\end{array} \rightB$
+ show that $\func{det }A = 1 + a^{2} + b^{2} + c^{2}$. Hence, find $A^{-1}$ for any $a$, $b$, and $c$.
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Show that $A = \leftB \begin{array}{rrr}
+a & p & q \\
+0 & b & r \\
+0 & 0 & c 
+\end{array} \rightB$
+ has an inverse if and only if $abc \neq 0$, and find $A^{-1}$ in that case.
+
+\item Show that if an upper triangular matrix is invertible, the inverse is also upper triangular.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Use induction on $n$ where $A$ is $n \times n$. It is clear if $n = 1$. If $n > 1$, write $A = \leftB \begin{array}{cc}
+a & X \\
+0 & B
+\end{array}\rightB$
+ in block form where $B$ is $(n - 1) \times (n - 1)$. Then $A^{-1} = \leftB \begin{array}{cc}
+a^{-1} & -a^{-1}XB^{-1} \\
+0 & B^{-1}
+\end{array}\rightB$, and this is upper triangular because $B$ is upper triangular by induction.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ be a matrix each of whose entries are integers. Show that each of the following conditions implies the other.
+
+
+\begin{enumerate}
+\item $A$ is invertible and $A^{-1}$ has integer entries.
+
+\item $\func{det }A = 1$ or $-1$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+If $A^{-1} = \leftB \begin{array}{rrr}
+3 & 0 & 1 \\ 
+0 & 2 & 3 \\
+3 & 1 & -1 
+\end{array}\rightB$
+ find $\func{adj }A$.
+
+\begin{sol}
+$-\frac{1}{21}\leftB\begin{array}{rrr}
+3 & 0 & 1 \\
+0 & 2 & 3\\
+3 & 1 & -1 
+\end{array}\rightB$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is $3 \times 3$ and $\func{det }A = 2$, find $\func{det}(A^{-1} + 4 \func{adj }A)$.
+\end{ex}
+
+\begin{ex}
+Show that $\func{det} \leftB \begin{array}{rr}
+0 & A \\
+B & X 
+\end{array}\rightB = \func{det }A \func{det }B$ when $A$ and $B$ are $2 \times 2$. What if $A$ and $B$ are $3 \times 3$?
+
+
+[\textit{Hint}: Block multiply by $ \leftB \begin{array}{rr}
+0 & I \\
+I & 0 
+\end{array}\rightB$.]
+\end{ex}
+
+\begin{ex}
+Let $A$ be $n \times n$, $n \geq 2$, and assume one column of $A$ consists of zeros. Find the possible values of $\func{rank}(\func{adj }A)$.
+\end{ex}
+
+\begin{ex}
+If $A$ is $3 \times 3$ and invertible, compute $\func{det}(-A^{2}(\func{adj }A)^{-1})$.
+\end{ex}
+
+
+\begin{ex}
+Show that $\func{adj}(uA) = u^{n-1} \func{adj }A$ for all $n \times n$ matrices $A$.
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ denote invertible $n \times n$ matrices. Show that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $\func{adj}(\func{adj }A) = (\func{det }A)^{n-2}A$ (here $n \geq 2$) [\textit{Hint}: See Example~\ref{exa:008396}.]
+
+\item $\func{adj}(A^{-1}) = (\func{adj }A)^{-1}$
+
+\item $\func{adj}(A^{T}) = (\func{adj }A)^T$
+
+\item $\func{adj}(AB) = (\func{adj }B)(\func{adj }A)$ [\textit{Hint}: Show that $AB \func{adj}(AB) = AB \func{adj }B \func{adj }A$.]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Have $(\func{adj }A)A = (\func{det }A)I$; so taking inverses, $A^{-1} \cdot (\func{adj } A)^{-1} = \frac{1}{\func{det } A}I$.
+ On the other hand, $A^{-1} \func{adj} (A^{-1}) = \func{det}(A^{-1})I = \frac{1}{\func{det } A}I$.
+ Comparison yields $A^{-1}(\func{adj }A)^{-1} = A^{-1}\func{adj}(A^{-1})$, and part \textbf{(b)} follows.
+
+\setcounter{enumi}{3}
+\item  Write $\func{det} A = d$, $\func{det } B = e$. By the adjugate formula $AB \func{adj}(AB) = deI$, and $AB \func{adj }B \func{adj }A = A[eI] \func{adj} A = (eI)(dI) = deI$. Done as $AB$ is invertible.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\end{multicols}
+
+
+
+

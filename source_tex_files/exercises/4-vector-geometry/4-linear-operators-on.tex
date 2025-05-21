@@ -1,0 +1,517 @@
+\section*{Exercises for \ref{sec:4_4}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:4_4}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+In each case show that that $T$ is either projection on a line, reflection in a line, or rotation through an angle, and find the line or angle.
+
+\begin{enumerate}[label={\alph*.}]
+\item $T\leftB
+\begin{array}{c}
+x\\
+y 
+\end{array}
+\rightB
+= \frac{1}{5}
+\leftB
+\begin{array}{c}
+x + 2y\\
+2x + 4y 
+\end{array}
+\rightB$
+\item $T\leftB
+\begin{array}{c}
+x\\
+y 
+\end{array}
+\rightB
+= \frac{1}{2}
+\leftB
+\begin{array}{c}
+x - y\\
+y - x
+\end{array}
+\rightB$
+\item $T\leftB
+\begin{array}{c}
+x\\
+y 
+\end{array}
+\rightB
+= \frac{1}{\sqrt{2}}
+\leftB
+\begin{array}{c}
+-x - y\\
+x - y 
+\end{array}
+\rightB$
+\item $T\leftB
+\begin{array}{c}
+x\\
+y 
+\end{array}
+\rightB
+= \frac{1}{5}
+\leftB
+\begin{array}{c}
+-3x + 4y\\
+4x + 3y 
+\end{array}
+\rightB$
+\item $T\leftB
+\begin{array}{c}
+x\\
+y 
+\end{array}
+\rightB =
+\leftB
+\begin{array}{c}
+-y\\
+-x 
+\end{array}
+\rightB$
+\item $T\leftB
+\begin{array}{c}
+x\\
+y 
+\end{array}
+\rightB
+= \frac{1}{2}
+\leftB
+\begin{array}{c}
+x - \sqrt{3}y\\
+\sqrt{3}x + y 
+\end{array}
+\rightB$
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $A = \leftB
+\begin{array}{rr}
+1 & -1\\
+-1 & 1\\
+\end{array}
+\rightB$, projection on $y = -x$.
+
+\setcounter{enumi}{3}
+\item $A = \frac{1}{5}\leftB
+\begin{array}{rr}
+-3 & 4\\
+4 & 3\\
+\end{array}
+\rightB$, reflection in $y = 2x$.
+
+\setcounter{enumi}{5}
+\item  $A = \frac{1}{2}\leftB
+\begin{array}{rr}
+1 & -\sqrt{3}\\
+\sqrt{3} & 1\\
+\end{array}
+\rightB$,
+ rotation through $\frac{\pi}{3}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Determine the effect of the following transformations.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Rotation through $\frac{\pi}{2}$, followed by projection on the $y$ axis, followed by reflection in the line $y = x$.
+
+\item Projection on the line $y = x$ followed by projection on the line $y = -x$.
+
+\item Projection on the $x$ axis followed by reflection in the line $y = x$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  The zero transformation.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case solve the problem by finding the matrix of the operator.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Find the projection of 
+$\vect{v} = \leftB
+\begin{array}{r}
+1\\
+-2\\
+3 
+\end{array}
+\rightB$
+ on the plane with equation $3x - 5y + 2z = 0$.
+
+\item Find the projection of 
+$\vect{v} = \leftB
+\begin{array}{r}
+0\\
+1\\
+-3 
+\end{array}
+\rightB$
+ on the plane with equation $2x - y + 4z = 0$.
+
+\item Find the reflection of 
+$\vect{v} = \leftB
+\begin{array}{r}
+1\\
+-2\\
+3 
+\end{array}
+\rightB$
+ in the plane with equation $x - y + 3z = 0$.
+
+\item Find the reflection of 
+$\vect{v} = \leftB
+\begin{array}{r}
+0\\
+1\\
+-3 
+\end{array}
+\rightB$
+ in the plane with equation $2x + y -5z = 0$.
+
+\item Find the reflection of 
+$\vect{v} = \leftB
+\begin{array}{r}
+2\\
+5\\
+-1 
+\end{array}
+\rightB$
+in the line with equation 
+$\leftB
+\begin{array}{r}
+x\\
+y\\
+z 
+\end{array}
+\rightB
+= t
+\leftB
+\begin{array}{r}
+1\\
+1\\
+-2 
+\end{array}
+\rightB$.
+
+\item Find the projection of 
+$\vect{v} = \leftB
+\begin{array}{r}
+1\\
+-1\\
+7 
+\end{array}
+\rightB$
+ on the line with equation $\leftB
+ \begin{array}{r}
+ x\\
+ y\\
+ z 
+ \end{array}
+ \rightB
+ = t
+ \leftB
+ \begin{array}{r}
+ 3\\
+ 0\\
+ 4 
+ \end{array}
+ \rightB$.
+
+\item Find the projection of 
+$\vect{v} = \leftB
+\begin{array}{r}
+1\\
+1\\
+-3
+\end{array}
+\rightB$
+ on the line with equation 
+ $\leftB
+ \begin{array}{r}
+ x\\
+ y\\
+ z 
+ \end{array}
+ \rightB
+ = t
+ \leftB
+ \begin{array}{r}
+ 2\\
+ 0\\
+ -3 
+ \end{array}
+ \rightB$.
+
+\item Find the reflection of 
+$\vect{v} = \leftB
+\begin{array}{r}
+2\\
+-5\\
+0 
+\end{array}
+\rightB$
+ in the line with equation 
+ $\leftB
+ \begin{array}{r}
+ x\\
+ y\\
+ z 
+ \end{array}
+ \rightB
+ = t
+ \leftB
+ \begin{array}{r}
+ 1\\
+ 1\\
+ -3
+ \end{array}
+ \rightB$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item 
+$\frac{1}{21}\leftB
+\begin{array}{rrr}
+	17 & 2 & -8\\
+	2 & 20 & 4\\
+	-8 & 4 & 5
+\end{array}
+\rightB
+\leftB
+\begin{array}{r}
+0\\
+1\\
+-3
+\end{array}
+\rightB$
+
+\setcounter{enumi}{3}
+\item  
+$\frac{1}{30}\leftB
+\begin{array}{rrr}
+22 & -4 & 20\\
+-4 & 28 & 10\\
+20 & 10 & -20
+\end{array}
+\rightB
+\leftB
+\begin{array}{r}
+0\\
+1\\
+-3
+\end{array}
+\rightB$
+
+\setcounter{enumi}{5}
+\item  
+$\frac{1}{25}\leftB
+\begin{array}{rrr}
+9 & 0 & 12\\
+0 & 0 & 0\\
+12 & 0 & 16
+\end{array}
+\rightB
+\leftB
+\begin{array}{r}
+1\\
+-1\\
+7
+\end{array}
+\rightB$
+
+\setcounter{enumi}{7}
+\item 
+ $\frac{1}{11}\leftB
+\begin{array}{rrr}
+-9 & 2 & -6\\
+2 & -9 & -6\\
+-6 & -6 & 7
+\end{array}
+\rightB
+\leftB
+\begin{array}{r}
+2\\
+-5\\
+0
+\end{array}
+\rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Find the rotation of 
+$\vect{v} = \leftB
+\begin{array}{r}
+2\\
+3\\
+-1 
+\end{array}
+\rightB$
+ about the $z$ axis through $\theta = \frac{\pi}{4}$.
+
+\item Find the rotation of 
+$\vect{v} = \leftB
+\begin{array}{r}
+1\\
+0\\
+3 
+\end{array}
+\rightB$
+ about the $z$ axis through $\theta = \frac{\pi}{6}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$\frac{1}{2}\leftB
+\begin{array}{rrr}
+\sqrt{3} & -1 & 0\\
+1 & \sqrt{3} & 0\\
+0 & 0 & 1
+\end{array}
+\rightB
+\leftB
+\begin{array}{r}
+1\\
+0\\
+3
+\end{array}
+\rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the matrix of the rotation in $\RR^3$ about the $x$ axis through the angle $\theta$ (from the positive $y$ axis to the positive $z$ axis).
+\end{ex}
+
+\begin{ex}
+Find the matrix of the rotation about the $y$ axis through the angle $\theta$ (from the positive $x$ axis to the positive $z$ axis).
+
+\begin{sol}
+$\leftB
+\begin{array}{ccc}
+\cos\theta & 0 & -\sin\theta\\
+0 & 1 & 0\\
+\sin\theta & 0 & \cos\theta
+\end{array}
+\rightB$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is $3 \times 3$, show that the image of the line in $\RR^3$ through $\vect{p}_{0}$ with direction vector $\vect{d}$ is the line through $A\vect{p}_{0}$ with direction vector $A\vect{d}$, assuming that $A\vect{d} \neq \vect{0}$. What happens if $A\vect{d} = \vect{0}$?
+\end{ex}
+
+\begin{ex}
+If $A$ is $3 \times 3$ and invertible, show that the image of the plane through the origin with normal $\vect{n}$ is the plane through the origin with normal $\vect{n}_{1} = B\vect{n}$ where $B = (A^{-1})^{T}$. [\textit{Hint}: Use the fact that $\vect{v} \dotprod  \vect{w} = \vect{v}^{T}\vect{w}$ to show that $\vect{n}_{1} \dotprod (A\vect{p}) = \vect{n} \dotprod \vect{p}$ for each $\vect{p}$ in $\RR^3$.]
+\end{ex}
+
+
+\begin{ex}
+Let $L$ be the line through the origin in $\RR^2$ with direction vector $\vect{d} = \leftB
+\begin{array}{r}
+a\\
+b\\
+\end{array}
+\rightB \neq 0$.
+
+\begin{enumerate}[label={\alph*.}]
+\item If $P_{L}$ denotes projection on $L$, show that $P_{L}$ has matrix $\frac{1}{a^2 + b^2}\leftB
+\begin{array}{cc}
+a^2 & ab\\
+ab & b^2\\
+\end{array}\rightB$.
+
+\item If $Q_{L}$ denotes reflection in $L$, show that $Q_{L}$ has matrix $\frac{1}{a^2 + b^2}\leftB
+\begin{array}{cc}
+a^2 - b^2 & 2ab\\
+2ab & b^2 - a^2\\
+\end{array}\rightB$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\item  Write $\vect{v} = \leftB
+\begin{array}{r}
+x\\
+y
+\end{array}
+\rightB$.
+
+\begin{align*}
+P_{L}(\vect{v}) = \left(\frac{\vect{v} \dotprod \vect{d}}{\vectlength \vect{d} \vectlength^2}\right)\vect{d} & = \frac{ax + by}{a^2 + b^2}\leftB
+\begin{array}{r}
+a\\
+b
+\end{array}
+\rightB  \\
+&  = \frac{1}{a^2 + b^2}\leftB
+\begin{array}{c}
+a^2x + aby\\
+abx + b^2y
+\end{array}
+\rightB \\
+& = \frac{1}{a^2 + b^2}\leftB
+\begin{array}{c}
+a^2 + ab\\
+ab + b^2
+\end{array}
+\rightB \leftB
+\begin{array}{r}
+x\\
+y
+\end{array}
+\rightB
+\end{align*}
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $\vect{n}$ be a nonzero vector in $\RR^3$, let $L$ be the line through the origin with direction vector $\vect{n}$, and let $M$ be the plane through the origin with normal $\vect{n}$. Show that $P_{L}(\vect{v}) = Q_{L}(\vect{v}) + P_{M}(\vect{v})$ for all $\vect{v}$ in $\RR^3$. [In this case, we say that $P_{L} = Q_{L} + P_{M}$.]
+\end{ex}
+
+\begin{ex}
+If $M$ is the plane through the origin in $\RR^3$ with normal $\vect{n} = \leftB
+\begin{array}{r}
+a\\
+b\\
+c 
+\end{array}
+\rightB$, show that $Q_{M}$ has matrix
+\begin{equation*}{\small
+\frac{1}{a^2 + b^2 + c^2}}{\footnotesize \leftB
+\begin{array}{ccc}
+b^2 + c^2 - a^2 & -2ab & -2ac \\
+-2ab & a^2 + c^2 - b^2 & -2bc \\
+-2ac & -2bc & a^2 + b^2 - c^2
+\end{array}
+\rightB}
+\end{equation*}
+\end{ex}
+\end{multicols}

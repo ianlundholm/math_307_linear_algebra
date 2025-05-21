@@ -1,0 +1,1062 @@
+\section*{Exercises for \ref{sec:2_4}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:2_4}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+In each case, show that the matrices are inverses of each other.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\leftB \begin{array}{rr}
+3 & 5 \\
+1 & 2
+\end{array} \rightB$, $\leftB \begin{array}{rr}
+2 & -5 \\
+-1 & 3
+\end{array} \rightB$
+
+\item $\leftB \begin{array}{rr}
+3 & 0 \\
+1 & -4
+\end{array} \rightB$, $\frac{1}{2}\leftB \begin{array}{rr}
+4 & 0 \\
+1 & -3
+\end{array} \rightB$
+
+\item $\leftB \begin{array}{rrr}
+1 & 2 & 0 \\
+0 & 2 & 3 \\
+1 & 3 & 1
+\end{array} \rightB$, $\leftB \begin{array}{rrr}
+7 & 2 & -6 \\
+-3 & -1 & 3 \\
+2 & 1 & -2
+\end{array} \rightB$
+
+\item $\leftB \begin{array}{rr}
+3 & 0 \\
+0 & 5
+\end{array} \rightB$, $\leftB \begin{array}{rr}
+\frac{1}{3} & 0 \\
+0 & \frac{1}{5}
+\end{array} \rightB$
+
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Find the inverse of each of the following matrices.
+\begin{exenumerate}[column-sep=-3em]
+\exitem $\leftB \begin{array}{rr}
+1 & -1 \\
+-1 & 3
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rr}
+4 & 1 \\
+3 & 2
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+1 & 0 & -1 \\
+3 & 2 & 0 \\
+-1 & -1 & 0
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+1 & -1 & 2 \\
+-5 & 7 & -11 \\
+-2 & 3 & -5
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+3 & 5 & 0 \\
+3 & 7 & 1 \\
+1 & 2 & 1
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+3 & 1 & -1 \\
+2 & 1 & 0 \\
+1 & 5 & -1
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+2 & 4 & 1 \\
+3 & 3 & 2 \\
+4 & 1 & 4
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+3 & 1 & -1 \\
+5 & 2 & 0 \\
+1 & 1 & -1
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+3 & 1 & 2 \\
+1 & -1 & 3 \\
+1 & 2 & 4
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrrr}
+-1 & 4 & 5 & 2 \\
+0 & 0 & 0 & -1 \\
+1 & -2 & -2 & 0 \\
+0 & -1 & -1 & 0
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrrr}
+1 & 0 & 7 & 5 \\
+0 & 1 & 3 & 6 \\
+1 & -1 & 5 & 2 \\
+1 & -1 & 5 & 1
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrrrr}
+1 & 2 & 0 & 0 & 0 \\
+0 & 1 & 3 & 0 & 0 \\
+0 & 0 & 1 & 5 & 0 \\
+0 & 0 & 0 & 1 & 7 \\
+0 & 0 & 0 & 0 & 1
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\frac{1}{5} \leftB \begin{array}{rr}
+2 & -1 \\
+-3 & 4
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item $\leftB \begin{array}{rrr}
+2 & -1 & 3 \\
+3 & 1 & -1 \\
+1 & 1 & -2
+\end{array} \rightB$
+
+\setcounter{enumi}{5}
+\item $\frac{1}{10} \leftB \begin{array}{rrr}
+1 & 4 & -1 \\
+-2 & 2 & 2 \\
+-9 & 14 & -1
+\end{array} \rightB$
+
+\setcounter{enumi}{7}
+\item $\frac{1}{4} \leftB \begin{array}{rrr}
+2 & 0 & -2 \\
+-5 & 2 & 5 \\
+-3 & 2 & -1
+\end{array} \rightB$
+
+\setcounter{enumi}{9}
+\item $\leftB \begin{array}{rrrr}
+0 & 0 & 1 & -2 \\
+-1 & -2 & -1 & -3 \\
+1 & 2 & 1 & 2 \\
+0 & -1 & 0 & 0
+\end{array} \rightB$
+
+\setcounter{enumi}{11}
+\item $\leftB \begin{array}{rrrrr}
+1 & -2 & 6 & -30 & 210 \\
+0 & 1 & -3 & 15 & -105 \\
+0 & 0 & 1 & -5 & 35 \\
+0 & 0 & 0 & 1 & -7 \\
+0 & 0 & 0 & 0 & 1
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, solve the systems of equations by finding the inverse of the coefficient matrix.
+\begin{exenumerate}
+\exitem $\arraycolsep=1pt\begin{array}[t]{rrrrr}
+3x & - & y & = & 5 \\
+2x & + & 2y & = & 1
+\end{array}$
+\exitem $\arraycolsep=1pt\begin{array}[t]{rrrrr}
+2x & - & 3y & = & 0 \\
+x & - & 4y & = & 1
+\end{array}$
+\exitem $\arraycolsep=1pt\begin{array}[t]{rrrrrrr}
+x & + & y & + & 2z & = & 5 \\
+x & + & y & + & z & = & 0 \\
+x & + & 2y & + & 4z & = & -2
+\end{array}$
+\exitem $\arraycolsep=1pt\begin{array}[t]{rrrrrrr}
+x & + & 4y & + & 2z & = & 1 \\
+2x & + & 3y & + & 3z & = & -1 \\
+4x & + & y & + & 4z & = & 0
+\end{array}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB = \frac{1}{5} \leftB \begin{array}{rr}
+4 & -3 \\
+1 & -2
+\end{array} \rightB \leftB \begin{array}{r}
+0 \\
+1
+\end{array} \rightB = \frac{1}{5} \leftB \begin{array}{r}
+-3 \\
+-2
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item $\leftB \begin{array}{c}
+x \\
+y \\
+z
+\end{array} \rightB = \frac{1}{5} \leftB \begin{array}{rrr}
+9 & -14 & 6 \\
+4 & -4 & 1 \\
+-10 & 15 & -5
+\end{array} \rightB \leftB \begin{array}{r}
+1 \\
+-1 \\
+0
+\end{array} \rightB = \frac{1}{5} \leftB \begin{array}{r}
+23 \\
+8 \\
+-25
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Given $A^{-1} = \leftB \begin{array}{rrr}
+1 & -1 & 3 \\
+2 & 0 & 5 \\
+-1 & 1 & 0
+\end{array} \rightB$:
+
+\begin{enumerate}[label={\alph*.}]
+\item Solve the system of equations $A\vect{x} = \leftB \begin{array}{r}
+1 \\
+-1 \\
+3
+\end{array} \rightB$.
+
+\item Find a matrix $B$ such that \\ $AB = \leftB \begin{array}{rrr}
+1 & -1 & 2 \\
+0 & 1 & 1 \\
+1 & 0 & 0
+\end{array} \rightB$.
+
+\item Find a matrix $C$ such that \\ $CA = \leftB \begin{array}{rrr}
+1 & 2 & -1 \\
+3 & 1 & 1
+\end{array} \rightB$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $B = A^{-1}AB = \leftB \begin{array}{rrr}
+4 & -2 & 1 \\
+7 & -2 & 4 \\
+-1 & 2 & -1
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find $A$ when
+\begin{exenumerate}
+\exitem $(3A)^{-1} = \leftB \begin{array}{rr}
+1 & -1 \\
+0 & 1
+\end{array} \rightB$
+\exitem $(2A)^{T} = \leftB \begin{array}{rr}
+1 & -1 \\
+2 & 3
+\end{array} \rightB^{-1}$
+\exitem* $(I + 3A)^{-1} = \leftB \begin{array}{rr}
+2 & 0 \\
+1 & -1
+\end{array} \rightB$
+\exitem* $(I - 2A^{T})^{-1} = \leftB \begin{array}{rr}
+2 & 1 \\
+1 & 1
+\end{array} \rightB$
+\exitem* $\left(A \leftB \begin{array}{rr}
+1 & -1 \\
+0 & 1
+\end{array} \rightB \right)^{-1} = \leftB \begin{array}{rr}
+2 & 3 \\
+1 & 1
+\end{array} \rightB$
+\exitem* $\left(\leftB \begin{array}{rr}
+1 & 0 \\
+2 & 1
+\end{array} \rightB A\right)^{-1} = \leftB \begin{array}{rr}
+1 & 0 \\
+2 & 2
+\end{array} \rightB$
+\exitem* $\left(A^{T} -2I \right)^{-1} = 2 \leftB \begin{array}{rr}
+1 & 1 \\
+2 & 3
+\end{array} \rightB$
+\exitem* $\left(A^{-1} -2I \right)^{T} = -2 \leftB \begin{array}{rr}
+1 & 1 \\
+1 & 0
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\frac{1}{10} \leftB \begin{array}{rr}
+3 & -2 \\
+1 & 1
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item $\frac{1}{2} \leftB \begin{array}{rr}
+0 & 1 \\
+1 & -1
+\end{array} \rightB$
+
+\setcounter{enumi}{5}
+\item $\frac{1}{2} \leftB \begin{array}{rr}
+2 & 0 \\
+-6 & 1
+\end{array} \rightB$
+
+\setcounter{enumi}{7}
+\item $-\frac{1}{2} \leftB \begin{array}{rr}
+1 & 1 \\
+1 & 0
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find $A$ when:
+\begin{exenumerate}
+\exitem $A^{-1} = \leftB \begin{array}{rrr}
+1 & -1 & 3 \\
+2 & 1 & 1 \\
+0 & 2 & -2
+\end{array} \rightB$
+\exitem $A^{-1} = \leftB \begin{array}{rrr}
+0 & 1 & -1 \\
+1 & 2 & 1 \\
+1 & 0 & 1
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $A = \frac{1}{2} \leftB \begin{array}{rrr}
+2 & -1 & 3 \\
+0 & 1 & -1 \\
+-2 & 1 & -1
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Given $\leftB \begin{array}{c}
+x_{1} \\
+x_{2} \\
+x_{3}
+\end{array} \rightB = \leftB \begin{array}{rrr}
+3 & -1 & 2 \\
+1 & 0 & 4 \\
+2 & 1 & 0
+\end{array} \rightB \leftB \begin{array}{c}
+y_{1} \\
+y_{2} \\
+y_{3}
+\end{array} \rightB$
+ and $\leftB \begin{array}{c}
+ z_{1} \\
+ z_{2} \\
+ z_{3}
+ \end{array} \rightB = \leftB \begin{array}{rrr}
+ 1 & -1 & 1 \\
+ 2 & -3 & 0 \\
+ -1 & 1 & -2
+ \end{array} \rightB \leftB \begin{array}{c}
+ y_{1} \\
+ y_{2} \\
+ y_{3}
+ \end{array} \rightB$, express the variables $x_{1}$, $x_{2}$, and $x_{3}$ in terms of $z_{1}$, $z_{2}$, and $z_{3}$.
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item In the system $\arraycolsep=1pt\begin{array}{rrrrr}
+3x & + & 4y & = & 7 \\
+4x & + & 5y & = & 1
+\end{array}$, substitute the new variables $x^\prime$ and $y^\prime$ given by $\arraycolsep=1pt\begin{array}{rrrrr}
+ x & = & -5x^\prime & + & 4y^\prime \\
+ y & = & 4x^\prime & - & 3y^\prime
+ \end{array}$. Then find $x$ and $y$.
+
+\item Explain part (a) by writing the equations as $A \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB = \leftB \begin{array}{r}
+7 \\
+1
+\end{array} \rightB$
+ and $\leftB \begin{array}{r}
+ x \\
+ y
+ \end{array} \rightB = B \leftB \begin{array}{c}
+ x^\prime \\
+ y^\prime
+ \end{array} \rightB$. What is the relationship between $A$ and $B$?
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $A$ and $B$ are inverses.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case either prove the assertion or give an example showing that it is false.
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A \neq 0$ is a square matrix, then $A$ is invertible.
+
+\item If $A$ and $B$ are both invertible, then $A + B$ is invertible.
+
+\item If $A$ and $B$ are both invertible, then $(A^{-1}B)^{T}$ is invertible.
+
+\item If $A^{4} = 3I$, then $A$ is invertible.
+
+\item If $A^{2} = A$ and $A \neq 0$, then $A$ is invertible.
+
+\item If $AB = B$ for some $B \neq 0$, then $A$ is invertible.
+
+\item If $A$ is invertible and skew symmetric ($A^{T} = -A$), the same is true of $A^{-1}$.
+
+\item If $A^{2}$ is invertible, then $A$ is invertible.
+
+\item If $AB = I$, then $A$ and $B$ commute.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  False. $\leftB \begin{array}{rr}
+1 & 0 \\
+0 & 1
+\end{array} \rightB + \leftB \begin{array}{rr}
+1 & 0 \\
+0 & -1
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item  True. $A^{-1} = \frac{1}{3}A^{3}$
+
+\setcounter{enumi}{5}
+\item  False. $A = B = \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 0
+\end{array} \rightB$
+
+\setcounter{enumi}{7}
+\item  True. If $(A^{2})B = I$, then $A(AB) = I$; use Theorem~\ref{thm:004553}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex} \label{ex:ex2_4_10}
+\begin{enumerate}[label={\alph*.}]
+\item If $A$, $B$, and $C$ are square matrices and $AB = I$, $ I = CA$, show that $A$ is invertible and $B = C = A^{-1}$.
+
+\item If $C^{-1} = A$, find the inverse of $C^{T}$ in terms of $A$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $(C^{T})^{-1} = (C^{-1})^{T} = A^{T}$ because $C^{-1} = (A^{-1})^{-1} = A$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Suppose $CA = I_{m}$, where $C$ is $m \times n$ and $A$ is $n \times m$. Consider the system $A\vect{x} = \vect{b}$ of $n$ equations in $m$ variables.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that this system has a unique solution $CB$ if it is consistent.
+
+\item If $C = \leftB \begin{array}{rrr}
+0 & -5 & 1 \\
+3 & 0 & -1
+\end{array} \rightB$
+ and $A = \leftB \begin{array}{rr}
+ 2 & -3 \\
+ 1 & -2 \\
+ 6 & -10
+ \end{array} \rightB$, find $\vect{x}$ (if it exists) when 
+\newline (i) $\vect{b} = \leftB \begin{array}{r}
+ 1 \\
+ 0 \\
+ 3
+ \end{array} \rightB$; and (ii) $\vect{b} = \leftB \begin{array}{r}
+ 7 \\
+ 4 \\
+ 22
+ \end{array} \rightB$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+
+\setcounter{enumi}{1}
+\item 
+(i) Inconsistent.
+
+(ii) $\leftB \begin{array}{c}
+x_{1} \\
+x_{2}
+\end{array} \rightB = \leftB \begin{array}{r}
+2 \\
+-1
+\end{array} \rightB$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Verify that $A = \leftB \begin{array}{rr}
+1 & -1 \\
+0 & 2
+\end{array} \rightB$
+ satisfies $A^{2} - 3A + 2I = 0$, and use this fact to show that \\$A^{-1} = \frac{1}{2}(3I - A)$.
+\end{ex}
+
+\begin{ex}
+Let $Q = \leftB \begin{array}{rrrr}
+a & -b & -c & -d \\
+b & a & -d & c \\
+c & d & a & -b \\
+d & -c & b & a
+\end{array} \rightB$. Compute $QQ^{T}$ and so find $Q^{-1}$ if $Q \neq 0$.
+\end{ex}
+
+\begin{ex}
+Let $U = \leftB \begin{array}{rr}
+0 & 1 \\
+1 & 0
+\end{array} \rightB$. Show that each of $U$, $-U$, and $-I_{2}$ is its own inverse and that the product of any two of these is the third.
+\end{ex}
+
+\begin{ex}
+Consider $A = \leftB \begin{array}{rr}
+1 & 1 \\
+-1 & 0
+\end{array} \rightB$, \\ $B = \leftB \begin{array}{rr}
+0 & -1 \\
+1 & 0
+\end{array} \rightB$, $C = \leftB \begin{array}{rrr}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+5 & 0 & 0
+\end{array} \rightB$. Find the inverses by computing (a) $A^{6}$; (b) $B^{4}$; and (c) $C^{3}$.
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $B^{4} = I$, so $B^{-1} = B^{3} = \leftB \begin{array}{rr}
+0 & 1 \\
+-1 & 0
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the inverse of $\leftB \begin{array}{rrr}
+1 & 0 & 1 \\
+c & 1 & c \\
+3 & c & 2
+\end{array} \rightB$
+ in terms of $c$.
+
+\begin{sol}
+$\leftB \begin{array}{crr}
+c^{2} - 2 & -c & 1 \\
+-c & 1 & 0 \\
+3 - c^{2} & c & -1
+\end{array} \rightB$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $c \neq 0$, find the inverse of $\leftB \begin{array}{rrr}
+1 & -1 & 1 \\
+2 & -1 & 2 \\
+0 & 2 & c
+\end{array} \rightB$
+ in terms of $c$.
+\end{ex}
+
+\begin{ex}
+Show that $A$ has no inverse when:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $A$ has a row of zeros.
+
+\item $A$ has a column of zeros.
+
+\item each row of $A$ sums to $0$. \newline [\textit{Hint}: Theorem~\ref{thm:004553}(2).]
+
+\item each column of $A$ sums to $0$.
+
+
+[\textit{Hint}: Corollary~\ref{cor:004537}, Theorem~\ref{thm:004442}.]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If column $j$ of $A$ is zero, $A\vect{y} = \vect{0}$ where $\vect{y}$ is column $j$ of the identity matrix. Use Theorem~\ref{thm:004553}.
+
+\setcounter{enumi}{3}
+\item  If each column of $A$ sums to $0$, $XA = 0$ where $X$ is the row of $1$s. Hence $A^{T}X^{T} = 0$ so $A$ has no inverse by Theorem~\ref{thm:004553} ($X^{T} \neq 0$).
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ denote a square matrix.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Let $YA = 0$ for some matrix $Y \neq 0$. Show that $A$ has no inverse. [\textit{Hint}: Corollary~\ref{cor:004537}, Theorem~\ref{thm:004442}.]
+
+\item Use part (a) to show that (i) $\leftB \begin{array}{rrr}
+1 & -1 & 1 \\
+0 & 1 & 1 \\
+1 & 0 & 2
+\end{array} \rightB$; and (ii) $\leftB \begin{array}{rrr}
+ 2 & 1 & -1 \\
+ 1 & 1 & 0 \\
+ 1 & 0 & -1
+ \end{array} \rightB$
+ have no inverse.
+
+
+[\textit{Hint}: For part (ii) compare row 3 with the difference between row 1 and row 2.]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item (ii) $(-1, 1, 1)A = 0$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is invertible, show that
+\begin{exenumerate}[column-sep=-5em]
+\exitem $A^{2} \neq 0$.
+\exitem $A^{k} \neq 0$ for all \\$k = 1, 2, \dots$.
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item Each power $A^{k}$ is invertible by Theorem~\ref{thm:004442} (because $A$ is invertible). Hence $A^{k}$ cannot be $0$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Suppose $AB = 0$, where $A$ and $B$ are square matrices. Show that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If one of $A$ and $B$ has an inverse, the other is zero.
+
+\item It is impossible for both $A$ and $B$ to have inverses.
+
+\item $(BA)^{2} = 0$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  By (a), if one has an inverse the other is zero and so has no inverse.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the inverse of the $x$-expansion in Example~\ref{exa:003128} and describe it geometrically.
+
+\begin{sol}
+If $A = \leftB \begin{array}{rr}
+a & 0 \\
+0 & 1
+\end{array} \rightB$, $a > 1$, then $A^{-1} = \leftB \begin{array}{rr}
+ \frac{1}{a} & 0 \\
+ 0 & 1
+ \end{array} \rightB$
+ is an x-compression because $\frac{1}{a} < 1$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the inverse of the shear transformation in Example \ref{exa:003136} and describe it geometrically.
+\end{ex}
+
+
+\begin{ex}
+In each case assume that $A$ is a square matrix that satisfies the given condition. Show that $A$ is invertible and find a formula for $A^{-1}$ in terms of $A$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $A^{3} - 3A + 2I = 0$.
+
+\item $A^{4} + 2A^{3} - A - 4I = 0$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $A^{-1} = \frac{1}{4} (A^3 +2A^2-1)$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ denote $n \times n$ matrices.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A$ and $AB$ are invertible, show that $B$ is invertible using only (2) and (3) of Theorem~\ref{thm:004442}.
+
+\item If $AB$ is invertible, show that both $A$ and $B$ are invertible using Theorem~\ref{thm:004553}.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $B\vect{x} = \vect{0}$, then $(AB)\vect{x} = (A)B\vect{x} = \vect{0}$, so $\vect{x} = \vect{0}$ because $AB$ is invertible. Hence $B$ is invertible by Theorem~\ref{thm:004553}. But then $A = (AB)B^{-1}$ is invertible by Theorem~\ref{thm:004442}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case find the inverse of the matrix $A$ using Example~\ref{exa:004627}.
+\begin{exenumerate}
+\exitem $A = \leftB \begin{array}{rrr}
+-1 & 1 & 2 \\
+0 & 2 & -1 \\
+0 & 1 & -1
+\end{array} \rightB$
+\exitem $A = \leftB \begin{array}{rrr}
+3 & 1 & 0 \\
+5 & 2 & 0 \\
+1 & 3 & -1
+\end{array} \rightB$
+\exitem* $A = \leftB \begin{array}{rrrr}
+3 & 4 & 0 & 0 \\
+2 & 3 & 0 & 0 \\
+1 & -1 & 1 & 3 \\
+3 & 1 & 1 & 4 
+\end{array} \rightB$
+\exitem* $A = \leftB \begin{array}{rrrr}
+2 & 1 & 5 & 2 \\
+1 & 1 & -1 & 0 \\
+0 & 0 & 1 & -1 \\
+0 & 0 & 1 & -2 
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\leftB \begin{array}{rr|r}
+2 & -1 & 0 \\
+-5 & 3 & 0 \\
+\hline
+-13 & 8 & -1
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item $\leftB \begin{array}{rr|rr}
+1 & -1 & -14 & 8 \\
+-1 & 2 & 16 & -9 \\
+\hline
+0 & 0 & 2 & -1 \\
+0 & 0 & 1 & -1
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ and $B$ are invertible symmetric matrices such that $AB = BA$, show that $A^{-1}$, $AB$, $AB^{-1}$, and $A^{-1}B^{-1}$ are also invertible and symmetric.
+\end{ex}
+
+\begin{ex}
+Let $A$ be an $n \times n$ matrix and let $I$ be the $n \times n$ identity matrix.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A^{2} = 0$, verify that $(I - A)^{-1} = I + A$.
+
+\item If $A^{3} = 0$, verify that $(I - A)^{-1} = I + A + A^{2}$.
+
+\item Find the inverse of $\leftB \begin{array}{rrr}
+1 & 2 & -1 \\
+0 & 1 & 3 \\
+0 & 0 & 1
+\end{array} \rightB$.
+
+\item If $A^{n} = 0$, find the formula for $(I - A)^{-1}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{3}
+\item If $A^{n} = 0$, $(I - A)^{-1} = I + A + \cdots + A^{n-1}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex} \label{ex:ex2_4_29}
+Prove property 6 of Theorem~\ref{thm:004442}: If $A$ is invertible and $a \neq 0$, then $aA$ is invertible and $(aA)^{-1} = \frac{1}{a}A^{-1}$
+\end{ex}
+
+\begin{ex}
+Let $A$, $B$, and $C$ denote $n \times n$ matrices. Using only Theorem~\ref{thm:004442}, show that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A$, $C$, and $ABC$ are all invertible, $B$ is invertible.
+
+\item If $AB$ and $BA$ are both invertible, $A$ and $B$ are both invertible.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $A[B(AB)^{-1}] = I = [(BA)^{-1}B]A$, so $A$ is invertible by Exercise~\ref{ex:ex2_4_10}.
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ denote invertible $n \times n$ matrices.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A^{-1} = B^{-1}$, does it mean that $A = B$? Explain.
+
+\item Show that $A = B$ if and only if $A^{-1}B = I$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Let $A$, $B$, and $C$ be $n \times n$ matrices, with $A$ and $B$ invertible. Show that
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A$ commutes with $C$, then $A^{-1}$ commutes with $C$.
+
+\item If $A$ commutes with $B$, then $A^{-1}$ commutes with $B^{-1}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\item  Have $AC = CA$. Left-multiply by $A^{-1}$ to get $C = A^{-1}CA$. Then right-multiply by $A^{-1}$ to get $CA^{-1} = A^{-1}C$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ be square matrices of the same size.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $(AB)^{2} = A^{2}B^{2}$ if $AB = BA$.
+
+\item If $A$ and $B$ are invertible and $(AB)^{2} = A^{2}B^{2}$, show that $AB = BA$.
+
+\item If $A = \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 0
+\end{array} \rightB$
+ and $B = \leftB \begin{array}{rr}
+ 1 & 1 \\
+ 0 & 0
+ \end{array} \rightB$, show that $(AB)^{2} = A^{2}B^{2}$ but $AB \neq BA$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Given $ABAB = AABB$. Left multiply by $A^{-1}$, then right multiply by $B^{-1}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ be $n \times n$ matrices for which $AB$ is invertible. Show that $A$ and $B$ are both invertible.
+
+\begin{sol}
+If $B\vect{x} = \vect{0}$ where $\vect{x}$ is $n \times 1$, then $AB\vect{x} = \vect{0}$ so $\vect{x} = \vect{0}$ as $AB$ is invertible. Hence $B$ is invertible by Theorem~\ref{thm:004553}, so $A = (AB)B^{-1}$ is invertible.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Consider $A = \leftB \begin{array}{rrr}
+1 & 3 & -1 \\
+2 & 1 & 5 \\
+1 & -7 & 13
+\end{array} \rightB$, \newline $B = \leftB \begin{array}{rrr}
+1 & 1 & 2 \\
+3 & 0 & -3 \\
+-2 & 5 & 17
+\end{array} \rightB$.
+
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $A$ is not invertible by finding a nonzero $1 \times 3$ matrix $Y$ such that $YA = 0$.
+
+
+[\textit{Hint}: Row 3 of $A$ equals $2\mbox{(row 2) }- 3\mbox{(row 1)}$.]
+
+\item Show that $B$ is not invertible.
+
+
+[\textit{Hint}: Column 3 $= 3\mbox{(column 2) } - \mbox{ column 1}$.]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $B \leftB \begin{array}{r}
+-1 \\
+3 \\
+-1
+\end{array} \rightB = 0$
+ so $B$ is not invertible by Theorem~\ref{thm:004553}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that a square matrix $A$ is invertible if and only if it can be left-cancelled: $AB = AC$ implies $B = C$.
+\end{ex}
+
+\begin{ex}
+If $U^{2} = I$, show that $I + U$ is not invertible unless $U = I$.
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If $J$ is the $4 \times 4$ matrix with every entry $1$, show that $I - \frac{1}{2}J$
+ is self-inverse and symmetric.
+
+\item If $X$ is $n \times m$ and satisfies $X^{T}X = I_{m}$, show that $I_{n} - 2XX^{T}$ is self-inverse and symmetric.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Write $U = I_{n} - 2XX^{T}$. Then $U^{T} = I_{n}^{T} - 2X^{TT}X^{T} = U$, and $U^{2} = I_{n}^{2} - (2XX^{T})I_{n} - I_{n}(2XX^{T}) + 4(XX^{T})(XX^{T}) = I_{n} - 4XX^{T} + 4XX^{T} = I_{n}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+An $n \times n$ matrix $P$ is called an idempotent if $P^{2} = P$. Show that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $I$ is the only invertible idempotent.
+
+\item $P$ is an idempotent if and only if $I - 2P$ is self-inverse.
+
+\item $U$ is self-inverse if and only if $U = I - 2P$ for some idempotent $P$.
+
+\item $I - aP$ is invertible for any $a \neq 1$, and that \newline $(I - aP)^{-1} = I + \left(\frac{a}{1 - a}\right)^{P}$.
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $(I - 2P)^{2} = I - 4P + 4P^{2}$, and this equals $I$ if and only if $P^{2} = P$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A^{2} = kA$, where $k \neq 0$, show that $A$ is invertible if and only if $A = kI$.
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ denote $n \times n$ invertible matrices.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $A^{-1} + B^{-1} = A^{-1}(A + B)B^{-1}$.
+
+\item If $A + B$ is also invertible, show that $A^{-1} + B^{-1}$ is invertible and find a formula for $(A^{-1} + B^{-1})^{-1}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $(A^{-1} + B^{-1})^{-1} = B(A + B)^{-1}A$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ be $n \times n$ matrices, and let $I$ be the $n \times n$ identity matrix.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Verify that $A(I + BA) = (I + AB)A$ and that \newline $(I + BA)B = B(I + AB)$.
+
+\item If $I + AB$ is invertible, verify that $I + BA$ is also invertible and that $(I + BA)^{-1} = I - B(I + AB)^{-1}A$.
+
+\end{enumerate}
+\end{ex}
+\end{multicols}
+

@@ -1,0 +1,250 @@
+
+\section*{Exercises for \ref{sec:8_8}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:8_8}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+In each case, find a symmetric matrix $A$ such that $q = \vect{x}^{T}B\vect{x}$ takes the form $q = \vect{x}^{T}A\vect{x}$.
+
+
+\begin{exenumerate}
+\exitem $\leftB \begin{array}{rr}
+1 & 1 \\
+0 & 1
+\end{array}\rightB$
+\exitem $\leftB \begin{array}{rr}
+1 & 1 \\
+-1 & 2
+\end{array}\rightB$
+\exitem $\leftB \begin{array}{rrr}
+1 & 0 & 1 \\
+1 & 1 & 0 \\
+0 & 1 & 1
+\end{array}\rightB$
+\exitem $\leftB \begin{array}{rrr}
+1 & 2 & -1 \\
+4 & 1 & 0 \\
+5 & -2 & 3
+\end{array}\rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $A = \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 2
+\end{array}\rightB$
+
+\setcounter{enumi}{3}
+\item  $A = \leftB \begin{array}{rrr}
+1 & 3 & 2 \\
+3 & 1 & -1 \\
+2 & -1 & 3
+\end{array}\rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, find a change of variables that will diagonalize the quadratic form $q$. Determine the index and $\func{rank}$ of $q$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $q = x_{1}^2 + 2x_{1}x_{2} + x_{2}^2$
+
+\item $q = x_{1}^2 + 4x_{1}x_{2} + x_{2}^2$
+
+\item $q = x_{1}^2 + x_{2}^2 + x_{3}^2 - 4(x_{1}x_{2} + x_{1}x_{3} + x_{2}x_{3})$
+
+\item $q = 7x_{1}^2 + x_{2}^2 + x_{3}^2 + 8x_{1}x_{2} + 8x_{1}x_{3} - 16x_{2}x_{3}$
+
+\item $q = 2(x_{1}^2 + x_{2}^2 + x_{3}^2 - x_{1}x_{2} + x_{1}x_{3} - x_{2}x_{3})$
+
+\item $q = 5x_{1}^2 + 8x_{2}^2 + 5x_{3}^2 - 4(x_{1}x_{2} + 2x_{1}x_{3} + x_{2}x_{3})$
+
+\item $q = x_{1}^2 - x_{3}^2 - 4x_{1}x_{2} + 4x_{2}x_{3}$
+
+\item $q = x_{1}^2 + x_{3}^2 - 2x_{1}x_{2} + 2x_{2}x_{3}$
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $P = \frac{1}{\sqrt{2}}\leftB \begin{array}{rr}
+1 & 1 \\
+1 & -1
+\end{array}\rightB$; \\
+$\vect{y} = \frac{1}{\sqrt{2}}\leftB \begin{array}{r}
+x_{1} + x_{2} \\
+x_{1} - x_{2}
+\end{array}\rightB$; \\
+$q = 3y_{1}^2 - y_{2}^2$; \ $1$, $2$
+
+\setcounter{enumi}{3}
+\item $P = \frac{1}{3}\leftB \begin{array}{rrr}
+2 & 2 & -1 \\
+2 & -1 & 2 \\
+-1 & 2 & 2
+\end{array}\rightB$;  \\
+$\vect{y} = \frac{1}{3}\leftB \begin{array}{rcrcr}
+2x_{1} & + & 2x_{2} & - & x_{3} \\
+2x_{1} & - & x_{2} & + & 2x_{3} \\
+-x_{1} & + & 2x_{2} & + & 2x_{3} 
+\end{array}\rightB$; \\
+$q = 9y_{1}^2 + 9y_{2}^2 - 9y_{3}^2$; \ $2$, $3$
+
+\setcounter{enumi}{5}
+\item $P = \frac{1}{3}\leftB \begin{array}{rrr}
+-2 & 1 & 2 \\
+2 & 2 & 1 \\
+1 & -2 & 2
+\end{array}\rightB$; \\ 
+$\vect{y} = \frac{1}{3}\leftB \begin{array}{rcrcr}
+-2x_{1} & + & 2x_{2} & + & x_{3} \\
+x_{1} & + & 2x_{2} & - & 2x_{3} \\
+2x_{1} & + & x_{2} & + & 2x_{3} 
+\end{array}\rightB$; \\ 
+$q = 9y_{1}^2 + 9y_{2}^2$; \ $2$, $2$
+
+\setcounter{enumi}{7}
+\item  $P = \frac{1}{\sqrt{6}}\leftB \begin{array}{rrr}
+-\sqrt{2} & \sqrt{3} & 1 \\
+\sqrt{2} & 0 & 2 \\
+\sqrt{2} & \sqrt{3} & -1
+\end{array}\rightB$; \\ 
+$\vect{y} = \frac{1}{\sqrt{6}}\leftB \begin{array}{rcrcr}
+-\sqrt{2}x_{1} & + & \sqrt{2}x_{2} & + & \sqrt{2}x_{3} \\
+\sqrt{3}x_{1} & & & + & \sqrt{3}x_{3} \\
+x_{1} & + & 2x_{2} & - & x_{3} 
+\end{array}\rightB$; \\
+$q = 2y_{1}^2 + y_{2}^2 - y_{3}^2$; \ $2$, $3$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+For each of the following, write the equation in terms of new variables so that it is in standard position, and identify the curve.
+
+\begin{exenumerate}
+\exitem $xy = 1$
+\exitem $3x^{2} - 4xy = 2$
+\exitem $6x^{2} + 6xy - 2y^{2} = 5$
+\exitem $2x^{2} + 4xy + 5y^{2} = 1$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $x_{1} = \frac{1}{\sqrt{5}}(2x - y)$, $y_{1} = \frac{1}{\sqrt{5}}(x + 2y)$; $4x_{1}^2 - y_{1}^2 = 2$; hyperbola
+
+\setcounter{enumi}{3}
+\item $x_{1} = \frac{1}{\sqrt{5}}(x + 2y)$, $y_{1} = \frac{1}{\sqrt{5}}(2x - y)$; $6x_{1}^2 + y_{1}^2 = 1$; ellipse
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Consider the equation $ax^{2} + bxy + cy^{2} = d$, where $b \neq 0$. Introduce new variables $x_{1}$ and $y_{1}$ by rotating the axes counterclockwise through an angle $\theta$. Show that the resulting equation has no $x_{1}y_{1}$-term if $\theta$ is given by
+\begin{align*}
+& \cos2\theta = \frac{a - c}{\sqrt{b^2+(a-c)^2}}
+ \\ & \sin2\theta = \frac{b}{\sqrt{b^2+(a-c)^2}}
+\end{align*}
+
+[\textit{Hint}: Use equation (\ref{rotationEq2}) preceding Theorem~\ref{thm:027179} to get $x$ and $y$ in terms of $x_{1}$ and $y_{1}$, and substitute.]
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item Basis $\{(i, 0, i), (1, 0, -1)\}$, dimension $2$
+
+\setcounter{enumi}{3}
+\item Basis $\{(1, 0, -2i), (0, 1, 1 - i)\}$, dimension $2$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Prove properties (1)--(5) preceding Example~\ref{exa:027315}.
+\end{ex}
+
+\begin{ex}
+If $A \stackrel{c}{\sim} B$ show that $A$ is invertible if and only if $B$ is invertible.
+\end{ex}
+
+\begin{ex}
+If $\vect{x} = (x_{1}, \dots, x_{n})^{T}$ is a column of variables, $A = A^{T}$ is $n \times n$, $B$ is $1 \times n$, and $c$ is a constant, $\vect{x}^{T}A\vect{x} + B\vect{x} = c$ is called a \textbf{quadratic equation}\index{quadratic equation} in the variables $x_{i}$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that new variables $y_{1}, \dots, y_{n}$ can be found such that the equation takes the form 
+\begin{equation*}
+\lambda_{1}y_{1}^2 + \cdots + \lambda_{r}y_{r}^2 + k_{1}y_{1} + \cdots + k_{n}y_{n} = c
+\end{equation*}
+
+\item Put $x_{1}^2 + 3x_{2}^2 + 3x_{3}^2 + 4x_{1}x_{2} - 4x_{1}x_{3} + 5x_{1} - 6x_{3} = 7$ in this form and find variables $y_{1}$, $y_{2}$, $y_{3}$ as in (a).
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $3y_{1}^2 + 5y_{2}^2 - y_{3}^2 - 3\sqrt{2}y_{1} + \frac{11}{3}\sqrt{3}y_{2} + \frac{2}{3}\sqrt{6}y_{3} = 7$ \\
+$y_{1} = \frac{1}{\sqrt{2}}(x_{2} + x_{3})$, $y_{2} = \frac{1}{\sqrt{3}}(x_{1} + x_{2} - x_{3})$, $y_{3} = \frac{1}{\sqrt{6}}(2x_{1} - x_{2} + x_{3})$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Given a symmetric matrix $A$, define $q_{A}(\vect{x}) = \vect{x}^{T}A\vect{x}$. Show that $B \stackrel{c}{\sim} A$ if and only if $B$ is symmetric and there is an invertible matrix $U$ such that $q_{B}(\vect{x}) = q_{A}(U\vect{x})$ for all $\vect{x}$. [\textit{Hint}: Theorem~\ref{thm:027243}.]
+\end{ex}
+
+\begin{ex}
+Let $q(\vect{x}) = \vect{x}^{T}A\vect{x}$ be a quadratic form where $A = A^{T}$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $q(\vect{x}) > 0$ for all $\vect{x} \neq \vect{0}$, if and only if $A$ is positive definite (all eigenvalues are positive). In this case, $q$ is called \textbf{positive definite}\index{positive definite}.
+
+\item Show that new variables $\vect{y}$ can be found such that $q = \vectlength\vect{y}\vectlength^{2}$ and $\vect{y} = U\vect{x}$ where $U$ is upper triangular with positive diagonal entries. [\textit{Hint}: Theorem~\ref{thm:024907}.]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item By Theorem~\ref{thm:024907} let $A = U^{T}U$ where $U$ is upper triangular with positive diagonal entries. Then $q = \vect{x}^{T}(U^{T}U)\vect{x} = (U\vect{x})^{T}U\vect{x} = \vectlength U\vect{x} \vectlength^{2}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+A \textbf{bilinear form}\index{bilinear form} $\beta$ on $\RR^n$ is a function that assigns to every pair $\vect{x}$, $\vect{y}$ of columns in $\RR^n$ a number $\beta(\vect{x}, \vect{y})$ in such a way that
+\begin{align*}
+\beta(r\vect{x} + s\vect{y}, \vect{z}) = r\beta(\vect{x}, \vect{z}) + s\beta(\vect{y}, \vect{z}) \\
+\beta(\vect{x}, r\vect{y} + s\vect{z}) = r\beta(\vect{x}, \vect{z}) + s\beta(\vect{x}, \vect{z})
+\end{align*}
+for all $\vect{x}$, $\vect{y}$, $\vect{z}$ in $\RR^n$ and $r$, $s$ in $\RR$. If $\beta(\vect{x}, \vect{y}) = \beta(\vect{y}, \vect{x})$ for all $\vect{x}$, $\vect{y}$, $\beta$ is called \textbf{symmetric}\index{symmetric bilinear form}.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $\beta$ is a bilinear form, show that an $n \times n$ matrix $A$ exists such that $\beta(\vect{x}, \vect{y}) = \vect{x}^{T}A\vect{y}$ for all $\vect{x}$, $\vect{y}$.
+
+\item Show that $A$ is uniquely determined by $\beta$.
+
+\item Show that $\beta$ is symmetric if and only if $A = A^{T}$.
+
+\end{enumerate}
+\end{ex}
+\end{multicols}

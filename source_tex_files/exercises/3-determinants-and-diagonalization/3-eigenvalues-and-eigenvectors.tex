@@ -1,0 +1,183 @@
+\section*{Exercises for \ref{sec:3_3}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:3_3}}
+\end{Filesave}
+
+\begin{multicols}{2}
+
+\begin{ex}
+Show that $A$ has $\lambda = 0$ as an eigenvalue if and only if $A$ is not invertible.
+\end{ex}
+
+\begin{ex}
+Let $A$ denote an $n \times n$ matrix and put $A_{1} = A - \alpha I$, $\alpha$ in $\RR$. Show that $\lambda$ is an eigenvalue of $A$ if and only if $\lambda -\alpha$ is an eigenvalue of $A_{1}$. (Hence, the eigenvalues of $A_{1}$ are just those of $A$ ``shifted'' by $\alpha$.) How do the eigenvectors compare?
+
+\begin{sol}
+$A\vect{x} = \lambda\vect{x}$ if and only if $(A - \alpha I)\vect{x} = (\lambda -  \alpha)\vect{x}$. Same eigenvectors.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that the eigenvalues of $\leftB \begin{array}{cc}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta 
+\end{array} \rightB$ 
+ are $e^{i\theta}$ and $e^{-i\theta}$. \newline (See Appendix \ref{chap:appacomplexnumbers})
+\end{ex}
+
+\begin{ex}
+Find the characteristic polynomial of the $n \times n$ identity matrix $I$. Show that $I$ has exactly one eigenvalue and find the eigenvectors.
+\end{ex}
+
+\begin{ex}
+Given $A = \leftB \begin{array}{rr}
+a & b \\
+c & d
+\end{array} \rightB$
+ show that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $c_{A}(x) = x^{2} - \func{tr } Ax + \func{det }A$, where $\func{tr } A = a + d$ is called the \textbf{trace} of $A$.
+
+\item The eigenvalues are $\frac{1}{2} \left[ (a+d) \pm \sqrt{(a-b)^2 + 4bc}\right]$.
+
+
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Let $A$ be any $n \times n$ matrix and $r \neq 0$ a real number.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that the eigenvalues of $rA$ are precisely the numbers $r\lambda$, where $\lambda$ is an eigenvalue of $A$.
+
+\item Show that $c_{rA}(x) = r^n c_A\left( \frac{x}{r} \right)$.
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $c_{rA} (x) =\func{det} \left[ xI - rA \right]$ \\ ${} = r^n \func{det} \left[ \frac{x}{r}I-A \right] = r^n c_A \left[ \frac{x}{r} \right]$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If all rows of $A$ have the same sum $s$, show that $s$ is an eigenvalue.
+
+\item If all columns of $A$ have the same sum $s$, show that $s$ is an eigenvalue.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Let $A$ be an invertible $n \times n$ matrix.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that the eigenvalues of $A$ are nonzero.
+
+\item Show that the eigenvalues of $A^{-1}$ are precisely the numbers $1/\lambda$, where $\lambda$ is an eigenvalue of $A$.
+
+\item Show that $c_{A^{-1}}(x) = \frac{(-x)^n}{\func{det } A} c_A \left( \frac{1}{x} \right)$.
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $\lambda \neq 0$, $A\vect{x} = \lambda\vect{x}$ if and only if $A^{-1}\vect{x} = \frac{1}{\lambda}\vect{x}$.
+ The result follows.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Suppose $\lambda$ is an eigenvalue of a square matrix $A$ with eigenvector $\vect{x} \neq \vect{0}$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $\lambda^{2}$ is an eigenvalue of $A^{2}$ (with the same $\vect{x}$).
+
+\item Show that $\lambda^{3} - 2 \lambda + 3$ is an eigenvalue of \\ $A^{3} - 2A + 3I$.
+
+\item Show that $p(\lambda)$ is an eigenvalue of $p(A)$ for any nonzero polynomial $p(x)$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $(A^{3} - 2A - 3I)\vect{x} = A^{3}\vect{x} - 2A\vect{x} + 3\vect{x} = \lambda^{3}\vect{x} - 2\lambda\vect{x} + 3\vect{x} = (\lambda^{3} - 2\lambda - 3)\vect{x}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is an $n \times n$ matrix, show that $c_{A^2}(x^{2}) = (-1)^{n}c_{A}(x)c_{A}(-x)$.
+\end{ex}
+
+\begin{ex}
+An $n \times n$ matrix $A$ is called nilpotent if $A^{m} = 0$ for some $m \geq 1$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that every triangular matrix with zeros on the main diagonal is nilpotent.
+
+\item If $A$ is nilpotent, show that $\lambda = 0$ is the only eigenvalue (even complex) of $A$.
+
+\item Deduce that $c_{A}(x) = x^{n}$, if $A$ is $n \times n$ and nilpotent.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $A^{m} = 0$ and $A\vect{x} = \lambda\vect{x}$, $\vect{x} \neq \vect{0}$, then $A^{2}\vect{x} = A(\lambda\vect{x}) = \lambda A\vect{x} = \lambda^{2}\vect{x}$. In general, $A^{k}\vect{x} = \lambda^{k}\vect{x}$ for all $k \geq 1$. Hence, $\lambda^{m}\vect{x} = A^{m}\vect{x} = \vect{0}\vect{x} = \vect{0}$, so $\lambda = 0$ (because $\vect{x} \neq \vect{0}$).
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Let $A = \leftB \begin{array}{cc}
+B & 0 \\
+0 & C 
+\end{array}\rightB$
+ where $B$ and $C$ are square matrices.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $c_{A}(x) = c_{B}(x)c_{C}(x)$.
+
+\item If $\vect{x}$ and $\vect{y}$ are eigenvectors of $B$ and $C$, respectively, show that $\leftB \begin{array}{c}
+\vect{x} \\
+0
+\end{array}\rightB$
+ and $\leftB \begin{array}{c}
+0 \\
+\vect{y}
+\end{array}\rightB$
+ are eigenvectors of $A$, and show how every eigenvector of $A$ arises from such eigenvectors.
+
+\end{enumerate}
+\end{ex}
+
+\end{multicols}
+
+
+
+
+
+
+
+

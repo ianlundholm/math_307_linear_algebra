@@ -1,0 +1,373 @@
+\section*{Exercises for \ref{sec:1_1}}
+
+\begin{Filesave}{solutions}
+\solsection{Section \ref{sec:1_1}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+In each case verify that the following are solutions for all values of $s$ and $t$.
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$\arraycolsep=1pt
+\begin{array}[t]{rcl}
+	x &=& 19t - 35 \\
+	y &=& 25 - 13t \\
+	z &=& t
+\end{array}$
+
+is a solution of
+
+$\arraycolsep=1pt
+\begin{array}{rlrlrcr}
+	2x &+ & 3y & + &  z & = & 5 \\
+	5x &+ & 7y & - & 4z & = & 0
+\end{array}$
+\item 
+$\arraycolsep=1pt
+\begin{array}[t]{rcl}
+	x_1 &=& 2s + 12t + 13\\
+	x_2 &=& s \\
+	x_3 &=& -s - 3t - 3\\
+	x_4 &=& t
+\end{array}$
+
+is a solution of
+
+$\arraycolsep=1pt
+\begin{array}{rlrlrlrcr}
+	2x_1 & + & 5x_2 & + & 9x_3 & + & 3x_4 & = & -1 \\
+	 x_1 & + & 2x_2 & + & 4x_3 &   &      & = & 1
+\end{array}$
+\end{enumerate}
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $2(2s + 12t + 13) + 5s + 9(-s - 3t - 3) + 3t = -1$; $(2s + 12t + 13) + 2s + 4(-s - 3t - 3) = 1$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find all solutions to the following in parametric form in two ways.
+\begin{exenumerate}
+\exitem $3x + y = 2$
+\exitem $2x + 3y = 1$
+\exitem $3x - y + 2z = 5$
+\exitem $x - 2y + 5z = 1$
+\end{exenumerate}
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $x = t$, $y = \frac{1}{3}(1 - 2t)$ or $x = \frac{1}{2}(1 - 3s)$, $y = s$
+
+\setcounter{enumi}{3}
+\item  $x = 1 + 2s - 5t$, $y = s$, $z = t$ or $x = s$, $y = t$, \\ $z = \frac{1}{5}(1 - s + 2t)$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Regarding $2x = 5$ as the equation \newline $2x + 0y = 5$ in two variables, find all solutions in parametric form.
+\end{ex}
+
+\begin{ex}
+Regarding $4x - 2y = 3$ as the equation $4x - 2y + 0z = 3$ in three variables, find all solutions in parametric form.
+
+\begin{sol}
+$x = \frac{1}{4}(3 + 2s)$, $y = s$, $z = t$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find all solutions to the general system $ax = b$ of one equation in one variable (a) when $a = 0$ and (b) when $a \neq 0$.
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\item  No solution if $b \neq 0$. If $b = 0$, \textit{any} $x$ is a solution.
+
+\item  $ x = \frac{b}{a} $
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that a system consisting of exactly one linear equation can have no solution, one solution, or infinitely many solutions. Give examples.
+\end{ex}
+
+
+\begin{ex}
+Write the augmented matrix for each of the following systems of linear equations.
+\begin{exenumerate}
+\exitem $\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	x  & - & 3y & = & 5\\
+	2x & + &  y & = & 1 
+\end{array}$
+\exitem $\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	x & + & 2y & = & 0\\
+	  &   &  y & = & 1
+\end{array}$
+\exitem $\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	x & - & y & + & z & = & 2 \\
+	  &   & x & - & z & = & 1 \\
+	  &   & y & + &2x & = & 0
+\end{array}$
+\exitem $\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	x & + & y & = & 1 \\
+	y & + & z & = & 0 \\
+	z & - & x & = & 2
+\end{array}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+$\leftB \begin{array}{rr|r}
+	1 & 2 & 0 \\
+	0 & 1 & 1
+\end{array} \rightB$
+\setcounter{enumi}{3}
+\item $\leftB \begin{array}{rrr|r}
+	1 & 1 & 0 & 1 \\
+	0 & 1 & 1 & 0 \\
+	-1 & 0 & 1 & 2
+\end{array} \rightB$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Write a system of linear equations that has each of the following augmented matrices.
+
+\begin{exenumerate}
+\exitem $\leftB \begin{array}{rrr|r}
+	1 & -1 & 6 & 0 \\
+	0 &  1 & 0 & 3 \\
+	2 & -1 & 0 & 1
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr|r}
+ 2 & -1 & 0 & -1 \\
+-3 &  2 & 1 & 0 \\
+ 0 &  1 & 1 & 3
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $ \arraycolsep=1pt \begin{array}{rlrlrcr}
+		 2x & - &  y &   &   & = & -1 \\
+		-3x & + & 2y & + & z & = & 0 \\
+		    &   &  y & + & z & = & 3
+	\end{array}$ \\
+	or \quad $ \arraycolsep=1pt\begin{array}{rlrlrcr}
+			 2x_1 & - &  x_2 &   &     & = & -1 \\
+			-3x_1 & + & 2x_2 & + & x_3 & = & 0 \\
+			      &   &  x_2 & + & x_3 & = & 3
+	\end{array}$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the solution of each of the following systems of linear equations using augmented matrices.
+
+\begin{exenumerate}
+\exitem
+$\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+  	 x & - & 3y & = & 1 \\
+	2x & - & 7y & = & 3
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	 x & + & 2y &=& 1 \\
+	3x & + & 4y &=& -1
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	2x & + & 3y &=& -1 \\
+	3x & + & 4y &=& 2
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrcr}
+	3x & + & 4y &=& 1 \\
+	4x & + & 5y &=& -3
+\end{array}$
+\end{exenumerate}
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $x = -3$, $y = 2$
+\setcounter{enumi}{3}
+\item  $x = -17$, $y = 13$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the solution of each of the following systems of linear equations using augmented matrices.
+
+\begin{exenumerate}
+\exitem
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	 x & + & y & + & 2z & = & -1 \\
+	2x & + & y & + & 3z & = & 0 \\
+	   & - & 2y& + &  z & = & 2
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rlrlrcr}
+	2x & + & y & + & z & = & -1 \\
+	 x & + & 2y & + & z & = & 0 \\
+	3x &  & & - &  2z & = & 5
+\end{array}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $ x = \frac{1}{9}$, $y = \frac{10}{9}$, $z = -\frac{7}{3}$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find all solutions (if any) of the following systems of linear equations.
+
+\begin{exenumerate}
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rcr}
+3x - 2y & = & 5 \\
+-12x + 8y & = & - 20
+\end{array}$
+\exitem 
+$\arraycolsep=1pt
+\begin{array}[t]{rcr}
+3x - 2y & = & 5 \\
+-12x + 8y & = & 16
+\end{array}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  No solution
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that the system 
+\begin{equation*}  \left \{
+\arraycolsep=3.5pt 
+\begin{array}{rlrlrcr}
+	 x & + & 2y & - &  z & = & a \\
+	2x & + &  y & + & 3z & = & b \\
+	 x & - & 4y & + & 9z & = & c
+\end{array} \right. \end{equation*}
+is inconsistent unless $c = 2b - 3a$.
+\end{ex}
+
+\begin{ex}
+By examining the possible positions of lines in the plane, show that two equations in two variables can have zero, one, or infinitely many solutions.
+\end{ex}
+\end{multicols}
+
+%%Breaking out of multicol to ensure below footnote is on the same page as the exercise
+\begin{multicols}{2}
+\begin{ex}
+In each case either show that the statement is true, or give an example\footnote{Such an example is called a \textbf{counterexample}\index{counterexample}. For example, if the statement is that ``all philosophers have beards'', the existence of a non-bearded philosopher would be a counterexample proving that the statement is false. This is discussed again in Appendix \ref{chap:appbproofs}.} showing it is false.
+
+\begin{enumerate}[label={\alph*.}]
+\item If a linear system has $n$ variables and $m$ equations, then the augmented matrix has $n$ rows.
+
+\item A consistent linear system must have infinitely many solutions.
+
+\item If a row operation is done to a consistent linear system, the resulting system must be consistent.
+
+\item If a series of row operations on a linear system results in an inconsistent system, the original system is inconsistent.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  F. $x + y = 0$, $x - y = 0$ has a unique solution.
+
+\setcounter{enumi}{3}
+\item  T. Theorem \ref{thm:000789}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find a quadratic $a + bx + cx^2$ such that the graph of $y = a + bx + cx^2$ contains each of the points $(-1, 6)$, $(2, 0)$, and $(3, 2)$.
+\end{ex}
+
+\begin{ex}
+Solve the system
+$\left \{
+\arraycolsep=1pt
+\begin{array}{rlrcr}
+	3x & + & 2y & = & 5 \\
+	7x & + & 5y & = & 1 
+\end{array} \right.$ by changing variables $
+\left \{
+\arraycolsep=1pt
+\begin{array}{rcrlr}
+	x & = & 5x^\prime & - & 2y^\prime \\
+	y & = & -7x^\prime & + & 3y^\prime 
+\end{array} \right.
+$ and solving the resulting equations for $x^\prime$ and $y^\prime$.
+
+\begin{sol}
+$x^\prime = 5$, $y^\prime = 1$, so $x = 23$, $y = -32$
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Find $a$, $b$, and $c$ such that
+{\normalsize
+\begin{equation*}
+\frac{x^2 - x + 3}{(x^2 + 2)(2x - 1)} = \frac{ax + b}{x^2 + 2} + \frac{c}{2x - 1}
+\end{equation*}}
+[\textit{Hint}: Multiply through by $(x^2 + 2)(2x - 1)$ and equate coefficients of powers of $x$.]
+
+\begin{sol}
+$ a = -\frac{1}{9}$, $b = -\frac{5}{9}$, $c = \frac{11}{9}$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+A zookeeper wants to give an animal 42 mg of vitamin A and 65 mg of vitamin D per day. He has two supplements: the first contains 10\% vitamin A and 25\% vitamin D; the second contains 20\% vitamin A and 25\% vitamin D. How much of each supplement should he give the animal each day?
+\end{ex}
+
+\begin{ex}
+Workmen John and Joe earn a total of \$24.60 when John works 2 hours and Joe works 3 hours. If John works 3 hours and Joe works 2 hours, they get \$23.90. Find their hourly rates.
+
+\begin{sol}
+\$4.50, \$5.20
+\end{sol}
+\end{ex}
+
+\begin{ex}
+A biologist wants to create a diet from fish and meal containing 183 grams of protein and 93 grams of carbohydrate per day. If fish contains 70\% protein and 10\% carbohydrate, and meal contains 30\% protein and 60\% carbohydrate, how much of each food is required each day?
+\end{ex}
+\end{multicols}

@@ -1,0 +1,271 @@
+
+\section*{Exercises for \ref{sec:8_1}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:8_1}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+In each case, use the Gram-Schmidt algorithm to convert the given basis $B$ of $V$ into an orthogonal basis.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $V = \RR^2$, $B = \{(1, -1), (2, 1)\}$
+
+\item $V = \RR^2$, $B = \{(2, 1), (1, 2)\}$
+
+\item $V = \RR^3$, $B = \{(1, -1, 1), (1, 0, 1), (1, 1, 2)\}$
+
+\item $V = \RR^3$, $B = \{(0, 1, 1), (1, 1, 1), (1, -2, 2)\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\{(2,1),\frac{3}{5}(-1,2)\}$
+
+\setcounter{enumi}{3}
+\item  $\{(0,1,1),(1,0,0),(0,-2,2)\}$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, write $\vect{x}$ as the sum of a vector in $U$ and a vector in $U^\perp$.
+
+
+\begin{enumerate}[label={\alph*.}, leftmargin=1em]
+\item $\vect{x} = (1, 5, 7)$, $U = \func{span}\{(1, -2, 3), (-1, 1, 1)\}$
+
+\item $\vect{x} = (2, 1, 6)$, $U = \func{span}\{(3, -1, 2), (2, 0, -3)\}$
+
+\item $\vect{x} = (3, 1, 5, 9)$, \\ $U = \func{span}\{(1, 0, 1, 1), (0, 1, -1, 1), (-2, 0, 1, 1)\}$
+
+\item $\vect{x} = (2, 0, 1, 6)$, \\ \hspace*{-1em}$U = \func{span}\{(1, 1, 1, 1), (1, 1, -1, -1), (1, -1, 1, -1)\}$
+
+\item $\vect{x} = (a, b, c, d)$, \\ $U = \func{span}\{(1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0)\}$
+
+\item $\vect{x} = (a, b, c, d)$, \\ $U = \func{span}\{(1, -1, 2, 0), (-1, 1, 1, 1)\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+	
+\setcounter{enumi}{1}
+\item $\vect{x} = \frac{1}{182}(271,-221,1030)  + \frac{1}{182}(93,403,62)$
+
+\setcounter{enumi}{3}
+\item $\vect{x}= \frac{1}{4}(1, 7, 11, 17) + \frac{1}{4}(7, -7, -7, 7)$
+
+\setcounter{enumi}{5}
+\item $\vect{x} = \frac{1}{12}(5a - 5b + c - 3d, -5a + 5b - c + 3d, a - b + 11c + 3d, -3a + 3b + 3c + 3d) + \frac{1}{12}(7a + 5b - c + 3d, 5a + 7b + c - 3d, -a + b + c -3d, 3a - 3b - 3c + 9d)$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $\vect{x} = (1, -2, 1, 6)$ in $\RR^4$, and let $U = \func{span}\{(2, 1, 3, -4), (1, 2, 0, 1)\}$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Compute $\proj{U}{\vect{x}}$.
+
+\item Show that $\{(1, 0, 2, -3), (4, 7, 1, 2)\}$ is another orthogonal basis of $U$.
+
+\item Use the basis in part (b) to compute $\proj{U}{\vect{x}}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\item  $\frac{1}{10}(-9,3,-21,33) = \frac{3}{10}(-3,1,-7,11)$
+
+\setcounter{enumi}{2}
+\item  $\frac{1}{70}(-63,21,-147,231) = \frac{3}{10}(-3,1,-7,11)$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, use the Gram-Schmidt algorithm to find an orthogonal basis of the subspace $U$, and find the vector in $U$ closest to $\vect{x}$.
+
+\begin{enumerate}[label={\alph*.}]
+\item $U = \func{span}\{(1, 1, 1), (0, 1, 1)\}$, $\vect{x} = (-1, 2, 1)$
+
+\item $U = \func{span}\{(1, -1, 0), (-1, 0, 1)\}$, $\vect{x} = (2, 1, 0)$
+
+\item $U = \func{span}\{(1, 0, 1, 0), (1, 1, 1, 0), (1, 1, 0, 0)\}$, $\vect{x} = (2, 0, -1, 3)$
+
+\item $U = \func{span}\{(1, -1, 0, 1), (1, 1, 0, 0), (1, 1, 0, 1)\}$, $\vect{x} = (2, 0, 3, 1)$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\{(1, -1, 0), \frac{1}{2}(-1, -1, 2)\}$; $\proj{U}{\vect{x}} = (1, 0, -1)$
+
+\setcounter{enumi}{3}
+\item $\{(1, -1, 0, 1), (1, 1, 0, 0), \frac{1}{3}(-1, 1, 0, 2)\}$; $\proj{U}{\vect{x}} = (2, 0, 0, 1)$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $U = \func{span}\{\vect{v}_{1}, \vect{v}_{2}, \dots, \vect{v}_{k}\}$, $\vect{v}_{i}$ in $\RR^n$, and let $A$ be the $k \times n$ matrix with the $\vect{v}_{i}$ as rows.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $U^\perp = \{\vect{x} \mid  \vect{x} \mbox{ in } \RR^n, A\vect{x}^{T} = \vect{0}\}$.
+
+\item Use part (a) to find $U^\perp$ if \\ $U = \func{span}\{(1, -1, 2, 1), (1, 0, -1, 1)\}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $U^\perp = \func{span}\{(1, 3, 1, 0), (-1, 0, 0, 1)\}$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}\label{ex:8_1_6}
+\begin{enumerate}[label={\alph*.}]
+\item Prove part 1 of Lemma~\ref{lem:023783}.
+
+\item Prove part 2 of Lemma~\ref{lem:023783}.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex} \label{ex:8_1_7}
+Let $U$ be a subspace of $\RR^n$. If $\vect{x}$ in $\RR^n$ can be written in any way at all as $\vect{x} = \vect{p} + \vect{q}$ with $\vect{p}$ in $U$ and $\vect{q}$ in $U^\perp$, show that necessarily $\vect{p} = \proj{U}{\vect{x}}$.
+\end{ex}
+
+\begin{ex}
+Let $U$ be a subspace of $\RR^n$ and let $\vect{x}$ be a vector in $\RR^n$. Using Exercise \ref{ex:8_1_7}, or otherwise, show that $\vect{x}$ is in $U$ if and only if $\vect{x} = \proj{U}{\vect{x}}$.
+
+\begin{sol}
+Write $\vect{p} = \proj{U}{\vect{x}}$. Then $\vect{p}$ is in $U$ by definition. If $\vect{x}$ is $U$, then $\vect{x} - \vect{p}$ is in $U$. But $\vect{x} - \vect{p}$ is also in $U^\perp$ by Theorem~\ref{thm:023885}, so $\vect{x} - \vect{p}$ is in $U \cap U^\perp = \{\vect{0}\}$. Thus $\vect{x} = \vect{p}$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $U$ be a subspace of $\RR^n$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $U^\perp = \RR^n$ if and only if $U = \{\vect{0}\}$.
+
+\item Show that $U^\perp = \{\vect{0}\}$ if and only if $U = \RR^n$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+If $U$ is a subspace of $\RR^n$, show that $\proj{U}{\vect{x}} = \vect{x}$ for all $\vect{x}$ in $U$.
+
+\begin{sol}
+Let $\{\vect{f}_{1}, \vect{f}_{2}, \dots , \vect{f}_{m}\}$ be an orthonormal basis of $U$. If $\vect{x}$ is in $U$ the expansion theorem gives $\vect{x} = (\vect{x} \dotprod \vect{f}_{1})\vect{f}_{1} + (\vect{x} \dotprod \vect{f}_{2})\vect{f}_{2} + \dots  + (\vect{x} \dotprod \vect{f}_{m})\vect{f}_{m} = \proj{U}{\vect{x}}$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $U$ is a subspace of $\RR^n$, show that $\vect{x} = \proj{U}{\vect{x}} + \proj{U^\perp}{\vect{x}}$ for all $\vect{x}$ in $\RR^n$.
+\end{ex}
+
+\begin{ex}
+If $\{\vect{f}_{1}, \dots, \vect{f}_{n}\}$ is an orthogonal basis of $\RR^n$ and $U = \func{span}\{\vect{f}_{1}, \dots, \vect{f}_{m}\}$, show that \\ $U^\perp = \func{span}\{\vect{f}_{m + 1}, \dots, \vect{f}_{n}\}$.
+\end{ex}
+
+\begin{ex}\label{ex:8_1_13}
+If $U$ is a subspace of $\RR^n$, show that $U^{\perp \perp} = U$. [\textit{Hint}: Show that $U \subseteq U^{\perp \perp}$, then use Theorem~\ref{thm:023953} (3) twice.]
+\end{ex}
+
+\begin{ex}
+If $U$ is a subspace of $\RR^n$, show how to find an $n \times n$ matrix $A$ such that $U = \{\vect{x} \mid A\vect{x} = \vect{0}\}$. [\textit{Hint}: Exercise~\ref{ex:8_1_13}.]
+
+\begin{sol}
+Let $\{\vect{y}_{1}, \vect{y}_{2}, \dots, \vect{y}_{m}\}$ be a basis of $U^\perp$, and let $A$ be the $n \times n$ matrix with rows $\vect{y}^T_1, \vect{y}^T_2, \dots, \vect{y}^T_m, 0, \dots, 0$. Then $A\vect{x} = \vect{0}$ if and only if $\vect{y}_{i} \dotprod \vect{x} = 0$ for each $i = 1, 2, \dots, m$; if and only if $\vect{x}$ is in $U^{\perp \perp} = U$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Write $\RR^n$ as rows. If $A$ is an $n \times n$ matrix, write its null space as $\func{null }A = \{\vect{x} \mbox{ in } \RR^n \mid A\vect{x}^{T} = \vect{0}\}$. Show that:
+
+\begin{exenumerate}
+\exitem $\func{null }A = (\func{row }A)^\perp$;
+\exitem $\func{null }A^{T} = (\func{col }A)^\perp$.
+\end{exenumerate}
+\end{ex}
+
+\begin{ex}
+If $U$ and $W$ are subspaces, show that $(U + W)^\perp = U^\perp \cap W^\perp$. [See Exercise \ref{ex:5_1_22}.]
+\end{ex}
+
+\begin{ex}\label{ex:8_1_17}
+Think of $\RR^n$ as consisting of rows.
+
+\begin{enumerate}[label={\alph*.}]
+\item Let $E$ be an $n \times n$ matrix, and let \\ $U = \{\vect{x} E \mid \vect{x} \mbox{ in } \RR^n\}$. Show that the following are equivalent.
+
+
+\begin{enumerate}[label={\roman*.}]
+\item $E^{2} = E = E^{T}$ ($E$ is a \textbf{projection matrix}\index{projection matrix}).
+
+\item $(\vect{x} - \vect{x}E) \dotprod (\vect{y}E) = 0$ for all $\vect{x}$ and $\vect{y}$ in $\RR^n$.
+
+\item $\proj{U}{\vect{x}} = \vect{x}E$ for all $\vect{x}$ in $\RR^n$.
+
+
+[\textit{Hint}: For (ii) implies (iii): Write $\vect{x} = \vect{x}E + (\vect{x} - \vect{x}E)$ and use the uniqueness argument preceding the definition of $\proj{U}{\vect{x}}$. For (iii) implies (ii): $\vect{x} - \vect{x}E$ is in $U^\perp$ for all $\vect{x}$ in $\RR^n$.]
+
+\end{enumerate}
+\item If $E$ is a projection matrix, show that $I - E$ is also a projection matrix.
+
+\item If $EF = 0 = FE$ and $E$ and $F$ are projection matrices, show that $E + F$ is also a projection matrix.
+
+\item If $A$ is $m \times n$ and $AA^{T}$ is invertible, show that $E = A^{T}(AA^{T})^{-1}A$ is a projection matrix.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{3}
+\item  $E^T = A^T[(AA^T)^-1]^T(A^T)^T  = A^T[(AA^T)^T]^{-1}A = A^T[AA^T]^{-1}A = E$
+
+$E^2 = A^T(AA^T)^{-1}AA^T(AA^T)^{-1}A   = A^T(AA^T)^{-1}A = E$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ be an $n \times n$ matrix of rank $r$. Show that there is an invertible $n \times n$ matrix $U$ such that $UA$ is a row-echelon matrix with the property that the first $r$ rows are orthogonal. [\textit{Hint}: Let $R$ be the row-echelon form of $A$, and use the Gram-Schmidt process on the nonzero rows of $R$ from the bottom up. Use Lemma~\ref{cor:004537}.]
+\end{ex}
+
+\begin{ex}
+Let $A$ be an $(n - 1) \times n$ matrix with rows $\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{n-1}$ and let $A_{i}$ denote the \\ $(n - 1) \times (n - 1)$ matrix obtained from $A$ by deleting column $i$. Define the vector $\vect{y}$ in $\RR^n$ by \begin{equation*}
+\vect{y} = \leftB \def\arraycolsep{1.5pt} \begin{array}{ccccc} \func{det}A_{1} & -\func{det}A_{2} & \func{det}A_{3} & \cdots & (-1)^{n+1} \func{det}A_{n} \end{array}\rightB
+\end{equation*} Show that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $\vect{x}_{i} \dotprod \vect{y} = 0$ for all $i = 1, 2, \dots , n - 1$. [\textit{Hint}: Write $B_{i} = \leftB \begin{array}{c}
+x_{i} \\
+A
+\end{array} \rightB$ and show that $\func{det}B_{i} = 0$.]
+
+\item $\vect{y} \neq \vect{0}$ if and only if $\{\vect{x}_{1}, \vect{x}_{2}, \dots , \vect{x}_{n-1}\}$ is linearly independent. [\textit{Hint}: If some $\func{det}A_{i} \neq 0$, the rows of $A_{i}$ are linearly independent. Conversely, if the $\vect{x}_{i}$ are independent, consider $A = UR$ where $R$ is in reduced row-echelon form.]
+
+\item If $\{\vect{x}_{1}, \vect{x}_{2}, \dots , \vect{x}_{n-1}\}$ is linearly independent, use Theorem~\ref{thm:023885}(3) to show that all solutions to the system of $n - 1$ homogeneous equations
+\begin{equation*}
+A\vect{x}^T = \vect{0}
+\end{equation*}
+are given by $t\vect{y}$, $t$ a parameter.
+
+\end{enumerate}
+\end{ex}
+\end{multicols}

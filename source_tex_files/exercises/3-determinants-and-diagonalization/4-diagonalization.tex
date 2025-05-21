@@ -1,0 +1,390 @@
+\section*{Exercises for \ref{sec:3_4}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:3_4}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+In each case find the characteristic polynomial, eigenvalues, eigenvectors, and (if possible) an invertible matrix $P$ such that $P^{-1}AP$ is diagonal.
+
+
+\begin{exenumerate}
+\exitem $A = \leftB \begin{array}{rr}
+1 & 2 \\
+3 & 2 
+\end{array}\rightB$
+\exitem $A = \leftB \begin{array}{rr}
+2 & -4 \\
+-1 & -1 
+\end{array}\rightB$
+\exitem $A = \leftB \begin{array}{rrr}
+7 & 0 & -4 \\
+0 & 5 & 0 \\
+5 & 0 & -2 
+\end{array}\rightB$
+\exitem $A = \leftB \begin{array}{rrr}
+1 & 1 & -3 \\
+2 & 0 & 6 \\
+1 & -1 & 5 
+\end{array}\rightB$
+\exitem $A = \leftB \begin{array}{rrr}
+1 & -2 & 3 \\
+2 & 6 &-6 \\
+1 & 2 & -1 
+\end{array}\rightB$
+\exitem  $A = \leftB \begin{array}{rrr}
+0 & 1 & 0 \\
+3 & 0 & 1 \\
+2 & 0 & 0 
+\end{array}\rightB$
+\exitem $A = \leftB \begin{array}{rrr}
+3 & 1 & 1 \\
+-4 & -2 & -5 \\
+2 & 2 & 5 
+\end{array}\rightB$
+\exitem $A = \leftB \begin{array}{rrr}
+2 & 1 & 1 \\
+0 & 1 & 0 \\
+1 & -1 & 2 
+\end{array}\rightB$
+\exitem* $A = \leftB \begin{array}{rrr}
+\lambda & 0 & 0 \\
+0 & \lambda & 0 \\
+0 & 0 & \mu 
+\end{array}\rightB$, $\lambda \neq \mu $
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $(x-3)(x+2); 3; -2$; $\leftB \begin{array}{r}
+4 \\
+-1
+\end{array} \rightB, \leftB \begin{array}{r}
+1 \\
+1
+\end{array} \rightB$; \\ $P = \leftB \begin{array}{rr}
+4 & 1 \\
+-1 & 1 
+\end{array} \rightB$; $P^{-1}AP = \leftB \begin{array}{rr}
+3 & 0 \\
+0 & -2 
+\end{array}\rightB.$
+
+\setcounter{enumi}{3}
+\item $(x-2)^3 ; 2 ; \leftB \begin{array}{c}
+1 \\
+1 \\
+0
+\end{array}\rightB, \leftB \begin{array}{r}
+-3 \\
+0 \\
+1
+\end{array}\rightB$;  No such $P$; Not diagonalizable.
+
+\setcounter{enumi}{5}
+\item $(x+1)^2(x-2) ; -1, -2; \leftB \begin{array}{r}
+-1 \\
+1 \\
+2
+\end{array}\rightB, \leftB \begin{array}{r}
+1 \\
+2 \\
+1
+\end{array}\rightB$; No such $P$; Not diagonalizable. Note that this matrix and the matrix in Example~\ref{exa:009262} have the same characteristic polynomial, but that matrix is diagonalizable.
+
+\setcounter{enumi}{7}
+\item $(x-1)^2(x-3) ; 1, 3; \leftB \begin{array}{r}
+-1 \\
+0 \\
+1
+\end{array}\rightB, \leftB \begin{array}{r}
+1 \\
+0 \\
+1
+\end{array}\rightB$
+ No such $P$; Not diagonalizable.
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+In each case, find $P^{-1}AP$ and then compute $A^{n}$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $ A = \leftB \begin{array}{rr}
+6 & -5 \\
+2 & -1 
+\end{array}\rightB, P = \leftB \begin{array}{rr}
+1 & 5 \\
+1 & 2 
+\end{array}\rightB$
+
+
+\item $ A = \leftB \begin{array}{rr}
+-7 & -12 \\
+6 & -10 
+\end{array}\rightB, P = \leftB \begin{array}{rr}
+-3 & 4 \\
+2 & -3 
+\end{array}\rightB$
+
+[\textit{Hint}: $(PDP^{-1})^{n} = PD^{n}P^{-1}$ for each $n = 1, 2, \dots$.]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $ P^{-1}AP = \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 2
+\end{array}\rightB$, so $A^n  = P \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 2^n 
+\end{array}\rightB P^{-1} = \leftB \begin{array}{cc}
+9 - 8 \cdot 2^n & 12(1-2^n) \\
+6(2^n-1) & 9\cdot 2^n - 8
+\end{array}\rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If $A = \leftB \begin{array}{rr}
+1 & 3 \\
+0 & 2 \end{array} \rightB$
+ and $B = \leftB \begin{array}{rr}
+2 & 0 \\
+0 & 1 
+\end{array}\rightB$
+ verify that $A$ and $B$ are diagonalizable, but $AB$ is not.
+
+\item If $D = \leftB \begin{array}{rr}
+1 & 0 \\
+0 & -1 
+\end{array}\rightB$
+ find a diagonalizable matrix $A$ such that $D + A$ is not diagonalizable.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $A = \leftB \begin{array}{rr}
+0 & 1 \\
+0 & 2 
+\end{array}\rightB$ 
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is an $n \times n$ matrix, show that $A$ is diagonalizable if and only if $A^{T}$ is diagonalizable.
+\end{ex}
+
+\begin{ex}
+If $A$ is diagonalizable, show that each of the following is also diagonalizable.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $A^{n}$, $n \geq 1$
+
+\item $kA$, $k$ any scalar.
+
+\item $p(A)$, $p(x)$ any polynomial (Theorem~\ref{thm:008997})
+
+\item $U^{-1}AU$ for any invertible matrix $U$.
+
+\item $kI + A$ for any scalar $k$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  and d. $PAP^{-1} = D$ is diagonal, then b. $P^{-1}(kA)P = kD$ is diagonal, and  d. $Q(U^{-1}AU)Q = D$ where $Q = PU$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Give an example of two diagonalizable matrices $A$ and $B$ whose sum $A + B$ is not diagonalizable.
+
+\begin{sol}
+$\leftB \begin{array}{cc}
+1 & 1 \\
+0 & 1 
+\end{array}\rightB$
+ is not diagonalizable by Example~\ref{exa:009234}. But $\leftB \begin{array}{rr}
+1 & 1 \\
+0 & 1 
+\end{array}\rightB = \leftB \begin{array}{rr}
+2 & 1 \\
+0 & -1 
+\end{array}\rightB + \leftB \begin{array}{rr}
+-1 & 0 \\
+0 & 2 
+\end{array}\rightB$
+ where $\leftB \begin{array}{rr} 
+2 & 1 \\
+0 & -1 
+\end{array}\rightB$  has diagonalizing matrix $P = \leftB \begin{array}{rr}
+1 & -1 \\
+0 & 3 
+\end{array}\rightB$
+ and $\leftB \begin{array}{rr}
+-1 & 0 \\
+0 & 2 
+\end{array}\rightB$
+ is already diagonal.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is diagonalizable and $1$ and $-1$ are the only eigenvalues, show that $A^{-1} = A$.
+\end{ex}
+
+\begin{ex}
+If $A$ is diagonalizable and $0$ and $1$ are the only eigenvalues, show that $A^{2} = A$.
+
+\begin{sol}
+We have $\lambda^{2} = \lambda$ for every eigenvalue $\lambda$ (as $\lambda = 0, 1$) so $D^{2} = D$, and so $A^{2} = A$ as in Example~\ref{exa:009262}.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is diagonalizable and $\lambda \geq 0$ for each eigenvalue of $A$, show that $A = B^{2}$ for some matrix $B$.
+\end{ex}
+
+\begin{ex}
+If $P^{-1}AP$ and $P^{-1}BP$ are both diagonal, show that $AB = BA$. [\textit{Hint}: Diagonal matrices commute.]
+\end{ex}
+
+\begin{ex}
+A square matrix $A$ is called \textbf{nilpotent}\index{matrix!nilpotent matrix}\index{nilpotent}\index{square matrix ($n \times n$ matrix)!nilpotent matrix} if $A^{n} = 0$ for some $n \geq 1$. Find all nilpotent diagonalizable matrices. [\textit{Hint}: Theorem~\ref{thm:008997}.]
+\end{ex}
+
+
+
+
+\begin{ex}
+Let $A$ be diagonalizable with real eigenvalues and assume that $A^{m} = I$ for some $m \geq 1$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $A^{2} = I$.
+
+\item If $m$ is odd, show that $A = I$.
+
+
+[\textit{Hint}: Theorem~\ref{thm:034138}]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\item  If $A\vect{x} = \lambda\vect{x}$, then $A^{k}\vect{x} = \lambda^{k}\vect{x}$ for each $k$. Hence $\lambda^{m}\vect{x} = A^{m}\vect{x} = \vect{x}$, so $\lambda^{m} = 1$. As $\lambda$ is real, $\lambda = \pm 1$ by the Hint. So if $P^{-1}AP = D$ is diagonal, then $D^{2} = I$ by Theorem~\ref{thm:009214}. Hence $A^{2} = PD^{2}P = I$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Let $A^{2} = I$, and assume that $A \neq I$ and $A \neq -I$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that the only eigenvalues of $A$ are $\lambda = 1$ and $\lambda = -1$.
+
+\item Show that $A$ is diagonalizable. [\textit{Hint}: Verify that $A(A + I) = A + I$ and $A(A - I) = -(A - I)$, and then look at nonzero columns of $A + I$ and of $A - I$.]
+
+\item If $Q_{m} : \RR^2 \to \RR^2$  is reflection in the line $y = mx$ where $m \neq 0$, use (b) to show that the matrix of $Q_{m}$ is diagonalizable for each $m$.
+
+\item Now prove (c) geometrically using Theorem~\ref{thm:009136}.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Let $A = \leftB \begin{array}{rrr}
+2 & 3 & -3 \\
+1 & 0 & -1 \\
+1 & 1 & -2 
+\end{array} \rightB$
+ and $B = \leftB \begin{array}{rrr}
+0 & 1 & 0 \\
+3 & 0 & 1 \\
+2 & 0 & 0  
+\end{array} \rightB$.
+ Show that $c_{A}(x) = c_{B}(x) = (x + 1)^{2} (x - 2)$, but $A$ is diagonalizable and $B$ is not.
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Show that the only diagonalizable matrix $A$ that has only one eigenvalue $\lambda$ is the scalar matrix $A = \lambda I$.
+
+\item Is $\leftB \begin{array}{rr}
+3 & -2 \\
+2 & -1 
+\end{array}\rightB$
+ diagonalizable?
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\item  We have $P^{-1}AP = \lambda I$ by the diagonalization algorithm, so $A = P(\lambda I)P^{-1} = \lambda PP^{-1} = \lambda I$.
+
+\item  No. $\lambda = 1$ is the only eigenvalue.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Characterize the diagonalizable $n \times n$ matrices $A$ such that $A^{2} - 3A + 2I = 0$ in terms of their eigenvalues. [\textit{Hint}: Theorem~\ref{thm:008997}.]
+\end{ex}
+
+\begin{ex}
+Let $A = \leftB \begin{array}{cc}
+B & 0 \\
+0 & C 
+\end{array}\rightB$
+ where $B$ and $C$ are square matrices.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $B$ and $C$ are diagonalizable via $Q$ and $R$ (that is, $Q^{-1}BQ$ and $R^{-1}CR$ are diagonal), show that $A$ is diagonalizable via $\leftB \begin{array}{cc}
+Q & 0 \\
+0 & R 
+\end{array}\rightB$
+
+
+\item Use (a) to diagonalize $A$ if $B = \leftB \begin{array}{rr}
+5 & 3 \\
+3 & 5 
+\end{array}\rightB$
+ and $C = \leftB \begin{array}{rr}
+7 & -1 \\
+-1 & 7 
+\end{array}\rightB$.
+
+
+\end{enumerate}
+\end{ex}
+
+
+\end{multicols}
+
+
+
+
+
+
+
+

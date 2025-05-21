@@ -1,0 +1,382 @@
+\section*{Exercises for \ref{sec:5_3}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:5_3}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\noindent We often write vectors in $\RR^n$ as row n-tuples.
+\begin{ex}
+Obtain orthonormal bases of $\RR^3$ by normalizing the following.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\{(1, -1, 2), (0, 2, 1), (5, 1, -2)\}$
+
+\item $\{(1, 1, 1), (4, 1, -5), (2, -3, 1)\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item \hspace{1em} \\
+\hspace*{-2em}$
+\left\{
+\frac{1}{\sqrt{3}}
+\leftB \begin{array}{r}
+1\\
+1\\
+1
+\end{array} \rightB, \frac{1}{\sqrt{42}}
+\leftB \begin{array}{r}
+4\\
+1\\
+-5
+\end{array} \rightB, \frac{1}{\sqrt{14}}
+\leftB \begin{array}{r}
+2\\
+-3\\
+1
+\end{array} \rightB
+\right\}
+$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, show that the set of vectors is orthogonal in $\RR^4$.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\{(1, -1, 2, 5), (4, 1, 1, -1), (-7, 28, 5, 5)\}$
+
+\item $\{(2, -1, 4, 5), (0, -1, 1, -1), (0, 3, 2, -1)\}$
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+In each case, show that $B$ is an orthogonal basis of $\RR^3$ and use Theorem~\ref{thm:015082} to expand $\vect{x} = (a, b, c)$ as a linear combination of the basis vectors.
+
+\begin{enumerate}[label={\alph*.}]
+\item $B = \{(1, -1, 3), (-2, 1, 1), (4, 7, 1)\}$
+
+\item $B = \{(1, 0, -1), (1, 4, 1), (2, -1, 2)\}$
+
+\item $B = \{(1, 2, 3), (-1, -1, 1), (5, -4, 1)\}$
+
+\item $B = \{(1, 1, 1), (1, -1, 0), (1, 1, -2)\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$ \leftB \begin{array}{r}
+a\\
+b\\
+c
+\end{array} \rightB
+= \frac{1}{2}(a - c)
+\leftB \begin{array}{r}
+1\\
+0\\
+-1
+\end{array} \rightB
++ \frac{1}{18}(a + 4b + c)
+\leftB \begin{array}{r}
+1\\
+4\\
+1
+\end{array} \rightB
++ \frac{1}{9}(2a - b + 2c)
+\leftB \begin{array}{r}
+2\\
+-1\\
+2
+\end{array} \rightB$.
+
+\setcounter{enumi}{3}
+\item  
+$\leftB \begin{array}{r}
+a\\
+b\\
+c
+\end{array} \rightB
+= \frac{1}{3}(a + b + c)
+\leftB \begin{array}{r}
+1\\
+1\\
+1
+\end{array} \rightB
++ \frac{1}{2}(a - b)
+\leftB \begin{array}{r}
+1\\
+-1\\
+0
+\end{array} \rightB
++ \frac{1}{6}(a + b - 2c)
+\leftB \begin{array}{r}
+1\\
+1\\
+-2
+\end{array} \rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, write $\vect{x}$ as a linear combination of the orthogonal basis of the subspace $U$.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\vect{x} = (13, -20, 15)$; $U = \func{span}\{(1, -2, 3), (-1, 1, 1)\}$
+
+\item $\vect{x} = (14, 1, -8, 5)$; \\ $U = \func{span}\{(2, -1, 0, 3), (2, 1, -2, -1)\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$\leftB \begin{array}{r}
+14\\
+1\\
+-8\\
+5
+\end{array} \rightB = 3
+\leftB \begin{array}{r}
+2\\
+-1\\
+0\\
+3
+\end{array} \rightB + 4
+\leftB \begin{array}{r}
+2\\
+1\\
+-2\\
+-1
+\end{array} \rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, find all $(a, b, c, d)$ in $\RR^4$ such that the given set is orthogonal.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\{(1, 2, 1, 0), (1, -1, 1, 3), (2, -1, 0, -1), \\ (a, b, c, d)\}$
+
+\item $\{(1, 0, -1, 1), (2, 1, 1, -1), (1, -3, 1, 0), \\ (a, b, c, d)\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item 
+$t \leftB \begin{array}{r}
+-1\\
+3\\
+10\\
+11
+\end{array} \rightB$, in $\RR$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $\vectlength\vect{x}\vectlength = 3$, $\vectlength\vect{y}\vectlength = 1$, and $\vect{x} \dotprod \vect{y} = -2$, compute:
+
+\begin{exenumerate}
+\exitem $\vectlength 3\vect{x} - 5\vect{y}\vectlength$
+\exitem $\vectlength 2\vect{x} + 7\vect{y}\vectlength$
+\exitem $(3\vect{x} - \vect{y}) \dotprod (2\vect{y} - \vect{x})$
+\exitem $(\vect{x} - 2\vect{y}) \dotprod (3\vect{x} + 5\vect{y})$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\sqrt{29}$
+
+\setcounter{enumi}{3}
+\item  $19$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case either show that the statement is true or give an example showing that it is false.
+
+\begin{enumerate}[label={\alph*.}]
+\item Every independent set in $\RR^n$ is orthogonal.
+
+\item If $\{\vect{x}, \vect{y}\}$ is an orthogonal set in $\RR^n$, then $\{\vect{x}, \vect{x} + \vect{y}\}$ is also orthogonal.
+
+\item If $\{\vect{x}, \vect{y}\}$ and $\{\vect{z}, \vect{w}\}$ are both orthogonal in $\RR^n$, then $\{\vect{x}, \vect{y}, \vect{z}, \vect{w}\}$ is also orthogonal.
+
+\item If $\{\vect{x}_{1}, \vect{x}_{2}\}$ and $\{\vect{y}_{1}, \vect{y}_{2}, \vect{y}_{3}\}$ are both orthogonal and $\vect{x}_{i} \dotprod \vect{y}_{j} = 0$ for all $i$ and $j$, then $\{\vect{x}_{1}, \vect{x}_{2}, \vect{y}_{1}, \vect{y}_{2}, \vect{y}_{3}\}$ is orthogonal.
+
+\item If $\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{n}\}$ is orthogonal in $\RR^n$, then $\RR^n = \func{span}\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{n}\}$.
+
+\item If $\vect{x} \neq \vect{0}$ in $\RR^n$, then $\{\vect{x}\}$ is an orthogonal set.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  F. $\vect{x} = 
+\leftB \begin{array}{r}
+1\\
+0
+\end{array} \rightB$ and $\vect{y} = 
+\leftB \begin{array}{r}
+0\\
+1
+\end{array} \rightB$.
+
+\setcounter{enumi}{3}
+\item  T. Every $\vect{x}_{i} \dotprod \vect{y}_{j} = 0$ by assumption, every $\vect{x}_{i} \dotprod \vect{x}_{j} = 0$ if $i \neq j$ because the $\vect{x}_{i}$ are orthogonal, and every $\vect{y}_{i} \dotprod \vect{y}_{j} = 0$ if $i \neq j$ because the $\vect{y}_{i}$ are orthogonal. As all the vectors are nonzero, this does it.
+
+\setcounter{enumi}{5}
+\item  T. Every pair of \textit{distinct} vectors in the set $\{\vect{x}\}$ has dot product zero (there are no such pairs).
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $\vect{v}$ denote a nonzero vector in $\RR^n$.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $P = \{\vect{x} \mbox{ in } \RR^n \mid \vect{x} \dotprod \vect{v} = 0\}$ is a subspace of $\RR^n$.
+
+\item Show that $\RR\vect{v} = \{t\vect{v} \mid t  \mbox{ in }\RR\}$ is a subspace of $\RR^n$.
+
+\item Describe $P$ and $\RR\vect{v}$ geometrically when $n = 3$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}\label{ex:5.3.9}
+If $A$ is an $m \times n$ matrix with orthonormal columns, show that $A^{T}A = I_{n}$. [\textit{Hint}: If $\vect{c}_{1}, \vect{c}_{2}, \dots, \vect{c}_{n}$ are the columns of $A$, show that column $j$ of $A^{T}A$ has entries $\vect{c}_{1} \dotprod \vect{c}_{j}, \vect{c}_{2} \dotprod \vect{c}_{j}, \dots, \vect{c}_{n} \dotprod \vect{c}_{j}$].
+
+\begin{sol}
+Let $\vect{c}_{1}, \dots, \vect{c}_{n}$ be the columns of $A$. Then row $i$ of $A^{T}$ is $\vect{c}_{i}^{T}$, so the $(i, j)$-entry of $A^{T}A$ is $\vect{c}_{i}^{T}\vect{c}_j = \vect{c}_{i} \dotprod \vect{c}_{j} = 0, 1$ according as $i \neq j$, $i = j$. So $A^{T}A = I$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Use the Cauchy inequality to show that $\sqrt{xy} \leq \frac{1}{2}(x + y)$ for all $x \geq 0$ and $y \geq 0$. Here  $\sqrt{xy}$ and $\frac{1}{2}(x + y)$ are called, respectively, the \textit{geometric mean} and \textit{arithmetic mean} of $x$ and $y$.
+
+[\textit{Hint}: Use 
+$ \vect{x} = 
+\leftB \begin{array}{r}
+\sqrt{x} \\
+\sqrt{y}
+\end{array} \rightB
+$
+ \textit{and} 
+$
+\vect{y} = 
+\leftB \begin{array}{r}
+\sqrt{y} \\
+\sqrt{x}
+\end{array} \rightB
+$.]
+\end{ex}
+
+\begin{ex}
+Use the Cauchy inequality to prove that:
+
+\begin{enumerate}[label={\alph*.}]
+\item  $r_1 + r_2 + \dots + r_n \leq n(r_1^2 + r_2^2 + \dots + r_n^2)$ for all $ r_i $ in $\RR$ and all $n \geq 1$.
+
+\item $r_1r_2 + r_1r_3 + r_2r_3 \leq r_1^2 + r_2^2 + r_3^2$ for all $r_1, r_2,$ and $r_3$ in $\RR$. [\textit{Hint}: See part (a).]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Take $n = 3$ in \textbf{(a)}, expand, and simplify.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Show that $\vect{x}$ and $\vect{y}$ are orthogonal in $\RR^n$ if and only if $\vectlength\vect{x} + \vect{y}\vectlength = \vectlength\vect{x} - \vect{y}\vectlength$.
+
+\item Show that $\vect{x} + \vect{y}$ and $\vect{x} - \vect{y}$ are orthogonal in $\RR^n$ if and only if $\vectlength\vect{x}\vectlength = \vectlength\vect{y}\vectlength$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  We have $(\vect{x} + \vect{y}) \dotprod (\vect{x} - \vect{y}) = \vectlength\vect{x}\vectlength^{2} - \vectlength\vect{y}\vectlength^{2}$. Hence $(\vect{x} + \vect{y}) \dotprod (\vect{x} - \vect{y}) = 0$ if and only if $\vectlength\vect{x}\vectlength^{2} = \vectlength\vect{y}\vectlength^{2}$; if and only if $\vectlength\vect{x}\vectlength = \vectlength\vect{y}\vectlength$---where we used the fact that $\vectlength\vect{x}\vectlength \geq 0$ and $\vectlength\vect{y}\vectlength \geq 0$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Show that $\vectlength\vect{x} + \vect{y}\vectlength^{2} = \vectlength\vect{x}\vectlength^{2} + \vectlength\vect{y}\vectlength^{2}$ if and only if $\vect{x}$ is orthogonal to $\vect{y}$.
+
+\item If $\vect{x} = 
+\leftB \begin{array}{r}
+1 \\
+1
+\end{array} \rightB
+$, $\vect{y} = 
+\leftB \begin{array}{r}
+1 \\
+0
+\end{array} \rightB
+$ and $\vect{z} = 
+\leftB \begin{array}{r}
+-2 \\
+3
+\end{array} \rightB$, show that $\vectlength\vect{x} + \vect{y} + \vect{z}\vectlength^{2} = \vectlength\vect{x}\vectlength^{2} + \vectlength\vect{y}\vectlength^{2} + \vectlength\vect{z}\vectlength^{2}$ but \newline $\vect{x} \dotprod \vect{y} \neq 0$, $\vect{x} \dotprod \vect{z} \neq 0$, and $\vect{y} \dotprod \vect{z} \neq 0$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}\label{ex:5_3_14}
+\begin{enumerate}[label={\alph*.}]
+\item Show that $\vect{x} \dotprod \vect{y} = \frac{1}{4}[\vectlength\vect{x} + \vect{y}\vectlength^{2} - \vectlength\vect{x} - \vect{y}\vectlength^{2}]$ for all $\vect{x}$, $\vect{y}$ in $\RR^n$.
+
+\item Show that $\vectlength\vect{x}\vectlength^{2} + \vectlength\vect{y}\vectlength^{2} = \frac{1}{2}\leftB \vectlength\vect{x} + \vect{y}\vectlength^{2} + \vectlength\vect{x} - \vect{y}\vectlength^{2}\rightB$ for all $\vect{x}$, $\vect{y}$ in $\RR^n$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+If $A$ is $n \times n$, show that every eigenvalue of $A^{T}A$ is
+nonnegative. [\textit{Hint}: Compute $\vectlength A\vect{x}\vectlength^{2}$ where $\vect{x}$ is an eigenvector.]
+
+\begin{sol}
+If $A^{T}A\vect{x} = \lambda\vect{x}$, then $\vectlength A\vect{x}\vectlength^{2} = (A\vect{x}) \dotprod (A\vect{x}) = \vect{x}^{T}A^{T}A\vect{x} = \vect{x}^{T}(\lambda\vect{x}) = \lambda\vectlength\vect{x}\vectlength^{2}$.
+\end{sol}
+\end{ex}
+
+\begin{ex}\label{ex:orthogonalexercise}
+If $\RR^n = \func{span}\{\vect{x}_{1}, \dots, \vect{x}_{m}\}$ and \newline $\vect{x} \dotprod \vect{x}_{i} = 0$ for all $i$, show that $\vect{x} = 0$. [\textit{Hint}: Show $\vectlength\vect{x}\vectlength = 0$.]
+\end{ex}
+
+\begin{ex}
+If $\RR^n = \func{span}\{\vect{x}_{1}, \dots, \vect{x}_{m}\}$ and $\vect{x} \dotprod \vect{x}_{i} = \vect{y} \dotprod \vect{x}_{i}$ for all $i$, show that $\vect{x} = \vect{y}$. [\textit{Hint}: Exercise \ref{ex:orthogonalexercise}]
+\end{ex}
+
+\begin{ex}
+Let $\{\vect{e}_{1}, \dots, \vect{e}_{n}\}$ be an orthogonal basis of $\RR^n$. Given $\vect{x}$ and $\vect{y}$ in $\RR^n$, show that
+\begin{equation*}
+\vect{x} \dotprod \vect{y} = \frac{(\vect{x} \dotprod \vect{e}_1)(\vect{y} \dotprod \vect{e}_1)}{\vectlength\vect{e}_1\vectlength^2} +
+\dots +
+\frac{(\vect{x} \dotprod \vect{e}_n)(\vect{y} \dotprod \vect{e}_n)}{\vectlength\vect{e}_n\vectlength^2}
+\end{equation*}
+\end{ex}
+\end{multicols}

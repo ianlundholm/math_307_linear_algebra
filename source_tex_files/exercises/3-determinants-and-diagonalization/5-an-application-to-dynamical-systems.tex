@@ -1,0 +1,129 @@
+\section*{Exercises for \ref{sec:3_5}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:3_4}}
+\end{Filesave}
+
+\begin{multicols}{2}
+
+
+\begin{ex}
+Referring to the model in Example~\ref{exa:008923},
+ determine if the population stabilizes, becomes extinct, or becomes 
+large in each case. Denote the adult and juvenile survival rates as $A$ and $J$, and the reproduction rate as $R$.
+\begin{equation*}
+\def\arraystretch{1.5}  \begin{array}{c|ccccc}
+& R & & A & & J \\ \cline{2-6}
+a. & 2 & & \frac{1}{2} & &\frac{1}{2}\\
+b. & 3 & &\frac{1}{4} & &\frac{1}{4}\\
+c. & 2 & &\frac{1}{4} & &\frac{1}{3}\\
+d. & 3 & &\frac{3}{5} & &\frac{1}{5}
+\end{array}
+\end{equation*}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\lambda_{1} = 1$, stabilizes.
+
+\setcounter{enumi}{3}
+\item  $\lambda_1 = \frac{1}{24} (3+\sqrt{69}) = 1.13$, diverges.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+  
+\begin{ex}
+Consider a linear dynamical system $\vect{v}_{k+1} = A\vect{v}_{k}$ for $k \geq 0$. In each case approximate $\vect{v}_{k}$ using Theorem~\ref{thm:009500}.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $A = \leftB \begin{array}{rr}
+2 & 1 \\
+4 & -1 
+\end{array}\rightB, \vect{v}_0 = \leftB \begin{array}{r}
+1 \\
+2
+\end{array}\rightB$
+
+
+\item $A = \leftB \begin{array}{rr}
+3 & -2 \\
+2 & -2 
+\end{array}\rightB, \vect{v}_0 = \leftB \begin{array}{r}
+3 \\
+-1
+\end{array}\rightB$
+
+
+\item $A = \leftB \begin{array}{rrr}
+1 & 0 & 0  \\
+1 & 2 & 3 \\
+1 & 4 & 1  
+\end{array}\rightB, \vect{v}_0 = \leftB \begin{array}{r}
+1 \\
+1 \\
+1
+\end{array}\rightB$
+
+
+\item $A = \leftB \begin{array}{rrr}
+1 & 3 & 2  \\
+-1 & 2 & 1 \\
+4 & -1 & -1  
+\end{array}\rightB, \vect{v}_0 = \leftB \begin{array}{r}
+2 \\
+0 \\
+1
+\end{array}\rightB$
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $V_k = \frac{7}{3} 2^k  \leftB \begin{array}{r}
+2 \\
+1
+\end{array}\rightB$
+
+
+\setcounter{enumi}{3}
+\item  $V_k = \frac{3}{2} 3^k  \leftB \begin{array}{r}
+1 \\
+0 \\
+1
+\end{array}\rightB$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+In the model of Example~\ref{exa:008923}, does the final outcome depend on the initial population of adult and juvenile females? Support your answer.
+\end{ex}
+
+\begin{ex}
+In Example~\ref{exa:008923}, keep the same reproduction rate of 2 and the same adult survival rate of $\frac{1}{2}$, but suppose that the juvenile survival rate is $\rho$. Determine which values of $\rho$ cause the population to become extinct or to become large.
+\end{ex}
+
+\begin{ex}
+In Example~\ref{exa:008923}, let the juvenile survival rate be $\frac{2}{5}$
+ and let the reproduction rate be 2. What values of the adult survival rate $\alpha$ will ensure that the population stabilizes?
+
+\begin{sol}
+Extinct if $\alpha < \frac{1}{5}$, stable if $\alpha = \frac{1}{5}$, diverges if $\alpha > \frac{1}{5}$.
+\end{sol}
+\end{ex}
+
+\end{multicols}
+
+
+
+
+
+
+
+

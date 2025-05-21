@@ -1,0 +1,97 @@
+\section*{Exercises for \ref{sec:1_4}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:1_4}}
+\end{Filesave}
+
+\begin{multicols}{2}
+
+\begin{ex}\label{ex:pipenetwork}
+Find the possible flows in each of the following networks of pipes.
+\begin{enumerate}[label={\alph*.}]
+\item \hfill
+\begin{figure}[H]
+\centering
+\input{exercises/1-systems-of-linear-equations/figures/4-an-application-to-network-flow/exercise1.4.1a}
+%\caption{\label{fig:001782}}
+\end{figure}
+
+\item \hfill
+\begin{figure}[H]
+\centering
+\input{exercises/1-systems-of-linear-equations/figures/4-an-application-to-network-flow/exercise1.4.1b}
+%\caption{\label{fig:001785}}
+\end{figure}
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$\arraycolsep=1pt
+\begin{array}[t]{rcrrr}
+	f_1 & = &  85 & - f_4 & - f_7 \\
+	f_2 & = &  60 & - f_4 & - f_7 \\
+	f_3 & = & -75 & + f_4 & + f_6 \\
+	f_5 & = &  40 & - f_6 & - f_7 \\
+\end{array}$
+
+$f_4$, $f_6$, $f_7$ parameters
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+A proposed network of irrigation canals is described in the accompanying diagram. At peak demand, the flows at interchanges $A$, $B$, $C$, and $D$ are as shown.
+
+\begin{figure}[H]
+\centering
+\input{exercises/1-systems-of-linear-equations/figures/4-an-application-to-network-flow/exercise1.4.2}
+%\caption{\label{fig:001788}}
+\end{figure}
+
+\begin{enumerate}[label={\alph*.}]
+\item Find the possible flows.
+
+\item If canal $BC$ is closed, what range of flow on $AD$ must be maintained so that no canal carries a flow of more than 30?
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$\arraycolsep=1pt
+\begin{array}[t]{l}
+	f_5 = 15 \\
+	25 \leq f_4 \leq 30
+\end{array}$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+A traffic circle has five one-way streets, and vehicles enter and leave as shown in the accompanying diagram.
+
+\begin{figure}[H]
+\centering
+\input{exercises/1-systems-of-linear-equations/figures/4-an-application-to-network-flow/exercise1.4.3}
+%\caption{\label{fig:001796}}
+\end{figure}
+
+\begin{enumerate}[label={\alph*.}]
+\item Compute the possible flows.
+
+\item Which road has the heaviest flow?
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item CD
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\end{multicols}

@@ -1,0 +1,377 @@
+\section*{Exercises for \ref{sec:2_7}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:2_7}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+Find an LU-factorization of the following matrices.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\leftB \begin{array}{rrrrr}
+2 & 6 & -2 & 0 & 2 \\
+3 & 9 & -3 & 3 & 1 \\
+-1 & -3 & 1 & -3 & 1
+\end{array} \rightB$
+
+\item $\leftB \begin{array}{rrr}
+2 & 4 & 2 \\
+1 & -1 & 3 \\
+-1 & 7 & -7
+\end{array} \rightB$
+
+\item $\leftB \begin{array}{rrrrr}
+2 & 6 & -2 & 0 & 2 \\
+1 & 5 & -1 & 2 & 5 \\
+3 & 7 & -3 & -2 & 5 \\
+-1 & -1 & 1 & 2 & 3 
+\end{array} \rightB$
+
+\item $\leftB \begin{array}{rrrrr}
+-1 & -3 & 1 & 0 & -1 \\
+1 & 4 & 1 & 1 & 1 \\
+1 & 2 & -3 & -1 & 1 \\
+0 & -2 & -4 & -2 & 0 
+\end{array} \rightB$
+
+\item $\leftB \begin{array}{rrrrrr}
+2 & 2 & 4 & 6 & 0 & 2 \\
+1 & -1 & 2 & 1 & 3 & 1 \\
+-2 & 2 & -4 & -1 & 1 & 6 \\
+0 & 2 & 0 & 3 & 4 & 8 \\
+-2 & 4 & -4 & 1 & -2 & 6 
+\end{array} \rightB$
+
+\item $\leftB \begin{array}{rrrrr}
+2 & 2 & -2 & 4 & 2 \\
+1 & -1 & 0 & 2 & 1 \\
+3 & 1 & -2 & 6 & 3 \\
+1 & 3 & -2 & 2 & 1 
+\end{array} \rightB$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\leftB \begin{array}{rrr}
+2 & 0 & 0 \\
+1 & -3 & 0 \\
+-1 & 9 & 1
+\end{array} \rightB \leftB \def\arraystretch{1.5}\begin{array}{rrr}
+1 & 2 & 1 \\
+0 & 1 & -\frac{2}{3} \\
+0 & 0 & 0
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item $\leftB \begin{array}{rrrr}
+-1 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 \\
+1 & -1 & 1 & 0 \\
+0 & -2 & 0 & 1
+\end{array} \rightB \leftB \begin{array}{rrrrr}
+1 & 3 & -1 & 0 & 1 \\
+0 & 1 & 2 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0
+\end{array} \rightB$
+
+\setcounter{enumi}{5}
+\item $\leftB \begin{array}{rrrr}
+2 & 0 & 0 & 0 \\
+1 & -2 & 0 & 0 \\
+3 & -2 & 1 & 0 \\
+0 & 2 & 0 & 1
+\end{array} \rightB \leftB \def\arraystretch{1.5}\begin{array}{rrrrr}
+1 & 1 & -1 & 2 & 1 \\
+0 & 1 & -\frac{1}{2} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Find a permutation matrix $P$ and an LU-factorization of $PA$ if $A$ is:
+\begin{exenumerate}
+\exitem $\leftB \begin{array}{rrr}
+0 & 0 & 2 \\
+0 & -1 & 4 \\
+3 & 5 & 1
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+0 & -1 & 2 \\
+0 & 0 & 4 \\
+-1 & 2 & 1
+\end{array} \rightB$
+\exitem* $\leftB \begin{array}{rrrrr}
+0 & -1 & 2 & 1 & 3\\
+-1 & 1 & 3 & 1 & 4 \\
+1 & -1 & -3 & 6 & 2 \\
+2 & -2 & -4 & 1 & 0
+\end{array} \rightB$
+\exitem* $\leftB \begin{array}{rrrr}
+-1 & -2 & 3 & 0 \\
+2 & 4 & -6 & 5 \\
+1 & 1 & -1 & 3 \\
+2 & 5 & -10 & 1
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol} 
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $P = \leftB \begin{array}{rrr}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 0
+\end{array} \rightB$ \\ $PA = \leftB \begin{array}{rrr}
+-1 & 2 & 1 \\
+0 & -1 & 2 \\
+0 & 0 & 4
+\end{array} \rightB$ \\ ${} = \leftB \begin{array}{rrr}
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 4
+\end{array} \rightB \leftB \begin{array}{rrr}
+1 & -2 & -1 \\
+0 & 1 & 2 \\
+0 & 0 & 1
+\end{array} \rightB$
+
+\setcounter{enumi}{3}
+\item $P = \leftB \begin{array}{rrrr}
+1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0
+\end{array} \rightB$ \\ $PA = \leftB \begin{array}{rrrr}
+-1 & -2 & 3 & 0 \\
+1 & 1 & -1 & 3 \\
+2 & 5 & -10 & 1 \\
+2 & 4 & -6 & 5
+\end{array} \rightB$ \\ ${} = \leftB \begin{array}{rrrr}
+-1 & 0 & 0 & 0 \\
+1 & -1 & 0 & 0 \\
+2 & 1 & -2 & 0 \\
+2 & 0 & 0 & 5
+\end{array} \rightB \leftB \begin{array}{rrrr}
+1 & 2 & -3 & 0 \\
+0 & 1 & -2 & -3 \\
+0 & 0 & 1 & -2 \\
+0 & 0 & 0 & 1
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case use the given LU-decomposition of $A$ to solve the system $A\vect{x} = \vect{b}$ by finding $\vect{y}$ such that $L\vect{y} = \vect{b}$, and then $\vect{x}$ such that $U\vect{x} = \vect{y}$:
+
+\begin{enumerate}[leftmargin=1em,label={\alph*.}]
+\item $A = \leftB \begin{array}{rrr}
+2 & 0 & 0 \\
+0 & -1 & 0 \\
+1 & 1 & 3
+\end{array} \rightB \leftB \begin{array}{rrrr}
+1 & 0 & 0 & 1\\
+0 & 0 & 1 & 2 \\
+0 & 0 & 0 & 1
+\end{array} \rightB$; \\ $\vect{b} = \leftB \begin{array}{r}
+1 \\
+-1 \\
+2
+\end{array} \rightB$
+
+\item $A = \leftB \begin{array}{rrr}
+2 & 0 & 0 \\
+1 & 3 & 0 \\
+-1 & 2 & 1
+\end{array} \rightB \leftB \begin{array}{rrrr}
+1 & 1 & 0 & -1\\
+0 & 1 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{array} \rightB$; \\ $ \vect{b} = \leftB \begin{array}{r}
+-2 \\
+-1 \\
+1
+\end{array} \rightB$
+
+\item {\footnotesize $A = \leftB \begin{array}{rrrr}
+-2 & 0 & 0 & 0 \\
+1 & -1 & 0 & 0 \\
+-1 & 0 & 2 & 0 \\
+0 & 1 & 0 & 2
+\end{array} \rightB \leftB \def\arraystretch{1.5}\begin{array}{rrrr}
+1 & -1 & 2 & 1 \\
+0 & 1 & 1 & -4 \\
+0 & 0 & 1 & -\frac{1}{2} \\
+0 & 0 & 0 & 1
+\end{array} \rightB$; \\ $\vect{b} = \leftB \begin{array}{r}
+1 \\
+-1 \\
+2 \\
+0
+\end{array} \rightB$}
+
+\item {\footnotesize $A = \leftB \begin{array}{rrrr}
+2 & 0 & 0 & 0 \\
+1 & -1 & 0 & 0 \\
+-1 & 1 & 2 & 0 \\
+3 & 0 & 1 & -1
+\end{array} \rightB \leftB \begin{array}{rrrr}
+1 & -1 & 0 & 1 \\
+0 & 1 & -2 & -1 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0
+\end{array} \rightB$; \\ $\vect{b} = \leftB \begin{array}{r}
+4 \\
+-6 \\
+4 \\
+5
+\end{array} \rightB$}
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\vect{y} = \leftB \begin{array}{r}
+-1 \\
+0 \\
+0
+\end{array} \rightB \vect{x} = \leftB \begin{array}{c}
+-1 + 2t \\
+-t \\
+s \\
+t
+\end{array} \rightB s$
+ and $t$ arbitrary
+
+\setcounter{enumi}{3}
+\item $\vect{y} = \leftB \begin{array}{r}
+2 \\
+8 \\
+-1 \\
+0
+\end{array} \rightB \vect{x} = \leftB \begin{array}{c}
+8 - 2t \\
+6 - t \\
+-1 - t \\
+t
+\end{array} \rightB t$
+ arbitrary
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}\label{ex:ex2_7_4}
+Show that $\leftB \begin{array}{rr}
+0 & 1 \\
+1 & 0
+\end{array} \rightB = LU$
+ is impossible where $L$ is lower triangular and $U$ is upper triangular.
+\end{ex}
+
+\begin{ex}
+Show that we can accomplish any row interchange by using only row operations of other types.
+
+\begin{sol}
+$\leftB \begin{array}{c}
+R_{1} \\
+R_{2}
+\end{array} \rightB \rightarrow
+\leftB \begin{array}{c}
+R_{1} + R_{2} \\
+R_{2}
+\end{array} \rightB \rightarrow
+\leftB \begin{array}{c}
+R_{1} + R_{2} \\
+-R_{1}
+\end{array} \rightB \rightarrow
+\leftB \begin{array}{c}
+R_{2} \\
+-R_{1}
+\end{array} \rightB \rightarrow
+\leftB \begin{array}{c}
+R_{2} \\
+R_{1}
+\end{array} \rightB$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Let $L$ and $L_{1}$ be invertible lower triangular matrices, and let $U$ and $U_{1}$ be invertible upper triangular matrices. Show that $LU = L_{1}U_{1}$ if and only if there exists an invertible diagonal matrix $D$ such that $L_{1} = LD$ and $U_{1} = D^{-1}U$. [\textit{Hint}: Scrutinize $L^{-1}L_{1} = UU_{1}^{-1}$.]
+
+\item Use part (a) to prove Theorem~\ref{thm:006697} in the case that $A$ is invertible.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Let $A = LU = L_{1}U_{1}$ be LU-factorizations of the invertible matrix $A$. Then $U$ and $U_{1}$ have no row of zeros and so (being row-echelon) are upper triangular with $1$'s on the main diagonal. Thus, using \textbf{(a.)}, the diagonal matrix $D = UU_{1}^{-1}$ has $1$'s on the main diagonal. Thus $D = I$, $U = U_{1}$, and $L = L_{1}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}\label{ex:ex2_7_7}
+Prove Lemma~\ref{lem:006547}(1). [\textit{Hint}: Use block multiplication and induction.]
+
+\begin{sol}
+If $A = \leftB \begin{array}{cc}
+a & 0 \\
+X & A_{1}
+\end{array} \rightB$
+ and $B = \leftB \begin{array}{cc}
+ b & 0 \\
+ Y & B_{1}
+ \end{array} \rightB$
+ in block form, then $AB = \leftB \begin{array}{cc}
+ ab & 0 \\
+ Xb + A_{1}Y & A_{1}B_{1}
+ \end{array} \rightB$,
+ and $A_{1}B_{1}$ is lower triangular by induction.
+\end{sol}
+\end{ex}
+
+\begin{ex}\label{ex:ex2_7_8}
+Prove Lemma~\ref{lem:006547}(2). [\textit{Hint}: Use block multiplication and induction.]
+\end{ex}
+
+\begin{ex}
+A triangular matrix is called \textbf{unit triangular}\index{unit triangular} if it is square and every main diagonal element is a $1$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A$ can be carried by the gaussian algorithm to row-echelon form using no row interchanges, show that $A = LU$ where $L$ is unit lower triangular and $U$ is upper triangular.
+
+\item Show that the factorization in (a.) is unique.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Let $A = LU = L_{1}U_{1}$ be two such factorizations. Then $UU_{1}^{-1} = L^{-1}L_{1}$; write this matrix as $D = UU_{1}^{-1} = L^{-1}L_{1}$. Then $D$ is lower triangular (apply Lemma~\ref{lem:006547} to $D = L^{-1}L_{1}$); and $D$ is also upper triangular (consider $UU_{1}^{-1}$). Hence $D$ is diagonal, and so $D = I$ because $L^{-1}$ and $L_{1}$ are unit triangular. Since $A = LU$; this completes the proof.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+	Let $\vect{c}_{1}, \vect{c}_{2}, \dots, \vect{c}_{r}$ be columns of lengths $m, m - 1, \dots, m - r + 1$. If $\vect{k}_{j}$ denotes column $j$ of $I_{m}$, show that $L^{(m)} \leftB \vect{c}_{1}, \vect{c}_{2}, \dots, \vect{c}_{r} \rightB =$ $L^{(m)} \leftB \vect{c}_{1} \rightB L^{(m)} \leftB \vect{k}_{1}, \vect{c}_{2} \rightB L^{(m)} \leftB \vect{k}_{1}, \vect{k}_{2}, \vect{c}_{3} \rightB \cdots$ \\ $L^{(m)} \leftB \vect{k}_{1}, \vect{k}_{2}, \dots, \vect{k}_{r-1}, \vect{c}_{r} \rightB$. The notation is as in the proof of Theorem~\ref{thm:006646}. [\textit{Hint}: Use induction on $m$ and block multiplication.]
+\end{ex}
+
+\begin{ex}\label{ex:ex2_7_11}
+Prove Lemma~\ref{lem:006829}. [\textit{Hint}: $P_{k}^{-1} = P_{k}$. Write $P_{k} = \leftB \begin{array}{cc}
+I_{k} & 0 \\
+0 & P_{0}
+\end{array} \rightB$
+ in block form where $P_{0}$ is an $(m - k) \times (m - k)$ permutation matrix.]
+\end{ex}
+\end{multicols}

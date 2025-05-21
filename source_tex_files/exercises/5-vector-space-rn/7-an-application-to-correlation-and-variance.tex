@@ -1,0 +1,71 @@
+
+\section*{Exercises for \ref{sec:5_7}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:5_7}}
+\end{Filesave}
+
+% This is intentionally not using multicols because of the large tables
+\begin{ex}
+The following table gives IQ scores for 10 fathers and their eldest sons. 
+Calculate the means, the variances, and the correlation coefficient $r$. (The data scaling formula is useful.)
+\begin{equation*}
+\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+							&   1 &   2 &   3 &   4 &   5 &   6 &   7 &   8 &   9 &  10 \\ \hline
+\textbf{\mbox{Father's IQ}} & 140 & 131 & 120 & 115 & 110 & 106 & 100 &  95 &  91 &  86 \\ 
+\textbf{\mbox{Son's IQ}} 	& 130 & 138 & 110 &  99 & 109 & 120 & 105 &  99 & 100 &  94 \\ \hline
+\end{array}
+\end{equation*}
+\end{ex}
+
+\begin{ex}
+The following table gives the number of years of education and the annual income (in thousands) of 10 individuals. Find the means, the variances, and the correlation coefficient. (Again the data scaling formula is useful.)
+\begin{equation*}
+\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{\mbox{Individual}} 			&  1 &  2 &  3 &  4 &  5 &  6 &  7 &  8 &  9 & 10 \\ \hline
+\textbf{\mbox{Years of education}} 	& 12 & 16 & 13 & 18 & 19 & 12 & 18 & 19 & 12 & 14 \\ 
+\textbf{\mbox{Yearly income}} 		& 31 & 48 & 35 & 28 & 55 & 40 & 39 & 60 & 32 & 35 \\
+\textbf{\mbox{(1000's)}} &&&&&&&&&& \\ \hline
+\end{array}
+\end{equation*}
+\begin{sol}
+Let $X$ denote the number of years of education, and let $Y$ denote the yearly income (in 1000's). Then $\overline{x} = 15.3$, $s_x^2 = 9.12$ and $s_{x} = 3.02$, while $\overline{y} = 40.3$, $s_y^2 = 114.23$ and $s_{y} = 10.69$. The correlation is $r(X, Y) = 0.599$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $\vect{x}$ is a sample vector, and $\vect{x}_{c}$ is the centred sample, show that $\overline{x}_{c} = 0$ and the standard deviation of $\vect{x}_{c}$ is $s_{x}$.
+\end{ex}
+
+\begin{ex}
+Prove the data scaling formulas found on page \pageref{thm:017436}: (a), (b), and (c).
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Given the sample vector 
+$\vect{x} = \leftB \begin{array}{c}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{array} \rightB$, let $\vect{z} =
+\leftB \begin{array}{c}
+z_1 \\
+z_2 \\
+\vdots \\
+z_n
+\end{array} \rightB$ where $z_{i} = a + bx_{i}$ for each $i$. By \textbf{(a)} we have $\overline{z} = a + b\overline{x}$, so 
+\begin{align*}
+s_z^2 &= \frac{1}{n - 1}\sum_{i}(z_i - \overline{z})^2 \\
+&= \frac{1}{n - 1}\sum_{i}[(a + bx_i) - (a + b\overline{x})]^2 \\
+&= \frac{1}{n - 1}\sum_{i}b^2(x_i - \overline{x})^2 \\
+&= b^2s_x^2.
+\end{align*}
+
+Now \textbf{(b)} follows because $\sqrt{b^2} = |b|$.
+\end{enumerate}
+\end{sol}
+\end{ex}

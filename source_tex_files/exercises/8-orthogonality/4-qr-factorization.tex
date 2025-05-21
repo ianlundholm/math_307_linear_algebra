@@ -1,0 +1,94 @@
+
+\section*{Exercises for \ref{sec:8_4}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:8_4}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+In each case find the QR-factorization of $A$.
+
+
+\begin{exenumerate}[column-sep=-15pt]
+\exitem $A = \leftB \begin{array}{rr}
+1 & -1 \\
+-1 & 0
+\end{array}\rightB$
+\exitem $A = \leftB \begin{array}{rr}
+2 & 1 \\
+1 &1
+\end{array}\rightB$
+\exitem $A = \leftB \begin{array}{rrr}
+1 & 1 & 1 \\
+1 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 0 
+\end{array}\rightB$
+\exitem $A = \leftB \begin{array}{rrr}
+1 & 1 & 0 \\
+-1 & 0 & 1 \\
+0 & 1 & 1 \\
+1 & -1 & 0 
+\end{array}\rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $Q = \frac{1}{\sqrt{5}}\leftB \begin{array}{rr}
+2 & -1 \\
+1 & 2 
+\end{array}\rightB$,
+ $R = \frac{1}{\sqrt{5}}\leftB \begin{array}{rr}
+5 & 3 \\
+0 & 1 
+\end{array}\rightB$
+
+\setcounter{enumi}{3}
+\item  $Q = \frac{1}{\sqrt{3}}\leftB \begin{array}{rrr}
+1 & 1 & 0 \\
+-1 & 0 & 1 \\
+0 & 1 & 1 \\
+1 & -1 & 1
+\end{array}\rightB$, \\
+$R = \frac{1}{\sqrt{3}}\leftB \begin{array}{rrr}
+3 & 0 & -1 \\
+0 & 3 & 1 \\
+0 & 0 & 2 
+\end{array}\rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ denote matrices.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A$ and $B$ have independent columns, show that $AB$ has independent columns. [\textit{Hint}: Theorem~\ref{thm:015672}.]
+
+\item Show that $A$ has a QR-factorization if and only if $A$ has independent columns.
+
+\item If $AB$ has a QR-factorization, show that the same is true of $B$ but not necessarily $A$.
+
+
+[\textit{Hint}: Consider $AA^{T}$ where $A = \leftB \begin{array}{rrr}
+1 & 0 & 0 \\
+1 & 1 & 1
+\end{array}\rightB$.]
+
+\end{enumerate}
+\begin{sol}
+If $A$ has a QR-factorization, use (a). For the converse use Theorem~\ref{thm:025133}.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $R$ is upper triangular and invertible, show that there exists a diagonal matrix $D$ with diagonal entries $\pm 1$ such that $R_{1} = DR$ is invertible, upper triangular, and has positive diagonal entries.
+\end{ex}
+
+\begin{ex}
+If $A$ has independent columns, let \\ $A = QR$ where $Q$ has orthonormal columns and $R$ is invertible and upper triangular. [Some authors call \textit{this} a QR-factorization of $A$.] Show that there is a diagonal matrix $D$ with diagonal entries $\pm 1$ such that $A = (QD)(DR)$ is the QR-factorization of $A$. [\textit{Hint}: Preceding exercise.]
+\end{ex}
+\end{multicols}

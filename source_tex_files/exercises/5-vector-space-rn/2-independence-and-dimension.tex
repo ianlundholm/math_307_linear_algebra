@@ -1,0 +1,519 @@
+\section*{Exercises for \ref{sec:5_2}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:5_2}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\noindent In Exercises \ref{ex:5_2_1}-\ref{ex:5_2_6} we write vectors $\RR^n$ as rows.
+\begin{ex}\label{ex:5_2_1}
+Which of the following subsets are independent? Support your answer.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\{(1, -1, 0)$, $(3, 2, -1)$, $(3, 5, -2)\}$ in $\RR^3$
+
+\item $\{(1, 1, 1)$, $(1, -1, 1)$, $(0, 0, 1)\}$ in $\RR^3$
+
+\item $\{(1, -1, 1, -1)$, $(2, 0, 1, 0)$, $(0, -2, 1, -2)\}$ in $\RR^4$
+
+\item $\{(1, 1, 0, 0)$, $(1, 0, 1, 0)$, $(0, 0, 1, 1)$, $(0, 1, 0, 1)\}$ in $\RR^4$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Yes. If 
+$r \leftB \begin{array}{r}
+1 \\
+1 \\
+1
+\end{array} \rightB
++ s
+\leftB \begin{array}{r}
+1 \\
+1 \\
+1
+\end{array} \rightB
++ t
+\leftB \begin{array}{r}
+0 \\
+0 \\
+1
+\end{array} \rightB
+=
+\leftB \begin{array}{r}
+0 \\
+0 \\
+0
+\end{array} \rightB$, then $r + s = 0$, $r - s = 0$, and $r + s + t = 0$. These equations give $r = s = t = 0$.
+
+\setcounter{enumi}{3}
+\item  No. Indeed: 
+$\leftB \begin{array}{r}
+1 \\
+1 \\
+0 \\
+0
+\end{array} \rightB
+-
+\leftB \begin{array}{r}
+1 \\
+0 \\
+1 \\
+0
+\end{array} \rightB
++
+\leftB \begin{array}{r}
+0 \\
+0 \\
+1 \\
+1 
+\end{array} \rightB
+-
+\leftB \begin{array}{r}
+0 \\
+1 \\
+0 \\
+1 
+\end{array} \rightB
+=
+\leftB \begin{array}{r}
+0 \\
+0 \\
+0 \\
+0
+\end{array} \rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $\{\vect{x}, \vect{y}, \vect{z}, \vect{w}\}$ be an independent set in $\RR^n$. Which of the following sets is independent? Support your answer.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\{\vect{x} - \vect{y}, \vect{y} - \vect{z}, \vect{z} - \vect{x}\}$
+
+\item $\{\vect{x} + \vect{y}, \vect{y} + \vect{z}, \vect{z} + \vect{x}\}$
+
+\item $\{\vect{x} - \vect{y}, \vect{y} - \vect{z}, \vect{z} - \vect{w}, \vect{w} - \vect{x}\}$
+
+\item $\{\vect{x} + \vect{y}, \vect{y} + \vect{z}, \vect{z} + \vect{w}, \vect{w} + \vect{x}\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Yes. If $r(\vect{x} + \vect{y}) + s(\vect{y} + \vect{z}) + t(\vect{z} + \vect{x}) = \vect{0}$, then $(r + t)\vect{x} + (r + s)\vect{y} + (s + t)\vect{z} = \vect{0}$. Since $\{\vect{x}, \vect{y}, \vect{z}\}$ is independent, this implies that $r + t = 0$, $r + s = 0$, and $s + t = 0$. The only solution is $r = s = t = 0$.
+
+\setcounter{enumi}{3}
+\item  No. In fact, $(\vect{x} + \vect{y}) - (\vect{y} + \vect{z}) + (\vect{z} + \vect{w}) - (\vect{w} + \vect{x}) = \vect{0}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find a basis and calculate the dimension of the following subspaces of $\RR^4$.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\func{span}\{(1, -1, 2, 0), (2, 3, 0, 3), (1, 9, -6, 6)\}$
+
+\item $\func{span}\{(2, 1, 0, -1), (-1, 1, 1, 1), (2, 7, 4, 1)\}$
+
+\item $\func{span}\{(-1, 2, 1, 0), (2, 0, 3, -1), (4, 4, 11, -3), \\ (3, -2, 2, -1)\}$
+
+\item $\func{span}\{(-2, 0, 3, 1), (1, 2, -1, 0), (-2, 8, 5, 3), \\ (-1, 2, 2, 1)\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item 
+$\left \{
+\leftB \begin{array}{r}
+2 \\
+1 \\
+0 \\
+-1
+\end{array} \rightB
+, 
+\leftB \begin{array}{r}
+-1 \\
+1 \\
+1 \\
+1
+\end{array} \rightB
+\right \}$; dimension $2$. 
+
+\setcounter{enumi}{3}
+\item  
+$\left \{
+\leftB \begin{array}{r}
+-2 \\
+0 \\
+3 \\
+1
+\end{array} \rightB
+,\
+\leftB \begin{array}{r}
+1 \\
+2 \\
+-1 \\
+0
+\end{array} \rightB
+\right \}$; dimension $2$.
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find a basis and calculate the dimension of the following subspaces of $\RR^4$.
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$U = \left \{
+\leftB \begin{array}{c}
+	a \\
+	a + b \\
+	a - b \\
+	b
+\end{array} \rightB \,
+\middle| \, a \mbox{ and } b \mbox{ in } \RR
+\right \} $
+
+\item %b
+$U = \left \{
+\leftB \begin{array}{c}
+a + b\\
+a - b \\
+b \\
+a
+\end{array} \rightB \,
+\middle| \, a \mbox{ and } b \mbox{ in } \RR
+\right \} $
+
+\item %c
+$U = \left \{
+\leftB \begin{array}{c}
+a \\
+b \\
+c + a \\
+c
+\end{array} \rightB \,
+\middle| \, a, b, \mbox{ and } c \mbox{ in } \RR
+\right \}$
+
+\item %d
+$U = \left \{
+\leftB \begin{array}{c}
+a - b\\
+b + c \\
+a \\
+b + c
+\end{array} \rightB \,
+\middle| \, a, b, \mbox{ and } c \mbox{ in } \RR
+\right \} $
+
+\item %e
+$U = \left \{
+\leftB \begin{array}{c}
+a \\
+b \\
+c \\
+d
+\end{array} \rightB \,
+\middle| \, a + b - c + d = 0 \mbox{ in } \RR
+\right \} $
+
+\item %f
+$U = \left \{
+\leftB \begin{array}{c}
+a \\
+b \\
+c \\
+d
+\end{array} \rightB \,
+\middle| \, a + b = c + d \mbox{ in } \RR
+\right \} $
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$\left \{
+\leftB \begin{array}{r}
+1 \\
+1 \\
+0 \\
+1
+\end{array} \rightB
+,\
+\leftB \begin{array}{r}
+1 \\
+-1 \\
+1 \\
+0
+\end{array} \rightB
+\right \}
+$; dimension $2$.
+
+\setcounter{enumi}{3}
+\item 
+$\left \{
+\leftB \begin{array}{r}
+	1 \\
+	0 \\
+	1 \\
+	0
+\end{array} \rightB
+,\
+\leftB \begin{array}{r}
+	-1 \\
+	 1 \\
+	 0 \\
+	 1
+\end{array} \rightB
+,\
+\leftB \begin{array}{r}
+	0 \\
+	1 \\
+	0 \\
+	1
+\end{array} \rightB
+\right \}
+$; dimension $3$.
+
+\setcounter{enumi}{5}
+\item  
+$\left \{
+\leftB \begin{array}{r}
+	-1 \\
+	1 \\
+	0 \\
+	0
+\end{array} \rightB
+,\
+\leftB \begin{array}{r}
+	1 \\
+	0 \\
+	1 \\
+	0
+\end{array} \rightB
+,\
+\leftB \begin{array}{r}
+	1 \\
+	0 \\
+	0 \\
+	1
+\end{array} \rightB
+\right \}
+$; dimension $3$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Suppose that $\{\vect{x}, \vect{y}, \vect{z}, \vect{w}\}$ is a basis of $\RR^4$. Show that:
+
+\begin{enumerate}[label={\alph*.}]
+\item $\{\vect{x} + a\vect{w}, \vect{y}, \vect{z}, \vect{w}\}$ is also a basis of $\RR^4$ for any choice of the scalar $a$.
+
+\item $\{\vect{x} + \vect{w}, \vect{y} + \vect{w}, \vect{z} + \vect{w}, \vect{w}\}$ is also a basis of $\RR^4$.
+
+\item $\{\vect{x}, \vect{x} + \vect{y}, \vect{x} + \vect{y} + \vect{z}, \vect{x} + \vect{y} + \vect{z} + \vect{w}\}$ is also a basis of $\RR^4$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $r(\vect{x} + \vect{w}) + s(\vect{y} + \vect{w}) + t(\vect{z} + \vect{w}) + u(\vect{w}) = \vect{0}$, then $r\vect{x} + s\vect{y} + t\vect{z} + (r + s + t + u)\vect{w} = \vect{0}$, so $r = 0$, $s = 0$, $t = 0$, and $r + s + t + u = 0$. The only solution is $r = s = t = u = 0$, so the set is independent. Since $\func{dim} \RR^4 = 4$, the set is a basis by Theorem~\ref{thm:014436}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}\label{ex:5_2_6}
+Use Theorem~\ref{thm:014205} to determine if the following sets of vectors are a basis of the indicated space.
+
+\begin{enumerate}[label={\alph*.}]
+\item $\{(3, -1), (2, 2)\}$ in $\RR^2$
+
+\item $\{(1, 1, -1), (1, -1, 1), (0, 0, 1)\}$ in $\RR^3$
+
+\item $\{(-1, 1, -1), (1, -1, 2), (0, 0, 1)\}$ in $\RR^3$
+
+\item $\{(5, 2, -1), (1, 0, 1), (3, -1, 0)\}$ in $\RR^3$
+
+\item $\{(2, 1, -1, 3), (1, 1, 0, 2), (0, 1, 0, -3), \\(-1, 2, 3, 1)\}$ in $\RR^4$
+
+\item $\{(1, 0, -2, 5), (4, 4, -3, 2), (0, 1, 0, -3), \\(1, 3, 3, -10)\}$ in $\RR^4$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Yes
+
+\setcounter{enumi}{3}
+\item  Yes
+
+\setcounter{enumi}{5}
+\item  No.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case show that the statement is true or give an example showing that it is false.
+
+\begin{enumerate}[label={\alph*.}]
+\item If $\{\vect{x}, \vect{y}\}$ is independent, then $\{\vect{x}, \vect{y}, \vect{x} + \vect{y}\}$ is independent.
+
+\item If $\{\vect{x}, \vect{y}, \vect{z}\}$ is independent, then $\{\vect{y}, \vect{z}\}$ is independent.
+
+\item If $\{\vect{y}, \vect{z}\}$ is dependent, then $\{\vect{x}, \vect{y}, \vect{z}\}$ is dependent for any $\vect{x}$.
+
+\item If all of $\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}$ are nonzero, then $\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$ is independent.
+
+\item If one of $\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}$ is zero, then $\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$ is dependent.
+
+\item If $a\vect{x} + b\vect{y} + c\vect{z} = \vect{0}$, then $\{\vect{x}, \vect{y}, \vect{z}\}$ is independent.
+
+\item If $\{\vect{x}, \vect{y}, \vect{z}\}$ is independent, then $a\vect{x} + b\vect{y} + c\vect{z} = \vect{0}$ for some $a$, $b$, and $c$ in $\RR$.
+
+\item If $\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$ is dependent, then $t_{1}\vect{x}_{1} + t_{2}\vect{x}_{2} + \dots + t_{k}\vect{x}_{k} = \vect{0}$ for some numbers $t_{i}$ in $\RR$ not all zero.
+
+\item If $\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$ is independent, then $t_{1}\vect{x}_{1} + t_{2}\vect{x}_{2} + \dots + t_{k}\vect{x}_{k} = \vect{0}$ for some $t_{i}$ in $\RR$.
+
+\item Every non-empty subset of a linearly independent set is again linearly independent. 
+
+\item Every set containing a spanning set is again a spanning set. 
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  T. If $r\vect{y} + s\vect{z} = \vect{0}$, then $0\vect{x} + r\vect{y} + s\vect{z} = \vect{0}$ so $r = s = 0$ because $\{\vect{x}, \vect{y}, \vect{z}\}$ is independent.
+
+\setcounter{enumi}{3}
+\item  F. If $\vect{x} \neq \vect{0}$, take $k = 2$, $\vect{x}_{1} = \vect{x}$ and $\vect{x}_{2} = -\vect{x}$.
+
+\setcounter{enumi}{5}
+\item  F. If $\vect{y} = -\vect{x}$ and $\vect{z} = \vect{0}$, then $1\vect{x} + 1\vect{y} + 1\vect{z} = \vect{0}$.
+
+\setcounter{enumi}{7}
+\item  T. This is a nontrivial, vanishing linear combination, so the $\vect{x}_{i}$ cannot be independent.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is an $n \times n$ matrix, show that $\func{det} A = 0$ if and only if some column of $A$ is a linear combination of the other columns.
+\end{ex}
+
+\begin{ex}
+Let $\{\vect{x}, \vect{y}, \vect{z}\}$ be a linearly independent set in $\RR^4$. Show that $\{\vect{x}, \vect{y}, \vect{z}, \vect{e}_{k}\}$ is a basis of $\RR^4$ for some $\vect{e}_{k}$ in the standard basis $\{\vect{e}_{1}, \vect{e}_{2}, \vect{e}_{3}, \vect{e}_{4}\}$.
+\end{ex}
+
+\begin{ex}
+If $\{\vect{x}_{1}, \vect{x}_{2}, \vect{x}_{3}, \vect{x}_{4}, \vect{x}_{5}, \vect{x}_{6}\}$ is an independent set of vectors, show that the subset $\{\vect{x}_{2}, \vect{x}_{3}, \vect{x}_{5}\}$ is also independent.
+
+\begin{sol}
+If $r\vect{x}_{2} + s\vect{x}_{3} + t\vect{x}_{5} = \vect{0}$ then $0\vect{x}_{1} + r\vect{x}_{2} + s\vect{x}_{3} + 0\vect{x}_{4} + t\vect{x}_{5} + 0\vect{x}_{6} = \vect{0}$ so $r = s = t = 0$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ be any $m \times n$ matrix, and let $\vect{b}_{1}, \vect{b}_{2}, \vect{b}_{3}, \dots, \vect{b}_{k}$ be columns in $\RR^m$ such that the system $A\vect{x} = \vect{b}_{i}$ has a solution $\vect{x}_{i}$ for each $i$. If $\{\vect{b}_{1}, \vect{b}_{2}, \vect{b}_{3}, \dots, \vect{b}_{k}\}$ is independent in $\RR^m$, show that $\{\vect{x}_{1}, \vect{x}_{2}, \vect{x}_{3}, \dots, \vect{x}_{k}\}$ is independent in $\RR^n$.
+\end{ex}
+
+\begin{ex}
+If $\{\vect{x}_{1}, \vect{x}_{2}, \vect{x}_{3}, \dots, \vect{x}_{k}\}$ is independent, show $\{\vect{x}_{1}, \vect{x}_{1} + \vect{x}_{2}, \vect{x}_{1} + \vect{x}_{2} + \vect{x}_{3}, \dots, \vect{x}_{1} + \vect{x}_{2} + \dots + \vect{x}_{k}\}$ is also independent.
+
+\begin{sol}
+If $t_{1}\vect{x}_{1} + t_{2}(\vect{x}_{1} + \vect{x}_{2}) + \dots + t_{k}(\vect{x}_{1} + \vect{x}_{2} + \dots + \vect{x}_{k}) = \vect{0}$, then $(t_{1} + t_{2} + \dots + t_{k})\vect{x}_{1} + (t_{2} + \dots + t_{k})\vect{x}_{2} + \dots + (t_{k-1} + t_{k})\vect{x}_{k-1} + (t_{k})\vect{x}_{k} = \vect{0}$. Hence all these coefficients are zero, so we obtain successively $t_{k} = 0, t_{k-1} = 0, \dots, t_{2} = 0, t_{1} = 0$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $\{\vect{y}, \vect{x}_{1}, \vect{x}_{2}, \vect{x}_{3}, \dots, \vect{x}_{k}\}$ is independent, show that $\{\vect{y} + \vect{x}_{1}, \vect{y} + \vect{x}_{2}, \vect{y} + \vect{x}_{3}, \dots, \vect{y} + \vect{x}_{k}\}$ is also independent.
+\end{ex}
+
+\begin{ex}
+If $\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$ is independent in $\RR^n$, and if $\vect{y}$ is not in $\func{span}\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$, show that $\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}, \vect{y}\}$ is independent.
+\end{ex}
+
+\begin{ex}
+If $A$ and $B$ are matrices and the columns of $AB$ are independent, show that the columns of $B$ are independent.
+\end{ex}
+
+\begin{ex}
+Suppose that $\{\vect{x}, \vect{y}\}$ is a basis of $\RR^2$, and let
+$A =
+\leftB \begin{array}{rr}
+a & b \\
+c & d
+\end{array} \rightB$.
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A$ is invertible, show that $\{a\vect{x} + b\vect{y}, c\vect{x} + d\vect{y}\}$ is a basis of $\RR^2$.
+
+\item If $\{a\vect{x} + b\vect{y}, c\vect{x} + d\vect{y}\}$ is a basis of $\RR^2$, show that $A$ is invertible.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  We show $A^{T}$ is invertible (then $A$ is invertible). Let $A^{T}\vect{x} = \vect{0}$ where $\vect{x} = [s\ t]^{T}$. This means
+  $as + ct = 0$ and $bs + dt = 0$, so $s(a\vect{x} + b\vect{y}) + t(c\vect{x} + d\vect{y}) = (sa + tc)\vect{x} + (sb + td)\vect{y} = \vect{0}$. Hence $s = t = 0$ by hypothesis.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ denote an $m \times n$ matrix.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $\func{null} A = \func{null}(UA)$ for every invertible $m \times m$ matrix $U$.
+
+\item Show that $\func{dim}(\func{null} A) = \func{dim}(\func{null}(AV))$ for every invertible $n \times n$ matrix $V$. [\textit{Hint}: If $\{\vect{x}_{1}, \vect{x}_{2}, \dots, \vect{x}_{k}\}$ is a basis of $\func{null} A$, show that $\{V^{-1}\vect{x}_{1}, V^{-1}\vect{x}_{2}, \dots, V^{-1}\vect{x}_{k}\}$ is a basis of $\func{null}(AV)$.]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Each $V^{-1}\vect{x}_{i}$ is in $\func{null}(AV)$ because $AV(V^{-1}\vect{x}_{i}) = A\vect{x}_{i} = \vect{0}$. The set $\{V^{-1}\vect{x}_{1}, \dots, V^{-1}\vect{x}_{k}\}$ is independent as $V^{-1}$ is invertible. If $\vect{y}$ is in $\func{null}(AV)$, then $V\vect{y}$ is in $\func{null}(A)$ so let $V\vect{y} = t_{1}\vect{x}_{1} + \dots + t_{k}\vect{x}_{k}$ where each $t_{k}$ is in $\RR$. Thus $\vect{y} = t_{1}V^{-1}\vect{x}_{1} + \dots + t_{k}V^{-1}\vect{x}_{k}$ is in $\func{span}\{V^{-1}\vect{x}_{1}, \dots, V^{-1}\vect{x}_{k}\}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ denote an $m \times n$ matrix.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $\func{im} A = \func{im}(AV)$ for every invertible $n \times n$ matrix $V$.
+
+\item Show that $\func{dim}(\func{im} A) = \func{dim}(\func{im}(UA))$ for every invertible $m \times m$ matrix $U$. [\textit{Hint}: If $\{\vect{y}_{1}, \vect{y}_{2}, \dots, \vect{y}_{k}\}$ is a basis of $\func{im}(UA)$, show that $\{U^{-1}\vect{y}_{1}, U^{-1}\vect{y}_{2}, \dots, U^{-1}\vect{y}_{k}\}$ is a basis of $\func{im} A$.]
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Let $U$ and $W$ denote subspaces of $\RR^n$, and assume that $U \subseteq W$. If $\func{dim} U = n - 1$, show that either $W = U$ or $W = \RR^n$.
+\end{ex}
+
+\begin{ex}
+Let $U$ and $W$ denote subspaces of $\RR^n$, and assume that $U \subseteq W$. If $\func{dim} W = 1$, show that either $U = \{\vect{0}\}$ or $U = W$.
+
+\begin{sol}
+We have $\{\vect{0}\} \subseteq U \subseteq W$ where $\func{dim}\{\vect{0}\} = 0$ and $\func{dim} W = 1$. Hence $\func{dim} U = 0$ or $\func{dim} U = 1$ by Theorem~\ref{thm:014447}, that is $U = 0$ or $U = W$, again by Theorem~\ref{thm:014447}.
+\end{sol}
+\end{ex}
+\end{multicols}

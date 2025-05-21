@@ -1,0 +1,232 @@
+\section*{Exercises for \ref{sec:2_9}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:2_9}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+Which of the following stochastic matrices is regular?
+\begin{exenumerate}
+\exitem $\leftB \def\arraystretch{1.5}\begin{array}{ccc}
+0 & 0 & \frac{1}{2} \\
+1 & 0 & \frac{1}{2} \\
+0 & 1 & 0
+\end{array} \rightB$
+\exitem $\leftB \def\arraystretch{1.5}\begin{array}{ccc}
+\frac{1}{2} & 0 & \frac{1}{3} \\
+\frac{1}{4} & 1 & \frac{1}{3} \\
+\frac{1}{4} & 0 & \frac{1}{3}
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Not regular
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case find the steady-state vector and, assuming that it starts in state 1, find the probability that it is in state 2 after $3$ transitions.
+\begin{exenumerate}
+\exitem $\leftB \begin{array}{cc}
+0.5 & 0.3 \\
+0.5 & 0.7
+\end{array} \rightB$
+\exitem $\leftB \def\arraystretch{1.5}\begin{array}{cc}
+\frac{1}{2} & 1 \\
+\frac{1}{2} & 0
+\end{array} \rightB$
+\exitem $\leftB \def\arraystretch{1.5}\begin{array}{rrr}
+	0 & \frac{1}{2} & \frac{1}{4} \\
+	1 & 0 & \frac{1}{4} \\
+	0 & \frac{1}{2} & \frac{1}{2}
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+0.4 & 0.1 & 0.5 \\
+0.2 & 0.6 & 0.2 \\
+0.4 & 0.3 & 0.3
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+0.8 & 0.0 & 0.2 \\
+0.1 & 0.6 & 0.1 \\
+0.1 & 0.4 & 0.7
+\end{array} \rightB$
+\exitem $\leftB \begin{array}{rrr}
+0.1 & 0.3 & 0.3 \\
+0.3 & 0.1 & 0.6 \\
+0.6 & 0.6 & 0.1
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\frac{1}{3} \leftB \begin{array}{r}
+2 \\
+1
+\end{array} \rightB$, $\frac{3}{8}$
+
+\setcounter{enumi}{3}
+\item $\frac{1}{3} \leftB \begin{array}{r}
+1 \\
+1 \\
+1
+\end{array} \rightB$, $0.312$
+
+\setcounter{enumi}{5}
+\item $\frac{1}{20} \leftB \begin{array}{r}
+5 \\
+7 \\
+8
+\end{array} \rightB$, $0.306$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+A fox hunts in three territories $A$, $B$, and $C$. He never hunts in the same territory on two successive days. If he hunts in $A$, then he hunts in $C$ the next day. If he hunts in $B$ or $C$, he is twice as likely to hunt in $A$ the next day as in the other territory.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item What proportion of his time does he spend in $A$, in $B$, and in $C$?
+
+\item If he hunts in $A$ on Monday ($C$ on Monday), what is the probability that he will hunt in $B$ on Thursday?
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Assume that there are three social classes---upper, middle, and lower---and that social mobility behaves as follows:
+
+
+\begin{enumerate}
+\item Of the children of upper-class parents, $70\%$ remain upper-class, whereas $10\%$ become middle-class and $20\%$ become lower-class.
+
+\item Of the children of middle-class parents, $80\%$ remain middle-class, whereas the others are evenly split between the upper class and the lower class.
+
+\item For the children of lower-class parents, $60\%$ remain lower-class, whereas $30\%$ become middle-class and $10\%$ upper-class.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Find the probability that the grandchild of lower-class parents becomes upper-class.
+
+\item Find the long-term breakdown of society into classes.
+
+\end{enumerate}
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $50\%$ middle, $25\%$ upper, $25\%$ lower
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+The prime minister says she will call an election. This gossip is passed from person to person with a probability $p \neq 0$ that the information is passed incorrectly at any stage. Assume that when a person hears the gossip he or she passes it to one person who does not know. Find the long-term probability that a person will hear that there is going to be an election.
+\end{ex}
+
+\begin{ex}
+John makes it to work on time one Monday out of four. On other work days his behaviour is as follows: If he is late one day, he is twice as likely to come to work on time the next day as to be late. If he is on time one day, he is as likely to be late as not the next day. Find the probability of his being late and that of his being on time Wednesdays.
+
+\begin{sol}
+$\frac{7}{16}$, $\frac{9}{16}$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Suppose you have $1$\textcent\ and match coins with a friend. At each match you either win or lose $1$\textcent\ with equal probability. If you go broke or ever get $4$\textcent, you quit. Assume your friend never quits. If the states are 0, 1, 2, 3, and 4 representing your wealth, show that the corresponding transition matrix $P$ is not regular. Find the probability that you will go broke after $3$ matches.
+\end{ex}
+
+
+\begin{ex}
+A mouse is put into a maze of compartments, as in the diagram. Assume that he always leaves any compartment he enters and that he is equally likely to take any tunnel entry.
+
+
+\begin{figure}[H]
+\centering
+\input{exercises/2-matrix-algebra/figures/9-an-application-to-markov-chains/exercise2.9.8}
+%\caption{\label{fig:007524}}
+\end{figure}
+
+\begin{enumerate}[label={\alph*.}]
+\item If he starts in compartment 1, find the probability that he is in compartment 1 again after $3$ moves.
+
+\item Find the compartment in which he spends most of his time if he is left for a long time.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\item $\frac{7}{75}$
+
+\item  He spends most of his time in compartment 3; steady state $\frac{1}{16} \leftB \begin{array}{r}
+3 \\
+2 \\
+5 \\
+4 \\
+2
+\end{array} \rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+If a stochastic matrix has a $1$ on its main diagonal, show that it cannot be regular. Assume it is not $1 \times 1$.
+\end{ex}
+
+\begin{ex}
+If $\vect{s}_{m}$ is the stage-$m$ state vector for a Markov chain, show that $\vect{s}_{m+k} = P^{k}\vect{s}_{m}$ holds for all $m \geq 1$ and $k \geq 1$ (where $P$ is the transition matrix).
+\end{ex}
+
+\begin{ex}
+A stochastic matrix is \textbf{doubly stochastic}\index{doubly stochastic matrix}\index{matrix!doubly stochastic matrix} if all the row sums also equal $1$. Find the steady-state vector for a doubly stochastic matrix.
+\end{ex}
+
+\begin{ex}
+Consider the $2 \times 2$ stochastic matrix
+
+$P = \leftB \begin{array}{cc}
+1 - p & q \\
+p & 1 - q
+\end{array} \rightB$, \\
+ where $0 < p < 1$ and $0 < q < 1$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $\frac{1}{p + q} \leftB \begin{array}{r}
+q \\
+p
+\end{array} \rightB$
+ is the steady-state vector for $P$.
+
+\item Show that $P^{m}$ converges to the matrix $\frac{1}{p + q} \leftB \begin{array}{cc}
+q & q \\
+p & p
+\end{array} \rightB$ by first verifying inductively that
+$P^m = \frac{1}{p + q} \leftB \begin{array}{cc}
+q & q \\
+p & p
+\end{array} \rightB $ $+ \frac{(1 - p - q)^m}{p + q} \leftB \begin{array}{cc}
+p & -q \\ 
+-p & q
+\end{array} \rightB$ for $m = 1, 2, \dots$. (It can be shown that the sequence of powers $P, P^{2}, P^{3}, \dots$ of any regular transition matrix converges to the matrix each of whose columns equals the steady-state vector for $P$.)
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\item  Direct verification.
+
+\item  Since $0 < p < 1$ and $0 < q < 1$ we get $0 < p + q < 2$ whence $-1 < p + q - 1 < 1$. Finally, $-1 < 1 - p - q < 1$, so $(1 - p - q)^{m}$ converges to zero as $m$ increases.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\end{multicols}

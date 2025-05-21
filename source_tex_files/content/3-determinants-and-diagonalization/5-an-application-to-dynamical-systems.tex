@@ -1,0 +1,533 @@
+\section{Linear Dynamical Systems}
+\label{sec:3_5}
+\index{diagonalization!linear dynamical systems}\index{linear dynamical system}
+
+We began Section \ref{sec:3_3} with an example from ecology which models the evolution of the 
+population of a species of birds as time goes on. As promised, we now 
+complete the example---Example~\ref{exa:009389} below.
+
+
+The bird population was described by computing the female population profile $\vect{v}_k = \leftB \begin{array}{r}
+a_k \\
+j_k
+\end{array}\rightB$
+ of the species, where $a_{k}$ and $j_{k}$ represent the number of adult and juvenile females present $k$ years after the initial values $a_{0}$ and $j_{0}$ were observed. The model assumes that these numbers are related by the following equations:
+\begin{align*}
+a_{k+1} &= \frac{1}{2} a_k + \frac{1}{4}j_k \\
+j_{k+1} &= 2a_k
+\end{align*}
+If we write $A = \leftB \begin{array}{rr}
+\frac{1}{2} & \frac{1}{4} \\
+2 & 0 
+\end{array}\rightB$
+ the columns $\vect{v}_{k}$ satisfy $\vect{v}_{k+1} = A\vect{v}_{k}$ for each $k = 0, 1, 2, \dots$.
+
+\noindent Hence $\vect{v}_{k} = A^{k}\vect{v}_{0}$ for each $k = 1, 2, \dots$. We can now use our diagonalization techniques to determine the population profile $\vect{v}_{k}$ for all values of $k$ in terms of the initial values.
+
+
+\begin{example}{}{009389}
+Assuming that the initial values were $a_{0} = 100$ adult females and $j_{0} = 40$ juvenile females, compute $a_{k}$ and $j_{k}$ for $k = 1, 2, \dots$.
+
+
+\begin{solution}
+  The characteristic polynomial of the matrix $A = \leftB \begin{array}{rr}
+\frac{1}{2} & \frac{1}{4} \\
+2 & 0 
+\end{array}\rightB$
+ is $c_{A}(x) = x^{2} - \frac{1}{2}x - \frac{1}{2} = (x - 1)(x + \frac{1}{2})$, so the eigenvalues are $\lambda_{1} = 1$ and $\lambda_{2} = -\frac{1}{2}$ and gaussian elimination gives corresponding basic eigenvectors $\leftB \begin{array}{r}
+\frac{1}{2} \\
+1
+\end{array}\rightB$
+ and $\leftB \begin{array}{r}
+-\frac{1}{4} \\
+1
+\end{array}\rightB$.
+ For convenience, we can use multiples $\vect{x}_1 = \leftB \begin{array}{r}
+1 \\
+2
+\end{array}\rightB$
+ and $\vect{x}_2 = \leftB \begin{array}{r}
+-1 \\
+4
+\end{array}\rightB$
+ respectively. Hence a diagonalizing matrix is $P = \leftB \begin{array}{rr}
+1 & -1 \\
+2 & 4 
+\end{array} \rightB$
+ and we obtain
+\begin{equation*}
+P^{-1}AP=D \mbox{ where } D = \leftB \begin{array}{rr}
+1 & 0 \\
+0 & -\frac{1}{2}
+\end{array}\rightB
+\end{equation*}
+This gives $A = PDP^{-1}$ so, for each $k \geq 0$, we can compute $A^{k}$ explicitly:
+
+
+\begin{align*}
+A^k = PD^kP^{-1} &= \leftB \begin{array}{rr}
+1 & -1 \\
+2 & 4 \end{array}\rightB \leftB \begin{array}{cc}
+1 & 0 \\
+0 & (-\frac{1}{2})^k \end{array}\rightB
+\frac{1}{6}
+\leftB \begin{array}{rr}
+4 & 1 \\
+-2 & 1 \end{array}\rightB \\
+&= \frac{1}{6}
+\leftB \def\arraystretch{1.25}\begin{array}{cc}
+4+2(-\frac{1}{2})^k & 1-(-\frac{1}{2})^k \\
+8-8(-\frac{1}{2})^k & 2+4(-\frac{1}{2})^k \end{array}\rightB
+\end{align*}
+
+Hence we obtain
+
+\begin{align*}
+\leftB \begin{array}{r}
+a_k \\
+j_k
+\end{array}\rightB = \vect{v}_k = A^k \vect{v}_0 & = \frac{1}{6}
+\leftB \def\arraystretch{1.25} \begin{array}{cc}
+4+2(-\frac{1}{2})^k & 1-(-\frac{1}{2})^k \\
+8-8(-\frac{1}{2})^k & 2+4(-\frac{1}{2})^k \end{array}\rightB \leftB \begin{array}{r}
+100 \\
+40
+\end{array}\rightB \\
+&= \frac{1}{6} \leftB \def\arraystretch{1.25}\begin{array}{cc}
+440 + 160 (-\frac{1}{2})^k \\
+880 - 640 (-\frac{1}{2})^k 
+\end{array}\rightB
+\end{align*}
+
+Equating top and bottom entries, we obtain exact formulas for $a_{k}$ and $j_{k}$:
+\begin{equation*}
+a_k = \frac{220}{3} + \frac{80}{3}\left(-\frac{1}{2}\right)^k \mbox{ and } j_k = \frac{440}{3} + \frac{320}{3}\left(-\frac{1}{2}\right)^k \mbox{ for } k = 1,2,\cdots
+\end{equation*}
+In practice, the exact values of $a_{k}$ and $j_{k}$ are not usually required. What is needed is a measure of how these numbers behave for large values of $k$. This is easy to obtain here. Since $(-\frac{1}{2})^{k}$ is nearly zero for large $k$, we have the following approximate values
+\begin{equation*}
+a_k \approx \frac{220}{3} \mbox{ and } j_k \approx \frac{440}{3} \mbox{ if } k \mbox{ is large}
+\end{equation*}
+Hence, in the long term, the female population stabilizes with approximately twice as many juveniles as adults.
+\end{solution}
+\end{example}
+
+\begin{definition}{Linear Dynamical System}{009426}
+If $A$ is an $n \times n$ matrix, a sequence $\vect{v}_{0}, \vect{v}_{1}, \vect{v}_{2}, \dots$  of columns in $\RR^n$ is called a \textbf{linear dynamical system} if $\vect{v}_{0}$ is specified and $\vect{v}_{1}, \vect{v}_{2}, \dots $ are given by the matrix recurrence $\vect{v}_{k+1}= A\vect{v}_{k}$ for each $k \geq 0$. We call $A$ the \textbf{migration} matrix of the system. \index{migration matrix}\index{matrix!migration}
+\end{definition}
+
+We have $\vect{v}_1 = A\vect{v}_0$, then $\vect{v}_2 = A\vect{v}_1 = A^{2}\vect{v}_0$, and continuing we find
+\begin{equation}\label{eq:dynamicalsyst}
+\vect{v}_k = A^k \vect{v}_0 \mbox{ for each } k = 1, 2, \cdots 
+\end{equation}
+Hence the columns $\vect{v}_{k}$ are determined by the powers $A^{k}$ of the matrix $A$ and, as we have seen, these powers can be efficiently computed if $A$ is diagonalizable. In fact Equation \ref{eq:dynamicalsyst} can be used to give a nice ``formula'' for the columns $\vect{v}_{k}$ in this case.
+
+
+Assume that $A$ is diagonalizable with eigenvalues $\lambda_{1}, \lambda_{2}, \dots ,  \lambda_{n}$ and corresponding basic eigenvectors $\vect{x}_{1}, \vect{x}_{2}, \dots , \vect{x}_{n}$. If $P = \leftB \begin{array}{cccc} \vect{x}_{1} & \vect{x}_{2} & \dots  & \vect{x}_{n} \end{array}\rightB$  is a diagonalizing matrix with the $\vect{x}_{i}$ as columns, then $P$ is invertible and
+\begin{equation*}
+P^{-1}AP=D = \diag(\lambda_1, \lambda_2, \cdots, \lambda_n)
+\end{equation*}
+by Theorem~\ref{thm:009214}. Hence $A = PDP^{-1}$ so Equation \ref{eq:dynamicalsyst} and Theorem~\ref{thm:008997} give
+\begin{equation*}
+\vect{v}_k = A^k \vect{v}_0 = (PDP^{-1})^k \vect{v}_0 = (PD^kP^{-1}) \vect{v}_0 = PD^k (P^{-1}\vect{v}_0)
+\end{equation*}
+for each $k = 1, 2, \dots$. For convenience, we denote the column $P^{-1}\vect{v}_{0}$ arising here as follows:
+\begin{equation*}
+\vect{b} = P^{-1} \vect{v}_0 = \leftB \begin{array}{c}
+b_1 \\
+b_2 \\
+\vdots \\
+b_n 
+\end{array} \rightB
+\end{equation*}
+Then matrix multiplication gives
+\begin{align}
+\vect{v}_k & = PD^k (P^{-1} \vect{v}_0) \nonumber\\
+ & = \leftB \begin{array}{cccc}
+\vect{x}_1 & \vect{x}_2 & \cdots & \vect{x}_n 
+\end{array} \rightB  
+\leftB \begin{array}{cccc}
+\lambda_1^k & 0 & \cdots & 0 \\
+0 & \lambda_2^k & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \lambda_n^k
+\end{array}\rightB 
+\leftB 
+\begin{array}{c}
+b_1 \\
+b_2 \\
+\vdots \\
+b_n 
+\end{array}\rightB \nonumber\\
+&=  \leftB \begin{array}{cccc}
+\vect{x}_1 & \vect{x}_2 & \cdots & \vect{x}_n 
+\end{array} \rightB \leftB \begin{array}{c}
+b_1 \lambda_1^k \\
+b_2 \lambda_2^k \\
+\vdots \\
+b_3 \lambda_n^k 
+\end{array} \rightB \nonumber\\
+&= b_1 \lambda_1^k \vect{x}_1 + b_2 \lambda_2^k \vect{x}_2 + \cdots + b_n \lambda_n^k \vect{x}_n  \label{eq:vkformula}
+\end{align}
+for each $k \geq 0$. This is a useful \textbf{exact formula}\index{exact formula} for the columns $\vect{v}_{k}$. Note that, in particular, 
+\begin{equation*}
+\vect{v}_{0} = b_{1}\vect{x}_{1} + b_{2}\vect{x}_{2} + \dots  + b_{n}\vect{x}_{n}
+\end{equation*}
+
+
+However, such an exact formula for $\vect{v}_{k}$ is often not required in practice; all that is needed is to \textit{estimate} $\vect{v}_{k}$ for large values of $k$ (as was done in Example~\ref{exa:009389}). This can be easily done if $A$ has a largest eigenvalue. An eigenvalue $\lambda$ of a matrix $A$ is called a \textbf{dominant eigenvalue}\index{dominant eigenvalue}\index{eigenvalues!dominant eigenvalue} of $A$ if it has multiplicity $1$ and
+\begin{equation*}
+| \lambda | > | \mu | \mbox{ for all eigenvalues } \mu \neq \lambda
+\end{equation*}
+where $|\lambda |$ denotes the absolute value of the number $\lambda$. For example, $\lambda_{1} = 1$ is dominant in Example~\ref{exa:009389}.
+
+
+Returning to the above discussion, suppose that $A$ has a dominant eigenvalue. By choosing the order in which the columns $\vect{x}_{i}$ are placed in $P$, we may assume that $\lambda_{1}$ is dominant among the eigenvalues $\lambda_{1}, \lambda_{2}, \dots , \lambda_{n}$ of $A$ (see the discussion following Example~\ref{exa:009234}). Now recall the exact expression for $\vect{v}_{k}$ in Equation \ref{eq:vkformula} above:
+\begin{equation*}
+\vect{v}_k = b_1 \lambda_1^k \vect{x}_1 + b_2 \lambda_2^k \vect{x}_2 + \cdots + b_n \lambda_n^k \vect{x}_n 
+\end{equation*}
+Take $\lambda_1^k$ out as a common factor in this equation to get
+\begin{equation*}
+\vect{v}_k = \lambda_1^k \left[ b_1 \vect{x}_1 + b_2 \left( \frac{\lambda_2}{\lambda_1}\right)^k \vect{x}_2 + \cdots + b_n \left( \frac{\lambda_n}{\lambda_1}\right)^k \vect{x}_n \right]
+\end{equation*}
+for each $k \geq 0$. Since $\lambda_{1}$ is dominant, we have $|\lambda_{i}| < |\lambda_{1}|$ for each $i \geq 2$, so each of the numbers $(\lambda_{i} /\lambda_{1})^{k}$ become small in absolute value as $k$ increases. Hence $\vect{v}_{k}$ is approximately equal to the first term $\lambda_1^k b_1 \vect{x}_1$, and we write this as $\vect{v}_k \approx \lambda_1^k b_1 \vect{x}_1$. These observations are summarized in the following theorem (together with the above exact formula for $\vect{v}_{k}$).
+
+\begin{theorem}{}{009500}
+Consider the dynamical system $\vect{v}_{0}, \vect{v}_{1}, \vect{v}_{2}, \dots$  with matrix recurrence
+\begin{equation*}
+\vect{v}_{k+1} = A \vect{v}_k \mbox{ for } k \geq 0  
+\end{equation*}
+where $A$ and $\vect{v}_{0}$ are given. Assume that $A$ is a diagonalizable $n \times n$ matrix with eigenvalues $\lambda_{1}, \lambda_{2}, \dots , \lambda_{n}$ and corresponding basic eigenvectors $\vect{x}_{1}, \vect{x}_{2}, \dots , \vect{x}_{n}$, and let $P = \leftB \begin{array}{cccc} \vect{x}_{1} & \vect{x}_{2} & \dots & \vect{x}_{n} \end{array}\rightB$ be the diagonalizing matrix. Then an exact formula for $\vect{v}_{k}$ is
+\begin{equation*}
+\vect{v}_k = b_1 \lambda_1^k \vect{x}_1 +  b_2 \lambda_2^k \vect{x}_2 + \cdots +  b_n \lambda_n^k \vect{x}_n \mbox{ for each } k \geq 0
+\end{equation*}
+where the coefficients $b_{i}$ come from
+\begin{equation*}
+\vect{b} = P^{-1} \vect{v}_0  = \leftB \begin{array}{c}
+b_1 \\
+b_2 \\
+\vdots \\
+b_n
+\end{array} \rightB
+\end{equation*}
+Moreover, if $A$ has dominant\footnotemark eigenvalue $\lambda_{1}$,  then $\vect{v}_{k}$ is approximated by
+\begin{equation*}
+\vect{v}_k = b_1 \lambda_1^k \vect{x}_1 \mbox{ for sufficiently large } k.
+\end{equation*}
+\end{theorem}
+\footnotetext{Similar results can be found in other situations. If for example, eigenvalues $\lambda_{1}$ and $\lambda_{2}$ (possibly equal) satisfy $|\lambda_{1}| = |\lambda_{2}| > |\lambda_{i}|$ for all $i > 2$, then we obtain $\vect{v}_{k} \approx b_{1}\lambda_1^kx_{1} + b_{2}\lambda_2^kx_{2}$ for large $k$.}
+
+\begin{example}{}{009525}
+Returning to Example~\ref{exa:009389}, we see that $\lambda_{1} = 1$ is the dominant eigenvalue, with eigenvector $\vect{x}_1 = \leftB \begin{array}{c}
+1 \\
+2
+\end{array} \rightB$.
+ Here $P = \leftB \begin{array}{rr}
+1 & -1 \\
+2 & 4 
+\end{array} \rightB$ 
+ and $\vect{v}_0 = \leftB \begin{array}{c}
+100 \\
+40
+\end{array} \rightB$
+ so $P^{-1} \vect{v}_0 = \frac{1}{3} \leftB \begin{array}{r}
+220 \\
+-80
+\end{array}\rightB$.
+ Hence $b_1 = \frac{220}{3}$
+ in the notation of Theorem~\ref{thm:009500}, so
+\begin{equation*}
+\leftB \begin{array}{c}
+a_k \\
+j_k 
+\end{array}
+\rightB = \vect{v}_k \approx b_1\lambda_1^k \vect{x}_1  = \frac{220}{3} 1^k \leftB \begin{array}{r}
+1 \\
+2
+\end{array} \rightB
+\end{equation*}
+where $k$ is large. Hence $ a_k \approx \frac{220}{3}$ 
+ and $j_k \approx \frac{440}{3}$
+ as in Example~\ref{exa:009389}.
+\end{example}
+
+This next example uses Theorem~\ref{thm:009500} to solve a ``linear recurrence.'' See also Section~\ref{sec:3_4}.
+
+
+\begin{example}{}{009538}
+Suppose a sequence $x_{0}, x_{1}, x_{2}, \dots$  is determined by insisting that
+\begin{equation*}
+x_0  = 1, x_1 = -1, \mbox{ and } x_{k+2} = 2x_k - x_{k+1} \mbox{ for every } k\geq 0 
+\end{equation*}
+Find a formula for $x_{k}$ in terms of $k$.
+
+\begin{solution}
+  Using the linear recurrence $x_{k+2} = 2x_{k} - x_{k+1}$ repeatedly gives
+\begin{equation*}
+x_2  = 2 x_0 - x_1 = 3, \quad x_3 = 2x_1 - x_2 = -5, \quad x_4 = 11, \quad x_5 = -21, \dots 
+\end{equation*}
+so the $x_{i}$ are determined but no pattern is apparent. The idea is to find $ \vect{v}_k = \leftB \begin{array}{c}
+x_k \\
+x_{k+1}
+\end{array} \rightB$
+ for each $k$ instead, and then retrieve $x_{k}$ as the top component of $\vect{v}_{k}$. The reason this works is that the linear recurrence guarantees that these $\vect{v}_{k}$ are a dynamical system:
+\begin{equation*}
+\vect{v}_{k+1} = \leftB \begin{array}{c}
+x_{k+1} \\
+x_{k+2}
+\end{array}\rightB = \leftB \begin{array}{c}
+x_{k+1} \\
+2x_k - x_{k+1}
+\end{array} \rightB 
+= A \vect{v}_k
+\mbox{ where } A = \leftB \begin{array}{rr}
+0 & 1  \\
+2 & -1 
+\end{array} \rightB 
+\end{equation*}
+The eigenvalues of $A$ are $\lambda_{1} = -2$ and $\lambda_{2} = 1$ with eigenvectors $ \vect{x}_1 = \leftB \begin{array}{r}
+1 \\
+-2
+\end{array}\rightB$
+ and  $ \vect{x}_2 = \leftB \begin{array}{r}
+1 \\
+1
+\end{array}\rightB$,
+ so the diagonalizing matrix is $P = \leftB \begin{array}{rr}
+1 & 1 \\
+-2 & 1 
+\end{array} \rightB$.
+
+Moreover, $ \vect{b} = P_0^{-1} \vect{v}_0 = \frac{1}{3} \leftB \begin{array}{c}
+2 \\
+1
+\end{array}\rightB$
+ so the exact formula for $\vect{v}_{k}$ is
+\begin{equation*}
+\leftB \begin{array}{c}
+x_k \\
+x_{k+1} 
+\end{array} \rightB = \vect{v}_k = b_1 \lambda_1^k \vect{x}_1 + b_2 \lambda_2^k \vect{x}_2 = \frac{2}{3} (-2)^k \leftB \begin{array}{r}
+1 \\
+-2
+\end{array} \rightB + \frac{1}{3} 1^k \leftB \begin{array}{r}
+1 \\
+1
+\end{array}\rightB
+\end{equation*}
+Equating top entries gives the desired formula for $x_{k}$:
+\begin{equation*}
+ x_k = \frac{1}{3} \left[ 2(-2)^k +1 \right] \mbox{ for all } k = 0, 1, 2, \dots
+\end{equation*}
+The reader should check this for the first few values of $k$.
+\end{solution}
+\end{example}
+
+
+\subsection*{Graphical Description of Dynamical Systems}
+\index{graphs!linear dynamical system}
+
+If a dynamical system $\vect{v}_{k+1} = A\vect{v}_{k}$ is given, the sequence $\vect{v}_{0}, \vect{v}_{1}, \vect{v}_{2}, \dots$  is called the \textbf{trajectory}\index{graphs!trajectory}\index{trajectory} of the system starting at $\vect{v}_{0}$. It is instructive to obtain a graphical plot of the system by writing $\vect{v}_k = \leftB \begin{array}{c}
+x_k \\
+y_k 
+\end{array} \rightB$
+ and plotting the successive values as points in the plane, identifying $\vect{v}_{k}$ with the point $(x_{k}, y_{k})$
+ in the plane. We give several examples which illustrate properties of 
+dynamical systems. For ease of calculation we assume that the matrix $A$ is simple, usually diagonal.
+
+
+\begin{example}{}{009590}
+\begin{wrapfigure}[12]{l}{5cm} 
+\centering
+\input{content/3-determinants-and-diagonalization/figures/3-diagonalization-and-eigenvalues/example3.3.15}
+%\caption{\label{fig:009611}}
+\end{wrapfigure}
+
+\setlength{\rightskip}{0pt plus 200pt}
+Let $A = \leftB \begin{array}{cc}
+\frac{1}{2} & 0 \\
+0 & \frac{1}{3}
+\end{array}\rightB$
+ Then the eigenvalues are $\frac{1}{2}$ and $\frac{1}{3}$, with corresponding eigenvectors $\vect{x}_1 = \leftB \begin{array}{r}
+1\\
+0
+\end{array} \rightB$
+ and $ \vect{x}_2 = \leftB \begin{array}{c}
+0 \\
+1
+\end{array}\rightB$. 
+
+ The exact formula is
+\begin{equation*}
+\vect{v}_k = b_1 \left( \frac{1}{2}\right)^k \leftB \begin{array}{r}
+1 \\
+0
+\end{array}\rightB + b_2 \left( \frac{1}{3} \right)^k \leftB \begin{array}{r}
+0 \\
+1
+\end{array} \rightB
+\end{equation*}
+for $k = 0, 1, 2, \dots $ by Theorem~\ref{thm:009500}, where the coefficients $b_{1}$ and $b_{2}$ depend on the initial point $\vect{v}_{0}$. 
+Several trajectories are plotted in the diagram and, for each choice of $\vect{v}_{0}$,
+ the trajectories converge toward the origin because both eigenvalues 
+are less than $1$ in absolute value. For this reason, the origin is called
+ an \textbf{attractor}\index{attractor}\index{graphs!attractor} for the system.
+\end{example}
+
+\begin{example}{}{009601}
+\begin{wrapfigure}[12]{l}{5cm}
+\centering
+\input{content/3-determinants-and-diagonalization/figures/3-diagonalization-and-eigenvalues/example3.3.16}
+%\caption{\label{fig:009627}}
+\end{wrapfigure}
+\setlength{\rightskip}{0pt plus 200pt}
+Let $ A = \leftB \begin{array}{cc}
+\frac{3}{2} & 0 \\
+0 & \frac{4}{3} 
+\end{array}\rightB$. 
+ Here the eigenvalues are $\frac{3}{2}$
+ and $\frac{4}{3}$, with corresponding eigenvectors $\vect{x}_1 = \leftB \begin{array}{r}
+1 \\
+0
+\end{array}\rightB$
+ and $\vect{x}_2 = \leftB \begin{array}{r}
+0 \\
+1
+\end{array}\rightB$ as before. The exact formula is
+\begin{equation*}
+\vect{v}_k  =  b_1 \left( \frac{3}{2}\right)^k \leftB \begin{array}{r}
+1 \\
+0
+\end{array}\rightB + b_2 \left( \frac{4}{3} \right)^k \leftB \begin{array}{r}
+0 \\
+1
+\end{array} \rightB
+\end{equation*}
+for $k = 0, 1, 2, \dots$. Since both eigenvalues are greater than $1$ in 
+absolute value, the trajectories diverge away from the origin for every 
+choice of initial point $V_{0}$. For this reason, the origin is called a \textbf{repellor}\index{repellor} for the system.
+\end{example}
+
+
+\begin{example}{}{009612}
+\begin{wrapfigure}[12]{l}{5cm}
+\centering
+\input{content/3-determinants-and-diagonalization/figures/3-diagonalization-and-eigenvalues/example3.3.17}
+%\caption{\label{fig:009627}}
+\end{wrapfigure}
+\setlength{\rightskip}{0pt plus 200pt}
+Let $A = \leftB \begin{array}{rr}
+1 & -\frac{1}{2} \\
+-\frac{1}{2} & 1 
+\end{array}\rightB$. Now the eigenvalues are $\frac{3}{2}$
+ and $\frac{1}{2}$, with corresponding eigenvectors $\vect{x}_1 = \leftB \begin{array}{r}
+-1 \\
+1
+\end{array}\rightB$
+ and $\vect{x}_2 = \leftB \begin{array}{r}
+1 \\
+1
+\end{array}\rightB$
+ The exact formula is
+\begin{equation*}
+\vect{v}_k = b_1 \left( \frac{3}{2} \right)^k \leftB \begin{array}{r}
+-1 \\
+1
+\end{array}\rightB + b_2 \left( \frac{1}{2} \right)^k \leftB \begin{array}{r}
+1 \\
+1
+\end{array}\rightB
+\end{equation*}
+for $k = 0, 1, 2, \dots$. In this case $\frac{3}{2}$
+ is the dominant eigenvalue so, if $b_{1} \neq 0$, we have $\vect{v}_k \approx b_1 \left( \frac{3}{2} \right)^k \leftB \begin{array}{r}
+-1 \\
+1
+\end{array}\rightB$
+ for large $k$ and $\vect{v}_{k}$ is approaching the line $y = -x$.
+
+However, if $b_{1} = 0$, then $\vect{v}_k = b_2 \left( \frac{1}{2} \right)^k \leftB \begin{array}{r}
+1 \\
+1
+\end{array}\rightB$
+ and so approaches the origin along the line $y = x$. In general the trajectories appear as in the diagram, and the origin is called a \textbf{saddle point}\index{graphs!saddle point}\index{saddle point} for the dynamical system in this case.
+\end{example}
+
+
+\begin{example}{}{009628}
+Let $A = \leftB \begin{array}{rr}
+0 & \frac{1}{2} \\
+-\frac{1}{2} & 0 
+\end{array}\rightB$.
+ Now the characteristic polynomial is $c_{A}(x) = x^{2} + \frac{1}{4}$, so the eigenvalues are the complex numbers $\frac{i}{2}$
+ and $-\frac{i}{2}$
+ where $i^{2} = -1$. Hence $A$ is not diagonalizable as a real matrix. However, the trajectories are not difficult to describe. If we start with $\vect{v}_0 = \leftB \begin{array}{r}
+1 \\
+1
+\end{array}\rightB$
+ then the trajectory begins as
+\begin{equation*}
+\vect{v}_1 = \leftB \def\arraystretch{1.25}\begin{array}{r}
+\frac{1}{2} \\
+-\frac{1}{2}
+\end{array}\rightB, \vect{v}_2 = \leftB \def\arraystretch{1.25}\begin{array}{r}
+-\frac{1}{4} \\
+-\frac{1}{4}
+\end{array}\rightB, \vect{v}_3 = \leftB \def\arraystretch{1.25}\begin{array}{r}
+-\frac{1}{8} \\
+\frac{1}{8}
+\end{array}\rightB, \vect{v}_4 = \leftB \def\arraystretch{1.25}\begin{array}{r}
+\frac{1}{16} \\
+\frac{1}{16}
+\end{array}\rightB, \vect{v}_5 = \leftB \def\arraystretch{1.25}\begin{array}{r}
+\frac{1}{32} \\
+-\frac{1}{32}
+\end{array}\rightB, \vect{v}_6 = \leftB \def\arraystretch{1.25}\begin{array}{r}
+-\frac{1}{64} \\
+-\frac{1}{64}
+\end{array}\rightB, \dots
+\end{equation*}
+
+\begin{wrapfigure}[7]{l}{5cm} 
+\centering
+\input{content/3-determinants-and-diagonalization/figures/3-diagonalization-and-eigenvalues/example3.3.18}
+%\captionof{figure}{\label{fig:009639}}
+\end{wrapfigure}
+
+\setlength{\rightskip}{0pt plus 200pt}
+The first five
+ of these points are plotted in the diagram. Here each trajectory 
+spirals in toward the origin, so the origin is an attractor. Note that 
+the two (complex) eigenvalues have absolute value less than 1 here. If 
+they had absolute value greater than 1, the trajectories would spiral 
+out from the origin.
+\vspace{5em}
+\end{example}
+
+\subsection*{Google PageRank}
+\index{eigenvalues!and Google PageRank}\index{Google PageRank}\index{PageRank}
+
+Dominant
+ eigenvalues are useful to the Google search engine for finding 
+information on the Web. If an information query comes in from a client, 
+Google has a sophisticated method of establishing the ``relevance'' of 
+each site to that query. When the relevant sites have been determined, 
+they are placed in order of importance using a ranking of \textit{all} 
+sites called the PageRank. The relevant sites with the highest PageRank 
+are the ones presented to the client. It is the construction of the 
+PageRank that is our interest here.
+
+
+The Web contains many links from one site to another. Google interprets a link from site $j$ to site $i$ as a ``vote'' for the importance of site $i$. Hence if site $i$ has more links to it than does site $j$, then $i$
+ is regarded as more ``important'' and assigned a higher PageRank. One way
+ to look at this is to view the sites as vertices in a huge directed 
+graph (see Section~\ref{sec:2_2}). Then if site $j$ links to site $i$ there is an edge from $j$ to $i$, and hence the $(i, j)$-entry is a $1$ in the associated adjacency matrix (called the \textit{connectivity} matrix in this context). Thus a large number of $1$s in row $i$ of this matrix is a measure of the PageRank of site $i$.\footnote{For more on PageRank\index{Google PageRank}\index{PageRank}, visit \href{https://en.wikipedia.org/wiki/PageRank}{https://en.wikipedia.org/wiki/PageRank.}}
+
+
+
+However this does not take into account the PageRank of the sites that link to $i$. Intuitively, the higher the rank of these sites, the higher the rank of site $i$. One approach is to compute a dominant eigenvector $\vect{x}$ for the connectivity matrix. In most cases the entries of $\vect{x}$ can be chosen to be positive with sum 1. Each site corresponds to an entry of $\vect{x}$, so the sum of the entries of sites linking to a given site $i$ is a measure of the rank of site $i$. In fact, Google chooses the PageRank of a site so that it is proportional to this sum.\footnote{See
+ the articles ``Searching the web with eigenvectors'' by Herbert S. Wilf\index{Wilf, Herbert S.}, 
+UMAP Journal 23(2), 2002, pages 101--103, and ``The worlds largest matrix 
+computation: Google's PageRank is an eigenvector of a matrix of order 
+2.7 billion'' by Cleve Moler, Matlab News and Notes, October 2002, pages 
+12--13.}
+
+

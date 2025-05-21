@@ -1,0 +1,437 @@
+\section*{Exercises for \ref{sec:4_3}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:4_3}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+If $\vect{i}$, $\vect{j}$, and $\vect{k}$ are the coordinate vectors, verify that $\vect{i} \times \vect{j} = \vect{k}$, $\vect{j} \times \vect{k} = \vect{i}$, and $\vect{k} \times \vect{i} = \vect{j}$.
+\end{ex}
+
+\begin{ex}
+Show that $\vect{u} \times (\vect{v} \times \vect{w})$ need not equal $(\vect{u} \times \vect{v}) \times \vect{w}$ by calculating both when
+\begin{equation*}
+\vect{u} = \leftB
+\begin{array}{r}
+1\\
+1\\
+1
+\end{array}
+\rightB,
+\vect{v} = \leftB
+\begin{array}{r}
+1\\
+1\\
+0
+\end{array}
+\rightB, \mbox{ and }
+\vect{w} = \leftB
+\begin{array}{r}
+0\\
+0\\
+1
+\end{array}
+\rightB
+\end{equation*}
+\end{ex}
+
+\begin{ex}
+Find two unit vectors orthogonal to both $\vect{u}$ and $\vect{v}$ if:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$\vect{u} = \leftB
+\begin{array}{r}
+1\\
+2\\
+2
+\end{array}
+\rightB$, 
+$\vect{v} = \leftB
+\begin{array}{r}
+2\\
+-1\\
+2
+\end{array}
+\rightB$
+
+\item 
+$\vect{u} = \leftB
+\begin{array}{r}
+1\\
+2\\
+-1
+\end{array}
+\rightB$, 
+$\vect{v} = \leftB
+\begin{array}{r}
+3\\
+1\\
+2
+\end{array}
+\rightB$
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\pm \frac{\sqrt{3}}{3} \leftB
+\begin{array}{r}
+1\\
+-1\\
+-1
+\end{array}
+\rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the area of the triangle with the following vertices.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $A(3, -1, 2)$, $B(1, 1, 0)$, and $C(1, 2, -1)$
+
+\item $A(3, 0, 1)$, $B(5, 1, 0)$, and $C(7, 2, -1)$
+
+\item $A(1, 1, -1)$, $B(2, 0, 1)$, and $C(1, -1, 3)$
+
+\item $A(3, -1, 1)$, $B(4, 1, 0)$, and $C(2, -3, 0)$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $0$
+
+\setcounter{enumi}{3}
+\item $\sqrt{5}$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the volume of the parallelepiped determined by $\vect{w}$, $\vect{u}$, and $\vect{v}$ when:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$\vect{w} = \leftB
+\begin{array}{r}
+2\\
+1\\
+1
+\end{array}
+\rightB$, 
+$\vect{v} = \leftB
+\begin{array}{r}
+1\\
+0\\
+2
+\end{array}
+\rightB$, and 
+$\vect{u} = \leftB
+\begin{array}{r}
+2\\
+1\\
+-1
+\end{array}
+\rightB$
+
+\item 
+$\vect{w} = \leftB
+\begin{array}{r}
+1\\
+0\\
+3
+\end{array}
+\rightB$, 
+$\vect{v} = \leftB
+\begin{array}{r}
+2\\
+1\\
+-3
+\end{array}
+\rightB$, and 
+$\vect{u} = \leftB
+\begin{array}{r}
+1\\
+1\\
+1
+\end{array}
+\rightB$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $7$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $P_{0}$ be a point with vector $\vect{p}_{0}$, and let $ax + by + cz = d$ be the equation of a plane with normal 
+$\vect{n} = \leftB
+\begin{array}{r}
+a\\
+b\\
+c
+\end{array}
+\rightB$.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that the point on the plane closest to $P_{0}$ has vector $\vect{p}$ given by
+\begin{equation*}
+\vect{p} = \vect{p}_{0} + \frac{d - (\vect{p}_{0} \dotprod \vect{n})}{\vectlength \vect{n} \vectlength^2}\vect{n}.
+\end{equation*}
+[\textit{Hint}: $\vect{p} = \vect{p}_{0} + t\vect{n}$ for some $t$, and $\vect{p} \dotprod \vect{n} = d$.]
+
+\item Show that the shortest distance from $P_{0}$ to the plane is $\frac{|d - (\vect{p}_{0} \dotprod \vect{n})|}{\vectlength \vect{n} \vectlength}$.
+
+\item Let $P_{0}^\prime$ denote the reflection of $P_{0}$ in the plane---that is, the point on the opposite side of the plane such that the line through $P_{0}$ and $P_{0}^\prime$ is perpendicular to the plane.
+
+
+Show that $\vect{p}_{0} + 2\frac{d - (\vect{p}_{0} \dotprod \vect{n})}{\vectlength \vect{n} \vectlength^2}\vect{n}$ is the vector of $P_{0}^\prime$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  The distance is $\vectlength\vect{p} - \vect{p}_{0}\vectlength$; use part (a.).
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Simplify $(a\vect{u} + b\vect{v}) \times (c\vect{u} + d\vect{v})$.
+\end{ex}
+
+\begin{ex}
+Show that the shortest distance from a point $P$ to the line through $P_{0}$ with direction vector $\vect{d}$ is $\frac{\vectlength \longvect{P_{0}P} \times \vect{d} \vectlength}{\vectlength \vect{d} \vectlength}$.
+\end{ex}
+
+\begin{ex}
+Let $\vect{u}$ and $\vect{v}$ be nonzero, nonorthogonal vectors. If $\theta$ is the angle between them, show that $\tan\theta = \frac{\vectlength \vect{u} \times \vect{v} \vectlength}{\vect{u} \dotprod \vect{v}}.$
+\end{ex}
+
+\begin{ex}
+Show that points $A$, $B$, and $C$ are all on one line if and only if $\longvect{AB} \times \longvect{AC} = 0$
+
+
+\begin{sol}
+$\vectlength \longvect{AB} \times \longvect{AC} \vectlength$ is the area of the parallelogram determined by $A$, $B$, and $C$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that points $A$, $B$, $C$, and $D$ are all on one plane if and only if  $\longvect{AB} \dotprod (\longvect{AB} \times \longvect{AC}) = 0$
+\end{ex}
+
+\begin{ex}
+Use Theorem~\ref{thm:012765} to confirm that, if $\vect{u}$, $\vect{v}$, and $\vect{w}$ are mutually perpendicular, the (rectangular) parallelepiped they determine has volume $\vectlength\vect{u}\vectlength\vectlength\vect{v}\vectlength\vectlength\vect{w}\vectlength$.
+
+\begin{sol}
+Because $\vect{u}$ and $\vect{v} \times \vect{w}$ are parallel, the angle $\theta$ between them is $0$ or $\pi$. Hence $\cos(\theta) = \pm 1$, so the volume is $|\vect{u} \dotprod (\vect{v} \times \vect{w})| = \vectlength\vect{u}\vectlength\vectlength\vect{v} \times \vect{w}\vectlength \cos(\theta) = \vectlength\vect{u}\vectlength\vectlength(\vect{v} \times \vect{w})\vectlength$. But the angle between $\vect{v}$ and $\vect{w}$ is $\frac{\pi}{2}$ so $\vectlength\vect{v} \times \vect{w}\vectlength = \vectlength\vect{v} \vectlength \vectlength\vect{w}\vectlength \cos(\frac{\pi}{2}) = \vectlength\vect{v}\vectlength\vectlength\vect{w}\vectlength$. The result follows.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that the volume of the parallelepiped determined by $\vect{u}$, $\vect{v}$, and $\vect{u} \times \vect{v}$ is $\vectlength\vect{u} \times \vect{v}\vectlength^{2}$.
+\end{ex}
+
+\begin{ex} \label{ex:ch4_3_ex14}
+Complete the proof of Theorem~\ref{thm:012715}.
+\end{ex}
+
+\begin{ex} \label{ex:ch4_3_ex15}
+Prove the following properties in Theorem~\ref{thm:012690}.
+
+\begin{exenumerate}
+\exitem Property 6
+\exitem Property 7
+\exitem Property 8
+\end{exenumerate}
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1} 
+\item If
+$\vect{u} = \leftB
+\begin{array}{r}
+u_{1}\\
+u_{2}\\
+u_{3}
+\end{array}
+\rightB$,
+$\vect{v} = \leftB
+\begin{array}{r}
+v_{1}\\
+v_{2}\\
+v_{3}
+\end{array}
+\rightB$ and
+$\vect{w} = \leftB
+\begin{array}{r}
+w_{1}\\
+w_{2}\\
+w_{3}
+\end{array}
+\rightB$, then
+$\vect{u} \times (\vect{v} + \vect{w}) = \func{det}\leftB
+\begin{array}{rrr}
+\vect{i} & u_{1} & v_{1} + w_{1}\\
+\vect{j} & u_{2} & v_{2} + w_{2}\\
+\vect{k} & u_{3} & v_{3} + w_{3}
+\end{array}
+\rightB$ \\
+${} = 
+\func{det}\leftB
+\begin{array}{rrr}
+\vect{i} & u_{1} & v_{1}\\
+\vect{j} & u_{2} & v_{2}\\
+\vect{k} & u_{3} & v_{3}
+\end{array}
+\rightB
++
+\func{det}\leftB
+\begin{array}{rrr}
+\vect{i} & u_{1} & w_{1}\\
+\vect{j} & u_{2} & w_{2}\\
+\vect{k} & u_{3} & w_{3}
+\end{array}
+\rightB$ \\ ${} = (\vect{u} \times \vect{v}) + (\vect{u} \times \vect{w})$
+where we used Exercise \ref{ex:ch4_3_ex21}. 
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex} \label{ex:ch4_3_ex16}
+\begin{enumerate}[label={\alph*.}]
+\item Show that $\vect{w} \dotprod (\vect{u} \times \vect{v}) = \vect{u} \dotprod (\vect{v} \times \vect{w}) = \vect{v} \times (\vect{w} \times \vect{u})$ holds for all vectors $\vect{w}$, $\vect{u}$, and $\vect{v}$.
+
+\item Show that $\vect{v} - \vect{w}$ and $(\vect{u} \times \vect{v}) + (\vect{v} \times \vect{w}) + (\vect{w} \times \vect{u})$ are orthogonal.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $(\vect{v} - \vect{w}) \dotprod [(\vect{u} \times \vect{v}) + (\vect{v} \times \vect{w}) + (\vect{w} \times \vect{u})] = (\vect{v} - \vect{w}) \dotprod (\vect{u} \times \vect{v}) + (\vect{v} - \vect{w}) \dotprod (\vect{v} \times \vect{w}) + (\vect{v} - \vect{w}) \dotprod (\vect{w} \times \vect{u}) = -\vect{w} \dotprod (\vect{u} \times \vect{v}) + 0 + \vect{v} \cdot (\vect{w} \times \vect{u}) = 0$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex} \label{ex:ch4_3_ex17}
+Show $\vect{u} \times (\vect{v} \times \vect{w}) = (\vect{u} \dotprod \vect{w}) \vect{v} - (\vect{u} \times \vect{v})\vect{w}$. [\textit{Hint}: First do it for $\vect{u} = \vect{i}$, $\vect{j}$, and $\vect{k}$; then write $\vect{u} = x\vect{i} + y\vect{j} + z\vect{k}$ and use Theorem~\ref{thm:012690}.]
+\end{ex}
+
+\begin{ex}
+Prove the \textbf{Jacobi identity}\index{Jacobi identity}: 
+\begin{equation*}
+\vect{u} \times (\vect{v} \times \vect{w}) + \vect{v} \times (\vect{w} \times \vect{u}) + \vect{w} \times (\vect{u} \times \vect{v}) = \vect{0}
+\end{equation*}
+ [\textit{Hint}: The preceding exercise.]
+\end{ex}
+
+\begin{ex}
+Show that 
+\begin{equation*}(\vect{u} \times \vect{v}) \dotprod (\vect{w} \times \vect{z})  = \func{det}\leftB
+\begin{array}{cc}
+\vect{u} \dotprod \vect{w} & \vect{u} \dotprod \vect{z}\\
+\vect{v} \dotprod \vect{w} & \vect{v} \dotprod \vect{z}
+\end{array}
+\rightB
+\end{equation*}
+
+[\textit{Hint}: Exercises~\ref{ex:ch4_3_ex16} and~\ref{ex:ch4_3_ex17}.] 
+\end{ex}
+
+\begin{ex}
+Let $P$, $Q$, $R$, and $S$ be four points, not all on one plane, as in the diagram. Show that the volume of the pyramid they determine is
+\begin{equation*}
+\frac{1}{6}|\longvect{PQ} \dotprod (\longvect{PR} \times \longvect{PS})|.
+\end{equation*}
+[\textit{Hint}: The volume of a cone with base area $A$ and height $h$ as in the diagram below right is $\frac{1}{3}Ah$.]
+
+
+\begin{figure}[H]
+\centering
+\input{exercises/4-vector-geometry/figures/3-more-on-the-cross-product/exercise4.3.20}
+%\caption{\label{fig:012901}}
+\end{figure}
+\end{ex}
+
+\begin{ex} \label{ex:ch4_3_ex21}
+Consider a triangle with vertices $A$, $B$, and $C$, as in the diagram below. Let $\alpha$, $\beta$, and $\gamma$ denote the angles at $A$, $B$, and $C$, respectively, and let $a$, $b$, and $c$ denote the lengths of the sides opposite $A$, $B$, and $C$, respectively. Write $\vect{u} = \longvect{AB}$, $\vect{v} = \longvect{BC}$, and $\vect{w} = \longvect{CA}$.
+
+
+\begin{figure}[H]
+\centering
+\input{exercises/4-vector-geometry/figures/3-more-on-the-cross-product/exercise4.3.21}
+%\caption{\label{fig:012904}}
+\end{figure}
+
+\begin{enumerate}[label={\alph*.}]
+\item Deduce that $\vect{u} + \vect{v} + \vect{w} = \vect{0}$.
+
+\item Show that $\vect{u} \times \vect{v} = \vect{w} \times \vect{u} = \vect{v} \times \vect{w}$. [\textit{Hint}: Compute $\vect{u} \times (\vect{u} + \vect{v} + \vect{w})$ and $\vect{v} \times (\vect{u} + \vect{v} + \vect{w})$.]
+
+\item Deduce the \textbf{law of sines}\index{law of sines}:
+\begin{equation*}
+\frac{\sin\alpha}{a} = \frac{\sin\beta}{b} = \frac{\sin\gamma}{c}
+\end{equation*}
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Show that the (shortest) distance between two planes $\vect{n} \dotprod \vect{p} = d_{1}$ and $\vect{n} \dotprod \vect{p} = d_{2}$ with $\vect{n}$ as normal is $\frac{|d_{2} - d_{1}|}{\vectlength \vect{n} \vectlength}$.
+
+\begin{sol}
+Let $\vect{p}_{1}$ and $\vect{p}_{2}$ be vectors of points in the planes, so $\vect{p}_{1} \dotprod \vect{n} = d_{1}$ and $\vect{p}_{2} \dotprod \vect{n} = d_{2}$. The distance is the length of the projection of $\vect{p}_{2} - \vect{p}_{1}$ along $\vect{n}$; that is $\frac{|(\vect{p}_{2} - \vect{p}_{1}) \dotprod \vect{n}|}{\vectlength \vect{n} \vectlength} = \frac{|d_{1} - d_{2}|}{\vectlength \vect{n} \vectlength}$.
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Let $A$ and $B$ be points other than the origin, and let $\vect{a}$ and $\vect{b}$ be their vectors. If $\vect{a}$ and $\vect{b}$ are not parallel, show that the plane through $A$, $B$, and the origin is given by
+\begin{equation*}
+\{P(x, y, z) \mid
+\leftB
+\begin{array}{r}
+x\\
+y\\
+z
+\end{array}
+\rightB = s\vect{a} + t\vect{b} \mbox{ for some } s \mbox{ and } t \} 
+\end{equation*}
+\end{ex} 
+
+\begin{ex}
+Let $A$ be a $2 \times 3$ matrix of rank 2 with rows $\vect{r}_{1}$ and $\vect{r}_{2}$. Show that 
+\begin{equation*}
+P = \{XA \mid X = [x y]; x, y \mbox{ arbitrary}\}
+\end{equation*}
+ is the plane through the origin with normal $\vect{r}_{1} \times \vect{r}_{2}$. 
+\end{ex}
+
+\begin{ex}
+Given the cube with vertices $P(x, y, z)$, where each of $x$, $y$, and $z$ is either $0$ or $2$, consider the plane perpendicular to the diagonal through $P(0, 0, 0)$ and $P(2, 2, 2)$ and bisecting it.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that the plane meets six of the edges of the cube and bisects them.
+
+\item Show that the six points in (a) are the vertices of a regular hexagon.
+
+\end{enumerate}
+\end{ex}
+\end{multicols}

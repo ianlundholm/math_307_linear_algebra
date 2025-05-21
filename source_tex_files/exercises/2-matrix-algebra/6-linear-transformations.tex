@@ -1,0 +1,689 @@
+\section*{Exercises for \ref{sec:2_6}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:2_6}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+Let $T : \RR^3 \to \RR^2$ be a linear transformation.
+
+{\footnotesize
+\begin{enumerate}[label={\alph*.}]
+\item Find $T \leftB \begin{array}{r}
+8 \\
+3 \\
+7
+\end{array} \rightB$
+ if $T \leftB \begin{array}{r}
+ 1 \\
+ 0 \\
+ -1
+ \end{array} \rightB = \leftB \begin{array}{r}
+ 	2 \\
+ 	3 
+ \end{array} \rightB$
+ \\ and   $T \leftB \begin{array}{r}
+ 2 \\
+ 1 \\
+ 3
+ \end{array} \rightB = \leftB \begin{array}{r}
+ -1 \\
+ 0
+ \end{array} \rightB$.
+
+\item Find $T \leftB \begin{array}{r}
+5 \\
+6 \\
+-13
+\end{array} \rightB$
+ if $T \leftB \begin{array}{r}
+ 3 \\
+ 2\\
+ -1
+ \end{array} \rightB = \leftB \begin{array}{r}
+ 3 \\
+ 5 
+ \end{array} \rightB$
+\\ and $T \leftB \begin{array}{r}
+ 2 \\
+ 0 \\
+ 5
+ \end{array} \rightB = \leftB \begin{array}{r}
+ -1 \\
+ 2
+ \end{array} \rightB$.
+
+\end{enumerate}}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\leftB \begin{array}{r}
+5 \\
+6 \\
+-13
+\end{array} \rightB = 3 \leftB \begin{array}{r}
+3 \\
+2 \\
+-1
+\end{array} \rightB - 2 \leftB \begin{array}{r}
+2 \\
+0 \\
+5
+\end{array} \rightB$, so\\
+$T \leftB \begin{array}{r}
+5 \\
+6 \\
+-13
+\end{array} \rightB = 3T \leftB \begin{array}{r}
+3 \\
+2 \\
+-1
+\end{array} \rightB - 2T \leftB \begin{array}{r}
+2 \\
+0 \\
+5
+\end{array} \rightB = 3 \leftB \begin{array}{r}
+3 \\
+5
+\end{array} \rightB - 2 \leftB \begin{array}{r}
+-1 \\
+2
+\end{array} \rightB = \leftB \begin{array}{r}
+11 \\
+11
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Let $T : \RR^4 \to \RR^3$ be a linear transformation.
+{\footnotesize
+\begin{enumerate}[label={\alph*.}]
+\item Find $T \leftB \begin{array}{r}
+1 \\
+3 \\
+-2 \\
+-3
+\end{array} \rightB$
+ if $T \leftB \begin{array}{r}
+ 1 \\
+ 1 \\
+ 0 \\
+ -1
+ \end{array} \rightB = \leftB \begin{array}{r}
+ 2 \\
+ 3 \\
+ -1
+ \end{array} \rightB$
+  \\and $T \leftB \begin{array}{r}
+ 0 \\
+ -1 \\
+ 1 \\
+ 1
+ \end{array} \rightB = \leftB \begin{array}{r}
+ 5 \\
+ 0 \\
+ 1
+ \end{array} \rightB$.
+
+\item Find $T \leftB \begin{array}{r}
+5 \\
+-1 \\
+2 \\
+-4
+\end{array} \rightB$
+if $T \leftB \begin{array}{r}
+1 \\
+1 \\
+1 \\
+1
+\end{array} \rightB = \leftB \begin{array}{r}
+5 \\
+1 \\
+-3
+\end{array} \rightB$
+\\and $T \leftB \begin{array}{r}
+-1 \\
+1 \\
+0 \\
+2
+\end{array} \rightB = \leftB \begin{array}{r}
+2 \\
+0 \\
+1
+\end{array} \rightB$.
+
+\end{enumerate}}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  As in 1(b), $T \leftB \begin{array}{r}
+5 \\
+-1 \\
+2 \\
+-4
+\end{array} \rightB = \leftB \begin{array}{r}
+4 \\
+2 \\
+-9
+\end{array} \rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case assume that the transformation $T$ is linear, and use Theorem~\ref{thm:005789} to obtain the matrix $A$ of $T$.
+
+\begin{enumerate}[leftmargin=1em,label={\alph*.}]
+\item $T : \RR^2 \to \RR^2$ is reflection in the line $y = -x$.
+
+\item $T : \RR^2 \to \RR^2$ is given by $T(\vect{x}) = -\vect{x}$ for each $\vect{x}$ in $\RR^2$.
+
+\item $T : \RR^2 \to \RR^2$ is clockwise rotation through $\frac{\pi}{4}$.
+
+\item $T : \RR^2 \to \RR^2$ is counterclockwise rotation through $\frac{\pi}{4}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $T(\vect{e}_{1}) = -\vect{e}_{2}$ and $T(\vect{e}_{2}) = -\vect{e}_{1}$. So $A\leftB \begin{array}{cc}
+T(\vect{e}_{1}) & T(\vect{e}_{2})
+\end{array} \rightB = \leftB \begin{array}{cc}
+-\vect{e}_{2} & -\vect{e}_{1}
+\end{array} \rightB = \leftB \begin{array}{rr}
+-1 & 0 \\
+0 & -1
+\end{array} \rightB$.
+
+\setcounter{enumi}{3}
+\item $T(\vect{e}_{1}) = \leftB \def\arraystretch{1.5}\begin{array}{r}
+\frac{\sqrt{2}}{2} \\
+\frac{\sqrt{2}}{2}
+\end{array} \rightB$
+ and $T(\vect{e}_{2}) = \leftB \def\arraystretch{1.5}\begin{array}{r}
+ -\frac{\sqrt{2}}{2} \\
+ \frac{\sqrt{2}}{2}
+ \end{array} \rightB$
+
+So $A = \leftB \begin{array}{cc}
+T(\vect{e}_{1}) & T(\vect{e}_{2})
+\end{array} \rightB = \frac{\sqrt{2}}{2} \leftB \begin{array}{rr}
+1 & -1 \\
+1 & 1
+\end{array} \rightB$.
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case use Theorem~\ref{thm:005789} to obtain the matrix $A$ of the transformation $T$. You may assume that $T$ is linear in each case.
+
+\begin{enumerate}[label={\alph*.}]
+\item $T : \RR^3 \to \RR^3$ is reflection in the $x-z$ plane.
+
+\item $T : \RR^3 \to \RR^3$ is reflection in the $y-z$ plane.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $T(\vect{e}_{1}) = -\vect{e}_{1}$, $T(\vect{e}_{2}) = \vect{e}_{2}$ and $T(\vect{e}_{3}) = \vect{e}_{3}$. Hence Theorem~\ref{thm:005789} gives $A\leftB \begin{array}{ccc}
+T(\vect{e}_{1}) & T(\vect{e}_{2}) & T(\vect{e}_{3})
+\end{array} \rightB = \leftB \begin{array}{ccc}
+-\vect{e}_{1} & \vect{e}_{2} & \vect{e}_{3}
+\end{array} \rightB = \leftB \begin{array}{rrr}
+-1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array} \rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $T : \RR^n \to \RR^m$ be a linear transformation.
+
+\begin{enumerate}[label={\alph*.}]
+\item If $\vect{x}$ is in $\RR^n$, we say that $\vect{x}$ is in the \textit{kernel} of $T$ if $T(\vect{x}) = \vect{0}$. If $\vect{x}_{1}$ and $\vect{x}_{2}$ are both in the kernel of $T$, show that $a\vect{x}_{1} + b\vect{x}_{2}$ is also in the kernel of $T$ for all scalars $a$ and $b$.
+
+\item If $\vect{y}$ is in $\RR^n$, we say that $\vect{y}$ is in the \textit{image} of $T$ if $\vect{y} = T(\vect{x})$ for some $\vect{x}$ in $\RR^n$. If $\vect{y}_{1}$ and $\vect{y}_{2}$ are both in the image of $T$, show that $a\vect{y}_{1} + b\vect{y}_{2}$ is also in the image of $T$ for all scalars $a$ and $b$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  We have $\vect{y}_{1} = T(\vect{x}_{1})$ for some $\vect{x}_{1}$ in $\RR^n$, and $\vect{y}_{2} = T(\vect{x}_{2})$ for some $\vect{x}_{2}$ in $\RR^n$. So $a\vect{y}_{1} + b\vect{y}_{2} = aT(\vect{x}_{1}) + bT(\vect{x}_{2}) = T(a\vect{x}_{1} + b\vect{x}_{2})$. Hence $a\vect{y}_{1} + b\vect{y}_{2}$ is also in the image of $T$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Use Theorem~\ref{thm:005789} to find the matrix of the \textbf{identity transformation}\index{identity transformation} $1_{\RR^n} : \RR^n \to \RR^n$ defined by $1_{\RR^n}(\vect{x}) = \vect{x}$ for each $\vect{x}$ in $\RR^n$.
+\end{ex}
+
+\begin{ex}
+In each case show that $T : \RR^2 \to \RR^2$ is not a linear transformation.
+\begin{exenumerate}
+\exitem $T \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB = \leftB \begin{array}{c}
+xy \\
+0
+\end{array} \rightB$
+\exitem $T \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB = \leftB \begin{array}{c}
+0 \\
+y^2
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $T\left(2 \leftB \begin{array}{c}
+0 \\
+1
+\end{array} \rightB \right) \neq 2 \leftB \begin{array}{r}
+0 \\
+-1
+\end{array} \rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case show that $T$ is either reflection in a line or rotation through an angle, and find the line or angle.
+
+\begin{enumerate}[label={\alph*.}]
+\item $T \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB = \frac{1}{5} \leftB \begin{array}{c}
+-3x + 4y \\
+4x + 3y
+\end{array} \rightB$
+
+\item $T \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB = \frac{1}{\sqrt{2}} \leftB \begin{array}{c}
+x + y \\
+-x + y
+\end{array} \rightB$
+
+\item $T \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB = \frac{1}{\sqrt{3}} \leftB \begin{array}{c}
+x - \sqrt{3}y \\
+\sqrt{3}x + y
+\end{array} \rightB$
+
+\item $T \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB = -\frac{1}{10} \leftB \begin{array}{c}
+8x + 6y \\
+6x - 8y
+\end{array} \rightB$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $A = \frac{1}{\sqrt{2}} \leftB \begin{array}{rr}
+1 & 1 \\
+-1 & 1
+\end{array} \rightB$, rotation through $\theta = -\frac{\pi}{4}$.
+
+\setcounter{enumi}{3}
+\item $A = \frac{1}{10} \leftB \begin{array}{rr}
+-8 & -6 \\
+-6 & 8
+\end{array} \rightB$, reflection in the line $y = -3x$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Express reflection in the line $y = -x$ as the composition of a rotation followed by reflection in the line $y = x$.
+\end{ex}
+
+\begin{ex}
+Find the matrix of $T : \RR^3 \to \RR^3$ in each case:
+
+\begin{enumerate}[label={\alph*.}]
+\item $T$ is rotation through $\theta$ about the $x$ axis (from the $y$ axis to the $z$ axis).
+
+\item $T$ is rotation through $\theta$ about the $y$ axis (from the $x$ axis to the $z$ axis).
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $\leftB \begin{array}{ccc}
+\cos \theta & 0 & -\sin \theta \\
+0 & 1 & 0 \\
+\sin \theta & 0 & \cos \theta
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $T_{\theta} : \RR^2 \to \RR^2$ denote reflection in the line making an angle $\theta$ with the positive $x$ axis.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that the matrix of $T_{\theta}$ is $\leftB \begin{array}{rr}
+\cos 2\theta & \sin 2\theta \\
+\sin 2\theta & -\cos 2\theta
+\end{array} \rightB$ for all $\theta$.
+
+\item Show that $T_{\theta} \circ R_{2\phi} = T_{\theta - \phi}$ for all $\theta$ and $\phi$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+In each case find a rotation or reflection that equals the given transformation.
+
+\begin{enumerate}[label={\alph*.}]
+\item Reflection in the $y$ axis followed by rotation through $\frac{\pi}{2}$.
+
+\item Rotation through $\pi$ followed by reflection in the $x$ axis.
+
+\item Rotation through $\frac{\pi}{2}$ followed by reflection in the line $y = x$.
+
+\item Reflection in the $x$ axis followed by rotation through $\frac{\pi}{2}$.
+
+\item Reflection in the line $y = x$ followed by reflection in the $x$ axis.
+
+\item Reflection in the $x$ axis followed by reflection in the line $y = x$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Reflection in the $y$ axis
+
+\setcounter{enumi}{3}
+\item  Reflection in $y = x$
+
+\setcounter{enumi}{5}
+\item  Rotation through $\frac{\pi}{2}$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $R$ and $S$ be matrix transformations $\RR^n \to \RR^m$ induced by matrices $A$ and $B$ respectively. In each case, show that $T$ is a matrix transformation and describe its matrix in terms of $A$ and $B$.
+
+\begin{enumerate}[label={\alph*.}]
+\item $T(\vect{x}) = R(\vect{x}) + S(\vect{x})$ for all $\vect{x}$ in $\RR^n$.
+
+\item $T(\vect{x}) = aR(\vect{x})$ for all $\vect{x}$ in $\RR^n$ (where $a$ is a fixed real number).
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $T(\vect{x}) = aR(\vect{x}) = a(A\vect{x}) = (aA)\vect{x}$ for all $\vect{x}$ in $\RR$. Hence $T$ is induced by $aA$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that the following hold for all linear transformations $T : \RR^n \to \RR^m$:
+
+\begin{exenumerate}[column-sep=-5em]
+\exitem $T(\vect{0}) = \vect{0}$
+\exitem $T(-\vect{x}) = -T(\vect{x})$ for all $\vect{x}$ in $\RR^n$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $\vect{x}$ is in $\RR^n$, then $T(-\vect{x}) = T\left[(-1)\vect{x}\right] = (-1)T(\vect{x}) = -T(\vect{x})$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+The transformation $T : \RR^n \to \RR^m$ defined by $T(\vect{x}) = \vect{0}$ for all $\vect{x}$ in $\RR^n$ is called the \textbf{zero transformation}\index{zero transformation}.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that the zero transformation is linear and find its matrix.
+
+\item Let $\vect{e}_{1}, \vect{e}_{2}, \dots, \vect{e}_{n}$ denote the columns of the $n \times n$ identity matrix. If $T : \RR^n \to \RR^m$ is linear and $T(\vect{e}_{i}) = \vect{0}$ for each $i$, show that $T$ is the zero transformation. [\textit{Hint}: Theorem~\ref{thm:005709}.]
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Write the elements of $\RR^n$ and $\RR^m$ as rows. If $A$ is an $m \times n$ matrix, define $T : \RR^m \to \RR^n$ by $T(\vect{y}) = \vect{y}A$ for all rows $\vect{y}$ in $\RR^m$. Show that:
+
+\begin{enumerate}[label={\alph*.}]
+\item $T$ is a linear transformation.
+
+\item the rows of $A$ are $T(\vect{f}_{1}), T(\vect{f}_{2}), \dots, T(\vect{f}_{m})$ where $\vect{f}_{i}$ denotes row $i$ of $I_{m}$. [\textit{Hint}: Show that $\vect{f}_{i} A$ is row $i$ of $A$.]
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Let $S : \RR^n \to \RR^n$ and $T : \RR^n \to \RR^n$ be linear transformations with matrices $A$ and $B$ respectively.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $B^{2} = B$ if and only if $T^{2} = T$ (where $T^{2}$ means $T \circ T$).
+
+\item Show that $B^{2} = I$ if and only if $T^2 = 1_{\RR^n}$.
+
+\item Show that $AB = BA$ if and only if $S \circ T = T \circ S$.
+
+\item[] [\textit{Hint}: Theorem~\ref{thm:005918}.]
+\end{enumerate}
+
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $B^{2} = I$ then $T^{2}(\vect{x}) = T[T(\vect{x})] = B(B\vect{x}) = B^{2}\vect{x} = I\vect{x} = \vect{x} = 1_{\RR^2}(\vect{x})$ for all $\vect{x}$ in $\RR^n$. Hence $T^{2} = 1_{\RR^2}$. If $T^{2} = 1_{\RR^2}$, then $B^{2}\vect{x} = T^{2}(\vect{x}) = 1_{\RR^2}(\vect{x}) = \vect{x} = I\vect{x}$ for all $\vect{x}$, so $B^{2} = I$ by Theorem~\ref{thm:002985}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $Q_{0} : \RR^2 \to \RR^2$ be reflection in the $x$ axis, let $Q_{1} : \RR^2 \to \RR^2$ be reflection in the line $y = x$, let $Q_{-1} : \RR^2 \to \RR^2$ be reflection in the line $y = -x$, and let $R_{\frac{\pi}{2}} : \RR^2 \to \RR^2$ be counterclockwise rotation through $\frac{\pi}{2}$.
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $Q_{1} \circ R_{\frac{\pi}{2}} = Q_{0}$.
+
+\item Show that $Q_{1} \circ Q_{0} = R_{\frac{\pi}{2}}$.
+
+\item Show that $R_{\frac{\pi}{2}} \circ Q_{0} = Q_{1}$.
+
+\item Show that $Q_{0} \circ R_{\frac{\pi}{2}} = Q_{-1}$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  The matrix of $Q_{1} \circ Q_{0}$
+ is $\leftB \begin{array}{rr}
+ 0 & 1 \\
+ 1 & 0
+ \end{array} \rightB \leftB \begin{array}{rr}
+ 1 & 0 \\
+ 0 & -1
+ \end{array} \rightB = \leftB \begin{array}{rr}
+ 0 & -1 \\
+ 1 & 0
+ \end{array} \rightB$,
+ which is the matrix of $R_{\frac{\pi}{2}}$.
+
+\setcounter{enumi}{3}
+\item  The matrix of $Q_{0} \circ R_{\frac{\pi}{2}}$
+ is \\ $\leftB \begin{array}{rr}
+ 1 & 0 \\
+ 0 & -1
+ \end{array} \rightB \leftB \begin{array}{rr}
+ 0 & -1 \\
+ 1 & 0
+ \end{array} \rightB = \leftB \begin{array}{rr}
+ 0 & -1 \\
+ -1 & 0
+ \end{array} \rightB$,
+ which is the matrix of $Q_{-1}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+For any slope $m$, show that:
+\begin{exenumerate}
+\exitem $Q_{m} \circ P_{m} = P_{m}$
+\exitem $P_{m} \circ Q_{m} = P_{m}$
+\end{exenumerate}
+\end{ex}
+
+\begin{ex}
+Define $T : \RR^n \to \RR$ by $T(x_{1}, x_{2}, \dots, x_{n}) = x_{1} + x_{2} + \cdots + x_{n}$. Show that $T$ is a linear transformation and find its matrix.
+
+\begin{sol}
+We have $T(\vect{x}) = x_{1} + x_{2} + \cdots + x_{n} = \leftB \begin{array}{cccc}
+1 & 1 & \cdots & 1
+\end{array} \rightB \leftB \begin{array}{c}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{n} \\
+\end{array} \rightB$, so $T$ is the matrix transformation induced by the matrix $A = \leftB \begin{array}{cccc}
+1 & 1 & \cdots & 1
+\end{array} \rightB$. In particular, $T$ is linear. On the other hand, we can use Theorem~\ref{thm:005789} to get $A$, but to do this we must first show directly that $T$ is linear. If we write $\vect{x} = \leftB \begin{array}{c}
+ x_{1} \\
+ x_{2} \\
+ \vdots \\
+ x_{n} \\
+ \end{array} \rightB$
+ and $\vect{y} = \leftB \begin{array}{c}
+ y_{1} \\
+ y_{2} \\
+ \vdots \\
+ y_{n} \\
+ \end{array} \rightB$. Then
+\begin{align*}
+T(\vect{x} + \vect{y}) &= T \leftB \begin{array}{c}
+x_{1} + y_{1} \\
+x_{2} + y_{2} \\
+\vdots \\
+x_{n} + y_{n} \\
+\end{array} \rightB \\
+&= (x_{1} + y_{1}) + (x_{2} + y_{2}) + \cdots + (x_{n} + y_{n}) \\
+&= (x_{1} + x_{2} + \cdots + x_{n}) + (y_{1} + y_{2} + \cdots + y_{n}) \\
+&= T(\vect{x}) + T(\vect{y})
+\end{align*}
+
+Similarly, $T(a\vect{x}) = aT(\vect{x})$ for any scalar $a$, so $T$ is linear. By Theorem~\ref{thm:005789}, $T$ has matrix $A = \leftB \begin{array}{cccc}
+T(\vect{e}_{1}) & T(\vect{e}_{2}) & \cdots & T(\vect{e}_{n})
+\end{array} \rightB = \leftB \begin{array}{cccc}
+1 & 1 & \cdots & 1
+\end{array} \rightB$, as before.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Given $c$ in $\RR$, define $T_{c} : \RR^n \to \RR$ by $T_{c}(\vect{x}) = c\vect{x}$ for all $\vect{x}$ in $\RR^n$. Show that $T_{c}$ is a linear transformation and find its matrix.
+\end{ex}
+
+\begin{ex}
+Given vectors $\vect{w}$ and $\vect{x}$ in $\RR^n$, denote their dot product by $\vect{w} \dotprod \vect{x}$.
+
+\begin{enumerate}[label={\alph*.}]
+\item Given $\vect{w}$ in $\RR^n$, define $T_{\vect{w}} : \RR^n \to \RR$ by $T_{\vect{w}}(\vect{x}) = \vect{w} \cdot \vect{x}$ for all $\vect{x}$ in $\RR^n$. Show that $T_{\vect{w}}$ is a linear transformation.
+
+\item Show that \textit{every} linear transformation $T : \RR^n \to \RR$ is given as in (a); that is $T = T_{\vect{w}}$ for some $\vect{w}$ in $\RR^n$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item If $T : \RR^n \to \RR$ is linear, write $T(\vect{e}_{j}) = w_{j}$ for each $j = 1, 2, \dots, n$ where $\{\vect{e}_{1}, \vect{e}_{2}, \dots, \vect{e}_{n}\}$ is the standard basis of $\RR^n$. Since $\vect{x} = x_{1}\vect{e}_{1} + x_{2}\vect{e}_{2} + \cdots  + x_{n}\vect{e}_{n}$, Theorem~\ref{thm:005709} gives
+\begin{align*}
+T(\vect{x}) & = T(x_{1}\vect{e}_{1} + x_{2}\vect{e}_{2} + \cdots + x_{n}\vect{e}_{n}) \\
+&= x_{1}T(\vect{e}_{1}) + x_{2}T(\vect{e}_{2}) + \cdots + x_{n}T(\vect{e}_{n}) \\
+&= x_{1}w_{1} + x_{2}w_{2} + \cdots + x_{n}w_{n} \\
+&= \vect{w} \dotprod \vect{x} = T_{\vect{w}}(\vect{x})
+\end{align*}
+
+where $\vect{w} = \leftB \begin{array}{c}
+w_{1} \\
+w_{2} \\
+\vdots \\
+w_{n} \\
+\end{array} \rightB$.
+ Since this holds for all $\vect{x}$ in $\RR^n$, it shows that $T = T_{\vect{W}}$. This also follows from Theorem~\ref{thm:005789}, but we have first to verify that $T$ is linear. (This comes to showing that $\vect{w} \cdot (\vect{x} + \vect{y}) = \vect{w} \cdot \vect{s} + \vect{w} \cdot \vect{y}$ and $\vect{w} \cdot (a\vect{x}) = a(\vect{w} \cdot \vect{x})$ for all $\vect{x}$ and $\vect{y}$ in $\RR^n$ and all $a$ in $\RR$.) Then $T$ has matrix $A = \leftB \begin{array}{cccc}
+ T(\vect{e}_{1}) & T(\vect{e}_{2}) & \cdots & T(\vect{e}_{n})
+ \end{array} \rightB = \leftB \begin{array}{cccc}
+ w_{1} & w_{2} & \cdots & w_{n}
+ \end{array} \rightB$ by Theorem~\ref{thm:005789}. Hence if $\vect{x} = \leftB \begin{array}{c}
+ x_{1} \\
+ x_{2} \\
+ \vdots \\
+ x_{n}
+ \end{array} \rightB$ in $\RR$, then $T(\vect{x}) = A\vect{x} = \vect{w} \cdot \vect{x}$, as required.
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $\vect{x} \neq \vect{0}$ and $\vect{y}$ are vectors in $\RR^n$, show that there is a linear transformation $T : \RR^n \to \RR^n$ such that $T(\vect{x}) = \vect{y}$. [\textit{Hint}: By Definition~\ref{def:002668}, find a matrix $A$ such that $A\vect{x} = \vect{y}$.]
+
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Given $\vect{x}$ in $\RR$ and $a$ in $\RR$, we have \\
+
+\hspace*{-3em}$\begin{array}{lllll}
+(S \circ T)(a\vect{x}) & = & S\left[T(a\vect{x})\right] & & \mbox{Definition of } S \circ T \\
+& = & S\left[aT(\vect{x})\right] & & \mbox{Because } T \mbox{ is linear.} \\
+& = & a\left[S\left[T(\vect{x})\right]\right] & & \mbox{Because } S \mbox{ is linear.} \\
+& = & a\left[S \circ T(\vect{x})\right]& & \mbox{Definition of } S \circ T \\
+\end{array}$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $\RR^n \xrightarrow{T} \RR^m \xrightarrow{S} \RR^k$ be two linear transformations. Show directly that $S \circ T$ is linear. That is:
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $(S \circ T)(\vect{x} + \vect{y}) = (S \circ T)\vect{x} + (S \circ T)\vect{y}$ for all $\vect{x}$, $\vect{y}$ in $\RR^n$.
+
+\item Show that $(S \circ T)(a\vect{x}) = a[(S \circ T)\vect{x}]$ for all $\vect{x}$ in $\RR^n$ and all $a$ in $\RR$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Let $\RR^n \xrightarrow{T} \RR^m \xrightarrow{S} \RR^k \xrightarrow{R} \RR^k$ be linear. Show that $R \circ (S \circ T) = (R \circ S) \circ T$ by showing directly that $[R \circ (S \circ T)](\vect{x}) = [(R \circ S) \circ T)](\vect{x})$ holds for each vector $\vect{x}$ in $\RR^n$.
+\end{ex}
+
+\end{multicols}

@@ -1,0 +1,1031 @@
+\section*{Exercises for \ref{sec:2_3}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:2_3}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+Compute the following matrix products.
+\begin{exenumerate}
+\exitem*
+$ \leftB \begin{array}{rr}
+1 & 3 \\
+0 & -2
+\end{array} \rightB \leftB \begin{array}{rr}
+2 & -1 \\
+0 & 1
+\end{array} \rightB
+$
+\exitem*
+$ \leftB \begin{array}{rrr}
+1 & -1 & 2 \\
+2 & 0 & 4
+\end{array} \rightB \leftB \begin{array}{rrr}
+2 & 3 & 1 \\
+1 & 9 & 7 \\
+-1 & 0 & 2
+\end{array} \rightB
+$
+\exitem*
+$ \leftB \begin{array}{rrr}
+5 & 0 & -7 \\
+1 & 5 & 9
+\end{array} \rightB \leftB \begin{array}{r}
+3 \\
+1 \\
+-1 \\
+\end{array} \rightB
+$
+\exitem*
+$ \leftB \begin{array}{rrr}
+1 & 3 & -3
+\end{array} \rightB \leftB \begin{array}{rr}
+3 & 0 \\
+-2 & 1 \\
+0 & 6
+\end{array} \rightB
+$
+\exitem*
+$ \leftB \begin{array}{rrr}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array} \rightB \leftB \begin{array}{rr}
+3 & -2  \\
+5 & -7 \\
+9 & 7
+\end{array} \rightB
+$
+\exitem*
+$ \leftB \begin{array}{rrr}
+1 & -1 & 3
+\end{array} \rightB \leftB \begin{array}{r}
+2 \\
+1 \\
+-8
+\end{array} \rightB
+$
+\exitem*
+$ \leftB \begin{array}{r}
+2 \\
+1 \\
+-7
+\end{array} \rightB \leftB \begin{array}{rrr}
+1 & -1 & 3
+\end{array} \rightB
+$
+
+\exitem* 
+$ \leftB \begin{array}{rr}
+3 & 1 \\
+5 & 2
+\end{array} \rightB \leftB \begin{array}{rr}
+2 & -1 \\
+-5 & 3
+\end{array} \rightB
+ $
+\exitem*
+$ \leftB \begin{array}{rrr}
+2 & 3 & 1 \\
+5 & 7 & 4
+\end{array} \rightB \leftB \begin{array}{ccc}
+a & 0 & 0 \\
+0 & b & 0 \\
+0 & 0 & c
+\end{array} \rightB
+$
+\exitem*
+$\leftB \begin{array}{ccc}
+a & 0 & 0 \\
+0 & b & 0 \\
+0 & 0 & c
+\end{array} \rightB 
+\leftB \begin{array}{ccc}
+a^\prime & 0 & 0 \\
+0 & b^\prime & 0 \\
+0 & 0 & c^\prime
+\end{array} \rightB
+$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+$\leftB \begin{array}{rrr}
+-1 & -6 & -2 \\
+0 & 6 & 10
+\end{array} \rightB
+$
+
+\setcounter{enumi}{3}
+\item  
+$\leftB \begin{array}{rr}
+-3 & -15
+\end{array} \rightB$
+
+\setcounter{enumi}{5}
+\item 
+$\leftB -23 \rightB$
+
+\setcounter{enumi}{7}
+\item 
+$\leftB \begin{array}{rr}
+1 & 0 \\
+0 & 1
+\end{array} \rightB
+$
+
+\setcounter{enumi}{9}
+\item  
+$\leftB \begin{array}{rrr}
+aa^\prime & 0 & 0 \\
+0 & bb^\prime & 0 \\
+0 & 0 & cc^\prime
+\end{array} \rightB
+$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each of the following cases, find all possible products $A^{2}$, $AB$, $AC$, and so on.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item
+$A = \leftB \begin{array}{rrr}
+1 & 2 & 3 \\
+-1 & 0 & 0
+\end{array} \rightB$, 
+$B = \leftB \begin{array}{rr}
+1 & -2 \\
+\frac{1}{2} & 3
+\end{array} \rightB$, \\
+ $C = \leftB \begin{array}{rr}
+-1 & 0 \\
+2 & 5 \\
+0 & 3
+\end{array} \rightB
+$ 
+
+\item
+$A = \leftB \begin{array}{rrr}
+	1 & 2 & 4 \\
+	0 & 1 & -1
+\end{array} \rightB$, 
+$B = \leftB \begin{array}{rr}
+	-1 & 6 \\
+	1 & 0
+\end{array} \rightB$, \\
+$C = \leftB \begin{array}{rr}
+	2 & 0 \\
+	-1 & 1 \\
+	1 & 2
+\end{array} \rightB
+$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+$
+BA = \leftB \begin{array}{rrr}
+-1 & 4 & -10 \\
+1 & 2 & 4
+\end{array} \rightB$, $B^{2} = \leftB \begin{array}{rr}
+7 & -6 \\
+-1 & 6
+\end{array} \rightB$, $CB = \leftB \begin{array}{rr}
+-2 & 12 \\
+2 & -6 \\
+1 & 6
+\end{array} \rightB$ \\
+$AC = \leftB \begin{array}{rr}
+4 & 10 \\
+-2 & -1
+\end{array} \rightB$, $CA = \leftB \begin{array}{rrr}
+2 & 4 & 8 \\
+-1 & -1 & -5 \\
+1 & 4 & 2
+\end{array} \rightB
+$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Find $a$, $b$, $a_{1}$, and $b_{1}$ if:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item
+$\leftB \begin{array}{cc}
+a & b \\
+a_{1} & b_{1}
+\end{array} \rightB \leftB \begin{array}{rr}
+3 & -5 \\
+-1 & 2
+\end{array} \rightB = \leftB \begin{array}{rr}
+1 & -1 \\
+2 & 0
+\end{array} \rightB
+$
+
+\item 
+$\leftB \begin{array}{rr}
+2 & 1 \\
+-1 & 2
+\end{array} \rightB \leftB \begin{array}{cc}
+a & b \\
+a_{1} & b_{1}
+\end{array} \rightB = \leftB \begin{array}{rr}
+7 & 2 \\
+-1 & 4
+\end{array} \rightB
+$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $(a, b, a_{1}, b_{1}) = (3, 0, 1, 2)$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Verify that $A^{2} - A - 6I = 0$ if:
+\begin{exenumerate}
+\exitem 
+$ \leftB \begin{array}{rr}
+3 & -1 \\
+0 & -2
+\end{array} \rightB
+$
+\exitem 
+$ \leftB \begin{array}{rr}
+2 & 2 \\
+2 & -1
+\end{array} \rightB
+$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+$A^{2} - A - 6I = \leftB \begin{array}{rr}
+8 & 2 \\
+2 & 5
+\end{array} \rightB - \leftB \begin{array}{rr}
+2 & 2 \\
+2 & -1
+\end{array} \rightB - \leftB \begin{array}{rr}
+6 & 0 \\
+0 & 6
+\end{array} \rightB = \leftB \begin{array}{rr}
+0 & 0 \\
+0 & 0
+\end{array} \rightB$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}\label{ex:ex2_3_5}
+
+Given $A = \leftB \begin{array}{rr}
+1 & -1 \\
+0 & 1
+\end{array} \rightB$, $B = \leftB \begin{array}{rrr}
+1 & 0 & -2 \\
+3 & 1 & 0
+\end{array} \rightB$, \\ $C = \leftB \begin{array}{rr}
+1 & 0 \\
+2 & 1 \\
+5 & 8
+\end{array} \rightB$, and $D = \leftB \begin{array}{rrr}
+ 3 & -1 & 2 \\
+ 1 & 0 & 5
+ \end{array} \rightB$, verify the \newline following facts from Theorem~\ref{thm:003469}.
+\begin{exenumerate}
+\exitem $A(B - D) = AB - AD$
+\exitem $A(BC) = (AB)C$
+\exitem $(CD)^{T} = D^{T}C^{T}$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+$
+A(BC) = \leftB \begin{array}{rr}
+1 & -1 \\
+0 & 1
+\end{array} \rightB \leftB \begin{array}{rr}
+-9 & -16 \\
+5 & 1
+\end{array} \rightB = \leftB \begin{array}{rr}
+-14 & -17 \\
+5 & 1
+\end{array} \rightB = \leftB \begin{array}{rrr}
+-2 & -1 & -2 \\
+3 & 1 & 0
+\end{array} \rightB \leftB \begin{array}{rr}
+1 & 0 \\
+2 & 1 \\
+5 & 8
+\end{array} \rightB = (AB)C
+$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ be a $2 \times 2$ matrix.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A$ commutes with $\leftB \begin{array}{rr}
+0 & 1 \\
+0 & 0
+\end{array} \rightB$, show that \\ $A = \leftB \begin{array}{rr}
+ a & b \\
+ 0 & a
+ \end{array} \rightB$
+ for some $a$ and $b$.
+
+\item If $A$ commutes with $\leftB \begin{array}{rr}
+0 & 0 \\
+1 & 0
+\end{array} \rightB$, show that \\ $A = \leftB \begin{array}{rr}
+ a & 0 \\
+ c & a
+ \end{array} \rightB$
+ for some $a$ and $c$.
+
+\item Show that $A$ commutes with \textit{every} $2 \times 2$ matrix \newline if and only if $A = \leftB \begin{array}{rr}
+a & 0 \\
+0 & a
+\end{array} \rightB$
+ for some $a$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $A = \leftB \begin{array}{rr}
+a & b \\
+c & d
+\end{array} \rightB$
+ and $E = \leftB \begin{array}{rr}
+ 0 & 0 \\
+ 1 & 0
+ \end{array} \rightB$, compare entries an $AE$ and $EA$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If $A^{2}$ can be formed, what can be said about the size of $A$?
+
+\item If $AB$ and $BA$ can both be formed, describe the sizes of $A$ and $B$.
+
+\item If $ABC$ can be formed, $A$ is $3 \times 3$, and $C$ is $5 \times 5$, what size is $B$?
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $m \times n$ and $n \times m$ for some $m$ and $n$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Find two $2 \times 2$ matrices $A$ such that $A^{2} = 0$.
+
+\item Find three $2 \times 2$ matrices $A$ such that (i) $A^{2} = I$; (ii) $A^{2} = A$.
+
+\item Find $2 \times 2$ matrices $A$ and $B$ such that $AB = 0$ but $BA \neq 0$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+\begin{enumerate}[label={\roman*.}]
+\item
+$
+\leftB \begin{array}{rr}
+1 & 0 \\
+0 & 1
+\end{array} \rightB$, $\leftB \begin{array}{rr}
+1 & 0 \\
+0 & -1
+\end{array} \rightB$, $\leftB \begin{array}{rr}
+1 & 1 \\
+0 & -1
+\end{array} \rightB
+$
+
+\item
+$
+\leftB \begin{array}{rr}
+1 & 0 \\
+0 & 0
+\end{array} \rightB$, $\leftB \begin{array}{rr}
+1 & 0 \\
+0 & 1
+\end{array} \rightB$, $\leftB \begin{array}{rr}
+1 & 1 \\
+0 & 0
+\end{array} \rightB
+$
+\end{enumerate}
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Write $P = \leftB \begin{array}{rrr}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \rightB$, and let $A$ be $3 \times n$ and $B$ be $m \times 3$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Describe $PA$ in terms of the rows of $A$.
+
+\item Describe $BP$ in terms of the columns of $B$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Let $A$, $B$, and $C$ be as in Exercise~\ref{ex:ex2_3_5}. Find the $(3, 1)$-entry of $CAB$ using exactly six numerical multiplications.
+\end{ex}
+
+\begin{ex}
+Compute $AB$, using the indicated block partitioning.
+\begin{equation*}
+A = \leftB \begin{array}{rr|rr}
+2 & -1 & 3 & 1 \\
+1 & 0  & 1 & 2 \\
+\hline
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{array} \rightB \quad
+B = \leftB \begin{array}{rr|r}
+1 & 2 & 0 \\
+-1 & 0  & 0 \\
+\hline
+0 & 5 & 1 \\
+1 & -1 & 0 
+\end{array} \rightB
+\end{equation*}
+\end{ex}
+
+\begin{ex}
+In each case give formulas for all powers $A, A^{2}, A^{3}, \dots$ of $A$ using the block decomposition indicated.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item
+$A = \leftB \begin{array}{r|rr}
+1 & 0 & 0 \\
+\hline
+1 & 1  & -1\\
+1 & -1 & 1
+\end{array} \rightB
+$
+
+\item
+$A = \leftB \begin{array}{rr|rr}
+1 & -1 & 2 & -1 \\
+0 & 1 & 0 & 0 \\
+\hline
+0 & 0 & -1 & 1 \\
+0 & 0 & 0 & 1
+\end{array} \rightB
+$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+$
+A^{2k} = \leftB \begin{array}{rc|rr}
+1 & -2k & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+\hline
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{array} \rightB$ for $k = 0, 1, 2, \dots$, \\ 
+$A^{2k + 1} = A^{2k}A = \leftB \begin{array}{rc|rr}
+1 & -(2k + 1) & 2 & -1 \\
+0 & 1 & 0 & 0 \\
+\hline
+0 & 0 & -1 & 1 \\
+0 & 0 & 0 & 1
+\end{array} \rightB$ for $k = 0, 1, 2, \dots$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+%\newpage
+\begin{ex}
+Compute the following using block multiplication (all blocks are $k \times k$).
+\begin{exenumerate}
+\exitem
+$\leftB \begin{array}{rr}
+I & X \\
+-Y & I
+\end{array} \rightB \leftB \begin{array}{rr}
+I & 0 \\
+Y & I
+\end{array} \rightB
+$
+\exitem 
+$\leftB \begin{array}{rr}
+I & X \\
+0 & I
+\end{array} \rightB \leftB \begin{array}{rr}
+I & -X \\
+0 & I
+\end{array} \rightB
+$
+\exitem 
+$\leftB \begin{array}{cc}
+I & X
+\end{array} \rightB \leftB \begin{array}{cc}
+I & X
+\end{array} \rightB^{T}
+$
+\exitem
+$\leftB \begin{array}{cc}
+I & X^{T}
+\end{array} \rightB \leftB \begin{array}{cc}
+-X & I
+\end{array} \rightB^{T}
+$
+\exitem*
+$\leftB \begin{array}{cc}
+I & X \\
+0 & -I
+\end{array} \rightB^{n}
+$ any $n \geq 1$
+\exitem* 
+$\leftB \begin{array}{cc}
+0 & X \\
+I & 0
+\end{array} \rightB^{n}
+$ any $n \geq 1$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+$\leftB \begin{array}{cc}
+I & 0 \\
+0 & I
+\end{array} \rightB = I_{2k}$
+
+\setcounter{enumi}{3}
+\item $0_{k}$
+
+
+\setcounter{enumi}{5}
+\item
+$\leftB \begin{array}{cc}
+X^{m} & 0 \\
+0 & X^{m}
+\end{array} \rightB$ if $n = 2m$; 
+$\leftB \begin{array}{cc}
+0 & X^{m + 1} \\
+X^{m} & 0
+\end{array} \rightB$ if $n = 2m + 1$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ denote an $m \times n$ matrix.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $AX = 0$ for every $n \times 1$ matrix $X$, show that $A = 0$.
+
+\item If $YA = 0$ for every $1 \times m$ matrix $Y$, show that $A = 0$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $Y$ is row $i$ of the identity matrix $I$, then $YA$ is row $i$ of $IA = A$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If $U = \leftB \begin{array}{rr}
+1 & 2 \\
+0 & -1
+\end{array} \rightB$, and $AU = 0$, show that $A = 0$.
+
+\item Let $U$ be such that $AU = 0$ implies that $A = 0$. If $PU = QU$, show that $P = Q$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+Simplify the following expressions where $A$, $B$, and $C$ represent matrices.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $A(3B - C) + (A - 2B)C + 2B(C + 2A)$
+
+\item $A(B + C - D) + B(C - A + D) - (A + B)C \\ + (A - B)D$
+
+\item $AB(BC - CB) + (CA - AB)BC + CA(A - B)C$
+
+\item $(A - B)(C - A) + (C - B)(A - C) + (C - A)^{2}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $AB - BA$
+
+\setcounter{enumi}{3}
+\item $0$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A = \leftB \begin{array}{cc}
+a & b \\
+c & d
+\end{array} \rightB$
+ where $a \neq 0$, show that $A$ factors in the form 
+ $A = \leftB \begin{array}{cc}
+ 1 & 0 \\
+ x & 1
+ \end{array} \rightB \leftB \begin{array}{cc}
+ y & z \\
+ 0 & w
+ \end{array} \rightB$.
+\end{ex}
+
+\begin{ex}
+If $A$ and $B$ commute with $C$, show that the same is true of:
+\begin{exenumerate}
+\exitem $A + B$
+\exitem $kA$, $k$ any scalar
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $(kA)C = k(AC) = k(CA) = C(kA)$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is any matrix, show that both $AA^{T}$ and $A^{T}A$ are symmetric.
+\end{ex}
+
+\begin{ex}
+If $A$ and $B$ are symmetric, show that $AB$ is symmetric if and only if $AB = BA$.
+
+\begin{sol}
+We have $A^{T} = A$ and $B^{T} = B$, so $(AB)^{T} = B^{T}A^{T} = BA$. Hence $AB$ is symmetric if and only if $AB = BA$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $A$ is a $2 \times 2$ matrix, show that \newline $A^{T}A = AA^{T}$ if and only if $A$ is symmetric or \newline $A = \leftB \begin{array}{cc}
+a & b \\
+-b & a
+\end{array} \rightB$
+ for some $a$ and $b$.
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Find all symmetric $2 \times 2$ matrices $A$ such that $A^{2} = 0$.
+
+\item Repeat (a) if $A$ is $3 \times 3$.
+
+\item Repeat (a) if $A$ is $n \times n$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $A = 0$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that there exist no $2 \times 2$ matrices $A$ and $B$ such that $AB - BA = I$. [\textit{Hint}: Examine the $(1, 1)$- and $(2, 2)$-entries.]
+\end{ex}
+
+\begin{ex}
+Let $B$ be an $n \times n$ matrix. Suppose $AB = 0$ for some nonzero $m \times n$ matrix $A$. Show that no $n \times n$ matrix $C$ exists such that $BC = I$.
+
+\begin{sol}
+If $BC = I$, then $AB = 0$ gives $0 = 0C = (AB)C = A(BC) = AI = A$, contrary to the assumption that $A \neq 0$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+An autoparts manufacturer makes fenders, doors, and hoods. Each requires assembly and packaging carried out at factories: Plant 1, Plant 2, and Plant 3. Matrix $A$ below gives the number of hours for assembly and packaging, and matrix $B$ gives the hourly rates at the three plants. Explain the meaning of the $(3, 2)$-entry in the matrix $AB$. Which plant is the most economical to operate? Give reasons.
+
+\begin{tabu}{lccll}
+& Assembly & Packaging & & \\
+$\begin{array}{l}
+	\mbox{Fenders} \\
+	\mbox{Doors} \\
+	\mbox{Hoods}
+\end{array}$ &
+\multicolumn{2}{l}{
+$\leftB \arraycolsep=20pt \begin{array}{cr}
+	12 & 2 \\
+	21 & 3 \\
+	10 & 2
+\end{array} \rightB$
+} & $=$ & $A$
+\end{tabu}
+
+\medskip
+
+\noindent\makebox[\linewidth]{
+\begin{tabu}{lcccll}
+	& Plant 1 & Plant 2 & Plant 3 & & \\
+	$\begin{array}{l}
+	\mbox{Assembly} \\
+	\mbox{Packaging}
+	\end{array}$ &
+	\multicolumn{3}{c}{
+		$\leftB \arraycolsep=15pt \begin{array}{rrr}
+		21 & 18 & 20 \\
+		14 & 10 & 13
+		\end{array} \rightB$
+	} & $=$ & $B$
+\end{tabu}}
+\end{ex}
+
+
+\begin{ex}
+For the directed graph below, find the adjacency matrix $A$, compute $A^{3}$, and determine the number of paths of length $3$ from $v_{1}$ to $v_{4}$ and from $v_{2}$ to $v_{3}$.
+
+
+\begin{figure}[H]
+\centering
+\input{exercises/2-matrix-algebra/figures/3-matrix-multiplication/exercise2.3.26}
+%\caption{\label{fig:004072}}
+\end{figure}
+
+\begin{sol}
+$3$ paths $v_{1} \rightarrow v_{4}$, $0$ paths $v_{2} \rightarrow v_{3}$
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case either show the statement is true, or give an example showing that it is false.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item If $A^{2} = I$, then $A = I$.
+
+\item If $AJ = A$, then $J = I$.
+
+\item If $A$ is square, then $(A^{T})^{3} = (A^{3})^{T}$.
+
+\item If $A$ is symmetric, then $I + A$ is symmetric.
+
+\item If $AB = AC$ and $A \neq 0$, then $B = C$.
+
+\item If $A \neq 0$, then $A^{2} \neq 0$.
+
+\item If $A$ has a row of zeros, so also does $BA$ for all $B$.
+
+\item If $A$ commutes with $A + B$, then $A$ commutes with $B$.
+
+\item If $B$ has a column of zeros, so also does $AB$.
+
+\item If $AB$ has a column of zeros, so also does $B$.
+
+\item If $A$ has a row of zeros, so also does $AB$.
+
+\item If $AB$ has a row of zeros, so also does $A$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  False. If $A = \leftB \begin{array}{rr}
+1 & 0 \\
+0 & 0
+\end{array} \rightB = J$, then $AJ = A$ but $J \neq I$.
+
+\setcounter{enumi}{3}
+\item  True. Since $A^{T} = A$, we have $(I + AT = I^{T} + A^{T} = I + A$.
+
+\setcounter{enumi}{5}
+\item  False. If $A = \leftB \begin{array}{rr}
+0 & 1 \\
+0 & 0
+\end{array} \rightB$, then $A \neq 0$ but $A^{2} = 0$.
+
+\setcounter{enumi}{7}
+\item  True. We have $A(A + B) = (A + B)A$; that is, $A^{2} + AB = A^{2} + BA$. Subtracting $A^{2}$ gives $AB = BA$.
+
+\setcounter{enumi}{9}
+\item  False. $A = \leftB \begin{array}{rr}
+1 & -2 \\
+2 & 4
+\end{array} \rightB$, $B = \leftB \begin{array}{rr}
+2 & 4 \\
+1 & 2
+\end{array} \rightB$
+
+\setcounter{enumi}{11}
+\item  False. See \textbf{(j)}.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If $A$ and $B$ are $2 \times 2$ matrices whose rows sum to $1$, show that the rows of $AB$ also sum to $1$.
+
+\item Repeat part (a) for the case where $A$ and $B$ are $n \times n$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $A = \leftB a_{ij} \rightB$ and $B = \leftB b_{ij} \rightB$ and $\sum_{j}a_{ij} = 1 = \sum_{j}b_{ij}$, then the $(i, j)$-entry of $AB$ is $c_{ij} = \sum_{k}a_{ik}b_{kj}$, whence $\sum_{j}c_{ij} = \sum_{j}\sum_{k}a_{ik}b_{kj} = \sum_{k}a_{ik}(\sum_{j}b_{kj}) = \sum_{k}a_{ik} = 1$. Alternatively: If $\vect{e} = (1, 1, \dots, 1)$, then the rows of $A$ sum to $1$ if and only if $A\vect{e} = \vect{e}$. If also $B\vect{e} = \vect{e}$ then $(AB)\vect{e} = A(B\vect{e}) = A\vect{e} = \vect{e}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ be $n \times n$ matrices for which the systems of equations $A\vect{x} = \vect{0}$ and $B\vect{x} = \vect{0}$ each have only the trivial solution $\vect{x} = \vect{0}$. Show that the system $(AB)\vect{x} = \vect{0}$ has only the trivial solution.
+\end{ex}
+
+
+\begin{ex}
+The \textbf{trace}\index{trace}\index{square matrix ($n \times n$ matrix)!square} of a square matrix $A$, denoted $\func{tr }A$, is the sum of the elements on the main diagonal of $A$. Show that, if $A$ and $B$ are $n \times n$ matrices:
+\begin{exenumerate}
+\exitem* $\func{tr}(A + B) = \func{tr }A + \func{tr }B$.
+\exitem* $\func{tr}(kA) = k \func{tr}(A)$ for any number $k$.
+\exitem $\func{tr}(A^{T}) = \func{tr}(A)$.
+\exitem $\func{tr}(AB) = \func{tr}(BA)$.
+\exitem* $\func{tr}(AA^{T})$ is the sum of the squares of all entries of $A$.
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $A = \leftB a_{ij} \rightB$, then $\func{tr}(kA) = \func{tr}\leftB ka_{ij} \rightB = \sum_{i=1}^{n} ka_{ii} = k\sum_{i=1}^{n} a_{ii} = k \func{tr}(A)$.
+
+
+\setcounter{enumi}{4}
+\item  Write $A^{T} = \leftB a_{ij}^\prime \rightB$, where $a_{ij}^\prime = a_{ji}$. Then $AA^{T} = \left( \sum_{k=1}^{n} a_{ik}a_{kj}^\prime \right)$, so $\func{tr}(AA^{T}) = \sum_{i=1}^{n} \leftB \sum_{k=1}^{n} a_{ik}a_{ki}^\prime \rightB = \sum_{i=1}^{n} \sum_{k=1}^{n} a_{ik}^{2}$.
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Show that $AB - BA = I$ is impossible.
+
+
+[\textit{Hint}: See the preceding exercise.]
+\end{ex}
+
+
+\begin{ex}
+A square matrix $P$ is called an \newline \textbf{idempotent}\index{idempotents}\index{square matrix ($n \times n$ matrix)!idempotent} if $P^{2} = P$. Show that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $0$ and $I$ are idempotents.
+
+\item $\leftB \begin{array}{rr}
+1 & 1 \\
+0 & 0
+\end{array} \rightB$, $\leftB \begin{array}{rr}
+1 & 0 \\
+1 & 0
+\end{array} \rightB$, and $\frac{1}{2} \leftB \begin{array}{rr}
+ 1 & 1 \\
+ 1 & 1
+ \end{array} \rightB$, are idempotents.
+
+\item If $P$ is an idempotent, so is $I - P$. Show further that $P(I - P) = 0$.
+
+\item If $P$ is an idempotent, so is $P^{T}$.
+
+\item If $P$ is an idempotent, so is $Q = P + AP - PAP$ for any square matrix $A$ (of the same size as $P$).
+
+\item If $A$ is $n \times m$ and $B$ is $m \times n$, and if $AB = I_{n}$, then $BA$ is an idempotent.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{4}
+\item  Observe that $PQ = P^{2} + PAP - P^{2}AP = P$, so $Q^{2} = PQ + APQ - PAPQ = P + AP - PAP = Q$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ be $n \times n$ \textbf{diagonal matrices}\index{diagonal matrices}\index{matrix!diagonal matrices}\index{square matrix ($n \times n$ matrix)!diagonal matrices} (all entries off the main diagonal are zero).
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $AB$ is diagonal and $AB = BA$.
+
+\item Formulate a rule for calculating $XA$ if $X$ is $m \times n$.
+
+\item Formulate a rule for calculating $AY$ if $Y$ is $n \times k$.
+
+\end{enumerate}
+\end{ex}
+
+\begin{ex}
+If $A$ and $B$ are $n \times n$ matrices, show that:
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $AB = BA$ if and only if
+\begin{equation*}
+(A + B)^{2} = A^{2} + 2AB + B^{2}
+\end{equation*}
+\item $AB = BA$ if and only if
+\begin{equation*}
+(A + B)(A - B) = (A - B)(A + B)
+\end{equation*}
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item $(A + B)(A - B) = A^{2} - AB + BA - B^{2}$, and $(A - B)(A + B) = A^{2} + AB - BA - B^{2}$. These are equal if and only if $-AB + BA = AB - BA$; that is, $2BA = 2AB$; that is, $BA = AB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In Theorem~\ref{thm:003584}, prove
+\begin{exenumerate}
+\exitem part 3;
+\exitem part 5.
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $(A + B)(A - B) = A^{2} - AB + BA - B^{2}$ and $(A - B)(A + B) = A^{2} - BA + AB - B^{2}$. These are equal if and only if $-AB + BA = -BA + AB$, that is $2AB = 2BA$, that is $AB = BA$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+%\begin{ex}
+%(V. Camillo) Show that the product of two reduced row-echelon matrices is also reduced row-echelon.
+
+%\begin{sol}
+%See V. Camillo, Communications in Algebra 25(6), (1997), 1767--1782; Theorem~\ref{thm:003488}.
+
+%\end{sol}
+%\end{ex}
+
+\end{multicols}

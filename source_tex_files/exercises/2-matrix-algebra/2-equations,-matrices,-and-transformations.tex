@@ -1,0 +1,794 @@
+\section*{Exercises for \ref{sec:2_2}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:2_2}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+In each case find a system of equations that is equivalent to the given vector equation. (Do not solve the system.)
+
+
+\begin{enumerate}[leftmargin=1em,label={\alph*.}]
+\item {\footnotesize $x_{1} \leftB \begin{array}{r}
+2 \\
+-3 \\
+0
+\end{array} \rightB + x_{2} \leftB \begin{array}{r}
+1 \\
+1 \\
+4
+\end{array} \rightB + x_{3} \leftB \begin{array}{r}
+2 \\
+0 \\
+-1
+\end{array} \rightB = \leftB \begin{array}{r}
+5 \\
+6 \\
+-3
+\end{array} \rightB$}
+
+\item 
+{\scriptsize $x_{1} \leftB \begin{array}{r}
+1 \\
+0 \\
+1 \\
+0
+\end{array} \rightB + x_{2} \leftB \begin{array}{r}
+-3 \\
+8 \\
+2 \\
+1
+\end{array} \rightB + x_{3} \leftB \begin{array}{r}
+-3 \\
+0 \\
+2 \\
+2
+\end{array} \rightB + x_{4} \leftB \begin{array}{r}
+3 \\
+2 \\
+0 \\
+-2
+\end{array} \rightB = \leftB \begin{array}{r}
+5 \\
+1 \\
+2 \\
+0
+\end{array} \rightB$}
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  
+$\arraycolsep=1pt
+\begin{array}[t]{rrrrrrrrr}
+x_{1} & - & 3x_{2} & - & 3x_{3} & + & 3x_{4} & = & 5 \\
+ &  & 8x_{2} &  &  & + & 2x_{4} & = & 1 \\
+x_{1} & + & 2x_{2} & + & 2x_{3} &  &  & = & 2 \\
+&  & x_{2} & + & 2x_{3} & - & 5x_{4} & = & 0 \\
+\end{array}$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case find a vector equation that is equivalent to the given system of equations. (Do not solve the equation.)
+
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$ \arraycolsep=1pt
+\begin{array}[t]{rrrrrrr}
+x_{1} & - & x_{2} & + & 3x_{3} & = & 5 \\
+-3x_{1} & + & x_{2} & + & x_{3} & = & -6 \\
+5x_{1} & - & 8x_{2} & & & = & 9
+\end{array}
+$
+
+
+\item
+$ \arraycolsep=1pt
+\begin{array}[t]{rrrrrrrrr}
+x_{1} & - & 2x_{2} & - & x_{3} & + & x_{4} & = & 5 \\
+-x_{1} &  &  & + & x_{3} &  - & 2x_{4} & = & -3 \\
+2x_{1} & - & 2x_{2} & + & 7x_{3} & & & = & 8 \\
+3x_{1} & - & 4x_{2} & + & 9x_{3} & - & 2x_{4} & = & 12
+\end{array}
+$
+
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+$
+x_{1} \leftB \begin{array}{r}
+1 \\
+-1 \\
+2 \\
+3
+\end{array} \rightB + 
+x_{2} \leftB \begin{array}{r}
+-2 \\
+0 \\
+-2 \\
+-4
+\end{array} \rightB + 
+x_{3} \leftB \begin{array}{r}
+-1 \\
+1 \\
+7 \\
+9
+\end{array} \rightB + 
+x_{4} \leftB \begin{array}{r}
+1 \\
+-2 \\
+0 \\
+-2
+\end{array} \rightB = 
+\leftB \begin{array}{r}
+5 \\
+-3 \\
+8 \\
+12
+\end{array} \rightB
+$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case compute $A\vect{x}$ using: (i) Definition~\ref{def:002668}. (ii) Theorem~\ref{thm:002903}.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item 
+$A = \leftB \begin{array}{rrr}
+3 & -2 & 0 \\
+5 & -4 & 1
+\end{array} \rightB $ and $\vect{x} = \leftB \begin{array}{c}
+x_{1} \\
+x_{2} \\
+x_{3}
+\end{array} \rightB$.
+
+\item 
+$A = \leftB \begin{array}{rrr}
+1 & 2 & 3 \\
+0 & -4 & 5
+\end{array} \rightB$ and $\vect{x} = \leftB \begin{array}{c}
+x_{1} \\
+x_{2} \\
+x_{3}
+\end{array} \rightB$.
+
+
+\item
+$A = \leftB \begin{array}{rrrr}
+-2 & 0 & 5 & 4 \\
+1 & 2 & 0 & 3 \\
+-5 & 6 & -7 & 8
+\end{array} \rightB$ and $\vect{x} = \leftB \begin{array}{c}
+x_{1} \\
+x_{2} \\
+x_{3} \\
+x_{4}
+\end{array} \rightB$.
+
+\item
+$A = \leftB \begin{array}{rrrr}
+3 & -4 & 1 & 6 \\
+0 & 2 & 1 & 5 \\
+-8 & 7 & -3 & 0
+\end{array} \rightB$ and $\vect{x} = \leftB \begin{array}{c}
+x_{1} \\
+x_{2} \\
+x_{3} \\
+x_{4}
+\end{array} \rightB$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+$
+A\vect{x} = \leftB \begin{array}{rrr}
+1 & 2 & 3 \\
+0 & -4 & 5
+\end{array} \rightB \leftB \begin{array}{r}
+x_{1} \\
+x_{2} \\
+x_{3}
+\end{array} \rightB  = 
+x_{1} \leftB \begin{array}{r}
+1 \\
+0
+\end{array} \rightB + 
+x_{2} \leftB \begin{array}{r}
+2 \\
+-4
+\end{array} \rightB +
+x_{3} \leftB \begin{array}{r}
+3 \\
+5
+\end{array} \rightB  = \leftB \arraycolsep=1pt \begin{array}{rrrrr}
+x_{1} & + & 2x_{2} & + & 3x_{3} \\
+& - & 4x_{2} & + & 5x_{3}
+\end{array} \rightB
+$
+
+
+\setcounter{enumi}{3}
+\item
+$A\vect{x} = \leftB \begin{array}{rrrr}
+3 & -4 & 1 & 6 \\
+0 & 2 & 1 & 5 \\
+-8 & 7 & -3 & 0
+\end{array} \rightB \leftB \begin{array}{r}
+x_{1} \\
+x_{2} \\
+x_{3} \\
+x_{4}
+\end{array} \rightB$ \\ ${} =
+x_{1} \leftB \begin{array}{r}
+3 \\
+0 \\
+-8
+\end{array} \rightB + 
+x_{2} \leftB \begin{array}{r}
+-4 \\
+2 \\
+7
+\end{array} \rightB +
+x_{3} \leftB \begin{array}{r}
+1 \\
+1 \\
+-3
+\end{array} \rightB +
+x_{4} \leftB \begin{array}{r}
+6 \\
+5 \\
+0
+\end{array} \rightB = \leftB \arraycolsep=1pt \begin{array}{rrrrrrr}
+3x_{1} & - & 4x_{2} & + & x_{3} & + & 6x_{4} \\
+ &  & 2x_{2} & + & x_{3} & + & 5x_{4} \\
+-8x_{1} & + & 7x_{2} & - & 3x_{3} &  &  \\
+\end{array} \rightB
+$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $A = \leftB \begin{array}{cccc}
+\vect{a}_{1} & \vect{a}_{2} & \vect{a}_{3} & \vect{a}_{4}
+\end{array} \rightB$ be the $3 \times 4$ matrix given in terms of its columns  $\vect{a}_{1} = \leftB \begin{array}{r}
+1 \\
+1 \\
+-1
+\end{array} \rightB$, $\vect{a}_{2} = \leftB \begin{array}{r}
+3 \\
+0 \\
+2
+\end{array} \rightB$, $\vect{a}_{3} = \leftB \begin{array}{r}
+2 \\
+-1 \\
+3
+\end{array} \rightB$, and $\vect{a}_{4} = \leftB \begin{array}{r}
+0 \\
+-3 \\
+5
+\end{array} \rightB$.
+ In each case either express $\vect{b}$ as a linear combination of $\vect{a}_{1}$, $\vect{a}_{2}$, $\vect{a}_{3}$, and $\vect{a}_{4}$, or show that it is not such a linear combination. Explain what your answer means for the corresponding system $A\vect{x} = \vect{b}$ of linear equations.
+\begin{exenumerate}
+\exitem 
+$\vect{b} = \leftB \begin{array}{r}
+0 \\
+3 \\
+5
+\end{array} \rightB$
+\exitem 
+$\vect{b} = \leftB \begin{array}{r}
+4 \\
+1 \\
+1
+\end{array} \rightB$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+To solve $A\vect{x} = \vect{b}$ the reduction is $\leftB \begin{array}{rrrr|r}
+1 & 3 & 2 & 0 & 4 \\
+1 & 0 & -1 & -3 & 1 \\
+-1 & 2 & 3 & 5 & 1
+\end{array} \rightB \rightarrow \leftB \begin{array}{rrrr|r}
+1 & 0 & -1 & -3 & 1 \\
+0 & 1 & 1 & 1 & 1 \\
+0 & 0 & 0 & 0 & 0
+\end{array} \rightB$
+ so the general solution is $\leftB \begin{array}{c}
+ 1 + s + 3t \\
+ 1 - s -t \\
+ s \\
+ t
+ \end{array} \rightB$.
+
+
+
+Hence $(1 + s + 3t)\vect{a}_{1} + (1 - s - t)\vect{a}_{2} + s\vect{a}_{3} + t\vect{a}_{4} = \vect{b}$ for any choice of $s$ and $t$. If $s = t = 0$, we get $\vect{a}_{1} + \vect{a}_{2} = \vect{b}$; if $s = 1$ and $t = 0$, we have $2\vect{a}_{1} + \vect{a}_{3} = \vect{b}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+In each case, express every solution of the system as a sum of a specific solution plus a solution of the associated homogeneous system.
+\begin{exenumerate}
+\exitem
+$ \arraycolsep=1pt
+\begin{array}[t]{rrrrrrr}
+x & + & y & + & z & = & 2 \\
+2x & + & y & & & = & 3 \\
+x & - & y & - & 3z & = & 0
+\end{array}
+$
+\exitem
+$ \arraycolsep=1pt
+\begin{array}[t]{rrrrrrr}
+x & - & y & - & 4z & = & -4 \\
+x & + & 2y & + & 5z & = & 2 \\
+x & + & y & + & 2z & = & 0
+\end{array}
+$
+\exitem*
+$ \arraycolsep=1pt
+\begin{array}[t]{rrrrrrrrrrr}
+x_{1} & + & x_{2} & - & x_{3} & & & - & 5x_{5} & = & 2 \\
+& & x_{2} & + & x_{3} & & & - & 4x_{5} & = & -1 \\
+& & x_{2} & + & x_{3} & + & x_{4} & - & x_{5} & = & -1 \\
+2x_{1} & & & - & 4x_{3} & + & x_{4} & + & x_{5} & = & 6
+\end{array}
+$
+\exitem*
+$ \arraycolsep=1pt
+\begin{array}[t]{rrrrrrrrrrr}
+2x_{1} & + & x_{2} & - & x_{3} & - & x_{4} & = & -1 \\
+3x_{1} & + & x_{2} & + & x_{3} & - & 2x_{4} & = & -2 \\
+-x_{1} & - & x_{2} & + & 2x_{3} & + & x_{4} & = & 2 \\
+-2x_{1} & - & x_{2} & & & + & 2x_{4} & = & 3
+\end{array}
+$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+$\leftB \begin{array}{r}
+-2 \\
+2 \\
+0
+\end{array} \rightB + t \leftB \begin{array}{r}
+1 \\
+-3 \\
+1
+\end{array} \rightB$
+
+
+\setcounter{enumi}{3}
+\item
+$\leftB \begin{array}{r}
+3 \\
+-9 \\
+-2 \\
+0
+\end{array} \rightB + t \leftB \begin{array}{r}
+-1 \\
+4 \\
+1 \\
+1
+\end{array} \rightB$
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $\vect{x}_{0}$ and $\vect{x}_{1}$ are solutions to the homogeneous system of equations $A\vect{x} = \vect{0}$, use Theorem~\ref{thm:002811} to show that $s\vect{x}_{0} + t\vect{x}_{1}$ is also a solution for any scalars $s$ and $t$ (called a \textbf{linear combination}\index{linear combinations!homogeneous equations} of $\vect{x}_{0}$ and $\vect{x}_{1}$).
+
+\begin{sol}
+We have $A\vect{x}_{0} = \vect{0}$ and $A\vect{x}_{1} = \vect{0}$ and so $A(s\vect{x}_{0} + t\vect{x}_{1}) = s(A\vect{x}_{0}) + t(A\vect{x}_{1}) = s \cdot \vect{0} + t \cdot \vect{0} = \vect{0}$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Assume that $A \leftB \begin{array}{r}
+1 \\
+-1 \\
+2
+\end{array} \rightB = \vect{0} = A \leftB \begin{array}{r}
+2 \\
+0 \\
+3
+\end{array} \rightB$. Assuming that $\vect{x}_{0} = \leftB \begin{array}{r}
+2 \\
+-1 \\
+3
+\end{array} \rightB$ is a solution to $A\vect{x} = \vect{b}$, find a two-parameter family of solutions to $A\vect{x} = \vect{b}$.
+\end{ex}
+
+\begin{ex}
+In each case write the system in the form $A\vect{x} = \vect{b}$, use the gaussian algorithm to solve the system, and express the solution as a particular solution plus a linear combination of basic solutions to the associated homogeneous system $A\vect{x} = \vect{0}$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item \arraycolsep=1pt
+$\begin{array}[t]{rrrrrrrrrrr}
+x_{1} & - & 2x_{2} & + & x_{3} & + & 4x_{4} & - & x_{5} & = & 8 \\
+-2x_{1} & + & 4x_{2} & + & x_{3} & - & 2x_{4} & - & 4x_{5} & = & -1 \\
+3x_{1} & - & 6x_{2} & + & 8x_{3} & + & 4x_{4} & - & 13x_{5} & = & 1 \\
+8x_{1} & - & 16x_{2} & + & 7x_{3} & + & 12x_{4} & - & 6x_{5} & = & 11
+\end{array}
+$
+
+\item \arraycolsep=1pt
+$\begin{array}[t]{rrrrrrrrrrr}
+x_{1} & - & 2x_{2} & + & x_{3} & + & 2x_{4} & + & 3x_{5} & = & -4 \\
+-3x_{1} & + & 6x_{2} & - & 2x_{3} & - & 3x_{4} & - & 11x_{5} & = & 11 \\
+-2x_{1} & + & 4x_{2} & - & x_{3} & + & x_{4} & - & 8x_{5} & = & 7 \\
+-x_{1} & + & 2x_{2} &  &  & + & 3x_{4} & - & 5x_{5} & = & 3
+\end{array}
+$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item
+$\vect{x} = \leftB \begin{array}{r}
+-3 \\
+0 \\
+-1 \\
+0 \\
+0
+\end{array} \rightB + \left( s \leftB \begin{array}{r}
+2 \\
+1 \\
+0 \\
+0 \\
+0
+\end{array} \rightB + t \leftB \begin{array}{r}
+-5 \\
+0 \\
+2 \\
+0 \\
+1
+\end{array} \rightB \right).
+$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Given vectors $\vect{a}_{1} = \leftB \begin{array}{r}
+1 \\
+0 \\
+1
+\end{array} \rightB$, \\$\vect{a}_{2} = \leftB \begin{array}{r}
+1 \\
+1 \\
+0
+\end{array} \rightB$, and $\vect{a}_{3} = \leftB \begin{array}{r}
+0 \\
+-1 \\
+1
+\end{array} \rightB$, find a vector $\vect{b}$ that is \textit{not} a linear combination of $\vect{a}_{1}$, $\vect{a}_{2}$, and $\vect{a}_{3}$. Justify your answer. [\textit{Hint}: Part (2) of Theorem~\ref{thm:002684}.]
+\end{ex}
+
+\begin{ex}
+In each case either show that the statement is true, or give an example showing that it is false.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $\leftB \begin{array}{r}
+3 \\
+2
+\end{array} \rightB$
+ is a linear combination of $\leftB \begin{array}{r}
+ 1 \\
+ 0
+ \end{array} \rightB$
+ and $\leftB \begin{array}{r}
+ 0 \\
+ 1
+ \end{array} \rightB$.
+
+
+\item If $A\vect{x}$ has a zero entry, then $A$ has a row of zeros.
+
+\item If $A\vect{x} = \vect{0}$ where $\vect{x} \neq \vect{0}$, then $A = 0$.
+
+\item Every linear combination of vectors in $\RR^n$ can be written in the form $A\vect{x}$.
+
+\item If $A = \leftB \begin{array}{ccc}
+\vect{a}_{1} & \vect{a}_{2} & \vect{a}_{3}
+\end{array} \rightB$ in terms of its columns, and if $\vect{b} = 3\vect{a}_{1} - 2\vect{a}_{2}$, then the system $A\vect{x} = \vect{b}$ has a solution.
+
+\item If $A = \leftB \begin{array}{ccc}
+\vect{a}_{1} & \vect{a}_{2} & \vect{a}_{3}
+\end{array} \rightB$ in terms of its columns, and if the system $A\vect{x} = \vect{b}$ has a solution, then $\vect{b} = s\vect{a}_{1} + t\vect{a}_{2}$ for some $s$, $t$.
+
+\item If $A$ is $m \times n$ and $m < n$, then $A\vect{x} = \vect{b}$ has a solution for every column $\vect{b}$.
+
+\item If $A\vect{x} = \vect{b}$ has a solution for some column $\vect{b}$, then it has a solution for every column $\vect{b}$.
+
+\item If $\vect{x}_{1}$ and $\vect{x}_{2}$ are solutions to $A\vect{x} = \vect{b}$, then $\vect{x}_{1} - \vect{x}_{2}$ is a solution to $A\vect{x} = \vect{0}$.
+
+\item Let $A = \leftB \begin{array}{ccc}
+\vect{a}_{1} & \vect{a}_{2} & \vect{a}_{3} \end{array}\rightB$ in terms of its columns. If $\vect{a}_{3} = s\vect{a}_{1} + t\vect{a}_{2}$, then $A\vect{x} = \vect{0}$, where $\vect{x} = \leftB \begin{array}{c}
+s \\
+t \\
+-1
+\end{array} \rightB$.
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item False. $\leftB \begin{array}{rr}
+1 & 2 \\
+2 & 4
+\end{array} \rightB \leftB \begin{array}{r}
+2 \\
+-1
+\end{array} \rightB = \leftB \begin{array}{r}
+0 \\
+0
+\end{array} \rightB$.
+
+\setcounter{enumi}{3}
+\item True. The linear combination $x_{1}\vect{a}_{1} + \cdots  + x_{n}\vect{a}_{n}$ equals $A\vect{x}$ where $A = \leftB \begin{array}{ccc}
+\vect{a}_{1} & \cdots & \vect{a}_{n}
+\end{array} \rightB$ by Theorem~\ref{thm:002684}.
+
+\setcounter{enumi}{5}
+\item False. If $A = \leftB \begin{array}{rrr}
+1 & 1 & -1 \\
+2 & 2 & 0
+\end{array} \rightB$
+ and $\vect{x} = \leftB \begin{array}{r}
+ 2 \\
+ 0 \\
+ 1
+ \end{array} \rightB$, then
+\begin{equation*}
+A\vect{x} = \leftB \begin{array}{r}
+1 \\
+4
+\end{array} \rightB \neq s \leftB \begin{array}{r}
+1 \\
+2
+\end{array} \rightB + t \leftB \begin{array}{r}
+1 \\
+2
+\end{array} \rightB \mbox{ for any } s \mbox{ and } t.
+\end{equation*}
+\setcounter{enumi}{7}
+\item False. If 
+$
+A = \leftB \begin{array}{rrr}
+1 & -1 & 1 \\
+-1 & 1 & -1
+\end{array} \rightB$, there is a solution for $\vect{b} = \leftB \begin{array}{r}
+0 \\
+0
+\end{array} \rightB$ but not for $\vect{b} = \leftB \begin{array}{r}
+1 \\
+0
+\end{array} \rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $T : \RR^2 \to \RR^2$ be a transformation. In each case show that $T$ is induced by a matrix and find the matrix.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $T$ is a reflection in the $y$ axis.
+
+\item $T$ is a reflection in the line $y = x$.
+
+\item $T$ is a reflection in the line $y = -x$.
+
+\item $T$ is a clockwise rotation through $\frac{\pi}{2}$.
+
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Here $T \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB = \leftB \begin{array}{c}
+y \\
+x
+\end{array} \rightB  = \leftB \begin{array}{rr}
+0 & 1 \\
+1 & 0
+\end{array} \rightB \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB$.
+
+
+\setcounter{enumi}{3}
+\item  Here $T \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB = \leftB \begin{array}{c}
+y \\
+-x
+\end{array} \rightB = \leftB \begin{array}{rr}
+0 & 1 \\
+-1 & 0
+\end{array} \rightB \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+The \textbf{projection}\index{projection matrix}\index{matrix!projection matrix} $P : \RR^3 \to \RR^2$ is defined by $P \leftB \begin{array}{c}
+x \\
+y \\
+z
+\end{array} \rightB = \leftB \begin{array}{c}
+x \\
+y
+\end{array} \rightB$
+ for all $\leftB \begin{array}{c}
+ x \\
+ y \\
+ z
+ \end{array} \rightB$
+ in $\RR^3$. Show that $P$ is induced by a matrix and find the matrix.
+\end{ex}
+
+\begin{ex}
+Let $T : \RR^3 \to \RR^3$
+ be a transformation. In each case show that $T$ is induced by a matrix and find the matrix.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item $T$ is a reflection in the $x-y$ plane.
+
+\item $T$ is a reflection in the $y-z$ plane.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  Here 
+\begin{equation*}
+T \leftB \begin{array}{c}
+x \\
+y \\
+z
+\end{array} \rightB = \leftB \begin{array}{c}
+-x \\
+y \\
+z
+\end{array} \rightB = \leftB \begin{array}{rrr}
+-1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array} \rightB \leftB \begin{array}{c}
+x \\
+y \\
+z
+\end{array} \rightB,
+\end{equation*}
+ so the matrix is $\leftB \begin{array}{rrr}
+-1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array} \rightB$.
+
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Fix $a > 0$ in $\RR$, and define $T_{a} : \RR^4 \to \RR^4$ by $T_{a}(\vect{x}) = a\vect{x}$ for all $\vect{x}$ in $\RR^4$. Show that $T$ is induced by a matrix and find the matrix. [$T$ is called a \textbf{dilation}\index{dilation} if $a > 1$ and a \textbf{contraction}\index{contraction} if $a < 1$.]
+\end{ex}
+
+\begin{ex}
+Let $A$ be $m \times n$ and let $\vect{x}$ be in $\RR^n$. If $A$ has a row of zeros, show that $A\vect{x}$ has a zero entry.
+\end{ex}
+
+\begin{ex}
+If a vector $\vect{b}$ is a linear combination of the columns of $A$, show that the system $A\vect{x} = \vect{b}$ is consistent (that is, it has at least one solution.)
+
+\begin{sol}
+Write $A = \leftB \begin{array}{cccc}
+\vect{a}_{1} & \vect{a}_{2} & \cdots & \vect{a}_{n}
+\end{array} \rightB$ in terms of its columns. If $\vect{b} = x_{1}\vect{a}_{1} + x_{2}\vect{a}_{2} + \cdots + x_{n}\vect{a}_{n}$ where the $x_{i}$ are scalars, then $A\vect{x} = \vect{b}$ by Theorem~\ref{thm:002684} where $\vect{x} = \leftB \begin{array}{cccc}
+x_{1} & x_{2} & \cdots & x_{n} 
+\end{array} \rightB^{T}$. That is, $\vect{x}$ is a solution to the system $A\vect{x} = \vect{b}$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If a system $A\vect{x} = \vect{b}$ is inconsistent (no solution), show that $\vect{b}$ is not a linear combination of the columns of $A$.
+\end{ex}
+
+\begin{ex}
+Let $\vect{x}_{1}$ and $\vect{x}_{2}$ be solutions to the homogeneous system $A\vect{x} = \vect{0}$.
+
+
+\begin{enumerate}[label={\alph*.}]
+\item Show that $\vect{x}_{1} + \vect{x}_{2}$ is a solution to $A\vect{x} = \vect{0}$.
+
+\item Show that $t\vect{x}_{1}$ is a solution to $A\vect{x} = \vect{0}$ for any scalar $t$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  By Theorem~\ref{thm:002849}, $A(t\vect{x}_{1}) = t(A\vect{x}_{1}) = t \cdot \vect{0} = \vect{0}$; that is, $t\vect{x}_{1}$ is a solution to $A\vect{x} = \vect{0}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Suppose $\vect{x}_{1}$ is a solution to the system $A\vect{x} = \vect{b}$. If $\vect{x}_{0}$ is any nontrivial solution to the associated homogeneous system $A\vect{x} = \vect{0}$, show that $\vect{x}_{1} + t\vect{x}_{0}$, $t$ a scalar, is an infinite one parameter family of solutions to $A\vect{x} = \vect{b}$. [\textit{Hint}: Example~\ref{exa:002159} Section~\ref{sec:2_1}.]
+\end{ex}
+
+\begin{ex}
+Let $A$ and $B$ be matrices of the same size. If $\vect{x}$ is a solution to both the system $A\vect{x} = \vect{0}$ and the system $B\vect{x} = \vect{0}$, show that $\vect{x}$ is a solution to the system $(A + B)\vect{x} = \vect{0}$.
+\end{ex}
+
+\begin{ex}
+If $A$ is $m \times n$ and $A\vect{x} = \vect{0}$ for every $\vect{x}$ in $\RR^n$, show that $A = 0$ is the zero matrix. [\textit{Hint}: Consider $A\vect{e}_{j}$ where $\vect{e}_{j}$ is the $j$th column of $I_{n}$; that is, $\vect{e}_{j}$ is the vector in $\RR^n$ with $1$ as entry $j$ and every other entry $0$.]
+\end{ex}
+
+\begin{ex}
+Prove part (1) of Theorem~\ref{thm:002811}.
+
+\begin{sol}
+If $A$ is $m \times n$ and $\vect{x}$ and $\vect{y}$ are $n$-vectors, we must show that $A(\vect{x} + \vect{y}) = A\vect{x} + A\vect{y}$. Denote the columns of $A$ by $\vect{a}_{1}, \vect{a}_{2}, \dots, \vect{a}_{n}$, and write $\vect{x} = \leftB \begin{array}{cccc}
+x_{1} & x_{2} & \cdots & x_{n}
+\end{array} \rightB^{T}$ and $\vect{y} = \leftB \begin{array}{cccc}
+y_{1} & y_{2} & \cdots & y_{n}
+\end{array} \rightB^{T}$. Then $\vect{x} + \vect{y} = \leftB \begin{array}{cccc}
+x_{1} + y_{1} & x_{2} + y_{2} & \cdots & x_{n} + y_{n}
+\end{array} \rightB^{T}$, so Definition~\ref{def:002068} and Theorem~\ref{thm:002170} give $A(\vect{x} + \vect{y}) = (x_{1} + y_{1})\vect{a}_{1} + (x_{2} + y_{2})\vect{a}_{2} + \cdots  + (x_{n} + y_{n})\vect{a}_{n} = (x_{1}\vect{a}_{1} + x_{2}\vect{a}_{2} + \cdots + x_{n}\vect{a}_{n}) + (y_{1}\vect{a}_{1} + y_{2}\vect{a}_{2} + \cdots  + y_{n}\vect{a}_{n}) = A\vect{x} + A\vect{y}$.
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Prove part (2) of Theorem~\ref{thm:002811}.
+\end{ex}
+\end{multicols}

@@ -1,0 +1,286 @@
+
+\section*{Exercises for \ref{sec:8_7}}
+
+\begin{Filesave}{solutions}
+\solsection{Section~\ref{sec:8_7}}
+\end{Filesave}
+
+\begin{multicols}{2}
+\begin{ex}
+Find all $a$ in $\mathbb{Z}_{10}$ such that:
+
+\begin{enumerate}[label={\alph*.}]
+\item $a^{2} = a$.
+
+\item $a$ has an inverse (and find the inverse).
+
+\item $a^{k} = 0$ for some $k \geq 1$.
+
+\item $a = 2^{k}$ for some $k \geq 1$.
+
+\item $a = b^{2}$ for some $b$ in $\mathbb{Z}_{10}$.
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $1^{-1} = 1$, $9^{-1} = 9$, $3^{-1} = 7$, $7^{-1} = 3$.
+
+\setcounter{enumi}{3}
+\item  $2^{1} = 2$, $2^{2} = 4$, $2^{3} = 8$, $2^{4} = 16 = 6$, $2^{5} = 12 = 2$, $2^{6} =
+  2^{2} \dots$  so $a = 2^k$ if and only if $a = 2, 4, 6, 8$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Show that if $3a = 0$ in $\mathbb{Z}_{10}$, then necessarily $a = 0$ in $\mathbb{Z}_{10}$.
+
+\item Show that $2a = 0$ in $\mathbb{Z}_{10}$  holds in $\mathbb{Z}_{10}$ if and only if $a = 0$ or $a = 5$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  If $2a = 0$ in $\mathbb{Z}_{10}$, then $2a = 10k$ for some integer $k$. Thus $a = 5k$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Find the inverse of:
+
+\begin{exenumerate}
+\exitem $8$ in $\mathbb{Z}_{13}$;
+\exitem $11$ in $\mathbb{Z}_{19}$.
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $11^{-1} = 7$ in $\mathbb{Z}_{19}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+If $ab = 0$ in a field $F$, show that either $a = 0$ or $b = 0$.
+\end{ex}
+
+\begin{ex}
+Show that the entries of the last column of the multiplication table of $\mathbb{Z}_n$ are 
+\begin{equation*}
+0, n - 1, n - 2, \dots, 2, 1
+\end{equation*}
+ in that order.
+\end{ex}
+
+\begin{ex}
+In each case show that the matrix $A$ is invertible over the given field, and find $A^{-1}$.
+
+\begin{enumerate}[label={\alph*.}]
+\item $A = \leftB \begin{array}{rr}
+1 & 4 \\
+2 & 1 
+\end{array}\rightB$ over $\mathbb{Z}_5$.
+
+\item $A = \leftB \begin{array}{rr}
+5 & 6 \\
+4 & 3 
+\end{array}\rightB$ over $\mathbb{Z}_7$.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\func{det} A = 15 - 24 = 1 + 4 = 5 \neq 0$ in $\mathbb{Z}_{7}$, so $A^{-1}$ exists. Since $5^{-1} = 3$ in $\mathbb{Z}_{7}$, we have
+$A^{-1} = 3\leftB \begin{array}{rr}
+3 & -6 \\
+3 & 5 
+\end{array}\rightB = 3\leftB \begin{array}{rr}
+3 & 1 \\
+3 & 5 
+\end{array}\rightB = \leftB \begin{array}{rr}
+2 & 3 \\
+2 & 1 
+\end{array}\rightB.$
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Consider the linear system $\arraycolsep=1.5pt \begin{array}{rrrrrrr}
+3x & + & y & + & 4z & = & 3 \\
+4x & + & 3y & + & z & = & 1 
+\end{array}$. In each case solve the system by reducing the augmented matrix to reduced row-echelon form over the given field:
+
+\begin{exenumerate}
+\exitem $\mathbb{Z}_5$
+\exitem $\mathbb{Z}_7$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item We have $5 \cdot 3 = 1$ in $\mathbb{Z}_{7}$ so the reduction of the augmented matrix is:
+\begin{align*}
+\leftB \begin{array}{rrrr}
+3 & 1 & 4 & 3 \\
+4 & 3 & 1 & 1 
+\end{array}\rightB & \rightarrow  \leftB \begin{array}{rrrr}
+1 & 5 & 6 & 1 \\
+4 & 3 & 1 & 1 
+\end{array}\rightB \\ & \rightarrow  \leftB \begin{array}{rrrr}
+1 & 5 & 6 & 1 \\
+0 & 4 & 5 & 4 
+\end{array}\rightB \\ & \rightarrow  \leftB \begin{array}{rrrr}
+1 & 5 & 6 & 1 \\
+0 & 1 & 3 & 1 
+\end{array}\rightB \\ & \rightarrow  \leftB \begin{array}{rrrr}
+1 & 0 & 5 & 3 \\
+0 & 1 & 3 & 1 
+\end{array}\rightB.
+\end{align*}
+Hence $x = 3 + 2t$, $y = 1 + 4t$, $z = t$; $t$ in $\mathbb{Z}_{7}$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+Let $K$ be a vector space over $\mathbb{Z}_2$ with basis $\{1, t\}$, so $K = \{a + bt \mid a, b, \mbox{ in } \mathbb{Z}_2\}$. It is known that $K$ becomes a field of four elements if we define $t^{2} = 1 + t$. Write down the multiplication table of $K$.
+\end{ex}
+
+\begin{ex}
+Let $K$ be a vector space over $\mathbb{Z}_3$ with basis $\{1, t\}$, so $K = \{a + bt \mid a, b, \mbox{ in } \mathbb{Z}_3\}$. It is known that $K$ becomes a field of nine elements if we define $t^{2} = -1$ in $\mathbb{Z}_3$. In each case find the inverse of the element $x$ of $K$:
+
+\begin{exenumerate}
+\exitem $x = 1 + 2t$
+\exitem $x = 1 + t$
+\end{exenumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $(1 + t)^{-1} = 2 + t$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex} \label{ex:8_7_10}
+How many errors can be detected or corrected by each of the following binary linear codes?
+
+\begin{enumerate}[label={\alph*.}]
+\item $C = \{0000000, 0011110, 0100111, 0111001, \\ \hspace*{2em} 1001011, 1010101, 1101100, 1110010\}$
+
+\item $C = \{0000000000, 0010011111, 0101100111,\\ \hspace*{2em} 0111111000, 1001110001, 1011101110,\\ \hspace*{2em} 1100010110, 1110001001\}$
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  The minimum weight of $C$ is $5$, so it detects $4$ errors and corrects $2$ errors.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If a binary linear $(n, 2)$-code corrects one error, show that $n \geq 5$. [\textit{Hint}: Hamming bound.]
+
+\item Find a $(5, 2)$-code that corrects one error.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\{00000, 01110, 10011, 11101\}.$
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item If a binary linear $(n, 3)$-code corrects two errors, show that $n \geq 9$. [\textit{Hint}: Hamming bound.]
+
+\item If $G = \leftB \begin{array}{rrrrrrrrrr}
+1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 1 & 1 & 0 & 1 & 0 & 1 & 1 & 1
+\end{array}\rightB$, show that the binary $(10, 3)$-code generated by $G$ corrects two errors. [It can be shown that no binary $(9, 3)$-code corrects two errors.]
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  The code is $\{0000000000, 1001111000, 0101100110,$ \\ $ 0011010111, 1100011110, 1010101111,$ \\ $ 0110110001, 1111001001\}$. This has minimum distance $5$ and so corrects $2$ errors.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+\begin{enumerate}[label={\alph*.}]
+\item Show that no binary linear $(4, 2)$-code can correct single errors.
+
+\item Find a binary linear $(5, 2)$-code that can correct one error.
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $\{00000, 10110, 01101, 11011\}$ is a $(5, 2)$-code of minimal weight $3$, so it corrects single errors.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Find the standard generator matrix $G$ and the parity-check matrix $H$ for each of the following systematic codes:
+
+\begin{enumerate}[label={\alph*.}]
+\item $\{00000, 11111\}$ over $\mathbb{Z}_2$.
+
+\item Any systematic $(n, 1)$-code where $n \geq 2$.
+
+\item The code in Exercise \ref{ex:8_7_10}(a).
+
+\item The code in Exercise \ref{ex:8_7_10}(b).
+
+\end{enumerate}
+\begin{sol}
+\begin{enumerate}[label={\alph*.}]
+\setcounter{enumi}{1}
+\item  $G = 
+\leftB \begin{array}{cc}
+1 & \vect{u}
+\end{array} \rightB$ where $\vect{u}$ is any nonzero vector in the code. $H = \leftB \begin{array}{c}
+\vect{u} \\
+I_{n-1}
+\end{array}\rightB$.
+
+\end{enumerate}
+\end{sol}
+\end{ex}
+
+\begin{ex}
+Let $\vect{c}$ be a word in $F^{n}$. Show that $B_{t}(\vect{c}) = \vect{c} + B_{t}(\vect{0})$, where we write 
+\begin{equation*}
+\vect{c} + B_{t}(\vect{0}) = \{\vect{c} + \vect{v} \mid \vect{v} \mbox{ in } B_{t}(\vect{0})\}
+\end{equation*}
+\end{ex}
+
+\begin{ex}
+If a $(n, k)$-code has two standard generator matrices $G$ and $G_{1}$, show that $G = G_{1}$.
+\end{ex}
+
+\begin{ex}
+Let $C$ be a binary linear $n$-code (over $\mathbb{Z}_2$). Show that either each word in $C$ has even weight, or half the words in $C$ have even weight and half have odd weight. [\textit{Hint}: The dimension theorem.]
+\end{ex}
+\end{multicols}
